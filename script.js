@@ -1,3 +1,6 @@
+// Flag that JS is running so animations only hide content when enhancements work
+document.documentElement.classList.add('js-enabled');
+
 // Scroll Animation Observer - Resets when scrolling up!
 const observerOptions = {
   threshold: 0.5,
