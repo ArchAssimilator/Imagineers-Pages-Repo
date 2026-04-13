@@ -4,29 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Imagineers.AI</title>
-  <meta name="description" content="Actionable Ai, Simplified. We conceive, build and deploy GenAI solutions and applications for immediate use." />
+  <meta name="description" content="Actionable AI, simplified. We conceive, build, and deploy GenAI solutions for immediate business impact." />
   <meta property="og:title" content="About | Imagineers.AI" />
-  <meta property="og:description" content="Actionable Ai, Simplified." />
+  <meta property="og:description" content="Actionable AI, simplified." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="imagineers logo.webp" />
   <link rel="icon" href="imagineers logo.webp" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="masterclass-theme.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="topNav">
     <div class="container nav">
-      <a class="brand">
-        <img src="imagineers logo.webp" alt="Imagineers.AI logo" />
-        <span>Imagineers.AI</span>
+      <a href="index.html" class="brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <span>IMAGINEERS.AI</span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="menu" id="mainMenu">
         <a href="index.html">About</a>
-        <a href="cpi.html">GenAI retreat</a>
-        <a href="genaisl.html">GenAi.StudioLAB*</a>
-        <a href="caio.html">CAiO as a Service</a>
+        <a href="cpi.html">Masterclass</a>
+        <a href="genaisl.html">GenAi.StudioLAB</a>
+        <a href="caio.html">CAiO Service</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -34,77 +34,110 @@
 
   <main>
     <section class="hero">
-      <div class="bg-parallax" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="eyebrow reveal">PROFILE</div>
-        <h1 class="reveal">Actionable Ai, Simplified</h1>
-        <p class="sub reveal">We conceive, build &amp; deploy GenAi solutions &amp; applications for immediate use</p>
-        <p class="reveal"><a class="btn" href="#services">Learn More</a></p>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="label">Imagineers.ai</span>
+          <h1 class="display">Actionable AI.<br />Simplified.</h1>
+          <p>
+            We conceive, build, and deploy GenAI solutions that create measurable impact across strategy,
+            operations, and delivery teams.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="cpi.html">Explore The Masterclass</a>
+            <a class="btn btn-ghost" href="contact.html">Talk To Our Team</a>
+          </div>
+        </div>
+        <aside class="hero-panel" data-reveal>
+          <h3>What We Do</h3>
+          <p><strong>Conceive:</strong> Identify where AI can create immediate advantage.</p>
+          <p><strong>Build:</strong> Design practical, high-utility AI workflows and tools.</p>
+          <p><strong>Deploy:</strong> Embed AI into people, process, and operating rhythm.</p>
+        </aside>
       </div>
     </section>
 
-    <section class="alt">
-      <div class="container">
-        <h2 class="reveal">Tapping into Global Pool of Ai Experts</h2>
-        <p class="lead reveal">"Everything Everywhere All at Once" is what the current pace of GenAi developments can feel like. You see the announcements, you hear the stories, but you have no idea where to start. Sound familiar?</p>
-        <p class="lead reveal">At Imagineers.Ai we put together a team of experienced professionals that have earned their stripes introducing new technologies in organisations for bottomline impact&nbsp;&mdash; all the way back to the first commercial uses of the Internet in 1994. This enables us to help you quickly figure out how Ai can be put to use for your organisation. We do Actionable Ai, Simplified!</p>
-      </div>
-    </section>
-
-    <section id="services">
-      <div class="container">
-        <div class="eyebrow reveal">SERVICES</div>
-        <h2 class="reveal">Taking Your Organisation the Next Level with GenAi</h2>
-        <div class="grid-3">
-          <div class="card reveal">
-            <h3>Conceive</h3>
-            <p>We help you answer a couple of simple, but important, questions. How could Ai 'kill' my products or services? How would competitors replace my organisation with Ai? But most importantly, how will Ai help me <strong>leapfrog my competition</strong> and enable me to <strong>develop entirely new products or services</strong>.</p>
+    <section class="section-muted">
+      <div class="container split">
+        <div data-reveal>
+          <span class="label">Our Approach</span>
+          <h2 class="display section-title">Built for Leaders Who Need Real Results</h2>
+          <p class="lede">
+            The pace of AI change can feel overwhelming. We turn complexity into action by focusing on
+            practical workflows, rapid pilot execution, and responsible scaling.
+          </p>
+        </div>
+        <div class="stat-stack" data-reveal>
+          <div class="stat">
+            <strong>Strategy</strong>
+            <p>Define high-value AI priorities linked to business goals.</p>
           </div>
-          <div class="card reveal">
-            <h3>Build</h3>
-            <p>With these questions answered we help you build the required solutions. Our focus is on <strong>Actionable Ai</strong>: off-the-shelf or open-source applications that require minimal tuning (if at all) and which <strong>lead to immediate, tangible results</strong> to get the organisation used to working in this new world of GenAi.</p>
+          <div class="stat">
+            <strong>Execution</strong>
+            <p>Build and test real workflows, not slideware.</p>
           </div>
-          <div class="card reveal">
-            <h3>Deploy</h3>
-            <p>Finally, we assist you with the integration of the newly developed GenAi solutions into the <strong>human, operational &amp; IT infrastructure</strong> of your organisation with a strong emphasis on guiding staff, partners, vendors and clients/customers how to the use the technology to their benefit.</p>
+          <div class="stat">
+            <strong>Adoption</strong>
+            <p>Enable teams to use AI confidently and consistently.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="alt">
-      <div class="container">
-        <div class="eyebrow reveal">TEAM</div>
-        <h2 class="reveal">Leadership</h2>
-        <p class="lead reveal">Our leadership is well versed in deploying technology for strategic impact.</p>
-        <div class="team">
-          <div class="card reveal">
-            <img src="RJ.avif" alt="RJ portrait" />
-            <h3>Rutger-Jan (RJ) van Spaandonk</h3>
-            <div class="role">Co-founder - Commercial Lead</div>
-            <p>Nxt Gen Technology &amp; Business Pioneer, Builder &amp; Board Member.</p>
-          </div>
-          <div class="card reveal">
-            <img src="CB.avif" alt="Chris portrait" />
-            <h3>Chris Barker</h3>
-            <div class="role">Co-founder - Tech Lead</div>
-            <p>Engineer, Innovator &amp; Strategist focused on Growth &amp; Turnarounds</p>
-          </div>
-          <div class="card reveal">
-            <img src="Di.avif" alt="Diane avatar" />
-            <h3>Diane</h3>
-            <div class="role">Chief Imagineer</div>
-            <p>Amalgamation of Class-leading GenAi bots - Chat GPT Plus, Claude, Bard, Pi &amp; Coral.</p>
-          </div>
+    <section>
+      <div class="container" data-reveal>
+        <span class="label">Services</span>
+        <h2 class="display section-title">How We Partner</h2>
+        <div class="module-grid">
+          <article class="module">
+            <h4>GenAI Masterclass</h4>
+            <p>Two-day, hands-on capability development for professionals and leadership teams.</p>
+          </article>
+          <article class="module">
+            <h4>GenAi.StudioLAB</h4>
+            <p>In-sourced innovation accelerator for use-case discovery, prototyping, and deployment.</p>
+          </article>
+          <article class="module">
+            <h4>CAiO as a Service</h4>
+            <p>Executive-grade AI leadership without a full-time C-level hire.</p>
+          </article>
+          <article class="module">
+            <h4>Implementation Advisory</h4>
+            <p>Governance, architecture, and operating model support for sustainable AI adoption.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-muted">
+      <div class="container" data-reveal>
+        <span class="label">Leadership</span>
+        <h2 class="display section-title">Experienced Builders and Operators</h2>
+        <div class="facilitator-grid">
+          <article class="person">
+            <img src="RJ.avif" alt="Rutger-Jan van Spaandonk" />
+            <div>
+              <h3>Rutger-Jan van Spaandonk</h3>
+              <p class="role">Co-founder, Commercial Lead</p>
+              <p>Technology and business leader with decades of experience launching and scaling major platforms across Africa.</p>
+            </div>
+          </article>
+          <article class="person">
+            <img src="CB.avif" alt="Chris Barker" />
+            <div>
+              <h3>Chris Barker</h3>
+              <p class="role">Co-founder, Tech Lead</p>
+              <p>Former consulting leader and operator focused on execution, systems thinking, and practical AI transformation.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 2025 by Imagineers.AI</div>
+    <div class="container">&copy; 2026 Imagineers.AI</div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="masterclass-theme.js"></script>
 </body>
 </html>

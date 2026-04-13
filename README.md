@@ -14,7 +14,7 @@ A modern, responsive website for Imagineers.AI built with clean HTML, CSS, and J
 
 - **About** (`index.html`) - Company overview and mission
 - **CPI Training** (`cpi.html`) - Training program details
-- **GenAI.StudioLab** (`genaisl.html`) - AI innovation services
+- **GenAI.StudioLAB* (`genaisl.html`) - AI innovation services
 - **CAIO as a Service** (`caio.html`) - Fractional Chief AI Officer services
 - **Contact** (`contact.html`) - Get in touch via email
 

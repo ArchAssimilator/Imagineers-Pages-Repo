@@ -3,28 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GenAi.StudioLAB* | Imagineers.AI</title>
-  <meta name="description" content="Disruptive Innovation Accelerator: a tailored, in-sourced programme to rapidly adopt and deploy GenAi for transformative impact." />
-  <meta property="og:title" content="GenAi.StudioLAB* | Imagineers.AI" />
+  <title>GenAi.StudioLAB | Imagineers.AI</title>
+  <meta name="description" content="GenAi.StudioLAB: an in-sourced innovation accelerator for rapid GenAI adoption and deployment." />
+  <meta property="og:title" content="GenAi.StudioLAB | Imagineers.AI" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="imagineers logo.webp" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="masterclass-theme.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="topNav">
     <div class="container nav">
-      <a class="brand">
-        <img src="imagineers logo.webp" alt="Imagineers.AI logo" />
-        <span>Imagineers.AI</span>
+      <a href="index.html" class="brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <span>IMAGINEERS.AI</span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="menu" id="mainMenu">
         <a href="index.html">About</a>
-        <a href="cpi.html">GenAI retreat</a>
-        <a href="genaisl.html">GenAi.StudioLAB*</a>
-        <a href="caio.html">CAiO as a Service</a>
+        <a href="cpi.html">Masterclass</a>
+        <a href="genaisl.html">GenAi.StudioLAB</a>
+        <a href="caio.html">CAiO Service</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -32,58 +33,69 @@
 
   <main>
     <section class="hero">
-      <div class="bg-parallax" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="eyebrow reveal">DISRUPTIVE INNOVATION ACCELERATOR</div>
-        <h1 class="reveal">GenAi.StudioLAB*</h1>
-        <p class="sub reveal">A tailored, in-sourced programme to help organisations rapidly adopt and deploy GenAi so as to transform the business, drive disruption in their industries and emerge as market leaders.</p>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="label">Disruptive Innovation Accelerator</span>
+          <h1 class="display">GenAi.StudioLAB</h1>
+          <p>
+            A tailored, in-sourced programme that helps organisations rapidly adopt and deploy GenAI,
+            drive disruption, and establish sustainable market leadership.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:info@imagineers.ai?subject=GenAi.StudioLAB%20Enquiry">Enquire Now</a>
+            <a class="btn btn-ghost" href="contact.html">Speak To Imagineers.ai</a>
+          </div>
+        </div>
+        <aside class="hero-panel" data-reveal>
+          <h3>Programme Structure</h3>
+          <p>Delivered in high-intensity cycles combining strategy, experimentation, and implementation.</p>
+          <p><strong>Format:</strong> in-sourced, practical, and outcomes-led.</p>
+        </aside>
       </div>
     </section>
 
-    <section>
-      <div class="container">
-        <div class="card reveal">
-          <h3>1. Generative Ai Strategy Workshops</h3>
-          <p>Interactive workshops to help understand how GenAi could transform their business, identify high-potential use cases, and develop a strategy and roadmap for adoption.</p>
+    <section class="section-muted">
+      <div class="container" data-reveal>
+        <span class="label">Capability Stack</span>
+        <h2 class="display section-title">What StudioLAB Covers</h2>
+        <div class="module-grid">
+          <article class="module">
+            <h4>1. GenAI Strategy Workshops</h4>
+            <p>Identify high-value use cases, strategic risks, and an adoption roadmap aligned with your business.</p>
+          </article>
+          <article class="module">
+            <h4>2. Executive & Employee Education</h4>
+            <p>Custom capability building focused on practical use, implementation realities, and workforce impact.</p>
+          </article>
+          <article class="module">
+            <h4>3. Rapid Prototyping Sprints</h4>
+            <p>Design and test high-priority prototypes quickly to validate value before full deployment.</p>
+          </article>
+          <article class="module">
+            <h4>4. Deployment Architecture Reviews</h4>
+            <p>Assess infrastructure and operating constraints for secure, responsible, cost-effective rollout.</p>
+          </article>
+          <article class="module">
+            <h4>5. Partnership & Vendor Matching</h4>
+            <p>Connect with the right technology providers, startups, and cloud partners for rapid execution.</p>
+          </article>
+          <article class="module">
+            <h4>6. Policy & Ethics Advisory</h4>
+            <p>Establish governance and decision frameworks for responsible AI use at enterprise scale.</p>
+          </article>
+          <article class="module">
+            <h4>7. Benchmarking & Analytics</h4>
+            <p>Track performance, cost, risk, and ROI to guide continuous improvement and investment decisions.</p>
+          </article>
         </div>
-        <div class="card reveal">
-          <h3>2. Executive &amp; Employee Education</h3>
-          <p>Custom training and workshops to educate executives and employees on GenAi capabilities, use cases, implementation considerations, and implications for the workforce and society.</p>
-        </div>
-        <div class="card reveal">
-          <h3>3. Rapid Prototyping Sprints</h3>
-          <p>Short, intense sprints focused on rapidly building and testing GenAi prototypes for high-potential use cases.</p>
-        </div>
-        <div class="card reveal">
-          <h3>4. Deployment Architecture Reviews</h3>
-          <p>Assessments of existing infrastructure and architectures resulting in recommendations to enable rapid, secure, responsible, and cost-effective deployment of GenAi technologies.</p>
-        </div>
-        <div class="card reveal">
-          <h3>5. Partnership &amp; Vendor Matching</h3>
-          <p>Connect organisations with GenAi startups, vendors and cloud providers that can provide technology and services for rapid progress.</p>
-        </div>
-        <div class="card reveal">
-          <h3>6. Policy &amp; Ethics Advisory</h3>
-          <p>Provide guidance on developing ethical policies, procedures and review processes when deploying GenAi to ensure responsible usage and positive impacts.</p>
-        </div>
-        <div class="card reveal">
-          <h3>7. Benchmarking &amp; Analytics</h3>
-          <p>Ongoing benchmarking of GenAi performance, costs, risks, and outcomes provides insights to drive continuous improvements and demonstrate ROI.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container">
-        <p class="reveal"><a class="btn" href="mailto:info@imagineers.ai?subject=GenAi.StudioLAB*%20Enquiry">Enquire Now</a></p>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 2025 by Imagineers.AI</div>
+    <div class="container">&copy; 2026 Imagineers.AI</div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="masterclass-theme.js"></script>
 </body>
 </html>

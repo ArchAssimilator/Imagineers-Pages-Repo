@@ -4,27 +4,28 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Imagineers.AI</title>
-  <meta name="description" content="Get in touch with Imagineers.AI" />
+  <meta name="description" content="Get in touch with Imagineers.AI for masterclasses, strategy support, and AI implementation." />
   <meta property="og:title" content="Contact | Imagineers.AI" />
   <meta property="og:type" content="website" />
   <link rel="icon" href="imagineers logo.webp" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css" />
-  <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="masterclass-theme.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" id="topNav">
     <div class="container nav">
-      <a class="brand">
-        <img src="imagineers logo.webp" alt="Imagineers.AI logo" />
-        <span>Imagineers.AI</span>
+      <a href="index.html" class="brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <span>IMAGINEERS.AI</span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
-      <nav class="menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="menu" id="mainMenu">
         <a href="index.html">About</a>
-        <a href="cpi.html">GenAI retreat</a>
-        <a href="genaisl.html">GenAi.StudioLAB*</a>
-        <a href="caio.html">CAiO as a Service</a>
+        <a href="cpi.html">Masterclass</a>
+        <a href="genaisl.html">GenAi.StudioLAB</a>
+        <a href="caio.html">CAiO Service</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -32,32 +33,56 @@
 
   <main>
     <section class="hero">
-      <div class="bg-parallax" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="eyebrow reveal">GET IN TOUCH</div>
-        <h1 class="reveal">Contact Us</h1>
-        <p class="sub reveal">We'd love to hear from you. Reach out to discuss how we can help transform your business with GenAi.</p>
+      <div class="container hero-grid">
+        <div data-reveal>
+          <span class="label">Contact Imagineers.ai</span>
+          <h1 class="display">Let Us Build Your AI Advantage</h1>
+          <p>
+            Reach out to discuss the GenAI Masterclass, GenAi.StudioLAB, or CAiO as a Service.
+            We will help you identify the fastest path to practical impact.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="mailto:info@imagineers.ai">Email info@imagineers.ai</a>
+          </div>
+        </div>
+        <aside class="hero-panel" data-reveal>
+          <h3>Direct Contacts</h3>
+          <p><strong>General enquiries:</strong> <a href="mailto:info@imagineers.ai">info@imagineers.ai</a></p>
+          <p><strong>International delivery:</strong> <a href="mailto:rj.vanspaandonk@imagineers.ai">rj.vanspaandonk@imagineers.ai</a></p>
+        </aside>
       </div>
     </section>
 
-    <section class="alt">
-      <div class="container">
-        <div class="contact-card reveal">
-          <h2>Let's Connect</h2>
-          <p class="lead">Whether you're interested in our training programs, innovation accelerator, or strategic AI leadership services, we're here to help.</p>
-          <a href="mailto:info@imagineers.ai" class="contact-email">
-            <span style="font-size: 1.5rem;">✉️</span>
-            info@imagineers.ai
-          </a>
+    <section class="section-muted">
+      <div class="container" data-reveal>
+        <span class="label">What To Include</span>
+        <h2 class="display section-title">To Help Us Respond Quickly</h2>
+        <div class="module-grid">
+          <article class="module">
+            <h4>Your organisation and role</h4>
+            <p>Share a short description of your business context and decision scope.</p>
+          </article>
+          <article class="module">
+            <h4>Service of interest</h4>
+            <p>Masterclass, StudioLAB, CAiO as a Service, or a combined engagement.</p>
+          </article>
+          <article class="module">
+            <h4>Priority outcomes</h4>
+            <p>List the main strategic or operational outcomes you want to achieve.</p>
+          </article>
+          <article class="module">
+            <h4>Timing and location</h4>
+            <p>Tell us your target timeframe and whether delivery is in-person or hybrid.</p>
+          </article>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">© 2025 by Imagineers.AI</div>
+    <div class="container">&copy; 2026 Imagineers.AI</div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="masterclass-theme.js"></script>
 </body>
 </html>
