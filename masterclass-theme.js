@@ -19,6 +19,15 @@
       });
     });
 
+    document.querySelectorAll('.course-accordion details').forEach((item) => {
+      item.addEventListener('toggle', () => {
+        if (!item.open || window.matchMedia('(min-width: 1081px)').matches) return;
+        document.querySelectorAll('.course-accordion details[open]').forEach((openItem) => {
+          if (openItem !== item) openItem.open = false;
+        });
+      });
+    });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('is-visible');

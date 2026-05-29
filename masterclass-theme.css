@@ -643,6 +643,132 @@
       gap: 0.65rem;
     }
 
+    .detail-hero h1 {
+      max-width: 14ch;
+    }
+
+    .course-table-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      box-shadow: 0 14px 34px rgba(10, 22, 39, 0.08);
+    }
+
+    .course-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      background: var(--white);
+      font-size: 0.9rem;
+    }
+
+    .course-table th,
+    .course-table td {
+      padding: 0.85rem 0.95rem;
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid #d8e3ec;
+    }
+
+    .course-table th {
+      background: var(--navy-900);
+      color: var(--white);
+      font-size: 0.76rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .course-table td:first-child {
+      color: var(--teal-500);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .course-accordion {
+      margin-top: 2rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+
+    .course-accordion details {
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 10px 28px rgba(10, 22, 39, 0.06);
+    }
+
+    .course-accordion details[open] {
+      border-color: rgba(0, 180, 216, 0.42);
+    }
+
+    .course-accordion summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .course-accordion summary::after {
+      content: "+";
+      color: var(--teal-500);
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .course-accordion details[open] summary::after {
+      content: "-";
+    }
+
+    .detail-copy {
+      margin-top: 1rem;
+      display: grid;
+      gap: 1rem;
+      color: var(--ink-700);
+      overflow-x: auto;
+    }
+
+    .detail-copy h3 {
+      color: var(--ink-900);
+      font-family: "Fraunces", Georgia, serif;
+      font-size: 1.35rem;
+      margin-top: 0.35rem;
+    }
+
+    .detail-copy ul {
+      display: grid;
+      gap: 0.55rem;
+      list-style: none;
+    }
+
+    .detail-copy li {
+      position: relative;
+      padding-left: 1.1rem;
+    }
+
+    .detail-copy li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.62em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal-500);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .pill-list span {
+      border: 1px solid #c8d8e5;
+      border-radius: 999px;
+      padding: 0.42rem 0.72rem;
+      background: #f7fbfe;
+      color: var(--ink-700);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
     details {
       background: var(--white);
       border-radius: 12px;
@@ -768,5 +894,9 @@
 
       .quotes-track {
         grid-auto-columns: minmax(260px, 86%);
+      }
+
+      .course-table {
+        min-width: 560px;
       }
     }
