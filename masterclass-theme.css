@@ -652,16 +652,46 @@
     }
 
     .quotes-track {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: minmax(320px, 34%);
+      display: flex;
       align-items: start;
       gap: 1rem;
     }
 
     .quotes-track .quote {
+      flex: 0 0 var(--quote-width, clamp(340px, 36vw, 460px));
       scroll-snap-align: start;
       min-height: 210px;
+    }
+
+    .quotes-track .quote:nth-child(1),
+    .quotes-track .quote:nth-child(2),
+    .quotes-track .quote:nth-child(8),
+    .quotes-track .quote:nth-child(10),
+    .quotes-track .quote:nth-child(15),
+    .quotes-track .quote:nth-child(16),
+    .quotes-track .quote:nth-child(17),
+    .quotes-track .quote:nth-child(18),
+    .quotes-track .quote:nth-child(19) {
+      --quote-width: clamp(260px, 24vw, 310px);
+    }
+
+    .quotes-track .quote:nth-child(3),
+    .quotes-track .quote:nth-child(5),
+    .quotes-track .quote:nth-child(7) {
+      --quote-width: clamp(640px, 62vw, 820px);
+    }
+
+    .quotes-track .quote:nth-child(9),
+    .quotes-track .quote:nth-child(12),
+    .quotes-track .quote:nth-child(13),
+    .quotes-track .quote:nth-child(14) {
+      --quote-width: clamp(500px, 50vw, 660px);
+    }
+
+    .quotes-track .quote:nth-child(4),
+    .quotes-track .quote:nth-child(6),
+    .quotes-track .quote:nth-child(11) {
+      --quote-width: clamp(390px, 40vw, 520px);
     }
 
     .quotes-scroller {
@@ -924,7 +954,11 @@
       }
 
       .quotes-track {
-        grid-auto-columns: minmax(260px, 86%);
+        gap: 0.85rem;
+      }
+
+      .quotes-track .quote {
+        flex-basis: 86%;
       }
 
       .course-table {
