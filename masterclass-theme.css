@@ -614,17 +614,48 @@
       font-style: normal;
     }
 
+    .section-muted .quote {
+      background: var(--white);
+      border: none;
+      border-top: 3px solid var(--teal-500);
+      color: var(--ink-900);
+      box-shadow: 0 14px 34px rgba(10, 22, 39, 0.09);
+    }
+
+    .section-muted .quote p {
+      color: var(--ink-700);
+    }
+
+    .section-muted .quote cite {
+      color: var(--teal-500);
+    }
+
+
     .quotes-scroller {
       margin-top: 2rem;
       overflow-x: auto;
-      padding-bottom: 0.4rem;
-      scrollbar-color: rgba(72, 202, 228, 0.6) rgba(255, 255, 255, 0.08);
+      padding: 0.15rem 0 1rem;
+      scrollbar-color: rgba(72, 202, 228, 0.6) transparent;
+    }
+
+    .quotes-scroller::-webkit-scrollbar {
+      height: 6px;
+    }
+
+    .quotes-scroller::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .quotes-scroller::-webkit-scrollbar-thumb {
+      background: rgba(72, 202, 228, 0.6);
+      border-radius: 3px;
     }
 
     .quotes-track {
       display: grid;
       grid-auto-flow: column;
       grid-auto-columns: minmax(320px, 34%);
+      align-items: start;
       gap: 1rem;
     }
 
