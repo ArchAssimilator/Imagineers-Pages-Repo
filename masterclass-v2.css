@@ -42,8 +42,76 @@ body:has(.sticky-cta) footer {
   min-height: calc(100svh - 12rem);
 }
 
+/* Lead copy left, Daily Maverick endorsement right. Collapses to one column
+   below 1080px, where the card sits under the CTAs. */
+.pitch-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(19rem, 22rem);
+  align-items: center;
+  gap: 3rem;
+}
+
 .pitch-lead {
   max-width: 62rem;
+}
+
+/* Endorsement card: white glass, because the Daily Maverick mark is black --- */
+
+.endorse-card {
+  background: rgba(255, 255, 255, 0.93);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius);
+  padding: 1.9rem 1.75rem 1.65rem;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.35);
+  color: var(--navy-950);
+}
+
+.endorse-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgba(7, 16, 29, 0.5);
+  margin-bottom: 0.95rem;
+}
+
+.endorse-logo {
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+
+/* .hero p in the base theme is white and wins on specificity, so every text
+   rule in this card is scoped to beat it. */
+.hero-pitch .endorse-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(1.35rem, 1.9vw, 1.7rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0.9rem 0 0;
+  color: var(--navy-950);
+}
+
+.hero-pitch .endorse-body {
+  margin: 0.85rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgba(7, 16, 29, 0.78);
+}
+
+.hero-pitch .endorse-foot {
+  margin: 1.15rem 0 0;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(7, 16, 29, 0.12);
+  font-size: 0.76rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: rgba(7, 16, 29, 0.55);
+  overflow-wrap: anywhere;
 }
 
 .hero-pitch h1 {
@@ -127,22 +195,6 @@ body:has(.sticky-cta) footer {
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.45);
-}
-
-.partner-strip {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.partner-strip img {
-  max-height: 26px;
-  width: auto;
-  opacity: 0.85;
 }
 
 /* --------------------------------------------------------------------------
@@ -906,8 +958,13 @@ body:has(.sticky-cta) footer {
 @media (max-width: 1080px) {
   .claim-grid,
   .genx-grid,
-  .operator-grid {
+  .operator-grid,
+  .pitch-top {
     grid-template-columns: 1fr;
+  }
+
+  .endorse-card {
+    max-width: 34rem;
   }
 
   .proof-strip {
