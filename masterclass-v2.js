@@ -1,76 +1,16 @@
 /* ==========================================================================
    masterclass-v2.js
-   Behaviour for the rebuilt Masterclass page: count-up proof numbers,
-   whiteboard lightbox, and the sticky CTA bar.
-   Runs alongside masterclass-theme.js (nav + scroll reveal live there).
+   Behaviour unique to the Masterclass page: whiteboard lightbox and the
+   sticky CTA bar.
+   Runs alongside masterclass-theme.js (nav + scroll reveal) and
+   proof-stats.js (the shared proof-strip numbers).
    ========================================================================== */
 
 (function () {
   'use strict';
 
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
   /* ------------------------------------------------------------------ */
-  /* 1. Count-up proof numbers                                          */
-  /* ------------------------------------------------------------------ */
-
-  function group(n) {
-    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-  }
-
-  function render(el, value) {
-    el.textContent = (el.dataset.prefix || '') + group(value) + (el.dataset.suffix || '');
-  }
-
-  function countUp(el) {
-    var target = parseInt(el.dataset.countTo, 10);
-    if (isNaN(target)) return;
-
-    if (reduceMotion) {
-      render(el, target);
-      return;
-    }
-
-    var duration = 1500;
-    var start = null;
-
-    function step(timestamp) {
-      if (start === null) start = timestamp;
-      var progress = Math.min((timestamp - start) / duration, 1);
-      // easeOutCubic, so the number decelerates into its final value
-      var eased = 1 - Math.pow(1 - progress, 3);
-      render(el, Math.round(target * eased));
-      if (progress < 1) window.requestAnimationFrame(step);
-    }
-
-    window.requestAnimationFrame(step);
-  }
-
-  var counters = document.querySelectorAll('[data-count-to]');
-
-  if (counters.length) {
-    // Seed with 0 so nothing flashes the final value before animating.
-    counters.forEach(function (el) {
-      render(el, reduceMotion ? parseInt(el.dataset.countTo, 10) : 0);
-    });
-
-    if (!reduceMotion && 'IntersectionObserver' in window) {
-      var countObserver = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
-          countUp(entry.target);
-          countObserver.unobserve(entry.target);
-        });
-      }, { threshold: 0.5 });
-
-      counters.forEach(function (el) { countObserver.observe(el); });
-    } else if (!reduceMotion) {
-      counters.forEach(countUp);
-    }
-  }
-
-  /* ------------------------------------------------------------------ */
-  /* 2. Whiteboard lightbox                                             */
+  /* 1. Whiteboard lightbox                                             */
   /* ------------------------------------------------------------------ */
 
   var lightbox = document.getElementById('boardLightbox');
@@ -121,7 +61,7 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* 3. Sticky CTA, revealed once the hero has scrolled away             */
+  /* 2. Sticky CTA, revealed once the hero has scrolled away             */
   /* ------------------------------------------------------------------ */
 
   var stickyCta = document.getElementById('stickyCta');

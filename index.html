@@ -82,9 +82,9 @@
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
       <nav class="menu" id="mainMenu">
-        <a href="index.html">Masterclass</a>
-        <a href="caio.html">CAiO Service</a>
-        <a href="fde.html">Forward-Deployed</a>
+        <a href="index.html">AI Masterclass</a>
+        <a href="caio.html"><span class="nav-case">CAiO</span> as a Service</a>
+        <a href="fde.html">Forward-Deployed Engineering</a>
         <a class="nav-cta" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Dates &amp; Booking</a>
       </nav>
     </div>
@@ -120,27 +120,29 @@
           </p>
         </div>
 
+        <!-- Numbers come from STATS in proof-stats.js. The text here is the
+             no-JS and crawler fallback; keep it in step. -->
         <div class="proof-strip" data-reveal>
           <div class="proof-item">
-            <span class="proof-num" data-count-to="60">60</span>
+            <span class="proof-num" data-stat="courses">60</span>
             <span class="proof-label">Two-day courses delivered</span>
           </div>
           <div class="proof-item">
-            <span class="proof-num" data-count-to="700" data-suffix="+">700+</span>
+            <span class="proof-num" data-stat="executives">700+</span>
             <span class="proof-label">Senior executives trained</span>
           </div>
           <div class="proof-item">
-            <span class="proof-num" data-count-to="1400">1,400</span>
+            <span class="proof-num" data-stat="execDays">1,400</span>
             <span class="proof-label">Executive days of instruction</span>
           </div>
           <div class="proof-item">
-            <span class="proof-num" data-count-to="6500">6,500</span>
+            <span class="proof-num" data-stat="hours">6,500</span>
             <span class="proof-label">Hours of hands-on GenAI, per facilitator</span>
           </div>
         </div>
 
         <div class="proof-foot" data-reveal>
-          <span class="proof-updated">Figures verified July 2026</span>
+          <span class="proof-updated">Figures verified <span data-stat="verified">July 2026</span></span>
           <span class="partner-strip">
             Public cohorts delivered with
             <img src="DMlogo.png" alt="Daily Maverick" />
@@ -1216,6 +1218,7 @@
   </footer>
 
   <script src="masterclass-theme.js"></script>
+  <script src="proof-stats.js"></script>
   <script src="masterclass-v2.js"></script>
 </body>
 </html>

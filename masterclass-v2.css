@@ -179,6 +179,21 @@ body:has(.sticky-cta) footer {
   color: var(--white);
 }
 
+/* An aside inside a dark claim band: set apart without competing with the
+   numbered argument above it. */
+.claim-band .claim-footnote {
+  margin-top: 1.5rem;
+  padding: 0.9rem 0 0.9rem 1.1rem;
+  border-left: 3px solid var(--amber);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.claim-band .claim-footnote strong {
+  color: var(--amber);
+}
+
 .contrast-list {
   list-style: none;
   display: grid;

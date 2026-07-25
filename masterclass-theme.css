@@ -102,18 +102,22 @@
       background: rgba(72, 202, 228, 0.1);
     }
 
+    /* Dark from the first paint. A transparent header sitting over a hero
+       gradient never had reliable contrast, and it changed under the user. */
     .site-header {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       z-index: 50;
-      transition: background 0.22s ease, box-shadow 0.22s ease;
-    }
-
-    .site-header.scrolled {
       background: rgba(7, 16, 29, 0.92);
       backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      transition: box-shadow 0.22s ease;
+    }
+
+    /* Scrolling only adds depth now, it does not change the contrast. */
+    .site-header.scrolled {
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
 
@@ -870,6 +874,12 @@
       color: rgba(255, 255, 255, 0.78);
       margin-bottom: 1.2rem;
       font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    /* The menu is uppercased, which destroys the lowercase i in CAiO. Exempt
+       wordmarks so they keep their own casing inside an uppercase run. */
+    .menu .nav-case {
+      text-transform: none;
     }
 
     /* Nav CTA: the booking link should never be just another tab. */
