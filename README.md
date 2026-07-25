@@ -1,102 +1,66 @@
-# Imagineers.AI Website
+# Imagineers.ai Website
 
-A modern, responsive website for Imagineers.AI built with clean HTML, CSS, and JavaScript.
-
-## Features
-
-- **Modern Dark Theme**: Sleek dark design with lime green accents
-- **Smooth Scroll Animations**: Fade-in and slide-in effects as you scroll
-- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
-- **Fast & Lightweight**: No frameworks, pure HTML/CSS/JS
-- **SEO Friendly**: Semantic HTML and proper meta tags
+Static site for Imagineers.ai. No frameworks, no build step. Published to
+`www.imagineers.ai` via GitHub Pages (see `CNAME`).
 
 ## Pages
 
-- **About** (`index.html`) - Company overview and mission
-- **CPI Training** (`cpi.html`) - Training program details
-- **GenAI.StudioLAB* (`genaisl.html`) - AI innovation services
-- **CAIO as a Service** (`caio.html`) - Fractional Chief AI Officer services
-- **Contact** (`contact.html`) - Get in touch via email
+The GenAI Executive Masterclass is the front door and sits at the site root.
 
-## Design
+| URL | File | Purpose |
+| --- | --- | --- |
+| `/` | `index.html` | GenAI Executive Masterclass: the full argument, agendas, whiteboards, testimonials, pricing and booking |
+| `/caio.html` | `caio.html` | CAiO as a Service: executive-level AI direction |
+| `/fde.html` | `fde.html` | Forward-Deployed Engineering: we come in and build it |
 
-Inspired by modern SaaS landing pages with:
-- Clean, minimalist layout
-- High contrast for readability
-- Generous whitespace
-- Professional typography (Inter font family)
-- Smooth transitions and animations
+Navigation order is deliberate: **train → direct → build**.
 
-## Setup Instructions
+### Redirect stubs
 
-### For Local Development
+`cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` are
+`noindex` meta-refresh stubs kept only so previously published URLs and old
+email signatures do not 404. They carry no content. Do not add any.
 
-1. Clone this repository
-2. Open `index.html` in your browser
-3. No build process required!
-
-### For GitHub Pages
-
-1. Go to your repository Settings
-2. Navigate to Pages section
-3. Under "Source", select the branch you want to deploy
-4. Save and wait a few minutes
-5. Your site will be live at `https://username.github.io/repository-name`
-
-## Customization Guide
-
-### Update Content
-
-All content marked with `[Placeholder: ...]` should be replaced with your actual content. Search for "Placeholder" in all HTML files and replace with your text.
-
-### Update Contact Email
-
-In `contact.html`, replace `contact@imagineers.ai` with your actual email address.
-
-### Change Colors
-
-Edit `styles.css` and update the CSS variables in the `:root` selector:
-
-```css
-:root {
-  --color-bg-primary: #060703;      /* Main background */
-  --color-accent: #9cf35b;          /* Accent color */
-  --color-text-primary: #ffffff;    /* Primary text */
-  /* ... more colors ... */
-}
-```
-
-### Modify Layout
-
-The site uses a grid-based layout with CSS Grid and Flexbox. Modify the grid in `styles.css`:
-
-```css
-.feature-grid {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-```
-
-## File Structure
+## Assets
 
 ```
 .
-├── index.html          # About page
-├── cpi.html           # CPI Training page
-├── genaisl.html       # GenAI StudioLab page
-├── caio.html          # CAIO as a Service page
-├── contact.html       # Contact page
-├── styles.css         # Main stylesheet
-├── script.js          # JavaScript for animations
-└── README.md          # This file
+├── index.html               # Masterclass (home)
+├── caio.html                # CAiO as a Service
+├── fde.html                 # Forward-Deployed Engineering
+├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
+├── masterclass-v2.css       # Additive layer: hero-pitch, claim-band, acts, boards, usecase grid
+├── masterclass-theme.js     # Nav toggle, scroll state, reveal-on-scroll, all pages
+├── masterclass-v2.js        # Whiteboard lightbox, counters, sticky CTA. Home page only
+├── Whiteboards/             # Course whiteboards used on the home page
+├── og-masterclass.jpg       # 1200x630 social card for the home page
+├── og-imagineers.jpg        # 1200x630 social card for caio and fde
+├── sitemap.xml, robots.txt  # Referenced from robots.txt at the domain root
+└── sh/start.sh              # Local static server, opens the site in a browser
 ```
 
-## Browser Support
+`masterclass-v2.css` loads *after* `masterclass-theme.css` and only introduces
+new class names, so the base theme is never overridden by accident.
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+## Local development
+
+```bash
+sh/start.sh          # serves on :80, falls back to :8080, opens a browser
+```
+
+Or `python3 -m http.server 8080` and open <http://localhost:8080>.
+
+## Conventions
+
+- **No em-dashes anywhere in copy.** Use a comma, colon, semicolon, period or
+  parentheses. En-dashes are fine for numeric ranges.
+- Absolute `https://www.imagineers.ai/...` URLs in `canonical`, `og:*` and
+  `sitemap.xml`. Relative everywhere else.
+- Every page carries the same `<footer>` block. If you change it, change it in
+  all three.
+- Course transcripts and other source material stay out of the repo. Anything
+  committed here is publicly fetchable (see `.gitignore`).
 
 ## License
 
-© 2025 Imagineers.AI. All rights reserved.
+© 2026 Imagineers.ai. All rights reserved.

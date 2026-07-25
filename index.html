@@ -3,16 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | Imagineers.AI</title>
-  <meta name="description" content="Actionable AI, simplified. We conceive, build, and deploy GenAI solutions for immediate business impact." />
-  <meta property="og:title" content="About | Imagineers.AI" />
-  <meta property="og:description" content="Actionable AI, simplified." />
+  <title>GenAI Executive Masterclass | Imagineers.ai</title>
+  <meta name="description" content="Two days that move you from school-grade AI output to business-grade AI output. 60 courses, 700+ senior executives trained in South Africa. Led by operators, not trainers." />
+  <link rel="canonical" href="https://www.imagineers.ai/" />
+  <meta property="og:site_name" content="Imagineers.ai" />
+  <meta property="og:title" content="GenAI Executive Masterclass | Imagineers.ai" />
+  <meta property="og:description" content="80% of AI users think AI does not work. They are being treated like school kids. Two days to fix that, from the team that has trained 700+ executives across 60 courses." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.imagineers.ai/" />
+  <meta property="og:image" content="https://www.imagineers.ai/og-masterclass.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="GenAI Executive Masterclass | Imagineers.ai" />
+  <meta name="twitter:description" content="80% of AI users think AI does not work. They are being treated like school kids. Two days to fix that." />
+  <meta name="twitter:image" content="https://www.imagineers.ai/og-masterclass.jpg" />
   <link rel="icon" href="imagineers logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="masterclass-theme.css" />
+  <link rel="stylesheet" href="masterclass-v2.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.imagineers.ai/#organisation",
+        "name": "Imagineers.ai",
+        "url": "https://www.imagineers.ai/",
+        "logo": "https://www.imagineers.ai/imagineers%20logo.webp",
+        "email": "info@imagineers.ai",
+        "description": "Business builders who make AI work in business. GenAI executive training, CAiO as a Service and forward-deployed engineering.",
+        "areaServed": "ZA",
+        "founder": [
+          { "@type": "Person", "name": "Rutger-Jan van Spaandonk" },
+          { "@type": "Person", "name": "Chris Barker" }
+        ]
+      },
+      {
+        "@type": "Course",
+        "name": "GenAI Executive Masterclass",
+        "description": "Two days that move senior executives from school-grade AI output to business-grade AI output. Structured prompting, expert-method prompting, context management, and twelve applied use cases including building a full financial model in Excel from a plain-English brief.",
+        "url": "https://www.imagineers.ai/",
+        "image": "https://www.imagineers.ai/og-masterclass.jpg",
+        "inLanguage": "en",
+        "provider": { "@id": "https://www.imagineers.ai/#organisation" },
+        "offers": {
+          "@type": "Offer",
+          "category": "Open enrolment",
+          "price": "22500",
+          "priceCurrency": "ZAR",
+          "url": "https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/",
+          "availability": "https://schema.org/LimitedAvailability"
+        },
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "onsite",
+          "courseWorkload": "P2D",
+          "location": {
+            "@type": "Place",
+            "name": "Johannesburg, Cape Town and Durban",
+            "address": { "@type": "PostalAddress", "addressCountry": "ZA" }
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="site-header" id="topNav">
@@ -23,121 +82,1140 @@
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
       <nav class="menu" id="mainMenu">
-        <a href="index.html">About</a>
-        <a href="cpi.html">Masterclass</a>
-        <a href="genaisl.html">GenAi.StudioLAB</a>
+        <a href="index.html">Masterclass</a>
         <a href="caio.html">CAiO Service</a>
-        <a href="contact.html">Contact</a>
+        <a href="fde.html">Forward-Deployed</a>
+        <a class="nav-cta" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Dates &amp; Booking</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div data-reveal>
-          <span class="label">Imagineers.ai</span>
-          <h1 class="display">Actionable AI.<br />Simplified.</h1>
-          <p>
-            We conceive, build, and deploy GenAI solutions that create measurable impact across strategy,
-            operations, and delivery teams.
+
+    <!-- =====================================================================
+         ATTENTION: the confrontation, then the proof
+         ===================================================================== -->
+    <section class="hero hero-pitch" id="home">
+      <div class="container">
+        <div class="pitch-lead" data-reveal>
+          <span class="label">GenAI Executive Masterclass &middot; Two Days &middot; Twelve Seats</span>
+          <h1 class="display">
+            AI is not underwhelming.<br />
+            You are being treated<br />
+            <span class="h1-turn">like a school kid.</span>
+          </h1>
+          <p class="pitch-sub">
+            80% of AI users conclude the technology does not really work. The other 20% fear it will take their job.
+            Both are reacting to the same thing: rationed, school-grade output from systems that are perfectly
+            capable of business-grade work.
+            <strong>In two days we show you the difference, and how to get it on demand.</strong>
           </p>
           <div class="hero-cta">
-            <a class="btn btn-primary" href="cpi.html">Explore The Masterclass</a>
-            <a class="btn btn-ghost" href="contact.html">Talk To Our Team</a>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">View Open Enrolment Dates</a>
+            <span class="cta-or" aria-hidden="true">OR</span>
+            <a class="btn btn-ghost" href="mailto:masterclass@imagineers.ai?subject=Private%20Team%20Course%20Enquiry">Enquire About a Private Team Course</a>
           </div>
-        </div>
-        <aside class="hero-panel" data-reveal>
-          <h3>What We Do</h3>
-          <p><strong>Conceive:</strong> Identify where AI can create immediate advantage.</p>
-          <p><strong>Build:</strong> Design practical, high-utility AI workflows and tools.</p>
-          <p><strong>Deploy:</strong> Embed AI into people, process, and operating rhythm.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section-muted">
-      <div class="container split">
-        <div data-reveal>
-          <span class="label">Our Approach</span>
-          <h2 class="display section-title">Built for Leaders Who Need Real Results</h2>
-          <p class="lede">
-            The pace of AI change can feel overwhelming. We turn complexity into action by focusing on
-            practical workflows, rapid pilot execution, and responsible scaling.
+          <p class="pitch-note">
+            Johannesburg, Cape Town and Durban. Private cohorts delivered internationally on request.
           </p>
         </div>
-        <div class="stat-stack" data-reveal>
-          <div class="stat">
-            <strong>Strategy</strong>
-            <p>Define high-value AI priorities linked to business goals.</p>
+
+        <div class="proof-strip" data-reveal>
+          <div class="proof-item">
+            <span class="proof-num" data-count-to="60">60</span>
+            <span class="proof-label">Two-day courses delivered</span>
           </div>
-          <div class="stat">
-            <strong>Execution</strong>
-            <p>Build and test real workflows, not slideware.</p>
+          <div class="proof-item">
+            <span class="proof-num" data-count-to="700" data-suffix="+">700+</span>
+            <span class="proof-label">Senior executives trained</span>
           </div>
-          <div class="stat">
-            <strong>Adoption</strong>
-            <p>Enable teams to use AI confidently and consistently.</p>
+          <div class="proof-item">
+            <span class="proof-num" data-count-to="1400">1,400</span>
+            <span class="proof-label">Executive days of instruction</span>
           </div>
+          <div class="proof-item">
+            <span class="proof-num" data-count-to="6500">6,500</span>
+            <span class="proof-label">Hours of hands-on GenAI, per facilitator</span>
+          </div>
+        </div>
+
+        <div class="proof-foot" data-reveal>
+          <span class="proof-updated">Figures verified July 2026</span>
+          <span class="partner-strip">
+            Public cohorts delivered with
+            <img src="DMlogo.png" alt="Daily Maverick" />
+          </span>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="container" data-reveal>
-        <span class="label">Services</span>
-        <h2 class="display section-title">How We Partner</h2>
-        <div class="module-grid">
-          <article class="module">
-            <h4>GenAI Masterclass</h4>
-            <p>Two-day, hands-on capability development for professionals and leadership teams.</p>
-          </article>
-          <article class="module">
-            <h4>GenAi.StudioLAB</h4>
-            <p>In-sourced innovation accelerator for use-case discovery, prototyping, and deployment.</p>
-          </article>
-          <article class="module">
-            <h4>CAiO as a Service</h4>
-            <p>Executive-grade AI leadership without a full-time C-level hire.</p>
-          </article>
-          <article class="module">
-            <h4>Implementation Advisory</h4>
-            <p>Governance, architecture, and operating model support for sustainable AI adoption.</p>
-          </article>
+    <!-- =====================================================================
+         The moat: volume, and the operators-not-trainers positioning
+         ===================================================================== -->
+    <section class="claim-band" id="why-us">
+      <div class="container claim-grid">
+        <div data-reveal>
+          <span class="label">Why Us</span>
+          <h2 class="display">We are not trainers.<br />We are business builders who make AI work in business.</h2>
+          <p>
+            <strong>We do not sell anything else.</strong> No solutions, no platforms, no technology, no implementation
+            engagement waiting on the other side of the two days. We have no vendor to steer you towards and no licence
+            to place, which is why we can be blunt about which tools are worth paying for and which are not.
+          </p>
+          <p>
+            No other training organisation in South Africa has put 700 senior executives through two full days each.
+            That is <strong>1,400 executive days</strong> of instruction across <strong>60 courses</strong>, in front of
+            business owners, C-suites and large-corporate leadership teams.
+          </p>
+          <p>
+            That volume matters for one reason only: we have watched 700 intelligent people fail at AI in the same
+            handful of ways, and we have rebuilt the material 60 times around what actually fixes it.
+          </p>
+          <p>
+            Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and Deloitte, MD of Apple South
+            Africa and general manager of Unilever's Lipton Teas, co-founders of Neotel, Seacom SA, Africa Weather, the
+            RightMed pharmacy group and a military-grade cyber intelligence firm, turnarounds at Aquarius Platinum and
+            TopTV, and the leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes.
+            <strong>We teach AI the way we had to learn it: to produce work we could put our names on.</strong>
+          </p>
+        </div>
+        <div data-reveal>
+          <ul class="contrast-list">
+            <li class="no"><span class="mark">&#10007;</span><span>A curriculum written by people who <em>studied</em> AI</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>A method built by operators who <em>needed</em> AI to produce defensible business work</span></li>
+            <li class="no"><span class="mark">&#10007;</span><span>Theory, ethics panels and slides about the future of work</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Two days of doing, on your laptop, on your problems, with output you keep</span></li>
+            <li class="no"><span class="mark">&#10007;</span><span>A lecture hall</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Twelve people, two facilitators, interruptions encouraged</span></li>
+            <li class="no"><span class="mark">&#10007;</span><span>A vendor with a platform, a licence or an implementation phase to sell you afterwards</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Facilitators with nothing else to sell, which is why the tool advice is blunt</span></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="section-muted">
+    <!-- =====================================================================
+         INTEREST: the argument, four acts. Boards live inside the panels.
+         ===================================================================== -->
+    <section class="section-muted" id="argument">
       <div class="container" data-reveal>
-        <span class="label">Leadership</span>
-        <h2 class="display section-title">Experienced Builders and Operators</h2>
-        <div class="facilitator-grid">
-          <article class="person">
-            <img src="RJ.avif" alt="Rutger-Jan van Spaandonk" />
-            <div>
-              <h3>Rutger-Jan van Spaandonk</h3>
-              <p class="role">Co-founder, Commercial Lead</p>
-              <p>Technology and business leader with decades of experience launching and scaling major platforms across Africa.</p>
+        <span class="label">The Argument</span>
+        <h2 class="display section-title">Four things you do not know about AI</h2>
+        <p class="lede">
+          Day one is built on four claims. Most executives have not heard any of them, and each one changes what you
+          get back from every prompt you write for the rest of your career. Open any of them to see how we teach it.
+        </p>
+
+        <div class="acts">
+
+          <!-- Overview board -->
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">&#9737;</span>
+              <span class="act-titles">
+                <span class="act-title">The whole of day one, on one board</span>
+                <span class="act-hook">If you only look at one thing on this page, look at this.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                The four claims below are a single causal chain. The labs ration your output, so structure is how you
+                prove you are worth more. Structure gets you adult answers, but business-grade answers need expert
+                method. And even then context rot is waiting for you more aggressively than you would like and sooner
+                than you expect.
+              </p>
+              <div class="boards">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="Four things you do not know about AI: the day one arc, from school-kid output through structured prompting and expert method, up to AI maturity, with context rot waiting at the top.">
+                    <img src="Whiteboards/00c%20Four-things-you-don-t-know-about-AI_slide.webp" alt="Whiteboard: Four things you do not know about AI, drawn as four ascending steps from being treated like a school kid, to adult results through simple prompt structure, to business-grade results through expert methods, to still walking into context rot." loading="lazy" decoding="async" width="1672" height="941" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>Day one in one picture.</b> Four steps, each one a prerequisite for the next.</figcaption>
+                </figure>
+              </div>
             </div>
-          </article>
-          <article class="person">
-            <img src="CB.avif" alt="Chris Barker" />
-            <div>
-              <h3>Chris Barker</h3>
-              <p class="role">Co-founder, Tech Lead</p>
-              <p>Former consulting leader and operator focused on execution, systems thinking, and practical AI transformation.</p>
+          </details>
+
+          <!-- Act 1 -->
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">1</span>
+              <span class="act-titles">
+                <span class="act-title">You are being treated like a school kid</span>
+                <span class="act-hook">Your answers are being rationed, and it is an economics problem, not a technology problem.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                Every major lab is underwater on inference. At most recent monthly, a dollar of revenue against two
+                dollars of cost.
+                Roughly 95% of users pay nothing at all, and of the 5% who do pay, about half the queries are trivial.
+              </p>
+              <p>
+                There is only one available response to that, and it is triage. Fewer tokens overall, and those tokens
+                split thinly across reading your input, thinking, and writing the output. The model is not being lazy
+                with you. <strong>It is behaving like a rationing system, not a tutor.</strong>
+              </p>
+              <p>
+                This reframe is the single most useful thing we hand people on day one. Once you accept that you are on
+                the wrong side of a rationing decision, the fix stops being "find a better AI" and becomes "demonstrate
+                that you are not a trivial query." Everything that follows is a way of doing exactly that.
+              </p>
+              <p class="act-takeaway">
+                The model behaves like a rationing system, not a tutor. The rest of day one is about getting yourself
+                out of the cheap queue.
+              </p>
+              <div class="boards">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="You are being treated like a school kid: the unit economics of inference, the user mix, the forced triage response, and what triage means for the tokens you actually receive.">
+                    <img src="Whiteboards/01a%20schoolkid.webp" alt="Whiteboard: You are being treated like a school kid. Four panels covering the economics of one dollar revenue against two dollars cost, the user mix where only one in twenty pays, the forced response of triaging for token austerity, and what triage means as fewer tokens split across input, thinking and output." loading="lazy" decoding="async" width="1672" height="941" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>The rationing argument in four panels.</b> Economics, user mix, forced triage, and what you actually receive.</figcaption>
+                </figure>
+              </div>
             </div>
-          </article>
+          </details>
+
+          <!-- Act 2 -->
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">2</span>
+              <span class="act-titles">
+                <span class="act-title">You can get adult results with simple prompt structure</span>
+                <span class="act-hook">RCTIO. Five parts, about ten seconds, a visibly different class of answer.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                The fastest available upgrade is to show the model that a serious adult is on the other end and that
+                slop will be sent back. We do that with <strong>RCTIO</strong>: Role, Context, Task, Instructions,
+                Output. It is not new and it is not clever, and after 60 courses it is still the most dependable
+                framework we have found.
+              </p>
+              <p>
+                Two things then happen. The model routes and spends more on you, often two to four times more, because it can see
+                the answer is going to be checked and bounced. More importantly, the structure forces <em>you</em> to
+                say what you actually want, which is usually the real problem. A properly specified role and context is
+                also the largest single lever we have found on hallucination, because most confident wrong answers are
+                the model quietly filling a gap you left open.
+              </p>
+              <p>
+                You do not have to write RCTIO by hand either. The exercise everyone remembers from the first morning
+                is handing the model your scruffy one-line intent and asking it to rebuild that into a full RCTIO
+                prompt, then running the rebuilt version in a clean chat. The gap between the two answers is usually
+                the moment the room goes quiet.
+              </p>
+              <p>
+                The carwash example settles the argument in about ten seconds. "Wash my car. The carwash is 100m away.
+                Walk or drive?" returns "walk, it is closer", which is confident and useless, because the model guessed
+                the wrong goal. Give it the same question with structure and it tells you to drive, because the car has
+                to be at the wash. <strong>The prompt was the weak link, not the model.</strong>
+              </p>
+              <p class="act-takeaway">
+                Structure supplies the context the model cannot guess. It is the cheapest quality upgrade available to
+                you, and it works on every model you will ever use.
+              </p>
+              <div class="boards">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="Structure supplies the context the model cannot guess: the same everyday carwash question asked two ways, one confidently wrong without structure and one right with RCTIO.">
+                    <img src="Whiteboards/02b%20the%20resuts%20are%20stark.webp" alt="Whiteboard: Structure supplies the context the model cannot guess. The same carwash question asked two ways. Without structure the answer is walk, it is closer, which guessed the wrong goal. With RCTIO structure the answer is drive, the car must be at the wash. The prompt is the weak link, not the model." loading="lazy" decoding="async" width="1536" height="1024" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>The carwash test.</b> One everyday question, two prompts, one confidently wrong answer (patched <b>not</b> fixed, July 2026).</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+
+          <!-- Act 3 -->
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">3</span>
+              <span class="act-titles">
+                <span class="act-title">But business-grade results require expert methods</span>
+                <span class="act-hook">Amateurs jump to an answer. Experts run a method, then triangulate.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                Adult results are still not business-grade, and the gap is method. Ask a single prompt to produce a
+                board-ready answer and the token economics from claim one guarantee you get something diluted and
+                insipid. Plausible, fluent, and not worth taking to a decision.
+              </p>
+              <p>
+                So we break it up. First, ask what methodologies a genuine expert would consider for this problem, each
+                with credible provenance. Second, rank them for your specific issue, with a reason you could defend.
+                Third, execute the chosen one as a named process, step by step.
+              </p>
+              <p>
+                Each of those steps is small enough to be done properly at the token budget you are actually given.
+                <strong>The compound output is work you can take into a board meeting.</strong> This is the single
+                biggest step change delegates report, and it is why day one is not a prompting course.
+              </p>
+              <p class="act-takeaway">
+                Run a method, do not jump to an answer. Several deliberate steps beat one clever prompt, every time.
+              </p>
+              <div class="boards">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="Business-grade results come from expert methodologies: list the candidate methods with provenance, rank them defensibly for your issue, then execute the chosen one as a named process.">
+                    <img src="Whiteboards/03a%20but%20biz%20grade%20require%20ppelines.webp" alt="Whiteboard: Business-grade results come from expert methodologies. Run a method, do not jump to an answer. Three ascending steps: list the methods each with credible provenance, rank for your issue with a reasoned and defensible choice, then execute the chosen method as a named process. Amateurs jump to an answer; experts run a method, then triangulate." loading="lazy" decoding="async" width="1536" height="1024" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>List, rank, execute.</b> The move from adult output to business-grade output.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+
+          <!-- Act 4 -->
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">4</span>
+              <span class="act-titles">
+                <span class="act-title">And you will still walk into context rot</span>
+                <span class="act-hook">We measure how fast it happens. The numbers are worse than anyone expects.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                Real business information is not a list of facts, it is a mesh of connected ones: sources, entities,
+                constraints, causes, timelines, evidence. As context grows, the connections weaken, fragment and drift.
+                The facts are all still in there. <strong>The relationships between them are not.</strong>
+              </p>
+              <p>
+                MRCR-8 is the closest available approximation of that mesh, and the results are sobering. At only 16k
+                tokens, roughly 8% of a 200k window and about 20 pages of input, the leading models are already
+                shedding accuracy quickly. Non-thinking modes fall off a cliff. Bigger context windows do not fix this,
+                and they are actively deceptive about it, because more irrelevant context makes it worse rather than
+                better.
+              </p>
+              <p>
+                So the last stretch of day one is diagnostic. Seven distinct ways context breaks, the business symptom
+                each one produces, and the specific action that prevents it. Once you can name the failure mode, you
+                stop blaming the model and reaching for a different one.
+              </p>
+              <p>
+                Then we hand you the countermeasure, and it is not a clever prompt. It is a filing habit. Convert your
+                source documents to Markdown, because a Word file can be a thousand times the size of the same text and
+                you are paying for that overhead out of the context you needed. Work in one numbered file per stage, so
+                input is saved, output is saved, and the output becomes the next input. And when a long chat starts to
+                drift, ask for a <strong>handoff</strong>: a self-contained summary of every decision taken and every
+                option rejected, which you paste into a clean chat and carry on.
+              </p>
+              <p>
+                It sounds administrative. It is the difference between AI work you can hand to a colleague, a client or
+                an auditor, and AI work that nobody, including you, can reconstruct a week later.
+              </p>
+              <p class="act-takeaway">
+                Structure your prompts, run expert methods, and reset often. Context rot is the failure mode that
+                quietly ruins otherwise good AI work.
+              </p>
+              <div class="boards boards-3">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="As context grows the fact mesh breaks: a coherent mesh of connected facts moves through link strain to a fragmented and drifted state with disconnected clusters, lost relationships and facts left behind.">
+                    <img src="Whiteboards/06b3%20Context%20rot%20-%20what%202.webp" alt="Whiteboard: As context grows, the fact mesh breaks. Three stages showing a small coherent mesh of connected facts, a growing context under link strain with longer hops and early breaks, and a large context that is fragmented and drifted with disconnected clusters, isolated facts and lost relationships." loading="lazy" decoding="async" width="1672" height="941" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>What actually breaks.</b> Not the facts, the connections between them.</figcaption>
+                </figure>
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="MRCR-8 approximates the complex mesh of business-grade information: accuracy against context length for the current frontier models, with the practical insights for professional use.">
+                    <img src="Whiteboards/06d.4%20Context%20rot%20-%20how%20bad%20graphs.webp" alt="Whiteboard: MRCR-8 approximates the complex mesh of business-grade information. A chart of accuracy against context length for current frontier thinking and non-thinking models, showing sharp decline well before context windows are full, with insights noting that thinking modes are vastly superior, that irrelevant context also causes rot, and that bigger context does not improve reasoning." loading="lazy" decoding="async" width="2804" height="1536" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>How fast it happens.</b> Measured across the current frontier models.</figcaption>
+                </figure>
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="Seven ways context breaks and how to prevent it: each failure mode paired with what breaks, the business symptom it produces, and the specific user action that prevents it.">
+                    <img src="Whiteboards/06e%20Context%20rot%20-%20mgnt%20v3.webp" alt="Whiteboard: 7 ways context breaks and how to prevent it. A table of seven failure modes including task-frame drift, source and version confusion, entity and metric confusion, aggregate and detail interference, format degradation, reasoning-chain breakdown and false coherence, each with what breaks, the business symptom, and the user action that prevents it." loading="lazy" decoding="async" width="1672" height="941" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>The diagnostic table.</b> Seven failure modes, seven symptoms, seven fixes.</figcaption>
+                </figure>
+              </div>
+              <p class="boards-note">
+                These boards are drawn from the live course material. Model names and figures reflect the frontier at
+                the time each board was drawn, and we refresh them as the benchmarks move.
+              </p>
+            </div>
+          </details>
+
         </div>
       </div>
     </section>
+
+    <!-- =====================================================================
+         Day two: the applied half
+         ===================================================================== -->
+    <section id="day-two">
+      <div class="container" data-reveal>
+        <span class="label">Day Two</span>
+        <h2 class="display section-title">That was day one.<br />Day two is thirteen use cases.</h2>
+        <p class="lede">
+          Day one changes how you brief AI. Day two shows you where to point it. Every item below is demonstrated live
+          and most are built by you, on your laptop, on your own material.
+        </p>
+        <div class="usecase-grid">
+          <article class="usecase usecase-hero">
+            <span class="tag">The one people talk about afterwards</span>
+            <h4>Excel: the most sophisticated model you can imagine, built from scratch in fifteen minutes</h4>
+            <p>
+              This is not AI writing formulas for you. We hand you the actual tool and you keep it. Describe a business
+              in plain English and it designs the full model logic, then builds the file: 36 months of integrated P&amp;L,
+              cash flow and balance sheet, driver-based, with assumptions, scenarios and sensitivities wired through.
+              Fifteen minutes for work that used to be a specialist's fortnight.
+            </p>
+            <p>
+              Then you run it backwards. Point it at a model somebody else built, the one nobody in the business
+              fully understands any more, and have it explain the structure in plain language, trace the value drivers,
+              and find the errors. Finance leaders tend to go quiet at this point.
+            </p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Professional Use</span>
+            <h4>Voice input</h4>
+            <p>Dictate at speaking speed into any model. The fastest habit change most delegates make.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Professional Use</span>
+            <h4>Tabulated learning</h4>
+            <p>Force complex material into tables you can actually interrogate and compare.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Analysis</span>
+            <h4>Data analysis</h4>
+            <p>Interrogate large datasets conversationally, then turn trends and outliers into recommendations.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Analysis</span>
+            <h4>Auditing somebody else's spreadsheet</h4>
+            <p>The second half of the Excel session. Structure, assumptions and value drivers explained in plain language, and the structural errors surfaced.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Research</span>
+            <h4>Deep research</h4>
+            <p>Source-backed research with defendable provenance, run on a project of your own. Day two opens with it.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Research</span>
+            <h4>Daily intelligence feed</h4>
+            <p>A standing brief on your sector, your competitors, or your policy environment.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Media</span>
+            <h4>Photos and video</h4>
+            <p>Concepts, mockups and drafts without the avoidable agency round trip.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Team Capability</span>
+            <h4>Custom GPTs and Gems</h4>
+            <p>Turn company knowledge into a reusable assistant. Built live in a labour law exercise.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Vibe Coding</span>
+            <h4>Samples and a live build</h4>
+            <p>We start from working examples, then build one in front of you. The education demo is the one people photograph.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Vibe Coding</span>
+            <h4>Build an app</h4>
+            <p>You build a working application from a plain-English brief, in AI Studio. No code required.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Agentic</span>
+            <h4>Agentic IDE exposure</h4>
+            <p>Where this is all heading. The interface, what it genuinely does, and an honest view of the limits.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Agentic</span>
+            <h4>Recurring workflow demos</h4>
+            <p>Lead generation, recruiting and VCF file handling. The work that repeats every week, done once and reused.</p>
+          </article>
+        </div>
+        <p class="act-takeaway" style="margin-top: 1.6rem;">
+          One warning, because it comes up on the first morning of nearly every course. Agents are not the answer to
+          your business problem. Almost everything that pays commercially today is a pipeline: a designed sequence of
+          prompts, each step small enough to be done properly. We show you the agentic tools honestly, including where
+          they fall over, and then we show you the thing that actually works.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         The objection: company data, security, and the IT department
+         ===================================================================== -->
+    <section class="claim-band" id="security">
+      <div class="container claim-grid">
+        <div data-reveal>
+          <span class="label">The Objection</span>
+          <h2 class="display">"Our IT department will not let us put company data into AI."</h2>
+          <p>
+            It comes up in every room, and it is one of the main reasons capable executives are still stuck on the
+            wrong side of the wall. So we deal with it properly rather than waving it through.
+          </p>
+          <p>
+            <strong>We give this guidance from the perspective of a military-grade cyber intelligence firm, which is
+            one of the businesses RJ co-founded, and from the vendor side of enterprise software, where he ran one of
+            the first ten companies in the world licensed to resell Microsoft Copilot.</strong> That combination is why
+            the guidance is specific rather than cautious.
+          </p>
+          <p>
+            The honest answer is usually an uncomfortable one, because your documents are already syncing to somebody
+            else's servers, in the background, and nobody agonised over that decision. So we do not run an ethics
+            panel. We give you a working position: what genuinely should never be uploaded, what to redact, which
+            settings to switch off on day one, which jurisdictions to keep off company work entirely and why, and a
+            policy your auditors can tick without stopping the business. Then we get back to the work.
+          </p>
+        </div>
+        <div data-reveal>
+          <ul class="contrast-list">
+            <li class="no"><span class="mark">&#10007;</span><span>A responsible-AI slide and a link to the policy template</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Two-factor authentication that survives a SIM swap, and why SMS codes do not</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>The "train on my data" setting to turn off in every tool you use</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>A redaction habit for client and personal data that people will actually follow</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Which jurisdictions legally compel retention of everything you type</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Where the real exposure sits, which is almost never the file you uploaded</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         DESIRE: the shift, and the Gen-X pitch
+         ===================================================================== -->
+    <section class="section-muted" id="shift">
+      <div class="container" data-reveal>
+        <span class="label">The Shift</span>
+        <h2 class="display section-title">What actually changes</h2>
+        <div class="course-table-wrap" data-reveal>
+          <table class="course-table">
+            <thead>
+              <tr>
+                <th>You arrive</th>
+                <th>You leave</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Asking AI one-off questions</td><td>Briefing AI with structured, business-grade instructions</td></tr>
+              <tr><td>Accepting the first generic answer</td><td>Reviewing, challenging and directing output with your own judgement</td></tr>
+              <tr><td>Treating AI as a novelty search box</td><td>Using it as a thinking, research, analysis and production partner</td></tr>
+              <tr><td>Blaming the model when quality drops</td><td>Naming the failure mode, then fixing the prompt, context or method</td></tr>
+              <tr><td>Letting long conversations go sour</td><td>Managing context deliberately so long work stays coherent</td></tr>
+              <tr><td>Prompts and outputs scattered across a dozen chats</td><td>A numbered working file per project, so any piece of AI work can be reconstructed</td></tr>
+              <tr><td>Uploading whatever file you happen to have</td><td>Documents converted so they actually work, and a data rule you can defend</td></tr>
+              <tr><td>Rebuilding the same task by hand each time</td><td>Turning it into a prompt chain your whole team can run</td></tr>
+              <tr><td>Private experimentation nobody can see</td><td>Company-owned methods that can be reviewed, governed and improved</td></tr>
+              <tr><td>Building a financial model over two weeks, or paying somebody else to</td><td>A full driver-based model from a plain-English brief in fifteen minutes, using a tool you now own</td></tr>
+              <tr><td>Thinking a $20 subscription is extravagant</td><td>Easily justifying $400 a month for when that time comes</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="audience">
+      <div class="container genx-grid" data-reveal>
+        <div>
+          <span class="label">Who It Is For</span>
+          <p class="genx-quote">
+            The best AI users are not the youngest people in your business.<br />
+            <em>They are the ones who already know how to manage a subordinate.</em>
+          </p>
+          <p class="lede">
+            Directing AI well is a management skill, not a technical one. You brief, you set standards, you review
+            critically, you send it back. Senior people are already excellent at this and consistently outperform
+            digital natives once they stop treating the model as a search engine.
+          </p>
+          <p class="lede" style="font-size: 1rem; margin-top: 1rem;">
+            There is a second advantage nobody mentions. Gen X and older millennials have already survived one complete
+            technology transition, from analogue to digital, in mid-career. You have done this before. That makes you
+            the most adaptable generation in the room, not the least.
+          </p>
+        </div>
+        <div>
+          <h3 style="font-family: 'Fraunces', Georgia, serif; font-size: 1.3rem; margin-bottom: 0.9rem;">In the room, typically</h3>
+          <div class="pill-list">
+            <span>Business owners</span>
+            <span>CEOs and MDs</span>
+            <span>C-suite teams</span>
+            <span>Founders</span>
+            <span>Management consultants</span>
+            <span>Senior managers</span>
+            <span>Strategy teams</span>
+            <span>Finance leaders</span>
+            <span>Operations leaders</span>
+            <span>HR and recruitment leaders</span>
+            <span>Marketing and sales leaders</span>
+            <span>Professional service providers</span>
+            <span>Non-executive directors</span>
+          </div>
+          <p class="lede" style="font-size: 1rem; margin-top: 1.4rem;">
+            No prior AI mastery required. Delegates range from complete beginners to experienced daily users who want a
+            stronger system. You do not need to be a developer or a data scientist. You do need to be willing to think
+            clearly, brief carefully and reject weak output.
+          </p>
+          <p class="lede" style="font-size: 0.95rem; margin-top: 1rem;">
+            <strong>Bring:</strong> a laptop (Mac or PC) and accounts on ChatGPT, Claude, Gemini and Copilot or Grok.
+            At least one paid subscription is required. We send setup guidance beforehand.
+          </p>
+        </div>
+      </div>
+
+      <div class="container" data-reveal>
+        <div class="boards" style="margin-top: 2.2rem;">
+          <figure class="board">
+            <button type="button" class="board-thumb" data-caption="Rethinking AI for business: the board we open the course with. The current state where 80% think AI does not work and 20% fear for their jobs, the transition from slop to business-grade results, why the best AI users are existing leaders who already manage subordinates, why Gen X is the most adaptable generation in the room, and the shift from &quot;I would never spend $20 on AI&quot; to &quot;$400 is a bargain&quot;.">
+              <img src="Whiteboards/00b%20Course%20intro.webp" alt="Whiteboard: Rethinking AI for Business. Panels covering the current state where 80% of AI users think AI does not work and 20% feel it will take their jobs, the transition from awesome slop to business-grade results, the effective AI user being existing leaders because the best AI users manage subordinates, Gen X as the most adaptable generation, the biz-builders approach of not being trainers, and the shift from never spending $20 on AI to saying $400 is a bargain." loading="lazy" decoding="async" width="2816" height="1536" />
+              <span class="zoom-hint">Click to enlarge</span>
+            </button>
+            <figcaption><b>The board we open the course with.</b> Why existing leaders, and Gen X in particular, turn out to be the most effective AI users in the room.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Proof from delegates
+         ===================================================================== -->
+    <section class="section-muted" id="testimonials">
+      <div class="container" data-reveal>
+        <span class="label">Delegate Feedback</span>
+        <h2 class="display section-title">700 executives&hellip;a couple of quotes.</h2>
+        <div class="quote-feature-grid">
+          <blockquote class="quote-feature">
+            <p>"If I could, I would send everyone in my company to this Masterclass. It is truly enabling."</p>
+            <cite>Simon Fishley<br />CIO, Luno</cite>
+          </blockquote>
+          <blockquote class="quote-feature">
+            <p>"Best investment in myself that I have made in years."</p>
+            <cite>Debi van Flymen<br />Director, Park Hyatt Johannesburg</cite>
+          </blockquote>
+          <blockquote class="quote-feature">
+            <p>"Don't look at the price. Close your eyes and swipe that card. It's well worth it."</p>
+            <cite>Michelle Gray<br />michellecandoit.com</cite>
+          </blockquote>
+        </div>
+        <p class="price-note" style="margin-top: 1.5rem;">
+          Sixteen more, unedited, in the detail section below.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         The facilitators. Photos out front, personality behind a panel.
+         ===================================================================== -->
+    <section id="facilitators">
+      <div class="container" data-reveal>
+        <span class="label">Who You Spend Two Days With</span>
+        <h2 class="display section-title">Two operators, not a training faculty</h2>
+        <div class="operator-grid">
+
+          <article class="operator">
+            <div class="operator-head">
+              <img src="RJ.avif" alt="Rutger-Jan van Spaandonk" />
+              <div>
+                <h3>Rutger-Jan van Spaandonk</h3>
+                <p class="role">Co-founder, Imagineers.ai</p>
+                <p class="bio">
+                  30+ years in technology. MBA (Wharton), BBA (Nyenrode). Serial founder and turnaround operator.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="operator">
+            <div class="operator-head">
+              <img src="CB.avif" alt="Chris Barker" />
+              <div>
+                <h3>Chris Barker</h3>
+                <p class="role">Co-founder, Imagineers.ai</p>
+                <p class="bio">
+                  Engineer, consultant and builder. MSc Eng, Wits faculty medal. Former McKinsey and Deloitte.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="operator-creds" data-reveal>
+          <h3 class="operator-creds-title">Between the two of us</h3>
+          <ul class="cred-list cred-list-combined">
+            <li><b>MSc Eng, Wits faculty medal, and an MBA from Wharton.</b> One engineer, one financier, both operators.</li>
+            <li><b>MD, Apple South Africa.</b> Led major Africa launches for Apple, Nintendo and Xiaomi.</li>
+            <li><b>General manager, Unilever</b> (Lipton Teas).</li>
+            <li><b>McKinsey</b> engagement manager and the office modelling expert. <b>MarchFirst</b> on the technology side.</li>
+            <li><b>Deloitte</b> director, Africa head of Innovation and Growth.</li>
+            <li><b>Co-founders</b> of Apple SA, Neotel, Seacom SA, Right to Care, Africa Weather (the first business to sell weather in Africa), RightMed (at one point South Africa's third-largest retail pharmacy group) and a military-grade cyber intelligence firm.</li>
+            <li><b>Turnarounds</b> including Aquarius Platinum, TopTV and several for the NEF.</li>
+            <li><b>South Africa's Covid response, all three waves.</b> Doubled critical care beds, scaled NHLS testing capacity, scaled oxygen 6.5x, ran the 400,000 healthcare-worker vaccine trial, then the full national roll-out: R50bn, 3,500 nurses, 1,500 sites, in four months.</li>
+            <li><b>6,500+ hours each</b> of hands-on GenAI use.</li>
+          </ul>
+        </div>
+
+        <!-- Personality lives behind a panel, so the professional view stays out front.
+             SLOT: drop the softened caricature board in below when ready. -->
+        <div class="acts" style="margin-top: 1.4rem;">
+          <details class="act" data-reveal>
+            <summary>
+              <span class="act-num">&#9998;</span>
+              <span class="act-titles">
+                <span class="act-title">What we are actually like for two days</span>
+                <span class="act-hook">Honest warning: we are opinionated, informal, and we will argue with you.</span>
+              </span>
+              <span class="act-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="act-body">
+              <p>
+                This is not a lecture. It is twelve people around a table with two facilitators who have strong
+                opinions and no particular interest in AI neutrality. We interrupt, we get interrupted, we disagree with
+                each other in front of you, and we will tell you plainly when a model is not up to the job you are
+                describing. Several delegates have called it intense. Nobody has called it dry.
+              </p>
+              <p>
+                We also do not pretend the tools are magic. A meaningful part of both days is spent on where AI is
+                still bad, where it is dangerous, and which model to avoid for which job. That candour is the reason
+                senior people trust the rest of it.
+              </p>
+              <p class="act-takeaway">
+                If you want a polished corporate training experience with a certificate at the end, we are the wrong
+                choice. If you want two days of arguing about your actual business with people who have built a few,
+                you will enjoy it.
+              </p>
+              <div class="boards">
+                <figure class="board">
+                  <button type="button" class="board-thumb" data-caption="Imagineers: Chris and RJ. Career highlights, co-founded businesses, turnarounds, and the Covid response work, drawn as a whiteboard.">
+                    <img src="Whiteboards/00a%20Imagineers%20Chris%20RJ.webp" alt="Whiteboard caricature of Chris Barker and Rutger-Jan van Spaandonk with their career highlights, co-founded companies, turnarounds and South African Covid response work." loading="lazy" decoding="async" width="1672" height="941" />
+                    <span class="zoom-hint">Click to enlarge</span>
+                  </button>
+                  <figcaption><b>The board we open the course with.</b> Our own introduction, done the way we do everything else.</figcaption>
+                </figure>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         ACTION: frame the price, then ask
+         ===================================================================== -->
+    <section class="section-muted" id="pricing">
+      <div class="container" data-reveal>
+        <span class="label">Investment</span>
+        <h2 class="display section-title">Two participation models</h2>
+
+        <div class="anchor-box">
+          <p>
+            Most delegates arrive believing a $20 AI subscription is an extravagance. A good number leave
+            <strong>easily justifying $400 a month for when that time comes</strong>, because they have just watched
+            what the paid frontier actually does when it is briefed properly.
+          </p>
+          <p>
+            That shift, not the fee, is what the two days are really about. Delegates have reported recovering
+            <strong>R30,000 to R60,000</strong> of non-billable time in their first week back. The real cost of
+            attending was never the ticket. It was the two days out of the office, and you are spending those either
+            way.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="seats">Twelve seats only</span>
+            <h3>Open Enrolment</h3>
+            <p class="price">R22,500 <small>incl VAT per person</small></p>
+            <p>Public cohort, delivered with Daily Maverick. Cross-industry peers, which most delegates rate as half the value.</p>
+            <ul>
+              <li>Same core curriculum and practical outputs</li>
+              <li>High-value networking with senior professionals</li>
+              <li>Cross-industry examples and live facilitator guidance</li>
+              <li>First Wednesday alumni sessions, every month, at no further cost</li>
+            </ul>
+            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Check Dates and Book</a>
+          </article>
+          <article class="price-card">
+            <span class="seats">Up to fifteen delegates</span>
+            <h3>Tailor-Made, Private Team</h3>
+            <p class="price">R225,000 <small>ex VAT</small></p>
+            <p>Fully customised around your sector, your goals and your live operational priorities.</p>
+            <ul>
+              <li>Custom demos and use cases built on your organisation</li>
+              <li>Private format, so leadership can align in the room</li>
+              <li>Applied directly to current strategic priorities</li>
+              <li>First Wednesday alumni sessions for the whole team, every month</li>
+              <li>Delivered internationally on request</li>
+            </ul>
+            <a class="btn btn-primary" href="mailto:masterclass@imagineers.ai?subject=Private%20Team%20Course%20Enquiry">Enquire for Your Team</a>
+          </article>
+        </div>
+
+        <p class="price-note">
+          Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including
+          internationally. Pricing for delivery outside South Africa quoted on enquiry.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         First Wednesday: the reason the course does not decay
+         ===================================================================== -->
+    <section class="claim-band" id="first-wednesday">
+      <div class="container claim-grid">
+        <div data-reveal>
+          <span class="label">First Wednesday</span>
+          <h2 class="display">The course does not end on day two.</h2>
+          <p>
+            This field moves faster than any two-day course can hold. So on the <strong>first Wednesday of every
+            month, at 3pm</strong>, we host a one-hour Zoom session for course alumni. Free, for as long as you want
+            to keep coming.
+          </p>
+          <p>
+            We cover what actually changed in the past month, which of it matters in business and which of it is
+            noise, and what you should do differently as a result. Every session we also hand over a sophisticated
+            AI tool or method, worked through live, the same way we do on the course itself.
+          </p>
+          <p>
+            It is the reason delegates from our earliest cohorts are still current. Come every month or skip a few.
+            Your seat stays open either way.
+          </p>
+        </div>
+        <div data-reveal>
+          <ul class="contrast-list">
+            <li class="yes"><span class="mark">&#10003;</span><span>One hour, first Wednesday of every month, 3pm, on Zoom</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>What changed last month, and specifically where it lands in your business</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>A new tool or method handed over live, every single session</span></li>
+            <li class="yes"><span class="mark">&#10003;</span><span>Included for every delegate, both formats, indefinitely</span></li>
+            <li class="no"><span class="mark">&#10007;</span><span>A newsletter you will not read</span></li>
+            <li class="no"><span class="mark">&#10007;</span><span>An upsell webinar</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="container final" data-reveal>
+        <h2 class="display">Two days, then you are over the 80% wall and in the top 0.01% of South Africans.</h2>
+        <p>
+          The gap between people who direct AI properly and people who query it casually is widening every quarter,
+          and it is compounding inside your competitors right now.
+        </p>
+        <div class="hero-cta" style="justify-content: center;">
+          <a class="btn btn-primary" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Reserve an Open Enrolment Seat</a>
+          <a class="btn btn-ghost" href="mailto:masterclass@imagineers.ai?subject=Private%20Team%20Course%20Enquiry">Talk to Us About a Private Course</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         The detail zone, for the minority who research before they buy
+         ===================================================================== -->
+    <section id="detail">
+      <div class="container" data-reveal>
+        <span class="label">Full Detail</span>
+        <h2 class="display section-title">Everything else, for the thorough</h2>
+        <p class="detail-zone-intro">
+          The section above is enough to decide. This section is for people who want the full agenda, the capability
+          mapping, and every piece of delegate feedback we have collected.
+        </p>
+        <div class="course-accordion">
+
+          <details>
+            <summary>The complete day one agenda (subject to change)</summary>
+            <div class="detail-copy">
+              <p>Day one moves you from casual AI use to structured, business-grade use. The emphasis is on better briefing, better judgement, better context, and repeatable ways of working.</p>
+              <table class="course-table">
+                <thead>
+                  <tr><th>Time</th><th>Session</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>08:30</td><td>Arrival and expectations</td></tr>
+                  <tr><td>09:15</td><td>Course objectives</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Foundation</td></tr>
+                  <tr><td>09:30</td><td>LLM foundational learning. How the models are actually built and then aligned, why the same question returns different quality on different days, the token economics behind that, and why the paid frontier is a genuinely different product rather than the same thing with fewer limits.</td></tr>
+                  <tr><td>11:15</td><td>LLM foundational learning, continued. Security, company data and the IT conversation, given from the perspective of a military-grade cyber intelligence firm. Then setting up your working system: converting everything to Markdown, staged and numbered files, and somewhere to keep prompts you can reuse.</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Prompt training: maturity of output</td></tr>
+                  <tr><td>12:15</td><td>RCTIO prompt structure. From TikTok brain to grown-up answers.</td></tr>
+                  <tr><td>13:15</td><td>RCTIO practice: whiteboard work and AI improvement exercises, including handing the model your own scruffy prompt and comparing the two answers. Logistics supplier case.</td></tr>
+                  <tr><td>13:30</td><td>Working lunch, on chaining prompts</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Prompt training: power of execution</td></tr>
+                  <tr><td>14:00</td><td>Expert-method prompting. From grown-up answers to business-grade results. Business strategy run through the Business Model Canvas: a multi-day screening task done properly in about five minutes.</td></tr>
+                  <tr><td>14:30</td><td>Tool-augmented prompting, so the AI does the boring bits fast. Strategy or business presentation: three different storylines for the same deck, in about fifteen minutes.</td></tr>
+                  <tr><td>15:10</td><td>Multi-step prompting. Semi-automated, steadily building knowledge. Contract or procurement case.</td></tr>
+                  <tr><td>15:40</td><td>Sequential prompt chaining, because our jobs are actually complex. Proposals case.</td></tr>
+                  <tr><td>16:10</td><td>Sequential prompt chaining, second pass. Recruiting case.</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Prompt training: trust and control</td></tr>
+                  <tr><td>16:30</td><td>Context management. The difference between trusted output and polished nonsense. Handoffs, resets and the governance trail.</td></tr>
+                  <tr><td>17:00</td><td>Realistic end time</td></tr>
+                </tbody>
+              </table>
+              <p class="agenda-note">Times are indicative and subject to change. Twelve people and two facilitators means we flex a great deal around what the room actually needs, so sessions run long, get swapped, or get added on the day.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>The complete day two agenda (subject to change)</summary>
+            <div class="detail-copy">
+              <p>Day two applies those foundations to the work that actually consumes time inside organisations: research, analysis, spreadsheets, reports, company knowledge, dashboards, media, app prototypes and agentic workflows.</p>
+              <table class="course-table">
+                <thead>
+                  <tr><th>Time</th><th>Session</th></tr>
+                </thead>
+                <tbody>
+                  <tr class="agenda-group"><td colspan="2">Arrival and breakfast</td></tr>
+                  <tr><td>08:30</td><td>Recap of the week's news, and what actually changed</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Professional use training</td></tr>
+                  <tr><td>09:00</td><td>Deep research, with defendable provenance. Run on a project of your own.</td></tr>
+                  <tr><td>10:00</td><td>Data analysis demo. Interrogating a real dataset conversationally, then turning it into recommendations.</td></tr>
+                  <tr><td>10:45</td><td>Voice input. SuperWhisper demo.</td></tr>
+                  <tr><td>11:15</td><td>Tabulated learning, across several demos. Hydrogen fuel and discipline cases.</td></tr>
+                  <tr><td>11:30</td><td>AI in Excel. The full modelling tool, handed over and used live: the most sophisticated model you can imagine, built from scratch in about fifteen minutes off a plain-English brief, with scenarios and sensitivities. Then the reverse job, auditing and explaining a model somebody else built.</td></tr>
+                  <tr><td>12:00</td><td>Custom GPT and Gem build. Labour law exercise.</td></tr>
+                  <tr><td>12:30</td><td>Working lunch, continuing the custom GPT</td></tr>
+                  <tr><td>13:00</td><td>Photos and video demo</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Vibe coding training</td></tr>
+                  <tr><td>13:15</td><td>Samples and a live build. Education demo.</td></tr>
+                  <tr><td>13:45</td><td>Build an app. Your own exercise, in AI Studio.</td></tr>
+                  <tr class="agenda-group"><td colspan="2">Agentic IDE exposure</td></tr>
+                  <tr><td>15:30</td><td>Daily intelligence news feed demo</td></tr>
+                  <tr><td>15:45</td><td>Several demos: lead generation, recruiting, VCF files.</td></tr>
+                  <tr><td>16:30</td><td>Realistic end time</td></tr>
+                </tbody>
+              </table>
+              <p class="agenda-note">Times are indicative and subject to change. Day two in particular moves around a lot, because we follow the use cases the room turns out to care about.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>How the agenda maps to business capability</summary>
+            <div class="detail-copy">
+              <table class="course-table">
+                <thead>
+                  <tr><th>Agenda Area</th><th>Skill Built</th><th>Business Capability Gained</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>AI foundations</td><td>AI mental model</td><td>Understand what the technology is, why outputs vary, and why it matters now.</td></tr>
+                  <tr><td>Adoption and leadership</td><td>Adoption judgement</td><td>See AI as a capability to manage, direct and build early.</td></tr>
+                  <tr><td>Model behaviour, risk and access</td><td>Model management</td><td>Know when output problems come from weak prompts, poor context or tool limitations.</td></tr>
+                  <tr><td>Markdown and Obsidian</td><td>Working system</td><td>Store, reuse and improve prompts and AI working documents.</td></tr>
+                  <tr><td>RCTIO prompting</td><td>Structured prompting</td><td>Move from generic answers to adult-level business output.</td></tr>
+                  <tr><td>Expert method prompting</td><td>Business-grade thinking</td><td>Use AI as a panel of strategic, financial, legal, operational, marketing, HR or technical perspectives.</td></tr>
+                  <tr><td>Prompt chaining</td><td>Workflow design</td><td>Convert business tasks into connected AI-supported steps.</td></tr>
+                  <tr><td>Context management</td><td>Reliability</td><td>Prevent context rot and improve output quality over longer workflows.</td></tr>
+                  <tr><td>Deep research</td><td>Source-backed insight</td><td>Produce research that can support strategy, market, competitor, customer and investment decisions.</td></tr>
+                  <tr><td>Data and Excel</td><td>Analysis and modelling</td><td>Build a full driver-based financial model from a plain-English brief in about fifteen minutes, audit a model you inherited, and turn datasets into clearer business insight.</td></tr>
+                  <tr><td>Custom assistants</td><td>Team enablement</td><td>Make company knowledge easier to use, share and turn into organisational AI capability.</td></tr>
+                  <tr><td>Dashboards and apps</td><td>Tool creation</td><td>Replace static reports or manual workflows with interactive tools.</td></tr>
+                  <tr><td>Agents</td><td>Workflow automation</td><td>See how recurring tasks can become scheduled, delegated or semi-autonomous.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary>Business work this course helps reduce</summary>
+            <div class="detail-copy">
+              <table class="course-table">
+                <thead>
+                  <tr><th>Work Area</th><th>Before</th><th>After</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Report writing</td><td>Rough notes, long drafts, slow rewrites, unclear structure.</td><td>Structured reports, executive summaries, sharper recommendations, reusable workflows.</td></tr>
+                  <tr><td>Presentations</td><td>Hours spent turning information into slides.</td><td>Faster decks, clearer storylines, better slide logic.</td></tr>
+                  <tr><td>Excel model building</td><td>Weeks of specialist model building, or a consultant's fee.</td><td>A 36-month integrated P&amp;L, cash flow and balance sheet built from a plain-English brief in about fifteen minutes, driver-based, with assumptions, scenarios and sensitivities. You take the tool home.</td></tr>
+                  <tr><td>Excel model understanding</td><td>Spreadsheets that feel like black boxes, and models nobody still working here built.</td><td>Structure, assumptions, calculations and value drivers explained in plain language, and the structural errors found.</td></tr>
+                  <tr><td>Research</td><td>Search-heavy work with uneven reliability.</td><td>Source-backed research reports, executive memos and strategic recommendations.</td></tr>
+                  <tr><td>Data analysis</td><td>Large datasets that are hard to interrogate.</td><td>Conversational analysis, trends, outliers, charts, summaries and recommendations.</td></tr>
+                  <tr><td>Company knowledge</td><td>Repeated internal questions and hard-to-use documents.</td><td>Custom assistants built from SOPs, policies, manuals and training material.</td></tr>
+                  <tr><td>Workflow automation</td><td>Repeated tasks rebuilt manually each time.</td><td>Shared prompt chains, reusable workflows and company-owned AI methods.</td></tr>
+                  <tr><td>Dashboards</td><td>Static reports and recurring data dumps.</td><td>Searchable, filterable, visual decision tools.</td></tr>
+                  <tr><td>App building</td><td>Long development cycles for internal tools and prototypes.</td><td>AI-assisted prototypes and simple applications built from plain-English briefs.</td></tr>
+                  <tr><td>Marketing visuals</td><td>Slow concept development and avoidable agency dependency.</td><td>Faster image concepts, video drafts, campaign mockups and communication assets.</td></tr>
+                  <tr><td>Lead generation and recruiting</td><td>Manual recurring research and admin.</td><td>Semi-autonomous workflows that gather information, structure outputs and prepare next actions.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+
+          <details>
+            <summary>How this becomes a team capability, not just a personal one</summary>
+            <div class="detail-copy">
+              <p>The goal is not only to make individuals faster. The stronger opportunity is turning useful AI methods into shared team capability and organisational IP.</p>
+              <p>Delegates see how company material becomes more usable through custom assistants and reusable workflows, including:</p>
+              <ul>
+                <li>SOPs, training manuals, product manuals, policy documents and internal knowledge bases.</li>
+                <li>Assistants that help staff find current company information faster.</li>
+                <li>Prompt chains that standardise repeated work such as proposals, recruiting, reporting, research, and customer or market intelligence.</li>
+                <li>Shared methods that reduce reliance on one person's private prompts or undocumented AI habits.</li>
+                <li>Company-owned workflows that can be reviewed, improved, governed and reused across a team.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>What you take back to work</summary>
+            <div class="detail-copy">
+              <ul>
+                <li>A reusable prompting method for clearer business instructions.</li>
+                <li>The Excel modelling tool itself, so you can keep building full driver-based financial models from a plain-English brief in about fifteen minutes.</li>
+                <li>A practical structure for building, storing and improving prompts.</li>
+                <li>Example workflows for reports, research, presentations, analysis and recurring operational work.</li>
+                <li>Tested approaches for documents, spreadsheets, dashboards, custom assistants, media and simple app prototypes.</li>
+                <li>A shortlist of team use cases worth developing into shared workflows or company-owned AI methods.</li>
+                <li>A clearer view of where AI should stay personal productivity support and where it should become team workflow or organisational IP.</li>
+                <li>A standing seat at First Wednesday, the monthly one-hour alumni session where we cover what changed and hand over a new tool.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details>
+            <summary>Security, company data and the IT conversation</summary>
+            <div class="detail-copy">
+              <p>This is the block delegates most often say they did not expect and most often say they needed. It is delivered from the perspective of a military-grade cyber intelligence firm, it is practical rather than theoretical, and it covers personal security as well as company data, because in practice the two failures are connected.</p>
+              <ul>
+                <li>Two-factor authentication everywhere, using an authenticator app or a hardware key rather than SMS, and the SIM-swap case study that explains why.</li>
+                <li>Device hygiene, including the argument for keeping banking off the phone you carry.</li>
+                <li>What actually happens to the files you upload, per vendor, and which privacy and training settings to change before you do anything else.</li>
+                <li>The legal frameworks behind certain models that compel retention and disclosure of everything typed into them, and why that is a long-horizon business risk rather than a today risk.</li>
+                <li>A redaction standard for client, patient, employee and personal data that staff will follow, as opposed to one that looks good in a policy document.</li>
+                <li>How to write a one-page AI data policy that satisfies an audit without freezing the organisation, and how to have the conversation with an IT function that has already standardised on one vendor.</li>
+              </ul>
+              <p>We are opinionated here and we say so. Both facilitators have commercial history on the vendor side of this argument, which is why the position is specific rather than cautious.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>The working system: Markdown, staged files and handoffs</summary>
+            <div class="detail-copy">
+              <p>Good prompting collapses without a place to keep the work. Day one therefore builds a small, boring, durable system alongside the prompting, and most delegates report it is the habit that survives longest after the course.</p>
+              <ul>
+                <li><b>Convert everything to Markdown.</b> Rich formats carry enormous overhead. A Word file can be orders of magnitude larger than the same text, and you pay for that out of the context you needed for thinking. We cover which conversion tools are currently reliable for PDFs, slides and spreadsheets, and how to check the conversion actually worked.</li>
+                <li><b>One file per stage, numbered.</b> Input saved, output saved, output becomes the next input. It reads like admin until the first time somebody asks you how a conclusion was reached.</li>
+                <li><b>Handoff prompts.</b> When a conversation starts to drift, you ask for a self-contained summary of decisions taken and options rejected, then open a clean chat with it. This is the practical answer to context rot.</li>
+                <li><b>A governance trail.</b> The numbered files become a reviewable record of how a piece of AI work was produced, which is what makes AI output safe to delegate inside a team or hand to a client.</li>
+              </ul>
+              <p>We use Obsidian for this because it is free and it renders Markdown properly. Any text editor works. The system matters, the tool does not.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>All delegate feedback, unedited</summary>
+            <div class="detail-copy">
+              <div class="quote-archive">
+                <blockquote><p>"The course was intensive from the outset, given the breadth of AI models covered and the wide range of practical applications for business. It is essential for anyone looking to implement AI effectively, and it arrived at exactly the right time for me. The time and cost efficiencies I expect to gain as a result are substantial."</p><cite>Louis Pfeiffer | Co-Founder, RockWealth Capital</cite></blockquote>
+                <blockquote><p>"Excellent course that has dramatically increased my GenAI knowledge and skills and already contributing to significant improvements in productivity in my business."</p><cite>Margaret McKenzie | Managing Director, Urban Earth</cite></blockquote>
+                <blockquote><p>"This GenAI Masterclass is a must for everyone. It is so important to receive guidance in the AI space on how to use these models for everyday use and business use, especially for security and factual purposes. Don't look at the price. Close your eyes and swipe that card! It's well worth it! Thank you Chris, RJ and Daily Maverick for all the teachings."</p><cite>Michelle Gray | michellecandoit.com</cite></blockquote>
+                <blockquote><p>"Mastering AI with the support of Imagineers.AI is an essential investment in your future, one you cannot afford to not do."</p><cite>Johan Human | DC Solve</cite></blockquote>
+                <blockquote><p>"I really appreciated that the sessions were conducted by business-minded facilitators. I believe that much of the benefit derived from the sessions stems from them having studied AI from the perspective of someone who actively needs to use it to improve their ability to perform and deliver results, as opposed to just using it to be lazy. I believe this allowed the lessons to make a greater impact than they would have if similar methods were taught by people who simply understand the theoretical application and capabilities of AI."</p><cite>Nicole Kitshoff | MD, Kitshoff Family Trust</cite></blockquote>
+                <blockquote><p>"Great course with great people, learned so much in such a short time."</p><cite>Rory de Courcy Hamilton | MD, DC Hamilton Consulting</cite></blockquote>
+                <blockquote><p>"RJ and Chris were fantastic. I would've loved another day to allow for a bit more time on each module/section, and to have time for more practical exercises. I would have happily paid for that if it were an option."</p><cite>Lise-Jo Snyman | Lica Creative (licacreative.co.za)</cite></blockquote>
+                <blockquote><p>"Fantastic programme, intense, but so worth it! Thanks, RJ and Chris."</p><cite>Hanje Botha | Executive Manager: Human Resources &amp; OD, TCTA (Trans-Caledon Tunnel Authority)</cite></blockquote>
+                <blockquote><p>"It's been a fantastic experience. I have learnt a lot and very grateful to participate in this workshop. I am looking forward to implementing learnt skills. I highly recommend it."</p><cite>Natalia Novikova | Gynaecologist &amp; Laparoscopic Surgeon</cite></blockquote>
+                <blockquote><p>"This was a great experience. I loved the passion and energy of the facilitators and their 'just try it' response to everything. I enjoyed the practice sessions and discovering how to build on what I knew. I think it was invaluable to me in terms of opening my world to possibility and taking clear next steps."</p><cite>Lorrine Botha | Co-Founder &amp; Co-Owner, Smile Business Creation</cite></blockquote>
+                <blockquote><p>"As an independent researcher, I found the course exceptionally valuable. In just two days, RJ and Chris did more than teach AI, they expanded the way I think about research, productivity, and what is now possible. I left with practical tools I was able to use immediately."</p><cite>Jay Carson | Independent Researcher, BioHarmony</cite></blockquote>
+                <blockquote><p>"This was an enlightening exposure to the AI tools which will undoubtedly help me achieve this coming year! Not magic, but where Google is at already, seeing some of it in action has improved my confidence and necessity to work with modern tools."</p><cite>Travis Mitchell | Marketing, Savannah Fine Chemicals</cite></blockquote>
+                <blockquote><p>"It was really eye opening and on the whole practical."</p><cite>William Marshall-Smith | CEO, Groundswell Holdings</cite></blockquote>
+                <blockquote><p>"Chris and RJ were excellent as facilitators."</p><cite>Maserame Mouyeme | Non-Executive Director &amp; Business Coach, Nala Leadership Circle</cite></blockquote>
+                <blockquote><p>"Thanks the course was excellent and has really shifted my mindset on how I work."</p><cite>Margaret McKenzie | MD, Urban Earth</cite></blockquote>
+                <blockquote><p>"Thank you for the time and effort and willingness to share this information to see many people succeed."</p><cite>Andreas C | Owner, Network Trust</cite></blockquote>
+                <blockquote><p>"Fantastic 2 days! My mind was blown by the new ways we can incorporate AI into our daily business."</p><cite>Anonymous CEO</cite></blockquote>
+              </div>
+            </div>
+          </details>
+
+          <details>
+            <summary>Frequently asked questions</summary>
+            <div class="detail-copy">
+              <p><strong>Do I need prior AI experience?</strong><br />No. The course starts with fundamentals and moves quickly into practical, business-grade implementation. Complete beginners and daily users sit in the same room and both leave with more than they expected.</p>
+              <p><strong>Will this be relevant to my specific industry?</strong><br />Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.</p>
+              <p><strong>How many people are in each session?</strong><br />Twelve, always. It is capped so that both facilitators can get to every person's actual work.</p>
+              <p><strong>What is the difference between the two formats?</strong><br />Tailor-Made is private and customised for one organisation. Open Enrolment is public, cross-industry and delivered with Daily Maverick. The core curriculum is the same.</p>
+              <p><strong>Our IT department has standardised on one AI tool. Is the course still useful?</strong><br />Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would earn its keep.</p>
+              <p><strong>Can we use real company data in the exercises?</strong><br />That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.</p>
+              <p><strong>Which model should I be using?</strong><br />It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can actually convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.</p>
+              <p><strong>Do you deliver outside South Africa?</strong><br />Yes. Private cohorts are delivered internationally on request, quoted on enquiry.</p>
+              <p><strong>What should I bring?</strong><br />A laptop and pre-configured accounts on ChatGPT, Claude, Gemini and Copilot or Grok. At least one paid subscription is required. We send setup guidance beforehand.</p>
+              <p><strong>What happens after the two days?</strong><br />First Wednesday. On the first Wednesday of every month at 3pm we run a one-hour Zoom session for alumni: what changed in the past month, where it lands in business, and a sophisticated AI tool or method handed over live. It is included for every delegate, indefinitely, and it is how people who did the course two years ago are still current.</p>
+              <p><strong>Is there a certificate?</strong><br />No. You leave with working prompts, workflows and outputs instead. We have found that senior delegates value the second thing considerably more.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Whiteboard lightbox -->
+  <div class="lightbox" id="boardLightbox" role="dialog" aria-modal="true" aria-label="Enlarged whiteboard">
+    <button type="button" class="lightbox-close" aria-label="Close enlarged whiteboard">&#10005;</button>
+    <figure>
+      <img alt="" />
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <!-- Sticky CTA, appears once the hero is out of view -->
+  <div class="sticky-cta" id="stickyCta">
+    <div class="container">
+      <span class="sticky-copy">
+        <b>GenAI Executive Masterclass</b> &middot; Two days &middot; Twelve seats &middot; R22,500 incl VAT
+      </span>
+      <a class="btn btn-primary" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">See Dates</a>
+    </div>
+  </div>
+
   <footer>
-    <div class="container">&copy; 2026 Imagineers.AI</div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <p>
+          Business builders who make AI work in business. We do not sell solutions, platforms or technology,
+          which is why our advice on tools is blunt.
+        </p>
+      </div>
+      <div>
+        <h4>What we do</h4>
+        <ul>
+          <li><a href="index.html">GenAI Executive Masterclass</a></li>
+          <li><a href="caio.html">CAiO as a Service</a></li>
+          <li><a href="fde.html">Forward-Deployed Engineering</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <ul>
+          <li>
+            Masterclass and private cohorts<br />
+            <a href="mailto:masterclass@imagineers.ai">masterclass@imagineers.ai</a>
+          </li>
+          <li>
+            CAiO, engineering and everything else<br />
+            <a href="mailto:info@imagineers.ai">info@imagineers.ai</a>
+          </li>
+          <li><a target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Open enrolment dates and booking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>First Wednesday</h4>
+        <p>
+          One hour, 3pm, the first Wednesday of every month, on Zoom. What changed in the past month, where it
+          lands in business, and a new AI tool handed over live. Free for course alumni, indefinitely.
+        </p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>&copy; 2026 Imagineers.ai</span>
+      <span>Johannesburg &middot; Cape Town &middot; Durban &middot; private cohorts delivered internationally</span>
+    </div>
   </footer>
 
   <script src="masterclass-theme.js"></script>
+  <script src="masterclass-v2.js"></script>
 </body>
 </html>

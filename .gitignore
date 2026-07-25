@@ -2,3 +2,7 @@ node_modules/
 package-lock.json
 *.log
 .DS_Store
+
+# Course source material: this repo is published as a static site, so anything
+# committed here is publicly fetchable.
+Course transcripts/

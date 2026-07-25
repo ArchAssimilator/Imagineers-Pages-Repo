@@ -872,13 +872,92 @@
       font-size: clamp(1rem, 2vw, 1.2rem);
     }
 
+    /* Nav CTA: the booking link should never be just another tab. */
+    .menu .nav-cta {
+      background: var(--teal-500);
+      color: var(--navy-950);
+      padding: 0.5rem 0.95rem;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      transition: background 0.2s ease;
+    }
+
+    .menu .nav-cta::after {
+      display: none;
+    }
+
+    .menu .nav-cta:hover {
+      background: var(--teal-400);
+    }
+
     footer {
       background: #060c16;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 3rem 0 1.4rem;
+      font-size: 0.88rem;
+      letter-spacing: 0.01em;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr;
+      gap: 2.2rem;
+      align-items: start;
+    }
+
+    .footer-brand img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-grid h4 {
+      color: var(--white);
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.85rem;
+    }
+
+    .footer-grid p {
+      line-height: 1.6;
       color: rgba(255, 255, 255, 0.55);
-      padding: 1.2rem 0;
-      font-size: 0.84rem;
-      text-align: center;
-      letter-spacing: 0.04em;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      display: grid;
+      gap: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .footer-grid a {
+      color: rgba(255, 255, 255, 0.78);
+      border-bottom: 1px solid transparent;
+    }
+
+    .footer-grid a:hover {
+      color: var(--teal-400);
+      border-bottom-color: var(--teal-400);
+    }
+
+    .footer-grid .muted {
+      display: block;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 0.8rem;
+    }
+
+    .footer-base {
+      margin-top: 2.4rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.6rem;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.42);
     }
 
     [data-reveal] {
@@ -929,6 +1008,14 @@
       .module-grid {
         grid-template-columns: 1fr;
       }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .menu .nav-cta {
+        justify-self: start;
+      }
     }
 
     @media (max-width: 660px) {
@@ -963,5 +1050,10 @@
 
       .course-table {
         min-width: 560px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
       }
     }
