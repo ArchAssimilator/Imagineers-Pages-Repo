@@ -29,7 +29,7 @@ email signatures do not 404. They carry no content. Do not add any.
 ├── caio.html                # CAiO as a Service
 ├── fde.html                 # Forward-Deployed Engineering
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
-├── masterclass-v2.css       # Additive layer: hero-pitch, claim-band, acts, boards, usecase grid
+├── masterclass-v2.css       # Additive layer: hero-pitch, endorse-card, claim-band, acts, boards, usecase grid
 ├── masterclass-theme.js     # Nav toggle, scroll state, reveal-on-scroll, all pages
 ├── proof-stats.js           # The proof-strip numbers and count-up, all pages
 ├── masterclass-v2.js        # Whiteboard lightbox and sticky CTA. Home page only
