@@ -14,6 +14,8 @@ Imagineers.ai has trained 700+ senior executives across 60 two-day courses in Jo
 
 - [What is a fractional CAiO?](https://www.imagineers.ai/what-is-a-fractional-caio.html): Definition of the fractional CAiO role, what it does day to day, and how it compares to a full-time Chief AI Officer and to a traditional consultant.
 - [What is a forward deployed engineer?](https://www.imagineers.ai/what-is-a-forward-deployed-engineer.html): Definition of the forward deployed engineer (FDE) role, what it does day to day, and how it compares to a traditional consultant and a regular software engineer.
+- [What is context rot?](https://www.imagineers.ai/what-is-context-rot.html): Definition of context rot, why the facts survive but the relationships between them break, how fast accuracy degrades on the MRCR-8 benchmark despite large context windows, the seven ways context breaks, and the filing habits that prevent it.
+- [AI pipelines vs agents](https://www.imagineers.ai/ai-pipelines-vs-agents.html): The difference between a designed AI pipeline and an autonomous agent, why almost everything that pays commercially today is a pipeline, and where agents genuinely fit.
 
 ## Contact
 

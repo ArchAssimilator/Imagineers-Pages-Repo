@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What Is Context Rot? | Imagineers.ai</title>
+  <meta name="description" content="Context rot is when an AI model keeps the facts but loses the relationships between them as context grows. What causes it, how fast it happens, and how to prevent it." />
+  <link rel="canonical" href="https://www.imagineers.ai/what-is-context-rot.html" />
+  <meta property="og:site_name" content="Imagineers.ai" />
+  <meta property="og:title" content="What Is Context Rot? | Imagineers.ai" />
+  <meta property="og:description" content="Context rot is when an AI model keeps the facts but loses the relationships between them as context grows. Bigger context windows do not fix it." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.imagineers.ai/what-is-context-rot.html" />
+  <meta property="og:image" content="https://www.imagineers.ai/og-imagineers.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_ZA" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.imagineers.ai/og-imagineers.jpg" />
+  <link rel="icon" href="imagineers logo.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="masterclass-theme.css" />
+  <link rel="stylesheet" href="masterclass-v2.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "DefinedTerm",
+        "@id": "https://www.imagineers.ai/what-is-context-rot.html#term",
+        "name": "Context rot",
+        "description": "Context rot is the degradation of an AI model's output as the context it is working with grows. The individual facts remain present, but the relationships between them weaken, fragment and drift, so the model produces fluent answers that are quietly wrong.",
+        "url": "https://www.imagineers.ai/what-is-context-rot.html"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.imagineers.ai/what-is-context-rot.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is context rot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Context rot is the degradation of an AI model's output as the context it is working with grows. Real business information is a mesh of connected facts: sources, entities, constraints, causes, timelines and evidence. As context grows, the connections between those facts weaken, fragment and drift. The facts are all still in there. The relationships between them are not."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do bigger context windows fix context rot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Bigger context windows do not fix context rot and are actively deceptive about it, because more irrelevant context makes the problem worse rather than better. On MRCR-8, leading models are already shedding accuracy fast at 16k tokens, roughly 20 pages of input, despite advertising context windows of 1M tokens."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the signs of context rot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Context breaks in seven recognisable ways: task-frame drift, source and version confusion, entity and metric confusion, aggregate and detail interference, format degradation, reasoning-chain breakdown, and false coherence. Each produces a distinct business symptom, and naming the failure mode is what stops you blaming the model and reaching for a different one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do you prevent context rot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The countermeasure is a filing habit, not a clever prompt. Convert source documents to Markdown, because a Word file can be a thousand times the size of the same text and you pay for that out of the context you needed. Work in one numbered file per stage, so output is saved and becomes the next input. When a long chat drifts, ask for a handoff: a self-contained summary of every decision taken and option rejected, which you paste into a clean chat."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header" id="topNav">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <span>IMAGINEERS.AI</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button>
+      <nav class="menu" id="mainMenu">
+        <a href="index.html">AI Masterclass</a>
+        <a href="caio.html"><span class="nav-case">CAiO</span> as a Service</a>
+        <a href="fde.html">Forward-Deployed Engineering</a>
+        <a class="nav-cta" target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Dates &amp; Booking</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero hero-pitch" id="home">
+      <div class="container">
+        <div class="pitch-lead" data-reveal>
+          <span class="label">Explainer &middot; Context Rot</span>
+          <h1 class="display">
+            What Is<br />
+            <span class="h1-turn">Context Rot?</span>
+          </h1>
+          <p class="pitch-sub">
+            <strong>Context rot is the degradation of an AI model's output as the context it is working with grows.</strong>
+            The individual facts remain present. The relationships between them weaken, fragment and drift, so the
+            model keeps producing fluent, confident answers that are quietly wrong. It is the failure mode that most
+            often ruins otherwise good AI work, and it arrives far sooner than the advertised context window suggests.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="index.html">See How We Teach It</a>
+            <span class="cta-or" aria-hidden="true">OR</span>
+            <a class="btn btn-ghost" href="#faq">Read the FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         What actually breaks
+         ===================================================================== -->
+    <section id="what-breaks">
+      <div class="container" data-reveal>
+        <span class="label">What Breaks</span>
+        <h2 class="display section-title">Not the facts. The connections between them.</h2>
+        <p class="lede">
+          Real business information is not a list of facts, it is a mesh of connected ones: sources, entities,
+          constraints, causes, timelines, evidence. As context grows, the connections weaken, fragment and drift.
+        </p>
+        <div class="boards">
+          <figure class="board">
+            <button type="button" class="board-thumb" data-caption="As context grows the fact mesh breaks: a coherent mesh of connected facts moves through link strain to a fragmented and drifted state with disconnected clusters, lost relationships and facts left behind.">
+              <img src="Whiteboards/06b3%20Context%20rot%20-%20what%202.webp" alt="Whiteboard: As context grows, the fact mesh breaks. Three stages showing a small coherent mesh of connected facts, a growing context under link strain with longer hops and early breaks, and a large context that is fragmented and drifted with disconnected clusters, isolated facts and lost relationships." loading="lazy" decoding="async" width="1672" height="941" />
+              <span class="zoom-hint">Click to enlarge</span>
+            </button>
+            <figcaption><b>What actually breaks.</b> Not the facts, the connections between them.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         How fast, measured
+         ===================================================================== -->
+    <section class="claim-band" id="how-fast">
+      <div class="container claim-grid">
+        <div data-reveal>
+          <span class="label">How Fast</span>
+          <h2 class="display">It happens sooner than you have been told.</h2>
+          <p>
+            MRCR-8 is the closest approximation of that mesh, and the results are sobering. At 16k tokens, roughly 20
+            pages of input, the leading models are already shedding accuracy fast. <b>This despite 1M context
+            windows.</b> Non-thinking modes fall off a cliff.
+          </p>
+          <p>
+            <strong>Bigger context windows do not fix this and are actively deceptive about it,</strong> because more
+            irrelevant context makes it worse rather than better. The number on the box is a capacity figure, not a
+            quality guarantee.
+          </p>
+          <p>
+            This is why "just paste the whole document in" stops working exactly when the work starts to matter, and
+            why the failure is so hard to catch: the output stays fluent long after it stops being reliable.
+          </p>
+        </div>
+        <div data-reveal>
+          <div class="boards">
+            <figure class="board">
+              <button type="button" class="board-thumb" data-caption="MRCR-8 approximates the complex mesh of business-grade information: accuracy against context length for the current frontier models, with the practical insights for professional use.">
+                <img src="Whiteboards/06d.4%20Context%20rot%20-%20how%20bad%20graphs.webp" alt="Whiteboard: MRCR-8 approximates the complex mesh of business-grade information. A chart of accuracy against context length for current frontier thinking and non-thinking models, showing sharp decline well before context windows are full, with insights noting that thinking modes are vastly superior, that irrelevant context also causes rot, and that bigger context does not improve reasoning." loading="lazy" decoding="async" width="2804" height="1536" />
+                <span class="zoom-hint">Click to enlarge</span>
+              </button>
+              <figcaption><b>How fast it happens.</b> Measured across the current frontier models.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         The seven failure modes
+         ===================================================================== -->
+    <section class="section-muted" id="failure-modes">
+      <div class="container" data-reveal>
+        <span class="label">The Diagnostic</span>
+        <h2 class="display section-title">Seven ways context breaks</h2>
+        <p class="lede">
+          Context rot is not one failure, it is seven. Each produces a distinct business symptom, and each has a
+          specific action that prevents it. Once you can name the failure mode, you stop blaming the model and
+          reaching for a different one.
+        </p>
+        <div class="usecase-grid">
+          <article class="usecase">
+            <span class="tag">Mode One</span>
+            <h4>Task-frame drift</h4>
+            <p>The model quietly stops answering the question you actually asked and starts answering a nearby one.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Two</span>
+            <h4>Source and version confusion</h4>
+            <p>Two versions of a document are in context and the model blends them into one that never existed.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Three</span>
+            <h4>Entity and metric confusion</h4>
+            <p>Numbers and names attach to the wrong entity. The figure is real, it just belongs to something else.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Four</span>
+            <h4>Aggregate and detail interference</h4>
+            <p>Totals and line items contaminate each other, so the summary stops reconciling with the underlying detail.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Five</span>
+            <h4>Format degradation</h4>
+            <p>The structure you asked for erodes over a long session until the output is no longer usable as given.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Six</span>
+            <h4>Reasoning-chain breakdown</h4>
+            <p>Each step looks sound in isolation, but the chain connecting them has quietly come apart.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Mode Seven</span>
+            <h4>False coherence</h4>
+            <p>The most dangerous one. The answer reads beautifully and is wrong, and nothing in the tone signals it.</p>
+          </article>
+        </div>
+        <div class="boards" style="margin-top: 1.6rem;">
+          <figure class="board">
+            <button type="button" class="board-thumb" data-caption="Seven ways context breaks and how to prevent it: each failure mode paired with what breaks, the business symptom it produces, and the specific user action that prevents it.">
+              <img src="Whiteboards/06e%20Context%20rot%20-%20mgnt%20v3.webp" alt="Whiteboard: 7 ways context breaks and how to prevent it. A table of seven failure modes including task-frame drift, source and version confusion, entity and metric confusion, aggregate and detail interference, format degradation, reasoning-chain breakdown and false coherence, each with what breaks, the business symptom, and the user action that prevents it." loading="lazy" decoding="async" width="1672" height="941" />
+              <span class="zoom-hint">Click to enlarge</span>
+            </button>
+            <figcaption><b>The diagnostic table.</b> Seven failure modes, seven symptoms, seven fixes.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         The countermeasure
+         ===================================================================== -->
+    <section id="prevention">
+      <div class="container" data-reveal>
+        <span class="label">The Countermeasure</span>
+        <h2 class="display section-title">The fix is a filing habit, not a clever prompt</h2>
+        <p class="lede">
+          It sounds administrative. It is the difference between AI work you can hand to a colleague, a client or an
+          auditor, and AI work nobody, including you, can reconstruct a week later.
+        </p>
+        <div class="usecase-grid">
+          <article class="usecase">
+            <span class="tag">Step One</span>
+            <h4>Convert everything to Markdown</h4>
+            <p>A Word file can be a thousand times the size of the same text, and you pay for that out of the context you needed for thinking.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Step Two</span>
+            <h4>One numbered file per stage</h4>
+            <p>Input saved, output saved, and the output becomes the next input. It reads like admin until somebody asks how a conclusion was reached.</p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Step Three</span>
+            <h4>Ask for a handoff when it drifts</h4>
+            <p>A self-contained summary of every decision taken and option rejected, which you paste into a clean chat. This is the practical answer to context rot.</p>
+          </article>
+        </div>
+        <p class="act-takeaway" style="margin-top: 1.6rem;">
+          Structure your prompts, run expert methods, and reset often. Context rot is covered in full on day one of the
+          <a href="index.html">GenAI Executive Masterclass</a>, with the diagnostic table above worked through live.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         FAQ, mirrors the FAQPage schema above
+         ===================================================================== -->
+    <section class="section-muted" id="faq">
+      <div class="container" data-reveal>
+        <span class="label">FAQ</span>
+        <h2 class="display section-title">Questions people ask about context rot</h2>
+        <div class="course-accordion">
+          <details>
+            <summary>What is context rot?</summary>
+            <div class="detail-copy">
+              <p>Context rot is the degradation of an AI model's output as the context it is working with grows. Real
+              business information is a mesh of connected facts: sources, entities, constraints, causes, timelines and
+              evidence. As context grows, the connections between those facts weaken, fragment and drift. The facts are
+              all still in there. The relationships between them are not.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Do bigger context windows fix context rot?</summary>
+            <div class="detail-copy">
+              <p>No. Bigger context windows do not fix context rot and are actively deceptive about it, because more
+              irrelevant context makes the problem worse rather than better. On MRCR-8, leading models are already
+              shedding accuracy fast at 16k tokens, roughly 20 pages of input, despite advertising context windows of
+              1M tokens.</p>
+            </div>
+          </details>
+          <details>
+            <summary>What are the signs of context rot?</summary>
+            <div class="detail-copy">
+              <p>Context breaks in seven recognisable ways: task-frame drift, source and version confusion, entity and
+              metric confusion, aggregate and detail interference, format degradation, reasoning-chain breakdown, and
+              false coherence. Each produces a distinct business symptom, and naming the failure mode is what stops you
+              blaming the model and reaching for a different one.</p>
+            </div>
+          </details>
+          <details>
+            <summary>How do you prevent context rot?</summary>
+            <div class="detail-copy">
+              <p>The countermeasure is a filing habit, not a clever prompt. Convert source documents to Markdown,
+              because a Word file can be a thousand times the size of the same text and you pay for that out of the
+              context you needed. Work in one numbered file per stage, so output is saved and becomes the next input.
+              When a long chat drifts, ask for a handoff: a self-contained summary of every decision taken and option
+              rejected, which you paste into a clean chat.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark">
+      <div class="container final" data-reveal>
+        <h2 class="display">Context rot is day one of the Masterclass.</h2>
+        <p>
+          Seven failure modes, the business symptom each one produces, and the action that prevents it. Worked through
+          live, on your own material, by the team that has trained 700+ South African executives.
+        </p>
+        <div class="hero-cta" style="justify-content: center;">
+          <a class="btn btn-primary" href="index.html">See the GenAI Executive Masterclass</a>
+          <a class="btn btn-ghost" href="ai-pipelines-vs-agents.html">Read: Pipelines vs Agents</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Whiteboard lightbox -->
+  <div class="lightbox" id="boardLightbox" role="dialog" aria-modal="true" aria-label="Enlarged whiteboard">
+    <button type="button" class="lightbox-close" aria-label="Close enlarged whiteboard">&#10005;</button>
+    <figure>
+      <img alt="" />
+      <figcaption></figcaption>
+    </figure>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="imagineers logo.webp" alt="Imagineers.ai logo" />
+        <p>
+          Business builders who make AI work in business. We train, we advise and we build. No platform, no licence
+          and no vendor margin, which is why our advice on tools is blunt.
+        </p>
+      </div>
+      <div>
+        <h4>What we do</h4>
+        <ul>
+          <li><a href="index.html">GenAI Executive Masterclass</a></li>
+          <li><a href="caio.html">CAiO as a Service</a></li>
+          <li><a href="fde.html">Forward-Deployed Engineering</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Talk to us</h4>
+        <ul>
+          <li>
+            Masterclass and private cohorts<br />
+            <a href="mailto:masterclass@imagineers.ai">masterclass@imagineers.ai</a>
+          </li>
+          <li>
+            CAiO, engineering and everything else<br />
+            <a href="mailto:info@imagineers.ai">info@imagineers.ai</a>
+          </li>
+          <li><a target="_blank" rel="noopener" href="https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/">Open enrolment dates and booking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>First Wednesday</h4>
+        <p>
+          One hour, 3pm, the first Wednesday of every month, on Zoom. What changed in the past month, where it
+          lands in business, and a new AI tool handed over live. Free for course alumni, indefinitely.
+        </p>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>&copy; 2026 Imagineers.ai</span>
+      <span>Johannesburg &middot; Cape Town &middot; Durban &middot; private cohorts delivered internationally</span>
+    </div>
+  </footer>
+
+  <script src="masterclass-theme.js"></script>
+  <script src="proof-stats.js"></script>
+  <script src="masterclass-v2.js"></script>
+</body>
+</html>
