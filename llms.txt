@@ -10,6 +10,11 @@ Imagineers.ai has trained 700+ senior executives across 60 two-day courses in Jo
 - [Fractional CAiO as a Service](https://www.imagineers.ai/caio.html): Chief AI Officer capability without a full-time hire. Board-level credibility, operating experience at national scale, and 6,500+ hours each of hands-on frontier AI, retained as a standing mandate.
 - [Forward Deployed Engineers (FDE)](https://www.imagineers.ai/fde.html): Engineers embedded inside a client's business, on their own data, shipping working AI systems against the real problem from week one. South Africa, and internationally on request.
 
+## Explainers
+
+- [What is a fractional CAiO?](https://www.imagineers.ai/what-is-a-fractional-caio.html): Definition of the fractional CAiO role, what it does day to day, and how it compares to a full-time Chief AI Officer and to a traditional consultant.
+- [What is a forward deployed engineer?](https://www.imagineers.ai/what-is-a-forward-deployed-engineer.html): Definition of the forward deployed engineer (FDE) role, what it does day to day, and how it compares to a traditional consultant and a regular software engineer.
+
 ## Contact
 
 - Masterclass and private cohorts: masterclass@imagineers.ai
