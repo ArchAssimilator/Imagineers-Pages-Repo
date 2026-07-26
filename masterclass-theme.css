@@ -720,10 +720,15 @@
 
     .course-table {
       width: 100%;
-      min-width: 640px;
       border-collapse: collapse;
       background: var(--white);
       font-size: 0.9rem;
+    }
+
+    /* Three-column tables cannot compress to a phone width and stay readable,
+       so those keep the horizontal scroll. Two-column ones fit and should not. */
+    .course-table-wide {
+      min-width: 640px;
     }
 
     .course-table th,
@@ -742,10 +747,12 @@
       text-transform: uppercase;
     }
 
+    /* No nowrap here. The agenda times it was written for are single tokens and
+       never wrap anyway, but on the prose tables it forced column one to the
+       width of its longest sentence and crushed column two. */
     .course-table td:first-child {
       color: var(--teal-500);
       font-weight: 800;
-      white-space: nowrap;
     }
 
     .course-accordion {
@@ -1058,8 +1065,13 @@
         flex-basis: 86%;
       }
 
-      .course-table {
+      .course-table-wide {
         min-width: 560px;
+      }
+
+      .course-table th,
+      .course-table td {
+        padding: 0.7rem 0.6rem;
       }
 
       .footer-grid {

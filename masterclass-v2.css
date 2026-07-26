@@ -246,6 +246,41 @@ body:has(.sticky-cta) footer {
   color: var(--amber);
 }
 
+/* A short numbered argument inside a claim band. The number does the scanning
+   work so the prose can stay tight. */
+.qual-list {
+  list-style: none;
+  display: grid;
+  gap: 1.1rem;
+  counter-reset: qual;
+  margin-bottom: 1.2rem;
+}
+
+.qual-list li {
+  counter-increment: qual;
+  display: grid;
+  grid-template-columns: 2.1rem 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.qual-list li::before {
+  content: counter(qual);
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--amber);
+}
+
+.qual-list li b {
+  color: var(--white);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
 .contrast-list {
   list-style: none;
   display: grid;
@@ -622,6 +657,29 @@ body:has(.sticky-cta) footer {
   color: rgba(255, 255, 255, 0.86);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+/* Cards in the ladder and stage grids carry an inline link out to the next
+   offer. Without this they render as plain body text. */
+.usecase a {
+  color: var(--teal-500);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 180, 216, 0.4);
+  transition: border-color 0.15s ease;
+}
+
+.usecase a:hover {
+  border-bottom-color: var(--teal-500);
+}
+
+.usecase-hero a {
+  color: var(--amber);
+  border-bottom-color: rgba(255, 183, 3, 0.45);
+}
+
+.usecase-hero a:hover {
+  border-bottom-color: var(--amber);
 }
 
 @media (min-width: 900px) {
