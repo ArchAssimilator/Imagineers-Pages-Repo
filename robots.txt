@@ -2,4 +2,21 @@ User-agent: *
 Allow: /
 Disallow: /SEO-PRD.md
 
+# AI crawlers explicitly allowed: citation in ChatGPT, Claude, Perplexity and
+# Google AI Overviews is a deliberate goal of this site, decided 2026-07-26.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://www.imagineers.ai/sitemap.xml
