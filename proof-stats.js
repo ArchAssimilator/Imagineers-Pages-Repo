@@ -1,46 +1,52 @@
 /* ==========================================================================
    proof-stats.js
-   Shared behaviour for the .proof-strip on every page.
+   Count-up animation for the .proof-strip on every page.
 
    ---------------------------------------------------------------------------
-   THE NUMBERS ARE NOT IN THIS FILE ANY MORE. They live in stats.json, which is
-   the single source of truth for this site AND for the Executive Navigants
-   landing page in the other repo. To change a figure, edit stats.json and then
-   run sh/check-stats.sh. Read HOW-TO-UPDATE-THE-NUMBERS.md first.
+   THE NUMBERS ARE NOT IN THIS FILE, AND THIS FILE NO LONGER FETCHES THEM.
+
+   They live in stats.json, and sh/apply-stats.mjs writes them into the HTML at
+   commit time via the pre-commit hook. By the time a page is deployed, the
+   markup is already correct, so this script only has to animate it.
+
+   It used to fetch stats.json at load and overwrite the markup. That was right
+   when the HTML was the stale copy, and wrong the moment apply-stats made the
+   HTML authoritative, because the two can disagree in the visitor's favour
+   only by accident. It bit us for real on 1 Aug 2026: GitHub Pages serves .js
+   with a four hour max-age but .html with ten minutes, so for four hours after
+   a deploy the CDN handed out a cached older script that confidently rewrote
+   the correct numbers back to the previous ones.
+
+   If you find yourself wanting to read stats.json from here again, you are
+   reintroducing that bug. The single source of truth is still stats.json; the
+   thing that reads it is sh/apply-stats.mjs, at commit time, once.
+
+   stats.json is still published at https://www.imagineers.ai/stats.json,
+   because the Executive Navigants landing page in the other repo fetches it.
+   That is the only consumer of the published file.
    ---------------------------------------------------------------------------
 
    How a proof item is wired:
 
-     data-stat="executives"   Shared fact. Value and suffix come from
-                              stats.json, and the number counts up on scroll.
-                              The text in the HTML is a fallback for crawlers
-                              and for no-JS; this script overwrites it and warns
-                              in the console if the two have drifted apart.
+     data-stat="executives"   Shared fact from stats.json. apply-stats keeps the
+                              text correct; this script reads that text and
+                              counts up to it on scroll.
 
      data-stat-text="executives"
-                              Shared fact written into running prose. Same
-                              value, no count-up animation, same drift warning.
+                              Same shared fact in running prose. apply-stats
+                              keeps it correct. Left alone here, because a
+                              number should not animate mid-sentence.
 
      data-count-to="2"        Page-local number. Counts up, but is not a shared
-                              fact, so it is not in stats.json. Used where a
-                              page wants a figure that only makes sense there.
+                              fact, so it is not in stats.json.
 
      (no attribute)           Left completely alone. Used for the slots where a
                               page swaps the number out for a phrase, such as
                               "Day 5" on the engineering page.
-
-   So each page shows the shared facts that support its own argument, and is
-   free to substitute its own fourth item. Nothing here assumes four items.
-
-   If stats.json cannot be fetched (offline, opened over file://), the script
-   falls back to the numbers already printed in the HTML, so the page never
-   shows a blank or a zero.
    ========================================================================== */
 
 (function () {
   'use strict';
-
-  var STATS_URL = 'stats.json';
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -81,48 +87,18 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* Bind the shared facts onto whatever this page is showing            */
+  /* Read the target out of the markup                                   */
   /* ------------------------------------------------------------------ */
 
-  function warnDrift(el, name, expected) {
-    var fallback = el.textContent.trim();
-    if (!fallback || fallback === expected) return;
-    console.warn(
-      'proof-stats: markup says "' + fallback + '" but stats.json says "' + expected +
-      '" for "' + name + '". Update the HTML so no-JS visitors and crawlers see the ' +
-      'current figure. Run sh/check-stats.sh to find every place that needs it.',
-      el
-    );
-  }
+  /* "1,400" or "725+" is a number we can animate. Anything else, such as the
+     "1 Aug 2026" verified date or a "Day 5" phrase, is left exactly as it is. */
+  function prepare() {
+    document.querySelectorAll('[data-stat]').forEach(function (el) {
+      var text = el.textContent.trim();
+      if (!/^[\d,\s]+\+?$/.test(text)) return;
 
-  function bind(stats) {
-    document.querySelectorAll('[data-stat], [data-stat-text]').forEach(function (el) {
-      var name = el.dataset.stat || el.dataset.statText;
-      var stat = stats[name];
-
-      if (stat === undefined) {
-        console.warn('proof-stats: no stat named "' + name + '" in stats.json', el);
-        return;
-      }
-
-      // String stats (the "verified" date) are written straight in.
-      if (typeof stat === 'string') {
-        warnDrift(el, name, stat);
-        el.textContent = stat;
-        return;
-      }
-
-      var expected = group(stat.value) + (stat.suffix || '');
-      warnDrift(el, name, expected);
-
-      // Prose: write it and leave it. No animation mid-sentence.
-      if (el.dataset.statText) {
-        el.textContent = expected;
-        return;
-      }
-
-      el.dataset.countTo = stat.value;
-      if (stat.suffix) el.dataset.suffix = stat.suffix;
+      el.dataset.countTo = parseInt(text.replace(/[^\d]/g, ''), 10);
+      if (/\+$/.test(text)) el.dataset.suffix = '+';
     });
   }
 
@@ -166,52 +142,7 @@
   }
 
   /* ------------------------------------------------------------------ */
-  /* Fallback: rebuild the stats from what is already printed on the page */
-  /* ------------------------------------------------------------------ */
 
-  function statsFromMarkup() {
-    var stats = {};
-    document.querySelectorAll('[data-stat], [data-stat-text]').forEach(function (el) {
-      var name = el.dataset.stat || el.dataset.statText;
-      if (stats[name]) return;
-      var text = el.textContent.trim();
-      // Only "1,400" or "700+" shaped text is a number. Anything else, such as
-      // the "July 2026" verified date, is carried through as a plain string.
-      stats[name] = /^[\d,\s]+\+?$/.test(text)
-        ? { value: parseInt(text.replace(/[^\d]/g, ''), 10), suffix: /\+$/.test(text) ? '+' : '' }
-        : text;
-    });
-    return stats;
-  }
-
-  /* ------------------------------------------------------------------ */
-  /* Go                                                                  */
-  /* ------------------------------------------------------------------ */
-
-  function start(stats) {
-    bind(stats);
-    animate();
-  }
-
-  if (!window.fetch) {
-    start(statsFromMarkup());
-    return;
-  }
-
-  // Default caching on purpose: GitHub Pages serves stats.json with a 4 hour
-  // max-age, so repeat views bind instantly from the browser cache instead of
-  // paying a round trip before the numbers can render.
-  fetch(STATS_URL)
-    .then(function (res) {
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      return res.json();
-    })
-    .then(function (data) { start(data); })
-    .catch(function (err) {
-      console.warn(
-        'proof-stats: could not load ' + STATS_URL + ' (' + err.message + '). ' +
-        'Falling back to the numbers printed in the HTML.'
-      );
-      start(statsFromMarkup());
-    });
+  prepare();
+  animate();
 })();
