@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#
+# pre-push: the pre-flight check for a GitHub Pages publish.
+#
+# Pushing this repo IS the deploy. There is no build step in between and no
+# server, so nothing downstream can catch a stale figure. This is the last
+# point at which a wrong number can be stopped, which is why the check runs
+# here rather than as a CI job that reports after the fact.
+#
+# Installed by:  sh/install-hooks.sh
+#
+# Blocks the push if any published figure disagrees with stats.json.
+# To push anyway:  git push --no-verify
+#
+set -uo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+printf '\n\033[2m── pre-push: checking published figures against stats.json ──\033[0m\n'
+
+if ! sh/check-stats.sh; then
+  cat <<'MSG'
+
+  ────────────────────────────────────────────────────────────────
+  PUSH BLOCKED. Pushing this repo publishes it, and at least one
+  figure on the live site would not match stats.json.
+
+  Fix the lines listed above, or waive a genuine false alarm with
+  an inline  <!-- stats-ok: why -->  comment, then push again.
+
+  Full procedure: HOW-TO-UPDATE-THE-NUMBERS.md
+  Deliberate exception: git push --no-verify
+  ────────────────────────────────────────────────────────────────
+
+MSG
+  exit 1
+fi
+
+# The other consumer, Executive-Navigants, reads stats.json over HTTPS from
+# www.imagineers.ai. This push is what updates it. Nothing to do here.
+
+exit 0

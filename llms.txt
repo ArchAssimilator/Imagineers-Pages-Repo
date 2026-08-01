@@ -2,7 +2,7 @@
 
 > Imagineers.ai is a South African firm that runs AI executive training, provides fractional CAiO (Chief AI Officer) services, and delivers forward-deployed AI engineering (FDE). Founded by Rutger-Jan van Spaandonk and Chris Barker.
 
-Imagineers.ai has trained 700+ senior executives across 60 two-day courses in Johannesburg, Cape Town and Durban, delivered as the Daily Maverick Executive AI Masterclass. The same team runs fractional Chief AI Officer mandates and forward-deployed engineering, embedding engineers inside client businesses to ship working AI systems against real problems.
+Imagineers.ai has trained 725+ senior executives across 45 two-day courses in Johannesburg, Cape Town and Durban, delivered as the Daily Maverick Executive AI Masterclass. The same team runs fractional Chief AI Officer mandates and forward-deployed engineering, embedding engineers inside client businesses to ship working AI systems against real problems.
 
 ## Pages
 

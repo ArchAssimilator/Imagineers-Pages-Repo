@@ -1,0 +1,16 @@
+{
+  "_README": "Written by sh/apply-stats.mjs. This is the record of which values are currently baked into the HTML and llms.txt, and it is what lets apply-stats find hand-typed figures on the next change. Committed on purpose. Do not hand-edit.",
+  "execDays": {
+    "value": 1400
+  },
+  "courses": {
+    "value": 45
+  },
+  "executives": {
+    "value": 725
+  },
+  "hours": {
+    "value": 6500
+  },
+  "verified": "1 Aug 2026"
+}

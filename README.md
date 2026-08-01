@@ -31,7 +31,9 @@ email signatures do not 404. They carry no content. Do not add any.
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
 ├── masterclass-v2.css       # Additive layer: hero-pitch, endorse-card, claim-band, acts, boards, usecase grid
 ├── masterclass-theme.js     # Nav toggle, scroll state, reveal-on-scroll, all pages
-├── proof-stats.js           # The proof-strip numbers and count-up, all pages
+├── stats.json               # SINGLE SOURCE OF TRUTH for the headline numbers
+├── proof-stats.js           # Reads stats.json, fills the proof strips, all pages
+├── sh/check-stats.sh        # Finds every figure that no longer matches stats.json
 ├── masterclass-v2.js        # Whiteboard lightbox and sticky CTA. Home page only
 ├── Whiteboards/             # Course whiteboards used on the home page
 ├── og-masterclass.jpg       # 1200x630 social card for the home page
@@ -53,20 +55,44 @@ Or `python3 -m http.server 8080` and open <http://localhost:8080>.
 
 ## Updating the headline numbers
 
-The 60 courses / 700+ executives / 1,400 executive days / 6,500 hours figures
-appear on all three pages. **Edit them in one place: the `STATS` object at the
-top of `proof-stats.js`.**
+The courses / executives / executive days / hours figures appear across the
+pages here, in `llms.txt`, **and on the Executive Navigants landing page in a
+separate repo.**
 
-Each proof item is wired one of three ways:
+**Edit them in one place: `stats.json`. Then run `sh/check-stats.sh`.**
 
-- `data-stat="executives"` is a shared fact. The value comes from `STATS` and
-  counts up on scroll. The number in the HTML is the crawler and no-JS
-  fallback; the script overwrites it and logs a console warning if the two have
-  drifted, so update both.
+Nothing else quotes a value. This file deliberately does not repeat the current
+numbers, because a README is the one place nobody thinks to update.
+
+Full procedure, including the step that updates the other repo:
+**[HOW-TO-UPDATE-THE-NUMBERS.md](./HOW-TO-UPDATE-THE-NUMBERS.md)**. Read it
+before touching a figure.
+
+In short: `stats.json` is the single source of truth. `proof-stats.js` fetches
+it and fills in every `data-stat` slot. GitHub Pages publishes it at
+`https://www.imagineers.ai/stats.json` with `access-control-allow-origin: *`,
+which is how the other site reads it with no server involved.
+
+Each proof item is wired one of four ways:
+
+- `data-stat="executives"` is a shared fact in a proof strip. The value comes
+  from `stats.json` and counts up on scroll. The number in the HTML is the
+  crawler and no-JS fallback; the script overwrites it and logs a console
+  warning if the two have drifted, so update both.
+- `data-stat-text="executives"` is the same shared fact in running prose. Same
+  value, no count-up animation.
 - `data-count-to="2"` is a page-local number. It animates but is not a shared
-  fact, so it stays out of `STATS`.
+  fact, so it stays out of `stats.json`.
 - No attribute means the slot is left alone. That is how a page swaps a number
   for a phrase, such as "Day 5" on the engineering page.
+
+Two hooks make this automatic. `pre-commit` runs `sh/apply-stats.sh`, which
+writes `stats.json` into every published file and stages the result, so editing
+the JSON and committing is the whole job. `pre-push` runs `sh/check-stats.sh`
+and refuses the push if anything still disagrees, which matters because pushing
+is the deploy here.
+
+Install both once per clone with `sh/install-hooks.sh`.
 
 Pages therefore show the shared facts that support their own argument and are
 free to substitute their own final item. Nothing assumes four items.

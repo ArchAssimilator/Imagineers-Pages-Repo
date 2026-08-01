@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+#
+# pre-commit: make "edit stats.json and nothing else" true.
+#
+# Rewrites every published file from stats.json and stages whatever changed,
+# so committing a new number is all you have to do. The proof strips, meta
+# descriptions, JSON-LD, prose and llms.txt all move with it.
+#
+# Installed by:  sh/install-hooks.sh
+# To skip once:  git commit --no-verify
+#
+set -uo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+
+OUT=$(node sh/apply-stats.mjs --porcelain 2>&1) || {
+  printf '\n\033[31mapply-stats failed, commit aborted:\033[0m\n%s\n' "$OUT"
+  exit 1
+}
+
+FILES=$(printf '%s\n' "$OUT" | sed -n '/^---FILES---$/,$p' | tail -n +2)
+printf '%s\n' "$OUT" | sed '/^---FILES---$/,$d'
+
+if [ -n "$FILES" ]; then
+  # Only stage files that this commit already touches, or that apply-stats
+  # rewrote because a number moved. Staging is what makes it automatic; the
+  # alternative is aborting the commit and asking you to add them yourself.
+  printf '\033[32m  staged:\033[0m\n'
+  while IFS= read -r f; do
+    [ -n "$f" ] || continue
+    git add -- "$f"
+    printf '    %s\n' "$f"
+  done <<< "$FILES"
+fi
+
+exit 0

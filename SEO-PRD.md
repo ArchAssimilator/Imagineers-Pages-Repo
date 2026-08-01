@@ -107,11 +107,15 @@ is more achievable for a three-page site than out-ranking established competitor
   you touch. En-dashes are fine for numeric ranges. Hyphens are fine.
 - Match the existing voice: direct, operator-led, slightly combative toward
   conventional AI training. Read the live copy before writing any.
-- **Never invent a factual claim.** Numbers like "700+ senior executives", "60
-  courses", "6,500 hours" and the R21,500 price already appear on the site. Reuse them
-  exactly. Do not round, inflate, extrapolate, or create new statistics. If a
-  recommendation requires a fact the site does not already assert, flag it as a
-  question for Chris rather than filling the gap.
+- **Never invent a factual claim.** The headline proof numbers (courses,
+  executives, executive days, hours) live in `stats.json` and nowhere else. Read
+  the current values from there, or run `sh/check-stats.sh` to print them, and
+  reuse them exactly. Do not quote them in this document or any other, because a
+  copy is a figure that goes stale. Do not round, inflate, extrapolate, or create
+  new statistics. If a recommendation requires a fact the site does not already
+  assert, flag it as a question for Chris rather than filling the gap.
+- **Write figures as digits**, so `sh/check-stats.sh` can police them. "Seven
+  hundred executives" is invisible to the checker and is how prose goes stale.
 
 **Technical:**
 
