@@ -7,14 +7,15 @@ this folder is published as-is to `www.imagineers.ai` by GitHub Pages (see
 ## 🚨 The headline numbers are a cross-repo single source of truth
 
 `stats.json` in this folder is the **only** place the proof figures live:
-courses run, executives trained, executive days, hours of hands-on use, and the
-"figures verified" date.
+courses run, executives trained, executive days, hours of hands-on use, both
+course fees, and the "figures verified" date.
 
 Two different websites read it:
 
 1. **This site.** `sh/apply-stats.mjs` writes the values into every published
-   file at commit time, via the `pre-commit` hook. `proof-stats.js` also
-   re-reads `stats.json` in the browser.
+   file at commit time, via the `pre-commit` hook. `proof-stats.js` only
+   animates what is already in the markup and must not fetch `stats.json`; the
+   comment at the top of that file says why.
 2. **Executive Navigants** (`../Executive-Navigants`, a completely separate repo
    and a separate deploy) fetches `https://www.imagineers.ai/stats.json` over
    HTTPS and refreshes itself. Nothing in this repo has to do anything for it,
@@ -38,9 +39,14 @@ Two different websites read it:
 - **A number that tracks a stat but does not sit next to the word for it must be
   bound explicitly**, as `<span data-stat-text="courses">45</span>`. Otherwise
   Part 3 of the checker reports it as an `ORPHAN` and the push is blocked.
+- **The two course fees are stats too**, `price` and `priceInHouse`. Do not type
+  a Rand figure into `index.html` or `llms.txt`; edit `stats.json`. A stat with a
+  `prefix` is money, which is what tells the tooling to write the "R" into the
+  HTML but not into the JSON-LD `Offer`, and to keep fees and headcounts from
+  ever being mistaken for each other.
 - Adding a new stat means: add it to `stats.json`, then add a keyword for it to
   `KEYWORDS` in **both** `sh/check-stats.mjs` and `sh/apply-stats.mjs`. They must
-  stay identical.
+  stay identical, and the keyword must be one no other stat can also match.
 - **`sh/.stats-applied.json` is committed on purpose and must not be hand-edited.**
   It records which values are currently in the HTML, and it is the only way
   `apply-stats` can find an unlabelled figure in prose on the next change.

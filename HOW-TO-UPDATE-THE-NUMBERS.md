@@ -31,6 +31,8 @@ The numbers in question are:
 | `executives` | "Senior executives trained" |
 | `execDays` | "Executive days of instruction" |
 | `hours` | "Hours of hands-on GenAI, per facilitator" |
+| `price` | The open-enrolment fee, "R21,500 incl VAT per person" |
+| `priceInHouse` | The private-team fee, "R215,000 ex VAT" |
 | `verified` | "Figures verified …" under the strip |
 
 The current values are in `stats.json` and nowhere else, including here. Run
@@ -70,6 +72,28 @@ its `label` too. Bump `verified` to the date you checked the figures.
 `suffix` is the bit that is not a digit, usually `"+"` or `""`. Do not put commas
 in `value`; the code inserts them.
 
+### Changing a course fee
+
+Exactly the same thing. `price` is the open-enrolment ticket, `priceInHouse` is
+the private-team engagement.
+
+```json
+"price": { "value": 23750, "prefix": "R", "suffix": "", "label": "per person incl VAT, open enrolment" },
+```
+
+The `prefix` is what makes a stat money rather than a count, and it changes two
+things. The "R" is written into the visible HTML but never into the JSON-LD
+`Offer`, which takes bare digits, and the tooling knows that a Rand amount is
+never a headcount, so `R30,000 to R60,000 of non-billable time` cannot be
+mistaken for one and a fee cannot be dragged along when a headline count moves.
+
+One fee is stated in five places, and all five move on commit: the JSON-LD
+offer, both price cards, the sticky call to action, and the line in `llms.txt`.
+The two fees are told apart by their VAT basis, "incl VAT" against "ex VAT",
+because the word "price" sits on both cards and would claim the wrong figure.
+If you ever reword a card so it no longer says which way VAT runs, the checker
+stops finding that figure. Say it.
+
 ### 2. Commit
 
 ```bash
@@ -91,14 +115,17 @@ edited the HTML behind the hook's back.
 **Part 2, hand-typed figures.** A static site cannot data-bind a `<meta>`
 description, a JSON-LD block, or a sentence in the middle of a paragraph. The
 script finds every number written near the words "courses", "executives",
-"executive days" or "hours", in the HTML pages **and in `llms.txt`**, and
-reports the ones that do not match `stats.json` as `STALE`. This part exits
-non-zero too, so a stale sentence stops a push exactly like a stale proof strip
-does.
+"executive days", "hours", "incl VAT" or "ex VAT", in the HTML pages **and in
+`llms.txt`**, and reports the ones that do not match `stats.json` as `STALE`.
+This part exits non-zero too, so a stale sentence stops a push exactly like a
+stale proof strip does.
 
 It looks at a window of text around each keyword rather than a single line, so
-a figure that wraps onto the next line is still caught. Prices, percentages,
-agenda times and HTML entities are ignored.
+a figure that wraps onto the next line is still caught. Percentages, agenda
+times and HTML entities are ignored. Rand amounts are read, because two of them
+are now tracked fees, but only ever as a fee: an untracked amount such as
+`R30,000` can never be reported as a headcount, and a headcount can never be
+rewritten into the middle of one.
 
 If a `STALE` line is a genuine false alarm, waive it in place:
 
@@ -147,22 +174,23 @@ GitHub Pages redeploys in a minute or two. **This alone updates both websites.**
 
 ## How each page actually gets the number
 
-**This site.** `proof-stats.js` fetches `stats.json` on load and writes the
-values into every element carrying a `data-stat` or `data-stat-text` attribute.
-Three wiring options:
+**This site.** The published HTML is already correct, because `apply-stats`
+wrote the values into it at commit time. `proof-stats.js` only animates what is
+there; it does not fetch `stats.json`, and the long comment at the top of that
+file explains why putting the fetch back would reintroduce a real bug. The
+attributes are how `apply-stats` knows what to write:
 
 - `data-stat="executives"` is a shared fact in a proof strip. Counts up on
   scroll. The text in the HTML is the crawler and no-JS fallback and must be
   kept in step, which is what Part 1 of the checker enforces.
 - `data-stat-text="executives"` is the same shared fact in running prose. Same
   value, no animation mid-sentence.
+- `data-stat-text="price"` is a fee, so the visible text carries the "R" as
+  well: `<span data-stat-text="price">R21,500</span>`.
 - `data-count-to="2"` is a page-local number. It animates but is not a shared
   fact, so it stays out of `stats.json`.
 - No attribute means the slot is left alone. That is how a page swaps a number
   for a phrase, such as "Day 5" on the engineering page.
-
-If `stats.json` cannot be fetched, the script falls back to the numbers already
-printed in the HTML, so the page never shows a blank or a zero.
 
 **Executive Navigants.** Reads `https://www.imagineers.ai/stats.json` over
 HTTPS. GitHub Pages serves it with `access-control-allow-origin: *`, which is
@@ -174,6 +202,9 @@ in that repo: `docs/subsystems/proof-stats.md`.
 - **Adding a new stat** means adding it to `stats.json` and adding a keyword for
   it to `KEYWORDS` in **both** `sh/check-stats.mjs` and `sh/apply-stats.mjs`.
   They must agree, or apply-stats writes something check-stats then rejects.
+  Pick a keyword only that stat can own. Two stats that share one, the way both
+  fees would have shared the word "price", will claim each other's figure and
+  report the wrong one stale.
   Keywords are matched in the plural on purpose, so "45 courses" is policed but
   the "GenAI Executive Masterclass" product name is not mistaken for a headcount.
 - **`sh/.stats-applied.json` is committed on purpose.** It records which values

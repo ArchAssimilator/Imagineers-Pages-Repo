@@ -22,5 +22,20 @@
     "label": "hours each of hands-on GenAI use"
   },
 
+  "_PRICES": "The two course fees. A stat with a prefix is a fee, not a count: the prefix is written in the HTML but never in the JSON-LD offer, which takes bare digits. Do not put a comma in value; the code inserts it where the surrounding text already uses one.",
+
+  "price": {
+    "value": 21500,
+    "prefix": "R",
+    "suffix": "",
+    "label": "per person incl VAT, open enrolment"
+  },
+  "priceInHouse": {
+    "value": 215000,
+    "prefix": "R",
+    "suffix": "",
+    "label": "per private cohort ex VAT, up to fifteen delegates"
+  },
+
   "verified": "1 Aug 2026"
 }

@@ -12,5 +12,11 @@
   "hours": {
     "value": 6500
   },
+  "price": {
+    "value": 21500
+  },
+  "priceInHouse": {
+    "value": 215000
+  },
   "verified": "1 Aug 2026"
 }

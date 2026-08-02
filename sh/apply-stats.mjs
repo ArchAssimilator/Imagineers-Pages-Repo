@@ -44,21 +44,32 @@ const FILES = [
 /* Same keywords and window as the checker, deliberately. If these two ever
    disagree, apply-stats would write something check-stats then rejects. */
 const KEYWORDS = {
-  execDays:   /\bexecutive[- ]days\b/gi,
-  courses:    /\bcourses\b/gi,
-  executives: /\bexecutives\b|\bleaders\b/gi,
-  hours:      /\bhours\b/gi,
+  execDays:     /\bexecutive[- ]days\b/gi,
+  courses:      /\bcourses\b/gi,
+  executives:   /\bexecutives\b|\bleaders\b/gi,
+  hours:        /\bhours\b/gi,
+  price:        /\bincl\.? VAT\b|"price":/gi,
+  priceInHouse: /\bex\.? VAT\b/gi,
 };
 const WINDOW = 110;
 
 const group = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 const expected = (name) =>
-  typeof stats[name] === 'string' ? stats[name] : group(stats[name].value) + (stats[name].suffix || '');
+  typeof stats[name] === 'string'
+    ? stats[name]
+    : (stats[name].prefix || '') + group(stats[name].value) + (stats[name].suffix || '');
+
+/* A stat carrying a prefix is money rather than a count. */
+const isFee = (name) => Boolean(stats[name] && stats[name].prefix);
 
 const mask = (text, re) => text.replace(re, (m) => ' '.repeat(m.length));
 const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-/* Regions that are not prose. Kept in step with check-stats.mjs. */
+/* Regions that are not prose. Kept in step with check-stats.mjs, including
+   how Rand amounts are handled: the digits survive and only the "R" is
+   stripped, because "R21,500" has no word boundary between the R and the 2.
+   `money` carries the character range of each amount, so a count stat can skip
+   them by position and never rewrite half of a fee. */
 function masked(text) {
   let t = text;
   t = mask(t, /<!--[\s\S]*?-->/g);
@@ -67,8 +78,15 @@ function masked(text) {
   t = mask(t, /\b\d{1,2}:\d{2}\b/g);
   t = mask(t, /#[0-9a-fA-F]{3,8}\b/g);
   t = mask(t, /\d[\d,]*\s*%/g);
-  t = mask(t, /\bR\s?\d[\d,]*\b/g);
-  return t;
+
+  const money = [];
+  t = t.replace(/\bR\s?(\d[\d,]*)\b/g, (whole, digits, offset) => {
+    const start = offset + whole.length - digits.length;
+    money.push([start, start + digits.length]);
+    return ' '.repeat(whole.length - digits.length) + digits;
+  });
+
+  return { text: t, isMoney: (i) => money.some(([a, b]) => i >= a && i < b) };
 }
 
 /* ---------------------------------------------------------------- */
@@ -117,7 +135,7 @@ for (const file of FILES) {
       if (!oldStat || !newStat || typeof newStat === 'string') continue;
       if (oldStat.value === newStat.value) continue;
 
-      const search = masked(text);
+      const { text: search, isMoney } = masked(text);
 
       /* Where the topic words are. */
       const zones = [...search.matchAll(keyword)]
@@ -130,15 +148,19 @@ for (const file of FILES) {
         .filter((v, i, a) => a.indexOf(v) === i);
       const re = new RegExp(`\\b(?:${forms.map(esc).join('|')})\\b`, 'g');
 
+      /* Each figure is rewritten in the spelling it already had. Prose writes
+         "21,500" and a JSON-LD offer writes "21500", and an offer with a comma
+         in it is not valid schema.org, so we cannot pick one house style. */
       const edits = [];
       for (const m of search.matchAll(re)) {
         if (!near(m.index)) continue;
-        edits.push([m.index, m.index + m[0].length]);
+        if (!isFee(name) && isMoney(m.index)) continue;   // a count never rewrites a Rand amount
+        edits.push([m.index, m.index + m[0].length, m[0].includes(',')]);
       }
 
       /* Right to left, so earlier offsets stay valid. */
-      const write = newStat.value >= 1000 ? group(newStat.value) : String(newStat.value);
-      for (const [from, to] of edits.reverse()) {
+      for (const [from, to, grouped] of edits.reverse()) {
+        const write = grouped ? group(newStat.value) : String(newStat.value);
         text = text.slice(0, from) + write + text.slice(to);
       }
     }

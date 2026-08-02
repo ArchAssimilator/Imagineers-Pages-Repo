@@ -25,7 +25,13 @@ const FILES = [
 
 const group = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 const expected = (name) =>
-  typeof stats[name] === 'string' ? stats[name] : group(stats[name].value) + (stats[name].suffix || '');
+  typeof stats[name] === 'string'
+    ? stats[name]
+    : (stats[name].prefix || '') + group(stats[name].value) + (stats[name].suffix || '');
+
+/* A stat carrying a prefix is money rather than a count. That is the only
+   thing that distinguishes the two fees from the four headline figures. */
+const isFee = (name) => Boolean(stats[name] && stats[name].prefix);
 
 /* Which words mean "this text is talking about that stat". Ordered most
    specific first: "executive days" must be claimed by execDays before the
@@ -34,12 +40,20 @@ const expected = (name) =>
    Plurals only, deliberately. A headline figure is always counting more than
    one of the thing, so "725 executives" and "45 courses" match, while the
    singular adjectival uses that carry unrelated numbers nearby, "Executive
-   Masterclass", "AI executive training", "the course we open with", do not. */
+   Masterclass", "AI executive training", "the course we open with", do not.
+
+   The two fees cannot use the obvious word. "price" appears on both cards and
+   would claim each other's figure, so they anchor to the VAT basis instead,
+   which is the one thing the open-enrolment and private-team fees never share.
+   `"price":` with the colon is the JSON-LD offer and nothing else; the HTML
+   class attribute is `class="price"` and does not match. */
 const KEYWORDS = [
-  ['execDays',   /\bexecutive[- ]days\b/gi],
-  ['courses',    /\bcourses\b/gi],
-  ['executives', /\bexecutives\b|\bleaders\b/gi],
-  ['hours',      /\bhours\b/gi],
+  ['execDays',     /\bexecutive[- ]days\b/gi],
+  ['courses',      /\bcourses\b/gi],
+  ['executives',   /\bexecutives\b|\bleaders\b/gi],
+  ['hours',        /\bhours\b/gi],
+  ['price',        /\bincl\.? VAT\b|"price":/gi],
+  ['priceInHouse', /\bex\.? VAT\b/gi],
 ];
 
 /* How far either side of the keyword we look for its number. Prose here wraps
@@ -68,7 +82,26 @@ function load(file) {
   text = mask(text, /\b\d{1,2}:\d{2}\b/g);          // agenda times
   text = mask(text, /#[0-9a-fA-F]{3,8}\b/g);        // hex colours
   text = mask(text, /\d[\d,]*\s*%/g);               // the 80% wall is not a headcount
-  text = mask(text, /\bR\s?\d[\d,]*\b/g);           // nor is R21,500
+
+  /* Rand amounts. The whole lot used to be blanked, so a fee could never be
+     read as a headcount. Two fees are tracked stats now, so blanking them
+     would hide the very figures we are here to police, and blanking by value
+     is worse than useless: the value we most need to see is the outgoing one,
+     which by definition is no longer in stats.json.
+
+     So the digits always survive and only the "R" is stripped, which is not
+     cosmetic. "R21,500" has no word boundary between the R and the 2, so the
+     \b-anchored number patterns below walk straight past the digits while the
+     R is still there. What keeps a fee from being counted as a headcount is
+     `money` instead: the character range of every amount, so a count stat can
+     skip them by position rather than by guessing at their value. */
+  const money = [];
+  text = text.replace(/\bR\s?(\d[\d,]*)\b/g, (whole, digits, offset) => {
+    const start = offset + whole.length - digits.length;
+    money.push([start, start + digits.length]);
+    return ' '.repeat(whole.length - digits.length) + digits;
+  });
+  const isMoney = (i) => money.some(([a, b]) => i >= a && i < b);
 
   /* Line number for any character offset. */
   const starts = [0];
@@ -82,7 +115,7 @@ function load(file) {
     return lo + 1;
   };
 
-  return { raw, text, waivers, lineAt };
+  return { raw, text, waivers, lineAt, isMoney };
 }
 
 /* ---------------------------------------------------------------- */
@@ -130,7 +163,7 @@ console.log(`${DIM}  with an inline  <!-- stats-ok: why -->  comment.${OFF}\n`);
 let stale = 0, waived = 0, ok = 0;
 
 for (const file of FILES) {
-  const { text, waivers, lineAt } = load(file);
+  const { text, waivers, lineAt, isMoney } = load(file);
 
   /* Claim the keyword itself, never its window. "1,400 executive days" is
      claimed by execDays, so the executives pattern cannot report the same
@@ -152,7 +185,14 @@ for (const file of FILES) {
       const from = Math.max(0, m.index - WINDOW);
       const to = Math.min(text.length, m.index + m[0].length + WINDOW);
       const window = text.slice(from, to);
-      const numbers = [...window.matchAll(/\b(\d{1,3}(?:,\d{3})+|\d{2,5})\b/g)]
+      /* Up to seven digits, so an ungrouped 215000 in a JSON-LD offer is read
+         as readily as a grouped 215,000 in prose. */
+      const numbers = [...window.matchAll(/\b(\d{1,3}(?:,\d{3})+|\d{2,7})\b/g)]
+        /* A Rand amount is not a headcount. llms.txt says "senior leaders in
+           South Africa. R21,500 incl VAT" in one breath, and without this the
+           executives pattern finds a number beside its keyword and calls the
+           line stale. A fee stat, of course, is allowed to match one. */
+        .filter((n) => isFee(name) || !isMoney(from + n.index))
         .map((n) => parseInt(n[1].replace(/,/g, ''), 10));
       if (!numbers.length) continue;
 
@@ -200,7 +240,7 @@ console.log(`${DIM}  written near the word for it. apply-stats cannot move these
 let orphans = 0;
 
 for (const file of FILES) {
-  const { raw, text, waivers, lineAt } = load(file);
+  const { raw, text, waivers, lineAt, isMoney } = load(file);
 
   /* Character ranges of the inner text of every data-stat element. Pass A of
      apply-stats rewrites these, so they are already accounted for. */
@@ -224,6 +264,7 @@ for (const file of FILES) {
       const i = m.index;
       if (bound.some(([a, b]) => i >= a && i < b)) continue;   // pass A owns it
       if (zones.some(([a, b]) => i >= a && i <= b)) continue;  // pass B owns it
+      if (!isFee(name) && isMoney(i)) continue;                // "R45,000" is not the course count
 
       const from = Math.max(0, i - 80), to = Math.min(text.length, i + 60);
       if (waivers.some((w) => w >= from && w <= to)) { waived++; continue; }
