@@ -47,11 +47,16 @@ repo root becomes publicly fetchable.
 | `caio.html` | CAiO as a Service \| Imagineers.ai | yes | yes | 8 tags | **none** |
 | `fde.html` | Forward-Deployed Engineering \| Imagineers.ai | yes | yes | 8 tags | **none** |
 
-**Redirect stubs (4):** `masterclass.html`, `contact.html`, `cpi.html` canonical to
-`index.html`; `genaisl.html` canonicals to `fde.html`. All four have title
-"Redirecting", no meta description, no OG tags. None appear in `sitemap.xml`, which
-is correct. Verify how each performs its redirect (meta refresh vs JS) before
-changing anything, and confirm whether any still receive inbound links.
+**Redirect stubs: none.** `masterclass.html`, `contact.html`, `cpi.html` and
+`genaisl.html` were meta-refresh stubs until August 2026, when they were deleted
+as unused. Those four paths now return 404, which is the intended state. They
+never appeared in `sitemap.xml`.
+
+Two canonical problems went with them. All four carried `noindex` alongside a
+`rel=canonical`, a conflicting pair that can carry the `noindex` to the canonical
+target, and the three homepage stubs canonicalised to `index.html` rather than
+`/`, a one-hop chain. Fixed at the same time: internal links now use `href="/"`,
+so `/index.html` is no longer advertised to crawlers.
 
 **Assets:** `robots.txt` (allows all, points at sitemap), `sitemap.xml` (3 URLs, no
 `lastmod`), `og-imagineers.jpg`, `og-masterclass.jpg`, `imagineers logo.webp`,

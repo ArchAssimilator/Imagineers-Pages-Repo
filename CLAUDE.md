@@ -67,8 +67,17 @@ works.
   class names, so the base theme is never overridden by accident.
 - Course transcripts and other source material stay out of this repo. Anything
   committed here is publicly fetchable.
-- `cpi.html`, `masterclass.html`, `contact.html`, `genaisl.html` are `noindex`
-  meta-refresh stubs that exist only so old URLs do not 404. Add no content.
+- `cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` were
+  meta-refresh stubs for pre-rebuild URLs. Deleted as unused, August 2026. Those
+  paths 404 by design. Do not recreate them.
+- If a redirect stub is ever needed again: give it a `rel=canonical` pointing at
+  the **final** destination URL and no `noindex`. The two together are a
+  conflicting signal, and an honoured canonical can carry the `noindex` to its
+  target. A canonical aimed at a URL that is itself canonicalised is a chain.
+- **Link to the homepage as `href="/"`, never `href="index.html"`.** GitHub Pages
+  serves `/index.html` as a real 200 duplicate of `/`, so linking to it invites
+  Google to crawl it and file it under "Alternative page with proper canonical
+  tag" in Search Console. Fixed August 2026, do not reintroduce.
 
 ## Local development
 

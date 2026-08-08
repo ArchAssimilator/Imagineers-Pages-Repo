@@ -15,11 +15,12 @@ The GenAI Executive Masterclass is the front door and sits at the site root.
 
 Navigation order is deliberate: **train → direct → build**.
 
-### Redirect stubs
+### Retired URLs
 
-`cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` are
-`noindex` meta-refresh stubs kept only so previously published URLs and old
-email signatures do not 404. They carry no content. Do not add any.
+`cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` used to be
+meta-refresh stubs covering URLs published before the July 2026 rebuild. They
+were deleted in August 2026 as unused, and those four paths now 404. Do not
+recreate them.
 
 ## Assets
 
