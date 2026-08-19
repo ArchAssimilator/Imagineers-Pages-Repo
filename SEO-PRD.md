@@ -44,13 +44,29 @@ repo root becomes publicly fetchable.
 | File | Title | Meta desc | Canonical | OG | JSON-LD |
 |---|---|---|---|---|---|
 | `index.html` | GenAI Executive Masterclass \| Imagineers.ai | yes | yes | 8 tags | 1 block: `Organization` + `Course` |
+| `masterclass.html` | GenAI Executive Masterclass: The Full Two-Day Programme \| Imagineers.ai | yes | yes | 8 tags | 1 block: `Organization` + `Course` + `FAQPage` |
 | `caio.html` | CAiO as a Service \| Imagineers.ai | yes | yes | 8 tags | **none** |
 | `fde.html` | Forward-Deployed Engineering \| Imagineers.ai | yes | yes | 8 tags | **none** |
 
 **Redirect stubs: none.** `masterclass.html`, `contact.html`, `cpi.html` and
 `genaisl.html` were meta-refresh stubs until August 2026, when they were deleted
-as unused. Those four paths now return 404, which is the intended state. They
-never appeared in `sitemap.xml`.
+as unused. `contact.html`, `cpi.html` and `genaisl.html` still return 404, which
+is the intended state.
+
+`masterclass.html` was rebuilt as a real page on 19 August 2026 and is in
+`sitemap.xml` at priority 0.9. It holds the full masterclass content;
+`index.html` is a cut-back version of the same page. Both are indexable and
+self-canonical, with distinct titles and meta descriptions. It is kept out of
+the nav on purpose, so it has no inbound internal links and Google will crawl it
+less often than a linked page. Its `Course` and `FAQPage` nodes use
+`https://www.imagineers.ai/masterclass.html#course` and `#faq` so no `@id`
+collides with the homepage.
+
+**Known risk, accepted.** The two pages share most of their copy. Google may
+consolidate them and suppress one. Watch Search Console for `index.html` or
+`masterclass.html` reported as "Duplicate, Google chose different canonical". If
+that happens, the fix is to cut more from `index.html` or canonicalise one to
+the other.
 
 Two canonical problems went with them. All four carried `noindex` alongside a
 `rel=canonical`, a conflicting pair that can carry the `noindex` to the canonical

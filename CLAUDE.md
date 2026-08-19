@@ -67,9 +67,15 @@ works.
   class names, so the base theme is never overridden by accident.
 - Course transcripts and other source material stay out of this repo. Anything
   committed here is publicly fetchable.
-- `cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` were
-  meta-refresh stubs for pre-rebuild URLs. Deleted as unused, August 2026. Those
-  paths 404 by design. Do not recreate them.
+- `cpi.html`, `contact.html` and `genaisl.html` were meta-refresh stubs for
+  pre-rebuild URLs. Deleted as unused, August 2026. Those paths 404 by design.
+  Do not recreate them.
+- `masterclass.html` was also one of those stubs, deleted at the same time. It
+  was **rebuilt as a real page on 19 August 2026**, holding the full masterclass
+  content while `index.html` is cut back. It is indexable, self-canonical, and
+  deliberately absent from the nav menu; `sitemap.xml` and `llms.txt` are its
+  only discovery routes. Its `Course` and `FAQPage` JSON-LD nodes carry
+  `masterclass.html#` `@id` values so they never collide with the homepage's.
 - If a redirect stub is ever needed again: give it a `rel=canonical` pointing at
   the **final** destination URL and no `noindex`. The two together are a
   conflicting signal, and an honoured canonical can carry the `noindex` to its

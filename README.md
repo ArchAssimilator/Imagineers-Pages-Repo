@@ -19,14 +19,20 @@ Navigation order is deliberate: **train → direct → build**.
 
 `cpi.html`, `masterclass.html`, `contact.html` and `genaisl.html` used to be
 meta-refresh stubs covering URLs published before the July 2026 rebuild. They
-were deleted in August 2026 as unused, and those four paths now 404. Do not
-recreate them.
+were deleted in August 2026 as unused. `cpi.html`, `contact.html` and
+`genaisl.html` now 404, which is intended. Do not recreate them.
+
+`masterclass.html` came back on 19 August 2026 as a real, indexable page. It
+carries the full masterclass content; `index.html` is the shorter version. It is
+not in the nav by design, so `sitemap.xml` and `llms.txt` are the only ways to
+find it.
 
 ## Assets
 
 ```
 .
 ├── index.html               # Masterclass (home)
+├── masterclass.html         # Masterclass, full version (not in nav)
 ├── caio.html                # CAiO as a Service
 ├── fde.html                 # Forward-Deployed Engineering
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
