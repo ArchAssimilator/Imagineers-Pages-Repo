@@ -7,7 +7,7 @@ Imagineers.ai has trained 725+ senior executives across 45 two-day courses in Jo
 ## Pages
 
 - [GenAI Executive Masterclass](https://www.imagineers.ai/): Two-day AI executive training for senior leaders in South Africa. R21,500 incl VAT per person, open enrolment in Johannesburg, Cape Town and Durban, or private cohorts delivered internationally on request.
-- [GenAI Executive Masterclass: the full two-day programme](https://www.imagineers.ai/masterclass.html): The complete masterclass curriculum in full, module by module, including all twelve applied use cases. Same course as the homepage describes, at greater length.
+- [GenAI Executive Masterclass: the full two-day programme](https://www.imagineers.ai/masterclass.html): The complete masterclass curriculum in full, module by module, including all twelve applied use cases, plus where each open enrolment cohort runs in Johannesburg, Cape Town and Durban. Same course as the homepage describes, at greater length.
 - [Fractional CAiO as a Service](https://www.imagineers.ai/caio.html): Chief AI Officer capability without a full-time hire. Board-level credibility, operating experience at national scale, and 6,500+ hours each of hands-on frontier AI, retained as a standing mandate.
 - [Forward Deployed Engineers (FDE)](https://www.imagineers.ai/fde.html): Engineers embedded inside a client's business, on their own data, shipping working AI systems against the real problem from week one. South Africa, and internationally on request.
 

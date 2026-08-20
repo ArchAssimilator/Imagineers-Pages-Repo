@@ -5,15 +5,32 @@ Static site for Imagineers.ai. No frameworks, no build step. Published to
 
 ## Pages
 
-The GenAI Executive Masterclass is the front door and sits at the site root.
+Eight live pages: four commercial, four definition explainers. The GenAI
+Executive Masterclass is the front door and sits at the site root.
 
-| URL | File | Purpose |
-| --- | --- | --- |
-| `/` | `index.html` | GenAI Executive Masterclass: the full argument, agendas, whiteboards, testimonials, pricing and booking |
-| `/caio.html` | `caio.html` | CAiO as a Service: executive-level AI direction |
-| `/fde.html` | `fde.html` | Forward-Deployed Engineering: we come in and build it |
+**Commercial**
 
-Navigation order is deliberate: **train → direct → build**.
+| URL | File | Purpose | Search term it targets |
+| --- | --- | --- | --- |
+| `/` | `index.html` | GenAI Executive Masterclass: the full argument, agendas, whiteboards, testimonials, pricing and booking | AI executive training South Africa |
+| `/masterclass.html` | `masterclass.html` | The same course at full length: every module, all twelve applied use cases, and where each cohort runs | AI executive training Johannesburg / Cape Town / Durban |
+| `/caio.html` | `caio.html` | Fractional CAiO as a Service: executive-level AI direction | fractional CAiO |
+| `/fde.html` | `fde.html` | Forward-Deployed Engineering: we come in and build it | forward deployed engineers, FDE |
+
+**Explainers.** Definition pages aimed at being cited by ChatGPT, Claude,
+Perplexity and Google AI Overviews rather than at ranking for geography. Each
+carries `DefinedTerm` and `FAQPage` schema and links to its commercial page.
+
+| URL | File |
+| --- | --- |
+| `/what-is-a-fractional-caio.html` | `what-is-a-fractional-caio.html` |
+| `/what-is-a-forward-deployed-engineer.html` | `what-is-a-forward-deployed-engineer.html` |
+| `/what-is-context-rot.html` | `what-is-context-rot.html` |
+| `/ai-pipelines-vs-agents.html` | `ai-pipelines-vs-agents.html` |
+
+Navigation order is deliberate: **train → direct → build**. Only the four
+commercial pages are in the nav, and `masterclass.html` is not, but it *is*
+linked from the shared footer on all eight pages.
 
 ### Retired URLs
 
@@ -24,17 +41,23 @@ were deleted in August 2026 as unused. `cpi.html`, `contact.html` and
 
 `masterclass.html` came back on 19 August 2026 as a real, indexable page. It
 carries the full masterclass content; `index.html` is the shorter version. It is
-not in the nav by design, so `sitemap.xml` and `llms.txt` are the only ways to
-find it.
+kept out of the nav by design, but it is linked from the shared footer on all
+eight pages and contextually from `index.html`, `fde.html` and three explainers,
+so it is not orphaned.
 
 ## Assets
 
 ```
 .
 ├── index.html               # Masterclass (home)
-├── masterclass.html         # Masterclass, full version (not in nav)
-├── caio.html                # CAiO as a Service
+├── masterclass.html         # Masterclass, full version (not in nav, linked from footer)
+├── caio.html                # Fractional CAiO as a Service
 ├── fde.html                 # Forward-Deployed Engineering
+├── what-is-a-fractional-caio.html            # Explainer
+├── what-is-a-forward-deployed-engineer.html  # Explainer
+├── what-is-context-rot.html                  # Explainer
+├── ai-pipelines-vs-agents.html               # Explainer
+├── llms.txt                 # Site summary for AI crawlers
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
 ├── masterclass-v2.css       # Additive layer: hero-pitch, endorse-card, claim-band, acts, boards, usecase grid
 ├── masterclass-theme.js     # Nav toggle, scroll state, reveal-on-scroll, all pages
@@ -111,7 +134,9 @@ free to substitute their own final item. Nothing assumes four items.
 - Absolute `https://www.imagineers.ai/...` URLs in `canonical`, `og:*` and
   `sitemap.xml`. Relative everywhere else.
 - Every page carries the same `<footer>` block. If you change it, change it in
-  all three.
+  all eight.
+- `<html lang="en-ZA">` and `og:locale=en_ZA` on every page. Keep them agreeing.
+- Titles stay under 60 characters, meta descriptions between 140 and 158.
 - Course transcripts and other source material stay out of the repo. Anything
   committed here is publicly fetchable (see `.gitignore`).
 

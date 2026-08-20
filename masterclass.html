@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="google-site-verification" content="DPMxhAG9NpFvezYpAEzvIGTn9ABsYGuGEyfAUmCyrXs" />
-  <title>GenAI Executive Masterclass: The Full Two-Day Programme | Imagineers.ai</title>
-  <meta name="description" content="The complete two-day masterclass curriculum, module by module, with all twelve applied use cases. Run as 45 courses for 725+ executives in South Africa." />
+  <title>GenAI Executive Masterclass: Johannesburg, Cape Town, Durban</title>
+  <meta name="description" content="AI executive training in Johannesburg, Cape Town and Durban. The complete two-day curriculum, module by module, run as 45 courses for 725+ executives." />
   <link rel="canonical" href="https://www.imagineers.ai/masterclass.html" />
   <meta property="og:site_name" content="Imagineers.ai" />
-  <meta property="og:title" content="GenAI Executive Masterclass: The Full Two-Day Programme | Imagineers.ai" />
-  <meta property="og:description" content="Every module of the two-day GenAI Executive Masterclass in full: structured prompting, expert-method prompting, context management and twelve applied use cases. Run as 45 courses for 725+ executives." />
+  <meta property="og:title" content="GenAI Executive Masterclass: Johannesburg, Cape Town, Durban" />
+  <meta property="og:description" content="AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day GenAI Executive Masterclass in full, including twelve applied use cases. Run as 45 courses for 725+ executives." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.imagineers.ai/masterclass.html" />
   <meta property="og:image" content="https://www.imagineers.ai/og-masterclass.jpg" />
@@ -17,8 +17,8 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_ZA" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GenAI Executive Masterclass: The Full Two-Day Programme | Imagineers.ai" />
-  <meta name="twitter:description" content="Every module of the two-day GenAI Executive Masterclass, in full, including all twelve applied use cases." />
+  <meta name="twitter:title" content="GenAI Executive Masterclass: Johannesburg, Cape Town, Durban" />
+  <meta name="twitter:description" content="AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day masterclass, in full." />
   <meta name="twitter:image" content="https://www.imagineers.ai/og-masterclass.jpg" />
   <link rel="icon" href="imagineers logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,14 +31,19 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": ["Organization", "EducationalOrganization"],
         "@id": "https://www.imagineers.ai/#organisation",
         "name": "Imagineers.ai",
         "url": "https://www.imagineers.ai/",
         "logo": "https://www.imagineers.ai/imagineers%20logo.webp",
         "email": "info@imagineers.ai",
         "description": "Business builders who make AI work in business. GenAI executive training, CAiO as a Service and forward-deployed engineering.",
-        "areaServed": "ZA",
+        "areaServed": [
+          { "@type": "Country", "name": "South Africa" },
+          { "@type": "City", "name": "Johannesburg" },
+          { "@type": "City", "name": "Cape Town" },
+          { "@type": "City", "name": "Durban" }
+        ],
         "sameAs": ["https://www.linkedin.com/company/imagineersai"],
         "founder": [
           {
@@ -64,7 +69,7 @@
         "description": "Two days that move senior executives from school-grade AI output to business-grade AI output. Structured prompting, expert-method prompting, context management, and twelve applied use cases including building a full financial model in Excel from a plain-English brief.",
         "url": "https://www.imagineers.ai/masterclass.html",
         "image": "https://www.imagineers.ai/og-masterclass.jpg",
-        "inLanguage": "en",
+        "inLanguage": "en-ZA",
         "provider": { "@id": "https://www.imagineers.ai/#organisation" },
         "offers": {
           "@type": "Offer",
@@ -74,16 +79,53 @@
           "url": "https://shop.dailymaverick.co.za/product-category/tickets/the-genai-exec-masterclass/",
           "availability": "https://schema.org/LimitedAvailability"
         },
-        "hasCourseInstance": {
-          "@type": "CourseInstance",
-          "courseMode": "onsite",
-          "courseWorkload": "P2D",
-          "location": {
-            "@type": "Place",
-            "name": "Johannesburg, Cape Town and Durban",
-            "address": { "@type": "PostalAddress", "addressCountry": "ZA" }
+        "hasCourseInstance": [
+          {
+            "@type": "CourseInstance",
+            "courseMode": "onsite",
+            "courseWorkload": "P2D",
+            "location": {
+              "@type": "Place",
+              "name": "Johannesburg",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Johannesburg",
+                "addressRegion": "Gauteng",
+                "addressCountry": "ZA"
+              }
+            }
+          },
+          {
+            "@type": "CourseInstance",
+            "courseMode": "onsite",
+            "courseWorkload": "P2D",
+            "location": {
+              "@type": "Place",
+              "name": "Cape Town",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Cape Town",
+                "addressRegion": "Western Cape",
+                "addressCountry": "ZA"
+              }
+            }
+          },
+          {
+            "@type": "CourseInstance",
+            "courseMode": "onsite",
+            "courseWorkload": "P2D",
+            "location": {
+              "@type": "Place",
+              "name": "Durban",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Durban",
+                "addressRegion": "KwaZulu-Natal",
+                "addressCountry": "ZA"
+              }
+            }
           }
-        }
+        ]
       },
       {
         "@type": "FAQPage",
@@ -95,6 +137,14 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Imagineers.ai runs AI executive training in South Africa. Rutger-Jan van Spaandonk and Chris Barker have trained 725+ senior executives across 45 two-day courses, delivered as the Daily Maverick Executive AI Masterclass in Johannesburg, Cape Town and Durban."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where does the GenAI Executive Masterclass run?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open enrolment cohorts run in Johannesburg, Cape Town and Durban as the Daily Maverick Executive AI Masterclass, twelve seats to a room, two full days. Private team cohorts of up to fifteen delegates are delivered wherever the leadership team sits, in South Africa or internationally on request."
             }
           }
         ]
@@ -129,14 +179,14 @@
       <div class="container">
        <div class="pitch-top">
         <div class="pitch-lead" data-reveal>
-          <span class="label">GenAI Executive Masterclass &middot; Two Days &middot; Twelve Seats</span>
+          <span class="label">GenAI Executive Masterclass &middot; Johannesburg, Cape Town, Durban</span>
           <h1 class="display">
             AI is stunning.<br />
             BUT you are being<br />
             <span class="h1-turn">treated like a school kid.</span>
           </h1>
           <p class="pitch-sub">
-            <strong>Imagineers.ai is a South African firm that runs AI executive training for senior leaders.</strong>
+            <strong>This is the full two-day programme of the GenAI Executive Masterclass, the AI executive training Imagineers.ai runs in Johannesburg, Cape Town and Durban.</strong>
             80% of AI users conclude the technology does not work. The other 20% fear it will take their job. Both are
             reacting to the same thing: rationed, school-grade output from systems capable of business-grade work.
             <strong>It takes two full days to learn how to get real results from AI, no shortcuts.</strong>
@@ -902,6 +952,58 @@
         <p class="price-note">
           Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including
           internationally. Pricing for delivery outside South Africa quoted on enquiry.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Where it runs. The three open-enrolment cities, stated as content
+         rather than left in the footer boilerplate where Google discounts it.
+         Every claim here is one the page already makes elsewhere. Do not add
+         venue names, addresses or dates unless they are confirmed.
+         ===================================================================== -->
+    <section id="where">
+      <div class="container" data-reveal>
+        <span class="label">Where It Runs</span>
+        <h2 class="display section-title">AI executive training in Johannesburg, Cape Town and Durban</h2>
+        <p class="lede">
+          Open enrolment cohorts run in all three cities as the Daily Maverick Executive AI Masterclass, twelve
+          seats to a room, two full days. Private team cohorts run wherever your leadership already sits, in
+          South Africa or internationally on request.
+        </p>
+        <div class="usecase-grid">
+          <article class="usecase">
+            <span class="tag">Gauteng</span>
+            <h4>AI executive training in Johannesburg</h4>
+            <p>
+              Open enrolment cohorts run in Johannesburg through the year, twelve seats to a room. If the published
+              dates do not suit, a private team cohort of up to fifteen delegates can run on your own premises
+              instead, built around your sector and your live operational priorities.
+            </p>
+          </article>
+          <article class="usecase">
+            <span class="tag">Western Cape</span>
+            <h4>AI executive training in Cape Town</h4>
+            <p>
+              The same two-day programme runs in Cape Town, with the same curriculum and the same practical
+              outputs. Cohorts are deliberately cross-industry rather than single-sector, because delegates
+              consistently rate the peers in the room as half the value.
+            </p>
+          </article>
+          <article class="usecase">
+            <span class="tag">KwaZulu-Natal</span>
+            <h4>AI executive training in Durban</h4>
+            <p>
+              Durban cohorts run the identical two days, and alumni join the same monthly First Wednesday session
+              afterwards regardless of which city they trained in. Private team cohorts can be delivered in Durban
+              for a single leadership group.
+            </p>
+          </article>
+        </div>
+        <p class="price-note">
+          Pricing is the same in all three cities: <span data-stat-text="price">R21,500</span> incl VAT per person
+          for open enrolment, or <span data-stat-text="priceInHouse">R215,000</span> ex VAT for a private team
+          cohort of up to fifteen delegates. Delivery outside South Africa is quoted on enquiry.
         </p>
       </div>
     </section>

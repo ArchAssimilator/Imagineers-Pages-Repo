@@ -1,6 +1,11 @@
 # PRD: Maximum-Achievable SEO and AI SEO for imagineers.ai
 
-**Status:** Ready to execute
+**Status:** Phases 1 to 3 executed July 2026. Phase 4 partly executed: the four
+explainer pages were built, the "AI executive training South Africa" page was not.
+A geo-targeting pass followed on 20 August 2026, which is where the current
+titles, city sections and per-city `CourseInstance` schema came from. Section 1
+below is the state as of July 2026 and is kept for the record. Do not trust it as
+current; re-verify against the files.
 **Written:** 2026-07-26
 **Intended runtime:** A fresh Claude Code chat on Opus, in this repo
 **Author of record:** Chris Barker
@@ -48,6 +53,11 @@ repo root becomes publicly fetchable.
 | `caio.html` | CAiO as a Service \| Imagineers.ai | yes | yes | 8 tags | **none** |
 | `fde.html` | Forward-Deployed Engineering \| Imagineers.ai | yes | yes | 8 tags | **none** |
 
+**Superseded.** As of 20 August 2026 all four carry JSON-LD. `caio.html` and
+`fde.html` each hold `Organization` + `Service` + `FAQPage`; `index.html` and
+`masterclass.html` hold `Organization`/`EducationalOrganization` + `Course` +
+`FAQPage`, with one `CourseInstance` per city. Titles now carry the geography.
+
 **Redirect stubs: none.** `masterclass.html`, `contact.html`, `cpi.html` and
 `genaisl.html` were meta-refresh stubs until August 2026, when they were deleted
 as unused. `contact.html`, `cpi.html` and `genaisl.html` still return 404, which
@@ -57,8 +67,9 @@ is the intended state.
 `sitemap.xml` at priority 0.9. It holds the full masterclass content;
 `index.html` is a cut-back version of the same page. Both are indexable and
 self-canonical, with distinct titles and meta descriptions. It is kept out of
-the nav on purpose, so it has no inbound internal links and Google will crawl it
-less often than a linked page. Its `Course` and `FAQPage` nodes use
+the nav on purpose. It is not orphaned, though: the shared footer links to it
+from all eight pages, and `index.html`, `fde.html` and three explainers link to
+it contextually. Its `Course` and `FAQPage` nodes use
 `https://www.imagineers.ai/masterclass.html#course` and `#faq` so no `@id`
 collides with the homepage.
 
