@@ -47,6 +47,11 @@ Two different websites read it:
 - Adding a new stat means: add it to `stats.json`, then add a keyword for it to
   `KEYWORDS` in **both** `sh/check-stats.mjs` and `sh/apply-stats.mjs`. They must
   stay identical, and the keyword must be one no other stat can also match.
+- **Two dates live in `stats.json` too.** `verified` is when the headline
+  figures were last checked and shows in the proof strip. `reviewed` is when
+  the copy was last gone over and shows in the footer of every page. Both are
+  plain strings, both are bound with `data-stat`, and neither needs a
+  `KEYWORDS` entry, because `apply-stats` never does arithmetic on a string.
 - **`sh/.stats-applied.json` is committed on purpose and must not be hand-edited.**
   It records which values are currently in the HTML, and it is the only way
   `apply-stats` can find an unlabelled figure in prose on the next change.
@@ -55,6 +60,23 @@ Full procedure, written for a human coming back to this cold:
 **[`HOW-TO-UPDATE-THE-NUMBERS.md`](./HOW-TO-UPDATE-THE-NUMBERS.md)**. Read it
 before changing a number, and keep it accurate if you change how any of this
 works.
+
+## `llms-full.txt` is generated, never written
+
+`llms.txt` is the hand-written index. `llms-full.txt` is every published page
+as one plain-text file, so an assistant reads the site in a single fetch.
+
+- **It is built by `sh/build-llms-full.mjs` from the HTML**, and the page list
+  comes from `sitemap.xml`, so adding a page to the sitemap adds it here too.
+- **The `pre-commit` hook rebuilds it, straight after `apply-stats`.** That
+  order matters: `apply-stats` corrects the figures in the HTML, then this
+  reads the corrected HTML. Reverse them and it captures the previous values.
+- **`sh/check-stats.sh` Part 4 rebuilds it in memory and compares byte for
+  byte**, so a hand-edit, a stale copy or a page changed after the last commit
+  all fail the same way and `pre-push` refuses the push.
+- **Do not hand-edit `llms-full.txt`.** The next commit overwrites it.
+- It carries no dates of its own. The reviewed date it prints is read out of
+  the footer, which is bound to `stats.json`.
 
 ## Other rules
 

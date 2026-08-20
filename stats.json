@@ -37,5 +37,8 @@
     "label": "per private cohort ex VAT, up to fifteen delegates"
   },
 
-  "verified": "1 Aug 2026"
+  "_DATES": "Two dates, and they mean different things. verified is when the headline figures above were last checked against the records. reviewed is when the site copy was last gone over, and it is what the footer shows on every page. Both are plain strings, so apply-stats writes them into any data-stat slot that names them and never tries to do arithmetic on them.",
+
+  "verified": "1 Aug 2026",
+  "reviewed": "20 Aug 2026"
 }

@@ -64,6 +64,8 @@ so it is not orphaned.
 ├── stats.json               # SINGLE SOURCE OF TRUTH for the headline numbers
 ├── proof-stats.js           # Reads stats.json, fills the proof strips, all pages
 ├── sh/check-stats.sh        # Finds every figure that no longer matches stats.json
+├── llms-full.txt            # GENERATED. Whole site as plain text, for AI crawlers
+├── sh/build-llms-full.mjs   # Builds llms-full.txt from the pages. Do not hand-edit the output
 ├── masterclass-v2.js        # Whiteboard lightbox and sticky CTA. Home page only
 ├── Whiteboards/             # Course whiteboards used on the home page
 ├── og-masterclass.jpg       # 1200x630 social card for the home page
@@ -98,10 +100,14 @@ Full procedure, including the step that updates the other repo:
 **[HOW-TO-UPDATE-THE-NUMBERS.md](./HOW-TO-UPDATE-THE-NUMBERS.md)**. Read it
 before touching a figure.
 
-In short: `stats.json` is the single source of truth. `proof-stats.js` fetches
-it and fills in every `data-stat` slot. GitHub Pages publishes it at
-`https://www.imagineers.ai/stats.json` with `access-control-allow-origin: *`,
-which is how the other site reads it with no server involved.
+In short: `stats.json` is the single source of truth. `sh/apply-stats.mjs`
+writes it into every published file **at commit time**, so the deployed markup
+is already correct. `proof-stats.js` does **not** fetch `stats.json`; it only
+animates the numbers already in the markup, and the comment at the top of that
+file explains why fetching them broke the site on 1 Aug 2026. GitHub Pages still
+publishes `stats.json` at `https://www.imagineers.ai/stats.json` with
+`access-control-allow-origin: *`, because the Executive Navigants site in the
+other repo fetches it. That is its only consumer.
 
 Each proof item is wired one of four ways:
 
@@ -136,6 +142,14 @@ free to substitute their own final item. Nothing assumes four items.
 - Every page carries the same `<footer>` block. If you change it, change it in
   all eight.
 - `<html lang="en-ZA">` and `og:locale=en_ZA` on every page. Keep them agreeing.
+- **`llms-full.txt` is generated, never hand-edited.** The `pre-commit` hook
+  rebuilds it from the pages, straight after `apply-stats`, and `pre-push`
+  refuses the push if it has drifted. If you edit page copy, commit, and it is
+  rebuilt for you. Details: `sh/build-llms-full.mjs`.
+- **Two dates live in `stats.json`.** `verified` is when the headline figures
+  were last checked and shows in the proof strip. `reviewed` is when the copy
+  was last gone over and shows in the footer of every page. Both are bound with
+  `data-stat`, so you change them in `stats.json` and nowhere else.
 - Titles stay under 60 characters, meta descriptions between 140 and 158.
 - Course transcripts and other source material stay out of the repo. Anything
   committed here is publicly fetchable (see `.gitignore`).

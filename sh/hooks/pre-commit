@@ -21,6 +21,17 @@ OUT=$(node sh/apply-stats.mjs --porcelain 2>&1) || {
 FILES=$(printf '%s\n' "$OUT" | sed -n '/^---FILES---$/,$p' | tail -n +2)
 printf '%s\n' "$OUT" | sed '/^---FILES---$/,$d'
 
+# llms-full.txt is the whole site as plain text for AI crawlers. It is derived
+# from the HTML, so it has to run AFTER apply-stats, never before: the other
+# order captures the previous values of anything that just moved.
+LLMS=$(node sh/build-llms-full.mjs --porcelain 2>&1) || {
+  printf '\n\033[31mbuild-llms-full failed, commit aborted:\033[0m\n%s\n' "$LLMS"
+  exit 1
+}
+printf '%s\n' "$LLMS" | sed '/^---FILES---$/,$d'
+FILES="$FILES
+$(printf '%s\n' "$LLMS" | sed -n '/^---FILES---$/,$p' | tail -n +2)"
+
 if [ -n "$FILES" ]; then
   # Only stage files that this commit already touches, or that apply-stats
   # rewrote because a number moved. Staging is what makes it automatic; the

@@ -18,12 +18,17 @@ gets them.
 4. **A number that tracks a stat but is not next to the word for it must be
    bound**, as `<span data-stat-text="courses">45</span>`, or the checker
    reports it as an `ORPHAN` and blocks the push.
-5. **A second repo consumes these numbers.** `../Executive-Navigants` fetches
+5. **`llms-full.txt` is generated, never hand-written.** `pre-commit` rebuilds
+   it from the published pages, immediately after `apply-stats`, and `pre-push`
+   blocks the push if it is stale. Regenerate by hand with
+   `sh/build-llms-full.sh`. Editing it directly is pointless: the next commit
+   overwrites it.
+6. **A second repo consumes these numbers.** `../Executive-Navigants` fetches
    `https://www.imagineers.ai/stats.json` over HTTPS and refreshes itself. There
    is nothing to run there, and nothing here to do for it.
-6. **No em-dashes anywhere in copy.** Comma, colon, semicolon, period or
+7. **No em-dashes anywhere in copy.** Comma, colon, semicolon, period or
    parentheses. En-dashes are fine for numeric ranges.
-7. **Everything committed here is published.** No transcripts, no client
+8. **Everything committed here is published.** No transcripts, no client
    material, no secrets.
 
 Static site, no build step. Serve locally with `sh/start.sh` over HTTP, never

@@ -4,6 +4,67 @@
 
 Imagineers.ai has trained 725+ senior executives across 45 two-day courses in Johannesburg, Cape Town and Durban, delivered as the Daily Maverick Executive AI Masterclass. The same team runs fractional Chief AI Officer mandates and forward-deployed engineering, embedding engineers inside client businesses to ship working AI systems against real problems.
 
+## Full text
+
+Every page in full, as plain text, in one file: https://www.imagineers.ai/llms-full.txt
+
+## Facts and figures
+
+Machine-readable source, including the date these were last verified:
+https://www.imagineers.ai/stats.json
+
+- 45 two-day courses run
+- 725+ senior executives trained in person
+- 1,400 executive days delivered
+- 6,500 hours each of hands-on GenAI use, per facilitator
+- Open enrolment: R21,500 incl VAT per person, twelve seats per cohort
+- Private team cohort: R215,000 ex VAT, up to fifteen delegates
+
+## Who runs it
+
+Imagineers.ai was founded by Rutger-Jan van Spaandonk and Chris Barker, who
+facilitate every course themselves rather than employing a training faculty.
+Between them: a Wharton MBA and a faculty-medal engineering degree, McKinsey and
+Deloitte, Managing Director of Apple South Africa, General Manager of Unilever's
+Lipton Teas, co-founders of Neotel, Seacom SA, Africa's largest NGO Right-to-Care,
+Africa Weather and the RightMed pharmacy group, turnarounds at Aquarius Platinum
+and TopTV, and the leadership of South Africa's Covid critical care, testing,
+oxygen and vaccination programmes.
+
+Every open enrolment cohort runs as the Daily Maverick Executive AI Masterclass,
+delivered with Daily Maverick and booked through them. It is not a third-party
+course they resell.
+
+## Common questions
+
+Q: Who runs AI executive training in South Africa?
+A: Imagineers.ai runs AI executive training in South Africa. Rutger-Jan van
+Spaandonk and Chris Barker have trained 725+ senior executives across 45 two-day
+courses, delivered as the Daily Maverick Executive AI Masterclass in Johannesburg,
+Cape Town and Durban.
+
+Q: Where does the GenAI Executive Masterclass run?
+A: Open enrolment cohorts run in Johannesburg, Cape Town and Durban, twelve seats
+to a room, two full days. Private team cohorts are delivered wherever the
+leadership team sits, in South Africa or internationally on request.
+
+Q: What is a fractional CAiO?
+A: A fractional CAiO gives a business Chief AI Officer capability without a
+full-time hire: board-level credibility, real operating experience under pressure,
+and genuine hands-on fluency with frontier AI models, retained as a standing
+mandate rather than a permanent employee.
+
+Q: What does a forward deployed engineer do?
+A: A forward deployed engineer works inside a client's business, in their
+environment and on their own data, shipping working AI systems against the real
+problem from week one, rather than handing over a roadmap and leaving.
+
+Q: What is context rot?
+A: Context rot is the degradation of an AI model's output as the context it is
+working with grows. The individual facts remain present, but the relationships
+between them weaken and drift, so the model keeps producing fluent, confident
+answers that are quietly wrong.
+
 ## Pages
 
 - [GenAI Executive Masterclass](https://www.imagineers.ai/): Two-day AI executive training for senior leaders in South Africa. R21,500 incl VAT per person, open enrolment in Johannesburg, Cape Town and Durban, or private cohorts delivered internationally on request.
