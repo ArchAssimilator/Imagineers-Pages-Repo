@@ -29,6 +29,43 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "Article",
+        "@id": "https://www.imagineers.ai/what-is-context-rot.html#article",
+        "url": "https://www.imagineers.ai/what-is-context-rot.html",
+        "name": "What Is Context Rot?",
+        "headline": "What Is Context Rot?",
+        "description": "Context rot is when an AI model keeps the facts but loses the relationships between them as context grows. What causes it, how fast, and how to prevent it.",
+        "inLanguage": "en-ZA",
+        "datePublished": "2026-07-26",
+        "dateModified": "2026-08-29",
+        "isPartOf": {
+          "@id": "https://www.imagineers.ai/#website"
+        },
+        "publisher": {
+          "@id": "https://www.imagineers.ai/#organisation"
+        },
+        "author": [
+          {
+            "@id": "https://www.imagineers.ai/#chris-barker"
+          },
+          {
+            "@id": "https://www.imagineers.ai/#rutger-jan-van-spaandonk"
+          }
+        ],
+        "image": "https://www.imagineers.ai/og-imagineers.jpg",
+        "mainEntityOfPage": "https://www.imagineers.ai/what-is-context-rot.html"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.imagineers.ai/#website",
+        "url": "https://www.imagineers.ai/",
+        "name": "Imagineers.ai",
+        "inLanguage": "en-ZA",
+        "publisher": {
+          "@id": "https://www.imagineers.ai/#organisation"
+        }
+      },
+      {
         "@type": "DefinedTerm",
         "@id": "https://www.imagineers.ai/what-is-context-rot.html#term",
         "name": "Context rot",
@@ -39,30 +76,108 @@
             "@id": "https://www.imagineers.ai/#chris-barker",
             "name": "Chris Barker",
             "jobTitle": "Co-founder, Imagineers.ai",
-            "sameAs": ["https://www.linkedin.com/in/chris-barker"]
+            "url": "https://www.imagineers.ai/about.html#chris-barker",
+            "worksFor": {
+              "@id": "https://www.imagineers.ai/#organisation"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/chris-barker"
+            ]
           },
           {
             "@type": "Person",
             "@id": "https://www.imagineers.ai/#rutger-jan-van-spaandonk",
             "name": "Rutger-Jan van Spaandonk",
             "jobTitle": "Co-founder, Imagineers.ai",
-            "sameAs": ["https://www.linkedin.com/in/rjvanspaandonk/"]
+            "url": "https://www.imagineers.ai/about.html#rutger-jan-van-spaandonk",
+            "worksFor": {
+              "@id": "https://www.imagineers.ai/#organisation"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/rjvanspaandonk/"
+            ]
           }
         ],
         "publisher": {
-          "@type": ["Organization", "EducationalOrganization"],
-          "@id": "https://www.imagineers.ai/#organisation",
-          "name": "Imagineers.ai",
-          "url": "https://www.imagineers.ai/",
-          "logo": "https://www.imagineers.ai/imagineers%20logo.webp",
-          "areaServed": [
-            { "@type": "Country", "name": "South Africa" },
-            { "@type": "City", "name": "Johannesburg" },
-            { "@type": "City", "name": "Cape Town" },
-            { "@type": "City", "name": "Durban" }
-          ],
-          "sameAs": ["https://www.linkedin.com/company/imagineersai"]
-        },
+                       "@type": [
+                         "Organization",
+                         "EducationalOrganization"
+                       ],
+                       "@id": "https://www.imagineers.ai/#organisation",
+                       "name": "Imagineers.ai",
+                       "alternateName": "Imagineers",
+                       "legalName": "Imagineers.ai",
+                       "url": "https://www.imagineers.ai/",
+                       "logo": "https://www.imagineers.ai/imagineers%20logo.webp",
+                       "email": "info@imagineers.ai",
+                       "foundingDate": "2023-08",
+                       "description": "Imagineers.ai is a South African AI executive training provider, founded in August 2023 by Rutger-Jan van Spaandonk and Chris Barker. It teaches senior leadership teams to get business-grade work out of frontier AI, and takes fractional Chief AI Officer mandates and forward-deployed engineering work for the same clients.",
+                       "address": [
+                         {
+                           "@type": "PostalAddress",
+                           "addressLocality": "Johannesburg",
+                           "addressRegion": "Gauteng",
+                           "addressCountry": "ZA"
+                         },
+                         {
+                           "@type": "PostalAddress",
+                           "addressLocality": "Cape Town",
+                           "addressRegion": "Western Cape",
+                           "addressCountry": "ZA"
+                         }
+                       ],
+                       "contactPoint": [
+                         {
+                           "@type": "ContactPoint",
+                           "contactType": "sales",
+                           "name": "Masterclass and private cohorts",
+                           "email": "masterclass@imagineers.ai",
+                           "areaServed": "ZA",
+                           "availableLanguage": [
+                             "en"
+                           ]
+                         },
+                         {
+                           "@type": "ContactPoint",
+                           "contactType": "customer support",
+                           "name": "CAiO, engineering and everything else",
+                           "email": "info@imagineers.ai",
+                           "areaServed": "ZA",
+                           "availableLanguage": [
+                             "en"
+                           ]
+                         }
+                       ],
+                       "areaServed": [
+                         {
+                           "@type": "Country",
+                           "name": "South Africa"
+                         },
+                         {
+                           "@type": "City",
+                           "name": "Johannesburg"
+                         },
+                         {
+                           "@type": "City",
+                           "name": "Cape Town"
+                         },
+                         {
+                           "@type": "City",
+                           "name": "Durban"
+                         }
+                       ],
+                       "sameAs": [
+                         "https://www.linkedin.com/company/imagineersai"
+                       ],
+                       "founder": [
+                         {
+                           "@id": "https://www.imagineers.ai/#rutger-jan-van-spaandonk"
+                         },
+                         {
+                           "@id": "https://www.imagineers.ai/#chris-barker"
+                         }
+                       ]
+                     },
         "url": "https://www.imagineers.ai/what-is-context-rot.html"
       },
       {
@@ -148,8 +263,10 @@
             <a class="btn btn-ghost" href="#faq">Read the FAQ</a>
           </div>
           <p class="pitch-note">
-            Written by <strong>Chris Barker</strong> and <strong>Rutger-Jan van Spaandonk</strong>,
+            Written by <strong><a href="about.html#chris-barker">Chris Barker</a></strong> and
+            <strong><a href="about.html#rutger-jan-van-spaandonk">Rutger-Jan van Spaandonk</a></strong>,
             co-founders of Imagineers.ai, who run the two-day AI executive training where this is taught themselves.
+            Published <span data-page-date="published">26 July 2026</span>, last updated <span data-page-date="modified">29 August 2026</span>.
           </p>
         </div>
       </div>
@@ -366,7 +483,7 @@
         <h2 class="display">Context rot is day one of the Masterclass.</h2>
         <p>
           Seven failure modes, the business symptom each one produces, and the action that prevents it. Worked through
-          live, on your own material, by the team that has trained 725+ South African executives.
+          live, on your own material, by the team that has trained 800+ South African executives.
         </p>
         <div class="hero-cta" style="justify-content: center;">
           <a class="btn btn-primary" href="/">See the GenAI Executive Masterclass</a>
@@ -427,6 +544,7 @@
     </div>
     <div class="container footer-base">
       <span>&copy; 2026 Imagineers.ai</span>
+      <span><a href="about.html">About Imagineers.ai</a> &middot; <a href="glossary.html">AI glossary</a></span>
       <span>Johannesburg &middot; Cape Town &middot; Durban &middot; private cohorts delivered internationally</span>
       <span>Last reviewed <span data-stat="reviewed">20 Aug 2026</span></span>
     </div>

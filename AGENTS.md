@@ -23,12 +23,33 @@ gets them.
    blocks the push if it is stale. Regenerate by hand with
    `sh/build-llms-full.sh`. Editing it directly is pointless: the next commit
    overwrites it.
-6. **A second repo consumes these numbers.** `../Executive-Navigants` fetches
+6. **`brand-entity.json` is the single source of truth for who this company
+   is**: the canonical description, the category noun, the ICPs, the three
+   differentiators, the founding date and the founder details. `pre-commit`
+   runs `sh/apply-brand.sh`, which writes it into the `Organization` and
+   `Person` blocks on every page and into any `data-brand` slot. `pre-push`
+   blocks on drift. Never hand-edit a company or founder block in a page's
+   JSON-LD, and never put a headline figure in `brand-entity.json`.
+7. **Page dates are stamped automatically and must not be typed.**
+   `sh/page-dates.json` is the source; `sh/apply-dates.sh` writes the visible
+   byline and the `datePublished` / `dateModified` in the schema. The
+   last-updated date is bumped **per page, only when that page's own content
+   changed in that commit**, read from git. Do not change this to stamp every
+   page on every push: a site where all ten pages claim to be updated because
+   one typo was fixed is telling Google its dates are noise. A new page must be
+   added to `sh/page-dates.json` or it is silently skipped.
+8. **`about.html` and `glossary.html` stay out of the top nav.** Footer, sitemap
+   and `llms.txt` only. That is a deliberate constraint, not an oversight.
+9. **Never invent competitor facts, prompts, ICPs or citation data.**
+   `citation-landscape.md` is empty until a human runs the prompts, and
+   `content-backlog.md` C3 needs six competitors' published material checked
+   first. `prompts.json` is a measuring instrument and is never posted anywhere.
+10. **A second repo consumes these numbers.** `../Executive-Navigants` fetches
    `https://www.imagineers.ai/stats.json` over HTTPS and refreshes itself. There
    is nothing to run there, and nothing here to do for it.
-7. **No em-dashes anywhere in copy.** Comma, colon, semicolon, period or
+11. **No em-dashes anywhere in copy.** Comma, colon, semicolon, period or
    parentheses. En-dashes are fine for numeric ranges.
-8. **Everything committed here is published.** No transcripts, no client
+12. **Everything committed here is published.** No transcripts, no client
    material, no secrets.
 
 Static site, no build step. Serve locally with `sh/start.sh` over HTTP, never

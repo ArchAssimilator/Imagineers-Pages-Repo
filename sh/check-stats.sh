@@ -22,7 +22,16 @@
 #   PART 3  Figures nothing can find.  Numbers equal to a headline figure that
 #           are neither bound nor written next to the word for it.
 #
-#   PART 4  llms-full.txt.  The whole site as plain text for AI crawlers,
+#   PART 4  Who the company is.  The company block, the two founder blocks and
+#           every data-brand slot, checked against brand-entity.json. Same rule
+#           as the figures: one source of truth, and a hand-edit is an error.
+#
+#   PART 5  Page dates.  The visible published and last-updated dates, and the
+#           datePublished / dateModified in the structured data, checked
+#           against sh/page-dates.json. Those dates are bumped automatically
+#           per page at commit time, so a mismatch means someone typed one.
+#
+#   PART 6  llms-full.txt.  The whole site as plain text for AI crawlers,
 #           generated from the pages by sh/build-llms-full.mjs. Rebuilt in
 #           memory and compared byte for byte, so a stale copy, a hand-edit or
 #           a page that changed after the last commit all show up the same way.
@@ -39,7 +48,13 @@ STATUS=0
 
 node sh/check-stats.mjs "$@" || STATUS=1
 
-printf '\n\033[2m── Part 4: llms-full.txt against the pages ───────────────\033[0m\n'
+printf '\n\033[2m── Part 4: company and founder details against brand-entity.json ──\033[0m\n'
+node sh/apply-brand.mjs --check || STATUS=1
+
+printf '\n\033[2m── Part 5: page dates against sh/page-dates.json ─────────\033[0m\n'
+node sh/apply-dates.mjs --check || STATUS=1
+
+printf '\n\033[2m── Part 6: llms-full.txt against the pages ───────────────\033[0m\n'
 node sh/build-llms-full.mjs --check || STATUS=1
 
 exit "$STATUS"

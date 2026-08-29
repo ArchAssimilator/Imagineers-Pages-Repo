@@ -1147,3 +1147,66 @@ body:has(.sticky-cta) footer {
   color: var(--ink-500);
   font-style: italic;
 }
+
+/* The glossary and the qualification lists carry inline links out to the full
+   explainers. The base theme sets  a { color: inherit; text-decoration: none }
+   deliberately, so any prose link is invisible until a rule like this one
+   claims it. Same treatment as .usecase a, so they read as one thing.
+   Added 29 August 2026 with glossary.html and about.html. */
+.act-body a,
+.qual-list a,
+.cred-list a,
+.operator .bio a {
+  color: var(--teal-500);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 180, 216, 0.4);
+  transition: border-color 0.15s ease;
+}
+
+.act-body a:hover,
+.qual-list a:hover,
+.cred-list a:hover,
+.operator .bio a:hover {
+  border-bottom-color: var(--teal-500);
+}
+
+/* On a dark band the teal is legible but the amber matches the numbered
+   markers beside it, so the link belongs to the list rather than fighting it. */
+.claim-band .qual-list a,
+.claim-band .cred-list a {
+  color: var(--amber);
+  border-bottom-color: rgba(255, 183, 3, 0.45);
+}
+
+.claim-band .qual-list a:hover,
+.claim-band .cred-list a:hover {
+  border-bottom-color: var(--amber);
+}
+
+/* --------------------------------------------------------------------------
+   14. The commitments section
+
+   Multi-paragraph prose on a light band. Nothing else on the page needed it:
+   the other light sections run one paragraph per column, and the dark bands
+   get their spacing from .claim-band p. New class rather than a bare `p` rule,
+   so the base theme is still never overridden by accident.
+   -------------------------------------------------------------------------- */
+
+.commit-copy {
+  max-width: 70ch;
+}
+
+.commit-copy p {
+  margin-bottom: 1.05rem;
+}
+
+.commit-copy .anchor-box {
+  margin-bottom: 1.5rem;
+}
+
+.commit-modules-title {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.3rem;
+  margin: 2.4rem 0 0.9rem;
+}

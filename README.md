@@ -5,8 +5,9 @@ Static site for Imagineers.ai. No frameworks, no build step. Published to
 
 ## Pages
 
-Eight live pages: four commercial, four definition explainers. The GenAI
-Executive Masterclass is the front door and sits at the site root.
+Ten live pages: four commercial, four definition explainers, and two reference
+pages that are reachable from the footer only. The GenAI Executive Masterclass
+is the front door and sits at the site root.
 
 **Commercial**
 
@@ -28,9 +29,19 @@ carries `DefinedTerm` and `FAQPage` schema and links to its commercial page.
 | `/what-is-context-rot.html` | `what-is-context-rot.html` |
 | `/ai-pipelines-vs-agents.html` | `ai-pipelines-vs-agents.html` |
 
+**Reference.** Added 29 August 2026 for answer-engine optimisation. Deliberately
+kept out of the nav to protect its simplicity, and reachable from the shared
+footer, `sitemap.xml` and `llms.txt` only.
+
+| URL | File | Purpose |
+| --- | --- | --- |
+| `/about.html` | `about.html` | The canonical entity page: category, both ICPs, the three differentiators, founding date, locations and both founder bios. Every author byline on the site links to its `#chris-barker` and `#rutger-jan-van-spaandonk` anchors |
+| `/glossary.html` | `glossary.html` | Seventeen AI terms, one quotable sentence each, with `DefinedTermSet` schema. Links out to the four explainers |
+
 Navigation order is deliberate: **train → direct → build**. Only the four
-commercial pages are in the nav, and `masterclass.html` is not, but it *is*
-linked from the shared footer on all eight pages.
+commercial pages are in the nav. `masterclass.html`, `about.html` and
+`glossary.html` are not, but all three *are* linked from the shared footer on
+every page.
 
 ### Retired URLs
 
@@ -57,6 +68,15 @@ so it is not orphaned.
 ├── what-is-a-forward-deployed-engineer.html  # Explainer
 ├── what-is-context-rot.html                  # Explainer
 ├── ai-pipelines-vs-agents.html               # Explainer
+├── about.html               # Entity page (not in nav, linked from footer)
+├── glossary.html            # AI glossary (not in nav, linked from footer)
+├── brand-entity.json        # SINGLE SOURCE OF TRUTH for the company description
+├── sh/page-dates.json       # SINGLE SOURCE OF TRUTH for every page's dates
+├── prompts.json             # Tracked prompt set for AI visibility measurement
+├── aeo-audit-report.md      # AEO audit, 29 Aug 2026
+├── aeo-gaps.md              # What is left to do, in priority order
+├── content-backlog.md       # Lane coverage gaps
+├── citation-landscape.md    # Which domains the engines cite (empty until measured)
 ├── llms.txt                 # Site summary for AI crawlers
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
 ├── masterclass-v2.css       # Additive layer: hero-pitch, endorse-card, claim-band, acts, boards, usecase grid

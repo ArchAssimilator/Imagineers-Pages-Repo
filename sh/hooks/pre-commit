@@ -21,9 +21,34 @@ OUT=$(node sh/apply-stats.mjs --porcelain 2>&1) || {
 FILES=$(printf '%s\n' "$OUT" | sed -n '/^---FILES---$/,$p' | tail -n +2)
 printf '%s\n' "$OUT" | sed '/^---FILES---$/,$d'
 
+# brand-entity.json is the single source of truth for who this company is, the
+# way stats.json is for the numbers. It writes the company block, the founder
+# blocks and any data-brand slot. Runs before the dates, so that a page changed
+# only by this counts as changed when the dates are worked out.
+BRAND=$(node sh/apply-brand.mjs --porcelain 2>&1) || {
+  printf '\n\033[31mapply-brand failed, commit aborted:\033[0m\n%s\n' "$BRAND"
+  exit 1
+}
+printf '%s\n' "$BRAND" | sed '/^---FILES---$/,$d'
+FILES="$FILES
+$(printf '%s\n' "$BRAND" | sed -n '/^---FILES---$/,$p' | tail -n +2)"
+
+# Bumps the last-updated date of any page whose own content changed in this
+# commit, and writes every page's dates from sh/page-dates.json. It reads git
+# to decide which pages changed, so it has to run after everything that edits
+# a page and before llms-full.txt is built from them.
+DATES=$(node sh/apply-dates.mjs --porcelain 2>&1) || {
+  printf '\n\033[31mapply-dates failed, commit aborted:\033[0m\n%s\n' "$DATES"
+  exit 1
+}
+printf '%s\n' "$DATES" | sed '/^---FILES---$/,$d'
+FILES="$FILES
+$(printf '%s\n' "$DATES" | sed -n '/^---FILES---$/,$p' | tail -n +2)"
+
 # llms-full.txt is the whole site as plain text for AI crawlers. It is derived
-# from the HTML, so it has to run AFTER apply-stats, never before: the other
-# order captures the previous values of anything that just moved.
+# from the HTML, so it has to run AFTER apply-stats, apply-brand and
+# apply-dates, never before: any other order captures the previous values of
+# whatever just moved.
 LLMS=$(node sh/build-llms-full.mjs --porcelain 2>&1) || {
   printf '\n\033[31mbuild-llms-full failed, commit aborted:\033[0m\n%s\n' "$LLMS"
   exit 1

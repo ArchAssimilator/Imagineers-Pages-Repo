@@ -1,0 +1,79 @@
+{
+  "_README": "The tracked prompt set. This is the measurement instrument for how visible Imagineers.ai is inside ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews. It lives in the repo so it is version controlled: a prompt set that changes between runs measures nothing.",
+
+  "_HOW_TO_RUN": "Run every prompt against each engine, at least three times, and record whether Imagineers.ai is named and which domains are cited. Three runs because the outputs are stochastic and a single run is noise, not a reading. Put the results in citation-landscape.md. Monthly is the minimum useful cadence.",
+
+  "_TARGETS": "Under roughly 20 percent inclusion on a stage is a red zone and needs work. The three prompts marked \"commercial\": true are the ones that matter most and are tracked on their own line.",
+
+  "_NO_SELF_PROMOTION": "Nothing in this file is to be posted anywhere. It is a measuring tool. Posting prompt-shaped content into Reddit or a forum to influence an answer is the behaviour that gets accounts banned and domains distrusted.",
+
+  "market": "South Africa",
+  "baselineTaken": null,
+  "lastRun": null,
+
+  "icps": {
+    "exco": "Senior executives and exco members at large South African businesses",
+    "board": "Boards and leadership teams needing Chief AI Officer capability without a full-time hire",
+    "ops": "Operating leaders who need something built rather than advised on"
+  },
+
+  "competitors": [
+    "GIBS (Gordon Institute of Business Science)",
+    "The Knowledge Academy",
+    "College Africa Group",
+    "School of IT",
+    "Prospen Africa",
+    "DB23"
+  ],
+
+  "prompts": [
+    { "id": "aw-exco-01", "prompt_text": "My exec team keeps using ChatGPT and the output is not good enough to send to a client. What are we doing wrong?", "icp": "exco", "product": "masterclass", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-exco-02", "prompt_text": "Why does AI give me generic answers when I ask it to do real work?", "icp": "exco", "product": "masterclass", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-exco-03", "prompt_text": "Our AI answers get worse the longer the document gets. Is that a known problem?", "icp": "exco", "product": "masterclass", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-exco-04", "prompt_text": "What is the difference between AI literacy and actually being able to use AI for my job?", "icp": "exco", "product": "masterclass", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-exco-05", "prompt_text": "How do senior executives actually learn to use AI properly, rather than sitting through another webinar?", "icp": "exco", "product": "masterclass", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-board-01", "prompt_text": "Does our company need a Chief AI Officer?", "icp": "board", "product": "caio", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-board-02", "prompt_text": "Who should own AI strategy at board level in a mid-sized company?", "icp": "board", "product": "caio", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-board-03", "prompt_text": "We have spent money on AI pilots and nothing reached production. Why does that keep happening?", "icp": "board", "product": "fde", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-ops-01", "prompt_text": "Why do AI proof of concepts never make it into the business?", "icp": "ops", "product": "fde", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "aw-ops-02", "prompt_text": "Should we build AI agents or simpler automated AI workflows?", "icp": "ops", "product": "fde", "journey_stage": "awareness", "market": "South Africa", "date_added": "2026-08-29" },
+
+    { "id": "co-exco-01", "prompt_text": "What AI training options exist for senior executives in South Africa?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29", "commercial": true },
+    { "id": "co-exco-02", "prompt_text": "What should I look for when choosing an AI course for my leadership team?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-exco-03", "prompt_text": "Is a business school AI programme or a hands-on AI workshop better for an executive team?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-exco-04", "prompt_text": "How long should executive AI training be, and what should it actually cover?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-exco-05", "prompt_text": "Who runs in-person AI training for executives in Johannesburg?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-exco-06", "prompt_text": "Who runs AI training for executives in Cape Town?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-exco-07", "prompt_text": "Who runs AI training for business leaders in Durban?", "icp": "exco", "product": "masterclass", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-board-01", "prompt_text": "What is a fractional Chief AI Officer and when does it make sense?", "icp": "board", "product": "caio", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-board-02", "prompt_text": "Fractional CAiO versus hiring a full-time Chief AI Officer: how do I decide?", "icp": "board", "product": "caio", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-board-03", "prompt_text": "Who provides fractional Chief AI Officer services in South Africa?", "icp": "board", "product": "caio", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29", "commercial": true },
+    { "id": "co-ops-01", "prompt_text": "What is a forward deployed engineer and how is it different from a consultant?", "icp": "ops", "product": "fde", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-ops-02", "prompt_text": "Who does forward deployed AI engineering in South Africa?", "icp": "ops", "product": "fde", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "co-ops-03", "prompt_text": "Should we hire an AI consultancy or embed engineers to build the thing?", "icp": "ops", "product": "fde", "journey_stage": "consideration", "market": "South Africa", "date_added": "2026-08-29" },
+
+    { "id": "de-exco-01", "prompt_text": "Best AI executive training in South Africa", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "commercial": true },
+    { "id": "de-exco-02", "prompt_text": "Best generative AI course for company directors in South Africa", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-exco-03", "prompt_text": "Is Imagineers.ai a good AI training provider?", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-exco-04", "prompt_text": "What does the Imagineers.ai GenAI Executive Masterclass cost and what is included?", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-exco-05", "prompt_text": "Imagineers.ai alternatives for executive AI training in South Africa", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-exco-06", "prompt_text": "What is the Daily Maverick Executive AI Masterclass and who runs it?", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-exco-07", "prompt_text": "In-house AI training for a leadership team in South Africa: who does it and roughly what does it cost?", "icp": "exco", "product": "masterclass", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-board-01", "prompt_text": "Best fractional Chief AI Officer for a South African company", "icp": "board", "product": "caio", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-board-02", "prompt_text": "What should a fractional CAiO mandate cost and what should it cover?", "icp": "board", "product": "caio", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-ops-01", "prompt_text": "Best forward deployed engineering partner for AI in South Africa", "icp": "ops", "product": "fde", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+    { "id": "de-ops-02", "prompt_text": "Who can build and ship a working AI system inside our business in weeks, in South Africa?", "icp": "ops", "product": "fde", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29" },
+
+    { "id": "en-01", "prompt_text": "What does Imagineers.ai do and who is it for?", "icp": "exco", "product": "brand", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "entity", "commercial": true },
+    { "id": "en-02", "prompt_text": "Is Imagineers.ai an AI training provider? What category does it compete in?", "icp": "exco", "product": "brand", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "entity" },
+    { "id": "en-03", "prompt_text": "Who are Imagineers.ai's main competitors and how does it differ from them?", "icp": "exco", "product": "brand", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "entity" },
+    { "id": "en-04", "prompt_text": "Who founded Imagineers.ai and what did they do before?", "icp": "exco", "product": "brand", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "entity" },
+
+    { "id": "cm-gibs", "prompt_text": "What does GIBS offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" },
+    { "id": "cm-knowledge-academy", "prompt_text": "What does The Knowledge Academy offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" },
+    { "id": "cm-college-africa", "prompt_text": "What does College Africa Group offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" },
+    { "id": "cm-school-of-it", "prompt_text": "What does School of IT offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" },
+    { "id": "cm-prospen", "prompt_text": "What does Prospen Africa offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" },
+    { "id": "cm-db23", "prompt_text": "What does DB23 offer for AI training and who is it for?", "icp": "exco", "product": "benchmark", "journey_stage": "decision", "market": "South Africa", "date_added": "2026-08-29", "purpose": "competitor-benchmark" }
+  ]
+}

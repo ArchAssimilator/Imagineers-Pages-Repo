@@ -14,7 +14,7 @@ the next commit overwrites it. Headline figures come from stats.json.
 
 URL: https://www.imagineers.ai/
 Title: AI Executive Training in South Africa | Imagineers.ai
-Description: AI executive training in South Africa for senior leaders. Two days from school-grade to business-grade AI output. 45 courses, 725+ executives trained.
+Description: AI executive training in South Africa for senior leaders. Two days from school-grade to business-grade AI output. 45 courses, 800+ executives trained.
 
 AI Executive Training in South Africa · Two Days · Twelve Seats
 
@@ -26,15 +26,15 @@ This is the Executive AI Masterclass
 Every open enrolment cohort runs as the Daily Maverick Executive AI Masterclass, delivered with them and booked through them, not a third-party course they resell.
 Booked at shop.dailymaverick.co.za
 45 Two-day courses delivered
-725+ Senior executives trained
+800+ Senior executives trained
 1,400 Executive days of instruction
-6,500 Hours of hands-on GenAI, per facilitator
+6,750 Hours of hands-on GenAI, per facilitator
 Figures verified 1 Aug 2026
 Why Us
 
 ## We are not trainers. We are business builders who make AI work in business.
 We do not sell anything else. No platform, no licence, no implementation engagement waiting on the other side of the two days. Nothing to steer you towards, so we can say plainly which tools are worth paying for and which are not.
-No other training organisation in South Africa has put 725 senior executives through two full days each: 1,400 executive days across 45 courses. That volume matters for one reason: we have watched 725+ intelligent people struggle with AI in the same handful of ways, and rebuilt the material 45 times around what fixes it.
+No other training organisation in South Africa has put 800 senior executives through two full days each: 1,400 executive days across 45 courses. That volume matters for one reason: we have watched 800+ intelligent people struggle with AI in the same handful of ways, and rebuilt the material 45 times around what fixes it.
 Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and Deloitte, MD of Apple South Africa, GM of Unilever's Lipton Teas, co-founders of Neotel, Seacom SA, Africa's largest NGO Right-to-Care, Africa Weather, the RightMed pharmacy group and a military-grade cyber intelligence firm, turnarounds at Aquarius Platinum and TopTV, and the leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes. We teach AI the way we had to learn it: to produce work we could put our names on.
 - No: A curriculum written by people who studied AI
 - Yes: A method built by operators who needed AI to produce defensible business work
@@ -47,7 +47,7 @@ Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and D
 The Argument
 
 ## Four things you do not know about AI
-Day one is built on four claims. Almost no executive has heard any of them (725+ will attest), and each one changes what you get back from every prompt you write from here on.
+Day one is built on four claims. Almost no executive has heard any of them (800+ will attest), and each one changes what you get back from every prompt you write from here on.
 The whole of day one, on one board If you only look at one thing on this page, look at this. The four claims are a single causal chain. The labs ration your output, so structure is how you prove you are worth more. Structure gets you adult answers, but business-grade answers need the expert method. And even then context rot is waiting, sooner and harder than you have ever been told.
 Day one in one picture. Four steps, each one a prerequisite for the next.
 Day Two
@@ -146,7 +146,7 @@ No prior AI mastery required. Delegates range from complete beginners to experie
 Bring: a current laptop (Mac or PC) and accounts on ChatGPT, Claude, optionally Gemini and Copilot. At least one paid subscription is required.
 Delegate Feedback
 
-## 725 executives...a couple of quotes.
+## 800 executives...a couple of quotes.
 "If I could, I would send everyone in my company to this Masterclass. It is truly enabling."
 Simon Fishley CIO, Luno
 "Best investment in myself that I have made in years."
@@ -175,7 +175,7 @@ Engineer, consultant and serial large scale business builder. MSc Eng, Wits GPA 
 - Co-founders of Apple SA, Neotel, Seacom SA, Right to Care (Africa's largest NGO R3Bn/yr), Africa Weather (the first business to sell weather in Africa and Australia), RightMed (at one point South Africa's third-largest retail pharmacy group) and a military-grade cyber intelligence firm.
 - Turnarounds including Aquarius Platinum, TopTV and several for the NEF.
 - South Africa's Covid response, all three waves. Doubled critical care beds, scaled NHLS testing capacity, scaled oxygen 6.5x, ran the 400,000 healthcare-worker vaccine trial, then led the full national roll-out: R50bn ARR, 3,500 nurses, 1,500 sites, in four months.
-- 6,500+ hours each of hands-on GenAI use.
+- 6,750+ hours each of hands-on GenAI use.
 Investment
 
 ## Two participation models
@@ -339,7 +339,7 @@ Is there a certificate? No. You leave with working prompts, workflows and output
 
 URL: https://www.imagineers.ai/masterclass.html
 Title: GenAI Executive Masterclass: Johannesburg, Cape Town, Durban
-Description: AI executive training in Johannesburg, Cape Town and Durban. The complete two-day curriculum, module by module, run as 45 courses for 725+ executives.
+Description: AI executive training in Johannesburg, Cape Town and Durban. The full two-day curriculum, ending in dated commitments rather than notes. 45 courses, 800+ executives.
 
 GenAI Executive Masterclass · Johannesburg, Cape Town, Durban
 
@@ -351,15 +351,15 @@ This is the Executive AI Masterclass
 Every open enrolment cohort runs as the Daily Maverick Executive AI Masterclass, delivered with them and booked through them, not a third-party course they resell.
 Booked at shop.dailymaverick.co.za
 45 Two-day courses delivered
-725+ Senior executives trained
+800+ Senior executives trained
 1,400 Executive days of instruction
-6,500 Hours of hands-on GenAI, per facilitator
+6,750 Hours of hands-on GenAI, per facilitator
 Figures verified 1 Aug 2026
 Why Us
 
 ## We are not trainers. We are business builders who make AI work in business.
-We do not sell anything else. No platform, no licence, no implementation engagement waiting on the other side of the two days. Nothing to steer you towards, so we can say plainly which tools are worth paying for and which are not.
-No other training organisation in South Africa has put 725 senior executives through two full days each: 1,400 executive days across 45 courses. That volume matters for one reason: we have watched 725+ intelligent people struggle with AI in the same handful of ways, and rebuilt the material 45 times around what fixes it.
+We do not sell anything else. No platform, no licence, no implementation engagement waiting on the other side of the two days. Nothing to steer you towards, so we can say plainly which tools are worth paying for and which are not. The implementation is not something we come back and quote for. It happens in the room, and you leave with it written down.
+No other training organisation in South Africa has put 800 senior executives through two full days each: 1,400 executive days across 45 courses. That volume matters for one reason: we have watched 800+ intelligent people struggle with AI in the same handful of ways, and rebuilt the material 45 times around what fixes it.
 Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and Deloitte, MD of Apple South Africa, GM of Unilever's Lipton Teas, co-founders of Neotel, Seacom SA, Africa's largest NGO Right-to-Care, Africa Weather, the RightMed pharmacy group and a military-grade cyber intelligence firm, turnarounds at Aquarius Platinum and TopTV, and the leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes. We teach AI the way we had to learn it: to produce work we could put our names on.
 - No: A curriculum written by people who studied AI
 - Yes: A method built by operators who needed AI to produce defensible business work
@@ -372,7 +372,7 @@ Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and D
 The Argument
 
 ## Four things you do not know about AI
-Day one is built on four claims. Almost no executive has heard any of them (725+ will attest), and each one changes what you get back from every prompt you write from here on. Open any of them to see how we teach it.
+Day one is built on four claims. Almost no executive has heard any of them (800+ will attest), and each one changes what you get back from every prompt you write from here on. Open any of them to see how we teach it.
 The whole of day one, on one board If you only look at one thing on this page, look at this. The four claims are a single causal chain. The labs ration your output, so structure is how you prove you are worth more. Structure gets you adult answers, but business-grade answers need the expert method. And even then context rot is waiting, sooner and harder than you have ever been told.
 Day one in one picture. Four steps, each one a prerequisite for the next.
 1 You are being treated like a school kid Your answers are being rationed, and it is an economics problem, not a technology problem. Every major lab is underwater on inference (AI output): a dollar of revenue against two dollars of cost. Roughly 95% of users pay nothing at all, and of the 5% who do, about half the queries are trivial.
@@ -404,8 +404,8 @@ The diagnostic table. Seven failure modes, seven symptoms, seven fixes.
 Boards are drawn from the live course material. Model names and figures reflect the frontier at the time each was drawn, and we refresh them as the benchmarks move.
 Day Two
 
-## That was day one. Day two is thirteen use cases.
-Day one changes how you brief AI. Day two shows you where to point it. Everything below is demonstrated live, most of it built by you, sometimes on your own material.
+## Day one is the method. Day two is the implementation.
+Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Ten of them end in a written commitment to something you will do in your first week back, so you do not leave with a list of ideas. You leave with a list of undertakings.
 The one people talk about afterwards
 
 #### Excel: the most sophisticated model you can imagine, built from scratch in fifteen minutes
@@ -460,6 +460,19 @@ Agentic
 #### Recurring workflow demos
 Lead generation, recruiting and VCF file handling: the work that repeats every week, done once and reused.
 One warning, because it comes up in nearly every course. Agents are not the answer to your business problem. Almost everything that pays commercially today is a pipeline: a designed sequence of prompts, each step small enough to be done properly. We show you the agentic tools honestly, including where they fall over, then we show you what works. Read the full argument: AI pipelines vs agents.
+The Implementation
+
+## We do not train you, then come back and sell you the implementation.
+It is the question we are asked most often, usually before lunch on day one. Do you teach for two days and then arrive with a consulting proposal? No. We are booked out delivering the programme and we do not want the engagement. So the implementation happens inside the two days, in the room, and you leave with it in writing.
+Ten of the thirteen modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work, with a date on it. It is captured live in the room rather than scribbled on a pad nobody opens again.
+A private team course of fifteen delegates has 150 of those slots. Assume a quarter are declined, because not every module fits every job. You still walk out with about 112 undertakings, each one dated, owned, and written by the person who has to do it.
+An open enrolment room of twelve seats produces about 90. Either way it is a work programme, and it did not exist on the morning of day one.
+At the end we print the lot as one document, delegate by delegate, module by module. In a private course it goes to the person who signed off the two days. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+This is the part a training company cannot copy. Naming the right task inside somebody else's business, in the room, in about ninety seconds, is a consulting skill and it only comes from having done the work. Between us we have built businesses, run them, turned them around, and spent years as consultants doing precisely this: sitting with an operator and finding the one job worth changing on Monday. A facilitator working from a curriculum has never had to make that call, so they can teach the tool and stop there. We are business builders first, which is why the two days end in commitments rather than notes.
+
+### The ten modules that end in a commitment
+Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
+Nine of them sit on day two; the presentation module is the day one exception, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than ten invented to fill in a form, which is why we plan on roughly three quarters being taken up.
 The Objection
 
 ## "Our IT department will not let us put company data into AI."
@@ -484,6 +497,7 @@ Letting long conversations go sour | Managing context so long work stays coheren
 Prompts and outputs scattered across a dozen chats | A numbered working file per project, so any piece of AI work can be reconstructed
 Uploading whatever file you happen to have | Documents converted so they work, and a data rule you can defend
 Rebuilding the same task by hand each time | Turning it into a prompt chain your whole team can run
+Good intentions, and a notebook nobody reopens | Ten dated commitments in writing, and a document your CEO can hold you to
 Private experimentation nobody can see | Company-owned methods that can be reviewed, governed and improved
 Building a financial model over two weeks, or paying somebody else to | A full driver-based model from a plain-English brief in fifteen minutes, using a tool you now own
 Thinking a $20 subscription is extravagant | Easily justifying $400 a month for when that time inevitably arrives
@@ -498,7 +512,7 @@ No prior AI mastery required. Delegates range from complete beginners to experie
 Bring: a current laptop (Mac or PC) and accounts on ChatGPT, Claude, optionally Gemini and Copilot. At least one paid subscription is required.
 Delegate Feedback
 
-## 725 executives...a couple of quotes.
+## 800 executives...a couple of quotes.
 "If I could, I would send everyone in my company to this Masterclass. It is truly enabling."
 Simon Fishley CIO, Luno
 "Best investment in myself that I have made in years."
@@ -527,7 +541,7 @@ Engineer, consultant and serial large scale business builder. MSc Eng, Wits GPA 
 - Co-founders of Apple SA, Neotel, Seacom SA, Right to Care (Africa's largest NGO R3Bn/yr), Africa Weather (the first business to sell weather in Africa and Australia), RightMed (at one point South Africa's third-largest retail pharmacy group) and a military-grade cyber intelligence firm.
 - Turnarounds including Aquarius Platinum, TopTV and several for the NEF.
 - South Africa's Covid response, all three waves. Doubled critical care beds, scaled NHLS testing capacity, scaled oxygen 6.5x, ran the 400,000 healthcare-worker vaccine trial, then led the full national roll-out: R50bn ARR, 3,500 nurses, 1,500 sites, in four months.
-- 6,500+ hours each of hands-on GenAI use.
+- 6,750+ hours each of hands-on GenAI use.
 What we are like for two days Honest warning: we are opinionated, informal, and we will argue with you. Twelve people around a table with two facilitators who have strong opinions and no particular interest in AI neutrality. We interrupt, we get interrupted, we disagree with each other in front of you, and we will tell you plainly when a model is not up to the job. Several delegates have called it intense. Nobody has called it dry.
 We also do not pretend the tools are magic. A meaningful part of both days covers where AI is still bad, where it is dangerous, and which model to avoid for which job, and that candour is why senior people trust the rest of it.
 If you want a polished corporate training experience with a certificate at the end, we are the wrong choice. If you want two days of arguing about your actual business with people who have built and run businesses themselves, you will enjoy it.
@@ -537,6 +551,7 @@ Investment
 ## Two participation models
 Most delegates arrive believing a $20 AI subscription is an extravagance. A good number leave easily justifying $400 a month for when that time comes, because they have just watched what the paid frontier does when it is briefed properly.
 That shift, not the fee, is what the two days are about. Delegates report recovering R30,000 to R60,000 of non-billable time in their first week back. The real cost was never the ticket. It was the two days out of the office, and you are spending those either way.
+You are also not buying a training company's time. You are buying two operators who have built businesses, run them and turned them around, and who spent years as consultants doing this work by hand at consulting rates. That is the only reason two days can end in a list of dated commitments instead of a set of notes, and it is the part no curriculum-led course can reproduce at any price.
 Twelve seats only
 
 ### Open Enrolment
@@ -546,6 +561,7 @@ The Daily Maverick Executive AI Masterclass. Cross-industry peers, which most de
 - High-value networking with senior professionals
 - Cross-industry examples and live facilitator guidance
 - First Wednesday alumni sessions, every month, at no further cost
+- The commitment mechanic in full: a room of twelve leaves with about 90 dated undertakings
 Check Dates and Book
 Up to fifteen delegates
 
@@ -557,6 +573,7 @@ Fully customised around your sector, your goals and your live operational priori
 - Applied directly to current strategic priorities
 - First Wednesday alumni sessions for the whole team, every month
 - Delivered internationally on request
+- The commitment pack for the sponsor: about 112 dated undertakings, printed as one document
 Enquire for Your Team
 Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including internationally. Pricing for delivery outside South Africa quoted on enquiry.
 Where It Runs
@@ -635,24 +652,24 @@ Prompt training: trust and control
 16:30 | Context management. The difference between trusted output and polished nonsense. Handoffs, resets and the governance trail.
 17:00 | Realistic end time
 Times are indicative and subject to change. Twelve people and two facilitators means we flex a great deal around what the room needs, so sessions run long, get swapped, or get added on the day.
-The complete day two agenda (subject to change) Day two applies those foundations to the work that consumes time inside organisations: research, analysis, spreadsheets, reports, company knowledge, dashboards, media, app prototypes and agentic workflows.
-Time | Session
+The complete day two agenda (subject to change) Day two applies those foundations to the work that consumes time inside organisations: research, analysis, spreadsheets, reports, company knowledge, dashboards, media, app prototypes and agentic workflows. The third column is the part that makes it an implementation day: those sessions do not close until every delegate has written down what they will do with it in their first week back.
+Time | Session | Ends in a commitment
 Arrival and breakfast
-08:30 | Feedback and course redirection to meet updated expectations
+08:30 | Feedback and course redirection to meet updated expectations |
 Professional use training
-09:00 | Deep research, with defendable provenance. Run on a project of your own.
-10:00 | Data analysis demo. Interrogating a real dataset conversationally, then turning it into recommendations.
-10:45 | Voice input. SuperWhisper demo. RTCIO in 3 seconds!
-11:15 | Tabulated learning, across several demos. Hydrogen fuel and discipline cases.
-11:30 | AI in Excel. The full modelling tool, handed over and used live: the most sophisticated model you can imagine, built from scratch in about fifteen minutes off a plain-English brief, with scenarios and sensitivities. Then the reverse job, auditing and explaining a model somebody else built.
-12:00 | Custom GPT and Gem build. Labour law exercise.
-12:30 | Working lunch, continuing the custom GPT
-13:00 | Photos and video demo
+09:00 | Deep research, with defendable provenance. Run on a project of your own. |
+10:00 | Data analysis demo. Interrogating a real dataset conversationally, then turning it into recommendations. |
+10:45 | Voice input. SuperWhisper demo. RTCIO in 3 seconds! |
+11:15 | Tabulated learning, across several demos. Hydrogen fuel and discipline cases. |
+11:30 | AI in Excel. The full modelling tool, handed over and used live: the most sophisticated model you can imagine, built from scratch in about fifteen minutes off a plain-English brief, with scenarios and sensitivities. Then the reverse job, auditing and explaining a model somebody else built. |
+12:00 | Custom GPT and Gem build. Labour law exercise. |
+12:30 | Working lunch, continuing the custom GPT |
+13:00 | Photos and video demo |
 Vibe coding training
-13:15 | Samples and a live build. Education demo.
-13:45 | Build an app. Your own exercise, in AI Studio.
-16:30 | Realistic end time
-Times are indicative and subject to change. Day two in particular moves around a lot, because we follow the use cases the room turns out to care about.
+13:15 | Samples and a live build. Education demo. |
+13:45 | Build an app. Your own exercise, in AI Studio. |
+16:30 | Realistic end time |
+Times are indicative and subject to change. Day two in particular moves around a lot, because we follow the use cases the room turns out to care about. The custom assistant session produces two commitments rather than one, and the presentation commitment is made on day one.
 How the agenda maps to business capability Agenda Area | Skill Built | Business Capability Gained
 AI foundations | AI mental model | Understand what the technology is, why outputs vary, and why it matters now.
 Adoption and leadership | Adoption judgement | See AI as a capability to manage, direct and build early.
@@ -688,6 +705,7 @@ Delegates see how company material becomes more usable through custom assistants
 - Shared methods that reduce reliance on one person's private prompts or undocumented AI habits.
 - Company-owned workflows that can be reviewed, improved, governed and reused across a team.
 What you take back to work
+- The commitment document: everything you undertook to do in your first week back, module by module, dated and in your own words.
 - A reusable prompting method for clearer business instructions.
 - The Excel modelling tool itself, so you can keep building full driver-based financial models from a plain-English brief in about fifteen minutes.
 - A practical structure for building, storing and improving prompts.
@@ -748,6 +766,7 @@ Frequently asked questions Do I need prior AI experience? No. The course starts 
 Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
 How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
 What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
+Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
 Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
 Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
 Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
@@ -758,9 +777,189 @@ Is there a certificate? No. You leave with working prompts, workflows and output
 
 ==============================================================================
 
+URL: https://www.imagineers.ai/about.html
+Title: About Imagineers.ai | AI Executive Training in South Africa
+Description: Imagineers.ai is a South African AI executive training provider, founded August 2023 by Rutger-Jan van Spaandonk and Chris Barker. Who we are, who we are for, and what we do differently.
+
+About
+
+# Who Imagineers.ai Is
+Imagineers.ai is a South African AI executive training provider, founded in August 2023 by Rutger-Jan van Spaandonk and Chris Barker. It teaches senior leadership teams to get business-grade work out of frontier AI, and takes fractional Chief AI Officer mandates and forward-deployed engineering work for the same clients. It has no platform, no licence and no vendor margin, which is why its advice on which AI tools are worth paying for is blunt.
+See the Masterclass OR Read the FAQ
+Page published 29 August 2026, last updated 29 August 2026.
+The Record
+
+## What we have actually done
+45 two-day courses run
+800+ senior executives trained in person
+1,400 executive days delivered
+6,750 hours each of hands-on GenAI use
+Figures verified 1 Aug 2026
+Category
+
+## What kind of company this is
+An AI executive training provider that also takes advisory and engineering work. Not a software vendor, not a reseller, not a management consultancy, and not a business school.
+Train
+
+#### GenAI Executive Masterclass
+Two days that move senior executives from school-grade AI output to business-grade AI output. Open enrolment cohorts run as the Daily Maverick Executive AI Masterclass. Private cohorts run in-house. The full curriculum, module by module.
+Advise
+
+#### CAiO as a Service
+Chief AI Officer capability on a standing mandate: board direction, use-case triage before spend, vendor decisions and the data risk position. What the mandate covers.
+Build
+
+#### Forward-Deployed Engineering
+Engineers working inside your business, on your data, shipping something that works rather than handing over a roadmap. How the engagement runs.
+Who It Is For
+
+## Two kinds of buyer, and nobody else
+We are deliberately narrow. If you are not one of these two, we will say so rather than take the work.
+- Senior executives and exco members at large South African businesses. People who have to decide what AI means for their function, are getting school-grade output from tools nobody taught them to drive, and cannot afford to be the last person in the room who does not know.
+- Boards and leadership teams that need Chief AI Officer capability without a full-time hire. They want board-level credibility and real operating experience on a standing mandate, not a deck and an invoice.
+Difference
+
+## Three things that are not true of the alternatives
+- The two founders facilitate every course themselves. There is no training faculty, no associate trainers and no franchise. If you book a cohort, you get the two people on this page, in the room, for both days.
+- Operators before trainers. Managing Director of Apple South Africa. General Manager of Unilever's Lipton Teas. Co-founders of Neotel and Seacom SA. Leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes. The examples in the room are ones we ran, not ones we read about.
+- Two days doing your own work, not watching slides about AI. Delegates leave having built things, including a full financial model in Excel from a plain-English brief. The test of the course is what you can do on the Monday, not what you can recall.
+No platform, no licence, no vendor margin. It is the reason our answer to "should we buy this AI tool" is usually no, and why that answer is worth something.
+The People
+
+## Who runs it
+Two co-founders, both hands on. Every article on this site is written by them, and every course is run by them.
+
+### Rutger-Jan van Spaandonk
+Co-founder, Imagineers.ai
+30+ years in technology. MBA (Wharton), BBA (Nyenrode). Serial founder and turnaround operator. Former Managing Director of Apple South Africa, where he led major Africa launches for Apple, Nintendo and Xiaomi. Co-founder of Neotel and Seacom SA. LinkedIn.
+
+### Chris Barker
+Co-founder, Imagineers.ai
+Engineer, consultant and serial large-scale business builder. MSc Eng, Wits faculty medal. Former General Manager at Unilever, McKinsey engagement manager, and Deloitte director for Innovation and Growth in Africa. Helped lead South Africa's Covid critical care, testing, oxygen and vaccination programmes. LinkedIn.
+
+### Between the two of us
+- MSc Eng, Wits faculty medal, and an MBA from Wharton. One engineer, one financier, both operators.
+- MD, Apple South Africa. Led major Africa launches for Apple, Nintendo and Xiaomi.
+- General manager, Unilever (Lipton Teas).
+- McKinsey engagement manager and the office modelling expert. MarchFirst on the technology side.
+- Deloitte director, Africa head of Innovation and Growth.
+- Co-founders of Apple SA, Neotel, Seacom SA, Right to Care (Africa's largest NGO R3Bn/yr), Africa Weather (the first business to sell weather in Africa and Australia), RightMed (at one point South Africa's third-largest retail pharmacy group) and a military-grade cyber intelligence firm.
+- Turnarounds including Aquarius Platinum, TopTV and several for the NEF.
+- South Africa's Covid response, all three waves. Doubled critical care beds, scaled NHLS testing capacity, scaled oxygen 6.5x, ran the 400,000 healthcare-worker vaccine trial, then led the full national roll-out: R50bn ARR, 3,500 nurses, 1,500 sites, in four months.
+- 6,750+ hours each of hands-on GenAI use.
+Where And When
+
+## Founded August 2023, based in Johannesburg and Cape Town
+Fact | Detail
+Founded | August 2023
+Founders | Rutger-Jan van Spaandonk and Chris Barker
+Category | AI executive training provider, with fractional CAiO and forward-deployed engineering
+Based in | Johannesburg and Cape Town, South Africa
+Open enrolment cities | Johannesburg, Cape Town and Durban
+Private cohorts | Wherever the leadership team sits, internationally on request
+Delivery partner | Daily Maverick, for open enrolment cohorts
+Owns a platform or licence | No. No software is sold and no vendor margin is taken.
+Contact | info@imagineers.ai
+FAQ
+
+## Straight answers about the company
+
+### What does Imagineers.ai do?
+Imagineers.ai is a South African AI executive training provider. It runs a two-day GenAI Executive Masterclass for senior leadership teams, and takes fractional Chief AI Officer mandates and forward-deployed engineering work for the same clients. It is not a software vendor, a reseller or a licence business.
+
+### Who is Imagineers.ai for?
+Two groups. Senior executives and exco members at large South African businesses who have to decide what AI means for their function. And boards or leadership teams that need Chief AI Officer capability on a standing mandate without carrying a full-time hire.
+
+### When was Imagineers.ai founded and by whom?
+Imagineers.ai was founded in August 2023 by Rutger-Jan van Spaandonk and Chris Barker. Both are operators before they are trainers, and both still facilitate every course themselves.
+
+### Where is Imagineers.ai based?
+Johannesburg and Cape Town, South Africa. Open enrolment cohorts run in Johannesburg, Cape Town and Durban. Private cohorts are delivered wherever the leadership team sits, and internationally on request.
+
+### How is Imagineers.ai different from other AI training providers?
+Three things. The two founders facilitate every course themselves, so there is no faculty and no associate trainers. They are operators first, with Apple South Africa, Unilever, McKinsey, Neotel, Seacom and South Africa's Covid vaccination roll-out behind them. And the two days are spent doing the delegate's own work with AI rather than watching slides about AI.
+
+### Does Imagineers.ai sell software or resell a platform?
+No. Imagineers.ai has no platform, no licence and no vendor margin. That is deliberate, and it is why its advice on which AI tools are worth paying for is blunt.
+
+==============================================================================
+
+URL: https://www.imagineers.ai/glossary.html
+Title: AI Glossary for Executives | Imagineers.ai
+Description: Plain-English definitions of the AI terms senior executives actually meet: context rot, AI pipelines and agents, fractional CAiO, forward deployed engineer, and more.
+
+Glossary
+
+# AI Terms, In Plain English
+The generative AI words senior executives actually meet, each defined in one sentence you could repeat in a board meeting. Written by the two people who teach them in the room, not lifted from a vendor's marketing page. Where a term deserves more than a paragraph, there is a full explainer behind it.
+See Where These Are Taught OR Jump to the Terms
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai. Published 29 August 2026, last updated 29 August 2026.
+The Terms
+
+## Seventeen words worth knowing exactly
+Ordered by how often they come up in a real leadership conversation, not alphabetically. Four of them have a full explainer behind them.
+
+### Context rot
+Context rot is the degradation of an AI model's output as the context it is working with grows. The facts stay present, but the relationships between them weaken and drift, so the model produces fluent answers that are quietly wrong. Bigger context windows do not fix it. Full explainer: what is context rot.
+
+### Business-grade output, and school-grade output
+Business-grade output is AI work you would put your name on and send to a board: sourced, specific, in your house format, and defensible under challenge. School-grade output is fluent, generic and correct-sounding, which is the default a model gives an untrained user. The gap between the two is a skill, not a model upgrade.
+
+### AI literacy versus AI fluency
+AI literacy is knowing what the technology is and what it can broadly do. AI fluency is being able to get a specific piece of your own work done to a standard, with a model, unaided. Most corporate AI programmes buy literacy and then report it as fluency.
+
+### Structured prompting
+Structured prompting is writing a request with its parts named and separated: the role, the material, the task, the constraints and the output format. It is the difference between asking a question and issuing a brief, and it is the first thing that moves output up a grade.
+
+### Expert-method prompting
+Expert-method prompting is telling a model which professional method to apply, rather than only what answer you want. Naming the method a good analyst would actually use raises the output far more than any amount of extra politeness or insistence in the request.
+
+### Context management
+Context management is the discipline of deciding what to put in front of a model and what to keep out, so the material it works from stays small, current and relevant. It is the highest-leverage habit an executive can build, and it is the direct defence against context rot.
+
+### Context window
+The context window is the maximum amount of text a model can hold in front of it at once, counted in tokens. A large advertised window is a capacity limit, not a promise of quality at that size. Models lose accuracy long before they run out of window.
+
+### Token
+A token is the unit a model reads and writes in, roughly three quarters of an English word. Context limits and API pricing are both measured in tokens, so it is the unit that quietly governs both quality and cost.
+
+### Hallucination
+A hallucination is a confident, fluent statement from an AI model that is not true. It is not a bug waiting to be patched out; it is a property of how these models work. That is why verification has to be designed into the process rather than bolted on at the end.
+
+### System prompt
+A system prompt is the standing instruction that sits above every conversation, setting the role, the rules and the house style. Writing one good system prompt is worth more than rewriting the same request a hundred times.
+
+### AI pipeline
+An AI pipeline is a fixed sequence of steps where a model does the thinking at each step, but a human or a script decides the order. Almost everything that pays commercially today is a pipeline rather than an agent. Full explainer: AI pipelines versus agents.
+
+### AI agent
+An AI agent is a system where the model itself decides what to do next and in what order, rather than following a sequence someone laid out in advance. That freedom is what makes agents powerful, and what makes them hard to hold to a standard. Full explainer: AI pipelines versus agents.
+
+### Retrieval-augmented generation (RAG)
+Retrieval-augmented generation is fetching relevant documents from your own material and putting them in front of the model before it answers, so the answer is grounded in your data rather than the model's memory. Most "AI trained on our documents" products are this.
+
+### Frontier model
+A frontier model is one of the handful of most capable general models available at a given moment. The set changes every few months, which is why capability judgements have a short shelf life and policies written against a named model age badly.
+
+### Fractional CAiO
+A fractional CAiO is a Chief AI Officer who works on a retained or standing-mandate basis rather than as a full-time employee. The accountability is the same as a permanent CAiO; the employment relationship is not. Full explainer: what is a fractional CAiO.
+
+### Forward deployed engineer (FDE)
+A forward deployed engineer works inside a client's business, in their environment and on their own data, shipping working systems against the real problem, rather than handing over a roadmap and leaving. Full explainer: what is a forward deployed engineer.
+
+### Chief AI Officer (CAiO)
+A Chief AI Officer owns the organisation's AI agenda at board level: what to build, what not to buy, what to deliberately wait on, and the data and risk position underneath all of it. The seat is the same whether it is filled full-time or fractionally. How we run the mandate.
+In Practice
+
+## Definitions are the cheap part
+Knowing what context rot is takes a minute. Recognising it in your own output, and knowing what to do about it before you send the document, is what the two days are for.
+See the Full Curriculum Who Teaches It
+
+==============================================================================
+
 URL: https://www.imagineers.ai/caio.html
 Title: Fractional CAiO as a Service in South Africa | Imagineers.ai
-Description: A fractional CAiO in South Africa: board credibility, operating experience, and 6,500+ hours of hands-on frontier AI. Trained 725+ SA executives.
+Description: A fractional CAiO in South Africa: board credibility, operating experience, and 6,750+ hours of hands-on frontier AI. Trained 800+ SA executives.
 
 Fractional CAiO as a Service · Chief AI Officer
 
@@ -768,8 +967,8 @@ Fractional CAiO as a Service · Chief AI Officer
 Imagineers.ai is a South African firm that provides fractional CAiO services: Chief AI Officer capability without a full-time hire. A Chief AI Officer has to be three people at once: someone a board will listen to, someone who has run a businesses under pressure, and someone with hands-on fluency in what the frontier models can and cannot do this month. Almost nobody holds all three. The few who do are not on the market, and if they were, you could not rationalise the package.
 Enquire About CAiO OR See the Evidence
 A small number of fractional, retained mandates at a time, covering board and executive committee work, in person and remote.
-725+ Senior executives trained, across most sectors of the South African economy
-6,500 Hours of hands-on frontier AI, per principal
+800+ Senior executives trained, across most sectors of the South African economy
+6,750 Hours of hands-on frontier AI, per principal
 45 Two-day courses, the material rebuilt after every one
 2 Principals on your mandate, never a pyramid of juniors
 Figures verified 1 Aug 2026
@@ -783,7 +982,7 @@ Consultancies bring the first two and outsource the third. Technologists bring t
 New to the term? Read what a fractional CAiO is.
 A footnote that counts for more than it looks. Now find that person with no affiliations. Almost everyone qualified on the three counts above earns from a reseller margin, an implementation practice, a platform partnership or a lab relationship, rarely disclosed at the point the advice is given. We hold none of them, and that fourth condition removes most of the remaining field.
 - No: An adviser who has read the research but has not shipped with the tools
-- Yes: 6,500+ hours each of hands-on use, across every major lab, updated weekly
+- Yes: 6,750+ hours each of hands-on use, across every major lab, updated weekly
 - No: A partner who sells the mandate, then sends the team who deliver it
 - Yes: The two people whose names are on this page, in your boardroom (one at a time)
 - No: Guidance shaped by a reseller agreement you cannot see
@@ -819,8 +1018,8 @@ We would rather show the record than describe it. Everything below belongs to Ru
 - MSc Eng, and the Wits faculty medal.
 
 ### On AI specifically, which is the part most CVs cannot show
-- 6,500+ hours each of hands-on frontier model use, across ChatGPT, Claude, Gemini, Copilot and Grok, on real commercial work rather than demonstrations.
-- 725+ senior executives trained across 45 two-day courses, in front of business owners, C-suites and large-corporate leadership teams in most sectors of the South African economy.
+- 6,750+ hours each of hands-on frontier model use, across ChatGPT, Claude, Gemini, Copilot and Grok, on real commercial work rather than demonstrations.
+- 800+ senior executives trained across 45 two-day courses, in front of business owners, C-suites and large-corporate leadership teams in most sectors of the South African economy.
 - Ran one of the first ten companies in the world licensed to resell Microsoft Copilot, which is where our view of the enterprise vendor conversation comes from.
 - We founded and run the Daily Maverick Executive AI Masterclass, their official open enrolment programme, and private cohorts internationally.
 - Original method, not a licensed curriculum. RCTIO, expert-method prompting, context management and the pipeline architecture were all built by us and rebuilt 45 times.
@@ -831,7 +1030,7 @@ Currency
 This is the quiet failure of every permanent Chief AI Officer hire and most advisory retainers. Somebody arrives genuinely current, and eighteen months later they are defending the architecture they chose on arrival, because nobody has time to keep re-learning a field that reprices itself every few weeks.
 We are structurally protected from that, and not by discipline. Every two weeks we stand in front of a new room of senior executives and get interrogated for two days by people who do not care what we said last time. The material gets rebuilt after every course. On the First Wednesday of every month we have to tell several hundred alumni what changed and what it means for their businesses.
 That is not marketing. It is the most demanding continuing-education regime we could have designed for ourselves, and it is the strongest argument for renting this capability rather than hiring it. You are not buying a person's current knowledge. You are buying a position forced to stay current.
-It also means we see the failure patterns first. 725 executives have shown us which AI initiatives pay inside a real South African business and which evaporate on contact with an organisation, and we bring that map to your use-case triage on day one.
+It also means we see the failure patterns first. 800 executives have shown us which AI initiatives pay inside a real South African business and which evaporate on contact with an organisation, and we bring that map to your use-case triage on day one.
 - Yes: A new room of senior executives roughly every two weeks
 - Yes: The method rebuilt after each of the last 45 courses
 - Yes: A monthly obligation to brief alumni on what changed
@@ -849,7 +1048,7 @@ What to build, what to (not) buy, what to leave alone and what to deliberately w
 Triage
 
 #### Use-case assessment before spend
-Risk, feasibility and honest value, run against the failure patterns we have watched 725 executives hit. Most organisations are carrying two or three initiatives that should be stopped.
+Risk, feasibility and honest value, run against the failure patterns we have watched 800 executives hit. Most organisations are carrying two or three initiatives that should be stopped.
 Vendors
 
 #### Platform and licence decisions
@@ -911,9 +1110,9 @@ Forward-Deployed Engineering (FDE)
 Imagineers.ai is a South African firm that provides forward-deployed engineering (FDE): engineers embedded inside a client's business who ship working AI systems. Forward-deployed engineering is how the frontier labs actually get their technology into businesses. You do not hand over a roadmap and leave. You put engineers inside the organisation, next to the people whose work is being eaten, and ship against the real problem in the real environment. We have each spent thirty years building businesses this way. Now we do it with AI.
 Start a Conversation OR See How It Runs
 A small number of engagements at a time, by choice, in South Africa and internationally on request.
-725+ Executives trained, which is how we know where AI pays
+800+ Executives trained, which is how we know where AI pays
 30+ Years each spent building and running businesses
-6,500 Hours of hands-on GenAI, per engineer
+6,750 Hours of hands-on GenAI, per engineer
 Day 5 Something working in your hands, not a status update
 Figures verified 1 Aug 2026
 The Difference
@@ -922,14 +1121,14 @@ The Difference
 Most AI programmes fail in the budget meeting, before anybody writes a line of code. They get scoped the way IT was always scoped: one large system, one large number, a business case that pays back in eighteen months, and an executive sponsor whose credibility is now attached to a single launch. Nothing about that shape holds up against a technology that changes every quarter.
 So the pilot succeeds, because pilots are designed to, and then it meets real data, real staff, real procurement and real edge cases, and stops being mentioned. Nobody is at fault, because nobody was ever in the building.
 Forward deployment closes that gap by refusing to open it. We work in your environment, on your data, against the constraint that is costing you money, from the first week. What we build is narrow on purpose, because narrow things survive contact with an organisation and grand ones do not.
-Three things stand behind that promise: the deepest AI training practice in the country, thirty years each of building and running businesses, and enough time inside the big consultancies to know exactly where the roadmap model breaks. The 725 executives we have taught show us which use cases pay. The businesses we have built, turned around and sold tell us what survives contact with payroll, procurement and a board. Both land in what we build, which is why our scoping is short and why what we leave behind tends to still be running a year later. Whatever we build runs on models you already pay for, and you own it outright when we go.
+Three things stand behind that promise: the deepest AI training practice in the country, thirty years each of building and running businesses, and enough time inside the big consultancies to know exactly where the roadmap model breaks. The 800 executives we have taught show us which use cases pay. The businesses we have built, turned around and sold tell us what survives contact with payroll, procurement and a board. Both land in what we build, which is why our scoping is short and why what we leave behind tends to still be running a year later. Whatever we build runs on models you already pay for, and you own it outright when we go.
 New to the term? Read what a forward deployed engineer is.
 - No: An eighteen-month business case for one large system
 - Yes: A first win small enough that nobody has to approve it, and obvious enough that everybody notices
 - No: A discovery phase, a maturity assessment and a roadmap deck
 - Yes: Week one in your business, on your data, with your people in the room
 - No: Engineers who have never had to explain any of this to your executives
-- Yes: The people who trained 725 of them, so your leadership is aligned before we build
+- Yes: The people who trained 800 of them, so your leadership is aligned before we build
 - No: A pilot that lives in a sandbox and dies at procurement
 - Yes: Something in production, run by your team, that survives us leaving
 - No: A platform licence and a vendor you cannot exit
@@ -941,9 +1140,9 @@ Why Us
 ## In 2020, nobody needed a report on oxygen supply.
 Forward deployment is what work looks like when failure is not an option and nobody else is coming. Across South Africa's Covid response we doubled critical care beds, scaled national testing capacity, took oxygen supply up 6.5 times, ran the 400,000 healthcare-worker vaccination trial, then delivered the national roll-out: R50bn, 3,500 nurses, 1,500 sites, four months.
 None of that was advisory work, and none of it was a first. Behind it sit thirty years each of founding, running, turning around and selling businesses: operating roles inside some of the world's largest companies, board seats, government delivery at national scale, and the McKinsey and Deloitte years that taught us what a roadmap can and cannot change. The full record is laid out, line by line, on the CAiO page.
-The 45 courses are the other half of the qualification. 725 senior executives have shown us which AI use cases pay inside a real South African business and which ones evaporate the moment somebody tries to operationalise them. Nobody who only builds has that map, and nobody who only teaches gets to test it. We do both, and it shows in how fast we can tell you whether something is worth building.
+The 45 courses are the other half of the qualification. 800 senior executives have shown us which AI use cases pay inside a real South African business and which ones evaporate the moment somebody tries to operationalise them. Nobody who only builds has that map, and nobody who only teaches gets to test it. We do both, and it shows in how fast we can tell you whether something is worth building.
 - Yes: Engineers who have run operations, not analysts who have observed them
-- Yes: 6,500+ hours each of hands-on frontier model use, and still counting
+- Yes: 6,750+ hours each of hands-on frontier model use, and still counting
 - Yes: Security guidance from inside a military-grade cyber intelligence firm
 - Yes: A working map of where AI pays, drawn from hundreds of businesses
 - Yes: Two principals doing the work, not a pyramid of juniors
@@ -992,7 +1191,7 @@ This is the stage most engineering firms cannot offer, and the one every failed 
 Week 0
 
 #### Two days inside the business
-Not a discovery workshop. We sit with the people whose time is being consumed and watch the work happen. We arrive already knowing the failure patterns, because we have watched 725 executives hit the same ones.
+Not a discovery workshop. We sit with the people whose time is being consumed and watch the work happen. We arrive already knowing the failure patterns, because we have watched 800 executives hit the same ones.
 Week 1
 
 #### The first working artifact
@@ -1069,7 +1268,7 @@ Explainer · Fractional CAiO
 # What Is a Fractional CAiO?
 Imagineers.ai is a South African firm that provides fractional CAiO services. A fractional CAiO is a Chief AI Officer who works on a retained, part-time or standing-mandate basis for one or more organisations, rather than as a full-time employee. The role carries the same accountability as a permanent CAiO, board direction, use-case triage, vendor decisions, risk position, without the organisation carrying a full-time package.
 See Fractional CAiO as a Service OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run fractional CAiO mandates themselves.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run fractional CAiO mandates themselves. Published 26 July 2026, last updated 29 August 2026.
 The Role
 
 ## What a fractional CAiO actually does
@@ -1118,7 +1317,7 @@ How much does a fractional CAiO cost? Cost depends on scope, cadence and the org
 Is a fractional CAiO right for my company? A fractional CAiO tends to fit organisations that need board-credible AI direction but do not have, or cannot yet justify, a full-time Chief AI Officer, and that would rather buy standing judgement than a one-off report.
 
 ## See how Imagineers.ai runs a fractional CAiO mandate.
-Board-level credibility, operating experience at national scale, and 6,500+ hours each of hands-on frontier AI. From the team behind the AI executive training that has run 45 courses for 725+ South African executives.
+Board-level credibility, operating experience at national scale, and 6,750+ hours each of hands-on frontier AI. From the team behind the AI executive training that has run 45 courses for 800+ South African executives.
 See Fractional CAiO as a Service Start With the Masterclass
 
 ==============================================================================
@@ -1132,7 +1331,7 @@ Explainer · Forward Deployed Engineers
 # What Is a Forward Deployed Engineer?
 Imagineers.ai is a South African firm that provides forward-deployed engineering (FDE). A forward deployed engineer is an engineer who works embedded inside a client's business, in their environment and on their own data, shipping working AI systems against a real problem rather than delivering a report or a roadmap from the outside.
 See Forward Deployed Engineers OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run forward-deployed engagements themselves.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run forward-deployed engagements themselves. Published 26 July 2026, last updated 29 August 2026.
 The Role
 
 ## What a forward deployed engineer actually does
@@ -1172,7 +1371,7 @@ How is a forward deployed engineer different from a regular software engineer? A
 How is a forward deployed engineer different from a consultant? A consultant typically leaves a roadmap or a recommendation. A forward deployed engineer leaves a running system, built and shipped inside the client's own environment.
 
 ## See how Imagineers.ai runs a forward-deployed engagement.
-Something real in your hands by day five, not a status update. Built by the team behind the AI executive training in Johannesburg, Cape Town and Durban, who have trained 725+ South African executives and know where AI actually pays.
+Something real in your hands by day five, not a status update. Built by the team behind the AI executive training in Johannesburg, Cape Town and Durban, who have trained 800+ South African executives and know where AI actually pays.
 See Forward Deployed Engineers Start With the Masterclass
 
 ==============================================================================
@@ -1186,7 +1385,7 @@ Explainer · Context Rot
 # What Is Context Rot?
 Context rot is the degradation of an AI model's output as the context it is working with grows. The individual facts remain present. The relationships between them weaken, fragment and drift, so the model keeps producing fluent, confident answers that are quietly wrong. It is the failure mode that most often ruins otherwise good AI work, and it arrives far sooner than the advertised context window suggests. Imagineers.ai is a South African firm that teaches senior executives how to prevent it, on day one of a two-day AI executive training course.
 See How We Teach It OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the two-day AI executive training where this is taught themselves.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the two-day AI executive training where this is taught themselves. Published 26 July 2026, last updated 29 August 2026.
 What Breaks
 
 ## Not the facts. The connections between them.
@@ -1258,7 +1457,7 @@ What are the signs of context rot? Context breaks in seven recognisable ways: ta
 How do you prevent context rot? The countermeasure is a filing habit, not a clever prompt. Convert source documents to Markdown, because a Word file can be a thousand times the size of the same text and you pay for that out of the context you needed. Work in one numbered file per stage, so output is saved and becomes the next input. When a long chat drifts, ask for a handoff: a self-contained summary of every decision taken and option rejected, which you paste into a clean chat.
 
 ## Context rot is day one of the Masterclass.
-Seven failure modes, the business symptom each one produces, and the action that prevents it. Worked through live, on your own material, by the team that has trained 725+ South African executives.
+Seven failure modes, the business symptom each one produces, and the action that prevents it. Worked through live, on your own material, by the team that has trained 800+ South African executives.
 See the GenAI Executive Masterclass Read: Pipelines vs Agents
 
 ==============================================================================
@@ -1272,7 +1471,7 @@ Explainer · Pipelines vs Agents
 # Agents are not the answer to your business problem.
 An AI pipeline is a designed sequence of prompts, each step small enough to be done properly, where the output of one stage becomes the input to the next. An agent, by contrast, is handed a goal and left to decide its own steps. Almost everything that pays commercially today is a pipeline. Imagineers.ai is a South African firm that builds these pipelines for businesses and teaches the method on its AI executive training, and it shows the agentic tools honestly, including where they fall over.
 See What We Build OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the pipelines described here themselves.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the pipelines described here themselves. Published 26 July 2026, last updated 29 August 2026.
 The Comparison
 
 ## Pipeline vs agent, side by side
@@ -1339,5 +1538,5 @@ Should my business use AI agents? Agents are not the answer to your business pro
 Why do AI pipelines work better than agents on business work? Because of token economics and context rot. Ask one prompt for a board-ready answer and you get something diluted and insipid, because the model is rationing what it spends on you. Breaking the work into small named steps means each one is done properly at the budget available, and the compound output is work you can take into a board meeting.
 
 ## We build the pipelines, and we teach the method.
-Pipeline design is taught on the two-day AI executive training in Johannesburg, Cape Town and Durban, and built by our forward deployed engineers. From the team that has trained 725+ South African executives across 45 courses.
+Pipeline design is taught on the two-day AI executive training in Johannesburg, Cape Town and Durban, and built by our forward deployed engineers. From the team that has trained 800+ South African executives across 45 courses.
 See Forward Deployed Engineers Start With the Masterclass

@@ -1,0 +1,22 @@
+{
+  "_README": "SINGLE SOURCE OF TRUTH for the published and last-updated date of every page. Written into the visible byline and the JSON-LD by sh/apply-dates.mjs, which the pre-commit hook runs. Same rule as stats.json: do not hand-edit a date in the HTML, it will be overwritten.",
+
+  "_HOW_MODIFIED_MOVES": "modified is bumped automatically, and only for pages whose own content changed in that commit. It is deliberately NOT stamped across all pages on every push. A site where all eight pages claim to be updated because one typo was fixed is telling Google the dates are noise, and Google responds by ignoring them. Per page, when that page actually changed, is the version that gets believed.",
+
+  "_HOW_PUBLISHED_IS_SET": "published is set once, by hand, when a page first goes live. apply-dates fills it with the commit date if it is missing, and never touches it again. The values below came from git: the commit that first added each file. masterclass.html is the exception, because the file existed as a redirect stub long before it was rebuilt as a real page on 19 August 2026, and the stub's date would be a lie.",
+
+  "_FORMATS": "Store ISO (YYYY-MM-DD) only. apply-dates renders the human form ('20 August 2026') into the visible text and writes the ISO form into the JSON-LD. Two renderings, one stored value, so they cannot disagree.",
+
+  "pages": {
+    "index.html":                              { "published": "2025-11-17", "modified": "2026-08-29" },
+    "masterclass.html":                        { "published": "2026-08-19", "modified": "2026-08-29" },
+    "caio.html":                               { "published": "2025-11-17", "modified": "2026-08-29" },
+    "fde.html":                                { "published": "2026-07-25", "modified": "2026-08-29" },
+    "about.html":                              { "published": "2026-08-29", "modified": "2026-08-29" },
+    "glossary.html":                           { "published": "2026-08-29", "modified": "2026-08-29" },
+    "what-is-context-rot.html":                { "published": "2026-07-26", "modified": "2026-08-29" },
+    "what-is-a-fractional-caio.html":          { "published": "2026-07-26", "modified": "2026-08-29" },
+    "what-is-a-forward-deployed-engineer.html":{ "published": "2026-07-26", "modified": "2026-08-29" },
+    "ai-pipelines-vs-agents.html":             { "published": "2026-07-26", "modified": "2026-08-29" }
+  }
+}

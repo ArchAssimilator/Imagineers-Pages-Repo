@@ -7,7 +7,7 @@
     "label": "two-day courses run"
   },
   "executives": {
-    "value": 725,
+    "value": 800,
     "suffix": "+",
     "label": "senior executives trained in person"
   },
@@ -17,7 +17,7 @@
     "label": "executive days delivered"
   },
   "hours": {
-    "value": 6500,
+    "value": 6750,
     "suffix": "",
     "label": "hours each of hands-on GenAI use"
   },

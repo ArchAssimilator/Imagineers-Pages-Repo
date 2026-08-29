@@ -1,22 +1,84 @@
 User-agent: *
 Allow: /
 Disallow: /SEO-PRD.md
+Disallow: /aeo-compliance-prd.md
+Disallow: /aeo-audit-report.md
+Disallow: /aeo-gaps.md
+Disallow: /content-backlog.md
+Disallow: /citation-landscape.md
+Disallow: /prompts.json
 
-# AI crawlers explicitly allowed: citation in ChatGPT, Claude, Perplexity and
-# Google AI Overviews is a deliberate goal of this site, decided 2026-07-26.
+# ---------------------------------------------------------------------------
+# AI crawlers. Every one of these is allowed on purpose, and the decision was
+# taken rather than inherited: being cited in ChatGPT, Claude, Perplexity,
+# Google AI Overviews and Apple Intelligence is a stated goal of this site.
+# Decided 2026-07-26, extended to the search-only and archive crawlers
+# 2026-08-29.
+#
+# Two kinds of crawler are listed, and they are not the same thing:
+#   Search / answer crawlers fetch a page to answer a question being asked
+#   right now, and cite the source. That is the traffic we want.
+#   Training crawlers fetch pages to train a future model, with no citation.
+#   Allowed here too, because a model that has read this site is more likely
+#   to name it, and there is nothing on this site we would not publish anyway.
+# ---------------------------------------------------------------------------
+
+# OpenAI: training, search, and user-initiated fetch
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic: training and search
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# Google: Gemini and AI Overviews training use
 User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot and Bing
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl, which many smaller models are trained on
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: meta-externalagent
+Allow: /
+
+# Amazon
+User-agent: Amazonbot
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
 Allow: /
 
 Sitemap: https://www.imagineers.ai/sitemap.xml

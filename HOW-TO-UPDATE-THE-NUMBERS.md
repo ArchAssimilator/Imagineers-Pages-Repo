@@ -221,3 +221,26 @@ in that repo: `docs/subsystems/proof-stats.md`.
   fallback and `stats.json` disagree you get a warning naming the element.
 - **Do not put the numbers back into `proof-stats.js`.** They were there until
   July 2026 and it is why the two sites drifted apart (600 versus 700).
+
+---
+
+## Related: the two other things that work exactly like this
+
+Since August 2026 there are three single-source-of-truth files, not one. They
+all behave the same way: edit the source, commit, and the hook rewrites the
+pages. The push is blocked if anything disagrees.
+
+| What you want to change | Edit this | Written by | Checked by |
+| --- | --- | --- | --- |
+| A headline figure or a fee | `stats.json` | `sh/apply-stats.mjs` | `check-stats.sh` parts 1 to 3 |
+| How the company is described, the category, the ICPs, the differentiators, the founder details | `brand-entity.json` | `sh/apply-brand.mjs` | `check-stats.sh` part 4 |
+| A page's published date | `sh/page-dates.json` | `sh/apply-dates.mjs` | `check-stats.sh` part 5 |
+
+**You never edit a page's last-updated date.** It is bumped for you at commit
+time, and only for pages whose own content changed in that commit. If you change
+one word on `caio.html`, only `caio.html` gets a new date. That is on purpose:
+stamping every page on every push tells Google the dates mean nothing.
+
+**Adding a new page?** Add it to `sitemap.xml` (which is also what puts it in
+`llms-full.txt`) and to `sh/page-dates.json`. Miss the second one and the page
+simply gets no dates, silently.

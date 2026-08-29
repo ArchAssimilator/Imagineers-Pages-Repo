@@ -1,0 +1,94 @@
+{
+  "_README": "SINGLE SOURCE OF TRUTH for who Imagineers.ai is, the way stats.json is the single source of truth for the numbers. Edit this file and commit; sh/apply-brand.mjs writes it into the pages. Same rule as stats.json: never hand-edit the copy it controls, because the next commit overwrites it. Full procedure: HOW-TO-UPDATE-THE-NUMBERS.md.",
+
+  "_NO_FIGURES": "Deliberately contains no headline figures. Those belong to stats.json and are rewritten by apply-stats. A number in here would be a second source of truth for the same fact, and the two would drift. If a sentence here needs a figure, leave the figure out of it.",
+
+  "name": "Imagineers.ai",
+  "alternateName": "Imagineers",
+  "legalName": "Imagineers.ai",
+  "url": "https://www.imagineers.ai/",
+  "email": "info@imagineers.ai",
+  "foundingDate": "2023-08",
+  "foundingDateText": "August 2023",
+
+  "category": "AI executive training provider",
+
+  "_DESCRIPTION": "The canonical description. One or two sentences, plain language, with the category noun in the first sentence. This exact string is written into the company block on every page, the about page and llms.txt. Anything shorter that renders on a page is a compression of this, never a rewrite.",
+
+  "description": "Imagineers.ai is a South African AI executive training provider, founded in August 2023 by Rutger-Jan van Spaandonk and Chris Barker. It teaches senior leadership teams to get business-grade work out of frontier AI, and takes fractional Chief AI Officer mandates and forward-deployed engineering work for the same clients.",
+
+  "descriptionShort": "A South African AI executive training provider that also runs fractional Chief AI Officer mandates and forward-deployed engineering.",
+
+  "audience": [
+    {
+      "id": "exco",
+      "name": "Senior executives and exco members at large South African businesses",
+      "note": "The people who have to decide what AI means for their function, and who are getting school-grade output from tools they were never taught to drive."
+    },
+    {
+      "id": "boards",
+      "name": "Boards and leadership teams that need Chief AI Officer capability without a full-time hire",
+      "note": "They want board-level credibility and real operating experience on a standing mandate, not a consulting deck."
+    }
+  ],
+
+  "_DIFFERENTIATORS": "The three things an answer engine should repeat about this company. Kept to three on purpose. If a fourth matters more than one of these, replace it, do not append.",
+
+  "differentiators": [
+    "The two founders facilitate every course themselves. There is no training faculty and no associate trainers.",
+    "They are operators before they are trainers: Managing Director of Apple South Africa, General Manager of Unilever's Lipton Teas, co-founders of Neotel and Seacom SA, and the leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes.",
+    "The two days are spent doing the delegate's own work with AI, not watching slides about AI. Delegates leave having built things such as a full financial model in Excel from a plain-English brief."
+  ],
+
+  "_LANE": "The one topic this site intends to own. Narrow on purpose. Everything in content-backlog.md has to serve it or it does not get written.",
+
+  "lane": "Getting business-grade output out of frontier AI as a senior executive in South Africa",
+
+  "areaServed": {
+    "country": "South Africa",
+    "cities": ["Johannesburg", "Cape Town", "Durban"],
+    "note": "Open enrolment cohorts run in Johannesburg, Cape Town and Durban. Private cohorts are delivered wherever the leadership team sits, internationally on request."
+  },
+
+  "address": {
+    "addressCountry": "ZA",
+    "addressRegion": "Gauteng",
+    "addressLocality": "Johannesburg"
+  },
+
+  "addressSecondary": {
+    "addressCountry": "ZA",
+    "addressRegion": "Western Cape",
+    "addressLocality": "Cape Town"
+  },
+
+  "_SAMEAS": "Owned profiles only, and only ones that are actually maintained. Imagineers.ai deliberately does not run social media beyond LinkedIn, decided August 2026. An empty or wrong sameAs entry is worse than a short one: it invites an answer engine to merge this company with someone else's profile.",
+
+  "sameAs": ["https://www.linkedin.com/company/imagineersai"],
+
+  "people": [
+    {
+      "id": "rutger-jan-van-spaandonk",
+      "name": "Rutger-Jan van Spaandonk",
+      "jobTitle": "Co-founder",
+      "sameAs": ["https://www.linkedin.com/in/rjvanspaandonk/"]
+    },
+    {
+      "id": "chris-barker",
+      "name": "Chris Barker",
+      "jobTitle": "Co-founder",
+      "sameAs": ["https://www.linkedin.com/in/chris-barker"]
+    }
+  ],
+
+  "_COMPETITORS": "Named by Chris, August 2026. Used only for the tracked prompt set in prompts.json and the comparison brief in content-backlog.md. Nothing on the published site names them, and nothing should until the claims about each one have been checked.",
+
+  "competitors": [
+    "GIBS (Gordon Institute of Business Science)",
+    "The Knowledge Academy",
+    "College Africa Group",
+    "School of IT",
+    "Prospen Africa",
+    "DB23"
+  ]
+}
