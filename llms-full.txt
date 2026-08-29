@@ -33,7 +33,7 @@ Figures verified 1 Aug 2026
 Why Us
 
 ## We are not trainers. We are business builders who make AI work in business.
-We do not sell anything else. No platform, no licence, no implementation engagement waiting on the other side of the two days. Nothing to steer you towards, so we can say plainly which tools are worth paying for and which are not.
+We do not sell anything else. No platform, no licence, no implementation engagement waiting on the other side of the two days. Nothing to steer you towards, so we can say plainly which tools are worth paying for and which are not. The implementation is not something we come back and quote for. It happens in the room, and you leave with it written down.
 No other training organisation in South Africa has put 800 senior executives through two full days each: 1,400 executive days across 45 courses. That volume matters for one reason: we have watched 800+ intelligent people struggle with AI in the same handful of ways, and rebuilt the material 45 times around what fixes it.
 Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and Deloitte, MD of Apple South Africa, GM of Unilever's Lipton Teas, co-founders of Neotel, Seacom SA, Africa's largest NGO Right-to-Care, Africa Weather, the RightMed pharmacy group and a military-grade cyber intelligence firm, turnarounds at Aquarius Platinum and TopTV, and the leadership of South Africa's Covid critical care, testing, oxygen and vaccination programmes. We teach AI the way we had to learn it: to produce work we could put our names on.
 - No: A curriculum written by people who studied AI
@@ -52,8 +52,8 @@ The whole of day one, on one board If you only look at one thing on this page, l
 Day one in one picture. Four steps, each one a prerequisite for the next.
 Day Two
 
-## That was day one. Day two is thirteen use cases.
-Day one changes how you brief AI. Day two shows you where to point it. Everything below is demonstrated live, most of it built by you, sometimes on your own material.
+## Day one is the method. Day two is the implementation.
+Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Ten of them end in a written commitment to something you will do in your first week back, so you do not leave with a list of ideas. You leave with a list of undertakings.
 The one people talk about afterwards
 
 #### Excel: the most sophisticated model you can imagine, built from scratch in fifteen minutes
@@ -108,6 +108,19 @@ Agentic
 #### Recurring workflow demos
 Lead generation, recruiting and VCF file handling: the work that repeats every week, done once and reused.
 One warning, because it comes up in nearly every course. Agents are not the answer to your business problem. Almost everything that pays commercially today is a pipeline: a designed sequence of prompts, each step small enough to be done properly. We show you the agentic tools honestly, including where they fall over, then we show you what works. Read the full argument: AI pipelines vs agents.
+The Implementation
+
+## We do not train you, then come back and sell you the implementation.
+It is the question we are asked most often, usually before lunch on day one. Do you teach for two days and then arrive with a consulting proposal? No. We are booked out delivering the programme and we do not want the engagement. So the implementation happens inside the two days, in the room, and you leave with it in writing.
+Ten of the thirteen modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work, with a date on it. It is captured live in the room rather than scribbled on a pad nobody opens again.
+A private team course of fifteen delegates has 150 of those slots. Assume a quarter are declined, because not every module fits every job. You still walk out with about 112 undertakings, each one dated, owned, and written by the person who has to do it.
+An open enrolment room of twelve seats produces about 90. Either way it is a work programme, and it did not exist on the morning of day one.
+At the end we print the lot as one document, delegate by delegate, module by module. In a private course it goes to the person who signed off the two days. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+This is the part a training company cannot copy. Naming the right task inside somebody else's business, in the room, in about ninety seconds, is a consulting skill and it only comes from having done the work. Between us we have built businesses, run them, turned them around, and spent years as consultants doing precisely this: sitting with an operator and finding the one job worth changing on Monday. A facilitator working from a curriculum has never had to make that call, so they can teach the tool and stop there. We are business builders first, which is why the two days end in commitments rather than notes.
+
+### The ten modules that end in a commitment
+Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
+Nine of them sit on day two; the presentation module is the day one exception, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than ten invented to fill in a form, which is why we plan on roughly three quarters being taken up.
 The Objection
 
 ## "Our IT department will not let us put company data into AI."
@@ -132,6 +145,7 @@ Letting long conversations go sour | Managing context so long work stays coheren
 Prompts and outputs scattered across a dozen chats | A numbered working file per project, so any piece of AI work can be reconstructed
 Uploading whatever file you happen to have | Documents converted so they work, and a data rule you can defend
 Rebuilding the same task by hand each time | Turning it into a prompt chain your whole team can run
+Good intentions, and a notebook nobody reopens | Ten dated commitments in writing, and a document your CEO can hold you to
 Private experimentation nobody can see | Company-owned methods that can be reviewed, governed and improved
 Building a financial model over two weeks, or paying somebody else to | A full driver-based model from a plain-English brief in fifteen minutes, using a tool you now own
 Thinking a $20 subscription is extravagant | Easily justifying $400 a month for when that time inevitably arrives
@@ -181,6 +195,7 @@ Investment
 ## Two participation models
 Most delegates arrive believing a $20 AI subscription is an extravagance. A good number leave easily justifying $400 a month for when that time comes, because they have just watched what the paid frontier does when it is briefed properly.
 That shift, not the fee, is what the two days are about. Delegates report recovering R30,000 to R60,000 of non-billable time in their first week back. The real cost was never the ticket. It was the two days out of the office, and you are spending those either way.
+You are also not buying a training company's time. You are buying two operators who have built businesses, run them and turned them around, and who spent years as consultants doing this work by hand at consulting rates. That is the only reason two days can end in a list of dated commitments instead of a set of notes, and it is the part no curriculum-led course can reproduce at any price.
 Twelve seats only
 
 ### Open Enrolment
@@ -190,6 +205,7 @@ The Daily Maverick Executive AI Masterclass. Cross-industry peers, which most de
 - High-value networking with senior professionals
 - Cross-industry examples and live facilitator guidance
 - First Wednesday alumni sessions, every month, at no further cost
+- The commitment mechanic in full: a room of twelve leaves with about 90 dated undertakings
 Check Dates and Book
 Up to fifteen delegates
 
@@ -201,6 +217,7 @@ Fully customised around your sector, your goals and your live operational priori
 - Applied directly to current strategic priorities
 - First Wednesday alumni sessions for the whole team, every month
 - Delivered internationally on request
+- The commitment pack for the sponsor: about 112 dated undertakings, printed as one document
 Enquire for Your Team
 Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including internationally. Pricing for delivery outside South Africa quoted on enquiry.
 Where It Runs
@@ -267,6 +284,7 @@ Delegates see how company material becomes more usable through custom assistants
 - Shared methods that reduce reliance on one person's private prompts or undocumented AI habits.
 - Company-owned workflows that can be reviewed, improved, governed and reused across a team.
 What you take back to work
+- The commitment document: everything you undertook to do in your first week back, module by module, dated and in your own words.
 - A reusable prompting method for clearer business instructions.
 - The Excel modelling tool itself, so you can keep building full driver-based financial models from a plain-English brief in about fifteen minutes.
 - A practical structure for building, storing and improving prompts.
@@ -327,6 +345,7 @@ Frequently asked questions Do I need prior AI experience? No. The course starts 
 Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
 How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
 What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
+Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
 Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
 Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
 Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
