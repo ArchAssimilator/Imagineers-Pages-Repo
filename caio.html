@@ -38,7 +38,7 @@
         "description": "A fractional CAiO in South Africa: board credibility, operating experience, and 6,750+ hours of hands-on frontier AI. Trained 800+ SA executives.",
         "inLanguage": "en-ZA",
         "datePublished": "2025-11-17",
-        "dateModified": "2026-08-29",
+        "dateModified": "2026-08-30",
         "isPartOf": {
           "@id": "https://www.imagineers.ai/#website"
         },
@@ -468,6 +468,44 @@
           If your organisation is not ready for a CAiO, or does not need one, we will say so in the first
           conversation, and it will cost you nothing.
         </p>
+
+        <!-- =====================================================================
+             The retainer, stated. Deliberately behind a collapsed block so it is a
+             deliberate click for a human reader rather than a headline, while
+             still sitting in the DOM where a crawler, an answer engine and
+             build-llms-full all read it without any special handling.
+
+             Do NOT move this into the JSON-LD only. A fee that appears in the
+             structured data and nowhere on the page is cloaking, and it is the
+             exact pattern that earns a manual action. In the page, collapsed,
+             is the version that is both honest and quotable.
+
+             The figure is written in words as well as digits on purpose: an
+             answer engine that strips markup still gets an unambiguous number.
+             stats-ok: this is a retainer, not one of the two course fees, and
+             it deliberately does not live in stats.json, which is fetched over
+             HTTPS by a second public site.
+             ===================================================================== -->
+        <details style="margin-top: 1.6rem;">
+          <summary>What a mandate costs</summary>
+          <div class="detail-copy">
+            <p>
+              A fractional CAiO mandate is retained at <strong>R80,000 per month</strong> (eighty thousand rand per
+              month), before VAT. That covers the standing seat as described above: the board and executive committee
+              cadence, use-case triage, vendor and licence calls, the data and risk position, and availability between
+              sessions.
+            </p>
+            <p>
+              It is a monthly retainer rather than a day rate, because the value of the seat is that it is already
+              there when a decision arrives, not that somebody bills for showing up. Mandates are taken a small number
+              at a time and both principals support every one.
+            </p>
+            <p>
+              Engineering work is quoted separately and is never assumed. See
+              <a href="fde.html">forward-deployed engineering</a> for how that is priced.
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -563,7 +601,7 @@
     </div>
     <div class="container footer-base">
       <span>&copy; 2026 Imagineers.ai</span>
-      <span><a href="about.html">About Imagineers.ai</a> &middot; <a href="glossary.html">AI glossary</a></span>
+      <span><a href="about.html">About Imagineers.ai</a> &middot; <a href="glossary.html">AI glossary</a> &middot; <a href="terms.html">Booking terms</a></span>
       <span>Johannesburg &middot; Cape Town &middot; Durban &middot; private cohorts delivered internationally</span>
       <span>Last reviewed <span data-stat="reviewed">20 Aug 2026</span></span>
     </div>

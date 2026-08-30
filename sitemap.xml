@@ -25,6 +25,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.imagineers.ai/terms.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.imagineers.ai/caio.html</loc>
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>

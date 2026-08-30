@@ -19,6 +19,10 @@ https://www.imagineers.ai/stats.json
 - 6,750 hours each of hands-on GenAI use, per facilitator
 - Open enrolment: R21,500 incl VAT per person, twelve seats per cohort
 - Private team cohort: R215,000 ex VAT, up to fifteen delegates
+- Payment in full before the course runs; VAT number supplied on the invoice
+- Cancellation: send a substitute at no charge, otherwise the seat moves to a later cohort
+- Not accredited by any SETA, no certificate, fee not claimable against the skills development levy
+- B-BBEE: exempt micro enterprise, automatic Level 4 contributor
 
 ## What kind of company this is
 
@@ -105,6 +109,22 @@ why the course ends in written, dated commitments rather than notes: naming the
 right task inside somebody else's business is a consulting skill, not a
 curriculum.
 
+Q: Who should not book the GenAI Executive Masterclass?
+A: Anyone who does not work at a computer for most of the working day, and
+anyone whose computer use does not go much beyond email. Both days are spent
+doing the delegate's own work on their own laptop at pace, so someone who is not
+already comfortable driving a computer spends the time on mechanics instead of
+method. Also anyone who needs a certificate or needs the fee to come back off
+the skills development levy: the course is not accredited and issues neither.
+
+Q: Can I cancel a masterclass booking, and what does it cost?
+A: Send a colleague from the same organisation in your place and there is no
+charge, which is the preferred option. If nobody can attend, the seat moves to a
+later cohort rather than being refunded. Payment is made in full before the
+course runs. Open enrolment bookings are transacted by Daily Maverick, so their
+published ticket terms govern the payment. Full detail:
+https://www.imagineers.ai/terms.html
+
 Q: What is a fractional CAiO?
 A: A fractional CAiO gives a business Chief AI Officer capability without a
 full-time hire: board-level credibility, real operating experience under pressure,
@@ -128,6 +148,7 @@ answers that are quietly wrong.
 - [GenAI Executive Masterclass: the full two-day programme](https://www.imagineers.ai/masterclass.html): The complete masterclass curriculum in full, module by module, including all thirteen applied use cases and the written commitments ten of them end in, plus where each open enrolment cohort runs in Johannesburg, Cape Town and Durban. Same course as the homepage describes, at greater length.
 - [Fractional CAiO as a Service](https://www.imagineers.ai/caio.html): Chief AI Officer capability without a full-time hire. Board-level credibility, operating experience at national scale, and 6,750+ hours each of hands-on frontier AI, retained as a standing mandate.
 - [About Imagineers.ai](https://www.imagineers.ai/about.html): Who the company is, what category it competes in, who it is for, the three things that make it different, when it was founded, where it is based, and full bios for both founders. The canonical entity page.
+- [Booking terms, fees and cancellations](https://www.imagineers.ai/terms.html): What the masterclass costs, how payment works, how to cancel or send a substitute, the position on purchase orders and VAT, and the accreditation, skills levy and B-BBEE answers. Also states plainly who should not book.
 - [Forward Deployed Engineers (FDE)](https://www.imagineers.ai/fde.html): Engineers embedded inside a client's business, on their own data, shipping working AI systems against the real problem from week one. South Africa, and internationally on request.
 
 ## Explainers

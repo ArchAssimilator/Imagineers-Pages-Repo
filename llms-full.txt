@@ -259,6 +259,25 @@ See how forward deployed engineers work
 ## Two days, then you are over the 80% wall and in the top 0.01% of South Africans.
 The gap between people who direct AI properly and people who query it casually is widening every quarter, and it is compounding inside your competitors right now.
 Reserve an Open Enrolment Seat Talk to Us About a Private Course
+Questions
+
+## Frequently asked questions
+Do I need prior AI experience? No. The course starts with fundamentals and moves quickly into practical, business-grade implementation. Complete beginners and daily users sit in the same room and both leave with more than they expected.
+Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
+How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
+What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
+Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
+Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
+Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
+Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
+Do you deliver outside South Africa? Yes. Private cohorts are delivered internationally on request, quoted on enquiry.
+What should I bring? A laptop and pre-configured accounts on ChatGPT, Claude, Gemini and Copilot or Grok. At least one paid subscription is required. We send setup guidance beforehand.
+What happens after the two days? First Wednesday. On the first Wednesday of every month at 3pm we run a one-hour Zoom session for alumni: what changed in the past month, where it lands in business, and a sophisticated AI tool or method handed over live. It is included for every delegate, indefinitely, and it is how people who did the course two years ago are still current.
+Is there a certificate? No. You leave with working prompts, workflows and outputs instead. We have found that senior delegates value the second thing considerably more.
+Is the masterclass accredited, and can we claim the fee against the skills levy? No to both. The masterclass is not accredited by any SETA or other body, so the fee cannot be claimed back against the skills development levy. Accreditation would freeze the curriculum, and this material gets rebuilt after every course. If levy recovery is the deciding factor in your training budget, book something accredited instead.
+What is your B-BBEE status? Imagineers.ai is an exempt micro enterprise, which carries an automatic Level 4 B-BBEE contributor status. A sworn affidavit confirming it is available on request for your procurement file.
+Can I cancel, or send a colleague instead? Send a colleague, and there is no charge. If nobody from your organisation can attend, the seat moves to a later cohort rather than being refunded. Open enrolment bookings are transacted by Daily Maverick, so their published ticket terms govern the payment. Full detail on the booking terms page.
+Who should not book this? Anyone who does not work at a computer for most of the working day, and anyone whose computer use does not go much beyond email. Both days are spent doing your own work on your own laptop at pace, so a delegate who is not already comfortable driving a computer spends the time on mechanics instead of method.
 Full Detail
 
 ## Everything else, for the thorough
@@ -341,18 +360,6 @@ Margaret McKenzie | MD, Urban Earth
 Andreas C | Owner, Network Trust
 "Fantastic 2 days! My mind was blown by the new ways we can incorporate AI into our daily business."
 Anonymous CEO
-Frequently asked questions Do I need prior AI experience? No. The course starts with fundamentals and moves quickly into practical, business-grade implementation. Complete beginners and daily users sit in the same room and both leave with more than they expected.
-Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
-How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
-What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
-Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
-Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
-Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
-Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
-Do you deliver outside South Africa? Yes. Private cohorts are delivered internationally on request, quoted on enquiry.
-What should I bring? A laptop and pre-configured accounts on ChatGPT, Claude, Gemini and Copilot or Grok. At least one paid subscription is required. We send setup guidance beforehand.
-What happens after the two days? First Wednesday. On the first Wednesday of every month at 3pm we run a one-hour Zoom session for alumni: what changed in the past month, where it lands in business, and a sophisticated AI tool or method handed over live. It is included for every delegate, indefinitely, and it is how people who did the course two years ago are still current.
-Is there a certificate? No. You leave with working prompts, workflows and outputs instead. We have found that senior delegates value the second thing considerably more.
 
 ==============================================================================
 
@@ -529,6 +536,15 @@ The board we open the course with. Why existing leaders, and Gen X in particular
 Business owners CEOs and MDs C-suite teams Founders Management consultants Senior managers Strategy teams Finance leaders Operations leaders HR and recruitment leaders Marketing and sales leaders Professional service providers Non-executive directors
 No prior AI mastery required. Delegates range from complete beginners to experienced daily users. You do not need to be a developer or a data scientist. You do need to be willing to think clearly, brief carefully and reject weak output.
 Bring: a current laptop (Mac or PC) and accounts on ChatGPT, Claude, optionally Gemini and Copilot. At least one paid subscription is required.
+Who It Is Not For
+
+## Four people who should not book this
+Twelve seats, two facilitators, two full days of doing your own work on your own laptop at pace. That format rules some people out. It is cheaper for everybody if we say so here rather than in the room.
+- You do not work at a computer for most of the working day. Everything taught here is a way of getting more out of the hours you already spend at a screen. If your week is spent on a factory floor, in a vehicle or in front of people, there is very little for the method to attach to, and you will not recover the two days.
+- Your computer use does not go much beyond email. Delegates who are still working out where a file saved spend both days on the mechanics instead of the method, and they know it by lunchtime on day one. Get comfortable driving a computer first. Then come, and you will get the full value of the fee.
+- You want a certificate at the end. There is not one, and the course is not accredited by any SETA or other body. You leave with working prompts, workflows and outputs instead. Senior delegates have consistently told us they prefer the second thing, but if your reason for attending is the certificate, this is the wrong course.
+- You need the fee to come back off the skills development levy. It will not, for the same reason: no accreditation. If levy recovery is the deciding factor in your training budget, book something accredited instead.
+If you are unsure which side of that line you sit on, email masterclass@imagineers.ai and describe your working week. We will tell you plainly, including when the answer is that this is not for you. The full commercial position, including fees, payment and cancellations, is on the booking terms page.
 Delegate Feedback
 
 ## 800 executives...a couple of quotes.
@@ -646,6 +662,26 @@ See how forward deployed engineers work
 ## Two days, then you are over the 80% wall and in the top 0.01% of South Africans.
 The gap between people who direct AI properly and people who query it casually is widening every quarter, and it is compounding inside your competitors right now.
 Reserve an Open Enrolment Seat Talk to Us About a Private Course
+Questions
+
+## Frequently asked questions
+Do I need prior AI experience? No. The course starts with fundamentals and moves quickly into practical, business-grade implementation. Complete beginners and daily users sit in the same room and both leave with more than they expected.
+Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
+How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
+What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
+Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
+Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
+Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
+Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
+Do you deliver outside South Africa? Yes. Private cohorts are delivered internationally on request, quoted on enquiry.
+What should I bring? A laptop and pre-configured accounts on ChatGPT, Claude, Gemini and Copilot or Grok. At least one paid subscription is required. We send setup guidance beforehand.
+What happens after the two days? First Wednesday. On the first Wednesday of every month at 3pm we run a one-hour Zoom session for alumni: what changed in the past month, where it lands in business, and a sophisticated AI tool or method handed over live. It is included for every delegate, indefinitely, and it is how people who did the course two years ago are still current.
+Is there a certificate? No. You leave with working prompts, workflows and outputs instead. We have found that senior delegates value the second thing considerably more.
+Is the masterclass accredited, and can we claim the fee against the skills levy? No to both. The masterclass is not accredited by any SETA or other body, so the fee cannot be claimed back against the skills development levy. Accreditation would freeze the curriculum, and this material gets rebuilt after every course. If levy recovery is the deciding factor in your training budget, book something accredited instead.
+What is your B-BBEE status? Imagineers.ai is an exempt micro enterprise, which carries an automatic Level 4 B-BBEE contributor status. A sworn affidavit confirming it is available on request for your procurement file.
+Can I cancel, or send a colleague instead? Send a colleague, and there is no charge. If nobody from your organisation can attend, the seat moves to a later cohort rather than being refunded. Open enrolment bookings are transacted by Daily Maverick, so their published ticket terms govern the payment. Full detail on the booking terms page.
+Do you accept purchase orders and vendor registration? Rarely. We are a two-person firm and supplier onboarding portals cost more to service than they are worth on a single cohort. Ask before you book and it will be considered case by case, but the default is payment up front against an invoice. The VAT number is supplied on the invoice.
+Who should not book this? Anyone who does not work at a computer for most of the working day, and anyone whose computer use does not go much beyond email. See who it is not for in full.
 Full Detail
 
 ## Everything else, for the thorough
@@ -781,18 +817,6 @@ Margaret McKenzie | MD, Urban Earth
 Andreas C | Owner, Network Trust
 "Fantastic 2 days! My mind was blown by the new ways we can incorporate AI into our daily business."
 Anonymous CEO
-Frequently asked questions Do I need prior AI experience? No. The course starts with fundamentals and moves quickly into practical, business-grade implementation. Complete beginners and daily users sit in the same room and both leave with more than they expected.
-Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
-How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
-What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
-Do you sell consulting after the training? No. We sell no platform, no licence and no implementation engagement waiting on the other side of the two days, and we are booked out delivering the course in any case. The implementation happens inside it. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days.
-Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
-Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
-Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
-Do you deliver outside South Africa? Yes. Private cohorts are delivered internationally on request, quoted on enquiry.
-What should I bring? A laptop and pre-configured accounts on ChatGPT, Claude, Gemini and Copilot or Grok. At least one paid subscription is required. We send setup guidance beforehand.
-What happens after the two days? First Wednesday. On the first Wednesday of every month at 3pm we run a one-hour Zoom session for alumni: what changed in the past month, where it lands in business, and a sophisticated AI tool or method handed over live. It is included for every delegate, indefinitely, and it is how people who did the course two years ago are still current.
-Is there a certificate? No. You leave with working prompts, workflows and outputs instead. We have found that senior delegates value the second thing considerably more.
 
 ==============================================================================
 
@@ -805,7 +829,7 @@ About
 # Who Imagineers.ai Is
 Imagineers.ai is a South African AI executive training provider, founded in August 2023 by Rutger-Jan van Spaandonk and Chris Barker. It teaches senior leadership teams to get business-grade work out of frontier AI, and takes fractional Chief AI Officer mandates and forward-deployed engineering work for the same clients. It has no platform, no licence and no vendor margin, which is why its advice on which AI tools are worth paying for is blunt.
 See the Masterclass OR Read the FAQ
-Page published 29 August 2026, last updated 29 August 2026.
+Page published 29 August 2026, last updated 30 August 2026.
 The Record
 
 ## What we have actually done
@@ -912,7 +936,7 @@ Glossary
 # AI Terms, In Plain English
 The generative AI words senior executives actually meet, each defined in one sentence you could repeat in a board meeting. Written by the two people who teach them in the room, not lifted from a vendor's marketing page. Where a term deserves more than a paragraph, there is a full explainer behind it.
 See Where These Are Taught OR Jump to the Terms
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai. Published 29 August 2026, last updated 29 August 2026.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai. Published 29 August 2026, last updated 30 August 2026.
 The Terms
 
 ## Seventeen words worth knowing exactly
@@ -973,6 +997,77 @@ In Practice
 ## Definitions are the cheap part
 Knowing what context rot is takes a minute. Recognising it in your own output, and knowing what to do about it before you send the document, is what the two days are for.
 See the Full Curriculum Who Teaches It
+
+==============================================================================
+
+URL: https://www.imagineers.ai/terms.html
+Title: Booking Terms, Fees and Cancellations | Imagineers.ai
+Description: What the GenAI Executive Masterclass costs, how to pay, how to cancel or send a substitute, and where Imagineers.ai stands on accreditation, the skills levy and B-BBEE.
+
+Booking Terms
+
+# What It Costs, And What Happens If Plans Change
+Every commercial question about booking the GenAI Executive Masterclass, answered on one page. Fees, payment, cancellations, substitutions, purchase orders, VAT, accreditation and B-BBEE. Where the answer is no, it says no.
+Check Dates and Book OR Enquire About a Private Course
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai. Published 30 August 2026, last updated 30 August 2026.
+The Fees
+
+## Two prices, both published
+There is no rate card behind an enquiry form. An open enrolment seat costs R21,500 incl VAT per person, twelve seats to a room. A private team cohort costs R215,000 ex VAT for up to fifteen delegates, wherever your leadership team sits. Delivery outside South Africa is quoted on enquiry, because the travel is the variable, not the teaching.
+Both fees cover both full days, both facilitators in the room, the materials, and the First Wednesday alumni session every month afterwards for as long as you want to keep coming. Travel, accommodation and parking are not included. See the two participation models for what each one includes in full.
+Payment
+
+## Paid in full, before the course runs
+Open enrolment seats are paid at the point of booking, through the Daily Maverick shop, because Daily Maverick holds the booking for every public cohort. Private cohorts are invoiced by Imagineers.ai and settled before the first morning.
+The VAT number appears on the invoice. It is not published here.
+If Plans Change
+
+## Send a colleague, or take a later cohort
+Send a substitute. If the delegate who booked cannot make it, another person from the same organisation can take the seat at no charge. Tell us who is coming instead and that is the end of it. This is the outcome we prefer, because an empty chair in a room of twelve costs everybody something.
+Otherwise, rebook. If nobody can attend, the seat moves to a later cohort rather than being refunded. Cohorts run regularly in Johannesburg, Cape Town and Durban, so the wait is usually weeks rather than months.
+Open enrolment bookings are transacted by Daily Maverick, so their published ticket terms are the ones that govern the payment. Read them on the booking page before you buy.
+Procurement
+
+## Purchase orders and vendor portals: usually no
+Imagineers.ai is two people. Supplier onboarding portals, vendor registration packs and purchase order workflows cost more to service than a single cohort is worth, so the default answer is payment up front against an invoice. Ask before you book if your finance function cannot work any other way, and it will be considered, but treat a yes as the exception rather than the process.
+We would rather tell you this before you spend three weeks in your own procurement system than after.
+Accreditation
+
+## Not accredited, not levy-claimable, Level 4
+The masterclass is not accredited by any SETA or other body, and there is no certificate at the end. That is a deliberate choice rather than an oversight: accreditation would fix the curriculum in place, and this material gets rebuilt after every course because the field moves faster than any syllabus approval cycle.
+The fee therefore cannot be claimed against the skills development levy. If levy recovery is the deciding factor in your training budget, book something accredited instead. We would rather say that here than in the third meeting.
+Imagineers.ai is an exempt micro enterprise, which carries an automatic Level 4 B-BBEE contributor status. A sworn affidavit confirming it is available on request for your procurement file.
+Fit
+
+## Who should not book this
+The two days are spent doing your own work on your own laptop, at pace, with two facilitators moving between twelve people. That format rules some people out, and it is cheaper for everybody if we say so now.
+- Do not book if you do not work at a computer for most of the working day. Everything the course teaches is a way of getting more out of the hours you already spend at a screen. If those hours are few, there is very little for the method to attach to.
+- Do not book if your computer use does not go much beyond email. Delegates who are still working out where a file saved to spend both days on the mechanics instead of the method, and they leave knowing it. Get comfortable driving a computer first, then come.
+- Do not book if you want a certificate. There is not one. See above.
+- Do not book if you need the fee to come back off the skills levy. It will not.
+If you are unsure which side of that line you sit on, email masterclass@imagineers.ai and describe your working week. We will tell you plainly, including when the answer is that this is not for you.
+Contact
+
+## In writing, to one of two addresses
+Masterclass seats and private cohorts: masterclass@imagineers.ai. Fractional Chief AI Officer mandates, engineering work and everything else: info@imagineers.ai.
+Imagineers.ai does not publish a telephone number. Both founders are in a room facilitating for most of any given fortnight, so email is answered faster and more usefully than a phone would be.
+FAQ
+
+## Straight answers about booking
+How much does the GenAI Executive Masterclass cost? An open enrolment seat costs R21,500 incl VAT per person. A private team cohort costs R215,000 ex VAT for up to fifteen delegates. Delivery outside South Africa is quoted on enquiry.
+How do I pay? Payment is made in full before the course runs. Open enrolment seats are paid at the point of booking through the Daily Maverick shop. Private cohorts are invoiced by Imagineers.ai and settled before the first day.
+Can I cancel my booking or send someone else instead? You can send a substitute delegate in your place at no charge, and that is the option we prefer. If nobody can attend, the seat is moved to a later cohort rather than refunded. Open enrolment bookings are held by Daily Maverick, so their published ticket terms govern the transaction.
+Do you accept purchase orders and vendor registration? Rarely. We are a two-person firm and supplier onboarding portals cost more to service than they are worth on a single cohort. Ask before you book and it will be considered case by case, but the default answer is payment up front against an invoice.
+What is your VAT number? It is supplied on the invoice. We do not publish it on the website.
+Is the masterclass accredited? No. It is not accredited by any SETA or other body, and no certificate is issued. You leave with working prompts, workflows and outputs instead.
+Can the fee be claimed against the skills development levy? No. Because the masterclass is not SETA-accredited, the fee cannot be claimed back against the skills development levy. If levy recovery is the deciding factor, do not book.
+What is your B-BBEE status? Imagineers.ai is an exempt micro enterprise, which carries an automatic Level 4 B-BBEE contributor status. A sworn affidavit is available on request.
+Who should not book this? Anyone who does not work at a computer for most of the working day, and anyone whose computer use does not go beyond email. The two days are spent doing your own work on your own laptop at pace, so a delegate who is not already comfortable driving a computer spends both days on the mechanics instead of the method.
+How do I contact you? By email. Masterclass and private cohorts: masterclass@imagineers.ai. Everything else: info@imagineers.ai. We do not publish a telephone number.
+
+## That is the commercial part. The course is the interesting part.
+The full two-day programme, module by module, is on the masterclass page. Open enrolment dates and seats are held by Daily Maverick.
+Check Dates and Book See the Full Programme
 
 ==============================================================================
 
@@ -1093,6 +1188,9 @@ Delivery
 #### Build capacity when you need it
 When the agenda calls for something to be built, our forward-deployed engineering practice can do it, in your environment, with your team, as a separate engagement and never an assumed one.
 Our independence, stated plainly. No vendor, technology or platform affiliation, no reseller or referral agreement, no third-party implementation partnership, no frontier lab relationship. Nobody pays us to reach a conclusion and there is no margin anywhere in what we recommend. We do build, through our own engineering practice, and we quote that separately so you can always take the advice and give the build to somebody else. If your organisation is not ready for a CAiO, or does not need one, we will say so in the first conversation, and it will cost you nothing.
+What a mandate costs A fractional CAiO mandate is retained at R80,000 per month (eighty thousand rand per month), before VAT. That covers the standing seat as described above: the board and executive committee cadence, use-case triage, vendor and licence calls, the data and risk position, and availability between sessions.
+It is a monthly retainer rather than a day rate, because the value of the seat is that it is already there when a decision arrives, not that somebody bills for showing up. Mandates are taken a small number at a time and both principals support every one.
+Engineering work is quoted separately and is never assumed. See forward-deployed engineering for how that is priced.
 How We Work Together
 
 ## Train, direct, build
@@ -1224,6 +1322,9 @@ After
 #### We leave, it keeps running
 Your team owns and operates it. We stay available for the next problem rather than embedded on a permanent retainer. An engagement that cannot end is dependency dressed as engineering.
 One honest caveat, because it comes up in every scoping conversation. Sometimes the right answer is that AI should not be doing this job at all, or not yet, or not on this data. We will say so, and say why. That answer is worth more to you than another engagement is to us.
+What an engagement costs Forward-deployed engineering is charged at R40,000 per engineer per day (forty thousand rand per engineer per day), before VAT. Days are billed as they are worked, against the stage plan above, so an engagement that should stop can stop.
+A first working artifact by day five typically sits in the region of a week of one or two engineers. The build-and-hand-over stage runs weeks two to six at a cadence agreed up front. We quote the shape before we start and we do not bill for a discovery phase that produces a document.
+The alignment stage is the two-day masterclass run privately for your leadership, priced as a course rather than as engineering. See booking terms for that fee.
 What We Build
 
 ## Pipelines and tools, not platforms
@@ -1287,7 +1388,7 @@ Explainer · Fractional CAiO
 # What Is a Fractional CAiO?
 Imagineers.ai is a South African firm that provides fractional CAiO services. A fractional CAiO is a Chief AI Officer who works on a retained, part-time or standing-mandate basis for one or more organisations, rather than as a full-time employee. The role carries the same accountability as a permanent CAiO, board direction, use-case triage, vendor decisions, risk position, without the organisation carrying a full-time package.
 See Fractional CAiO as a Service OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run fractional CAiO mandates themselves. Published 26 July 2026, last updated 29 August 2026.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run fractional CAiO mandates themselves. Published 26 July 2026, last updated 30 August 2026.
 The Role
 
 ## What a fractional CAiO actually does
@@ -1350,7 +1451,7 @@ Explainer · Forward Deployed Engineers
 # What Is a Forward Deployed Engineer?
 Imagineers.ai is a South African firm that provides forward-deployed engineering (FDE). A forward deployed engineer is an engineer who works embedded inside a client's business, in their environment and on their own data, shipping working AI systems against a real problem rather than delivering a report or a roadmap from the outside.
 See Forward Deployed Engineers OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run forward-deployed engagements themselves. Published 26 July 2026, last updated 29 August 2026.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run forward-deployed engagements themselves. Published 26 July 2026, last updated 30 August 2026.
 The Role
 
 ## What a forward deployed engineer actually does
@@ -1404,7 +1505,7 @@ Explainer · Context Rot
 # What Is Context Rot?
 Context rot is the degradation of an AI model's output as the context it is working with grows. The individual facts remain present. The relationships between them weaken, fragment and drift, so the model keeps producing fluent, confident answers that are quietly wrong. It is the failure mode that most often ruins otherwise good AI work, and it arrives far sooner than the advertised context window suggests. Imagineers.ai is a South African firm that teaches senior executives how to prevent it, on day one of a two-day AI executive training course.
 See How We Teach It OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the two-day AI executive training where this is taught themselves. Published 26 July 2026, last updated 29 August 2026.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the two-day AI executive training where this is taught themselves. Published 26 July 2026, last updated 30 August 2026.
 What Breaks
 
 ## Not the facts. The connections between them.
@@ -1490,7 +1591,7 @@ Explainer · Pipelines vs Agents
 # Agents are not the answer to your business problem.
 An AI pipeline is a designed sequence of prompts, each step small enough to be done properly, where the output of one stage becomes the input to the next. An agent, by contrast, is handed a goal and left to decide its own steps. Almost everything that pays commercially today is a pipeline. Imagineers.ai is a South African firm that builds these pipelines for businesses and teaches the method on its AI executive training, and it shows the agentic tools honestly, including where they fall over.
 See What We Build OR Read the FAQ
-Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the pipelines described here themselves. Published 26 July 2026, last updated 29 August 2026.
+Written by Chris Barker and Rutger-Jan van Spaandonk, co-founders of Imagineers.ai, who run the pipelines described here themselves. Published 26 July 2026, last updated 30 August 2026.
 The Comparison
 
 ## Pipeline vs agent, side by side

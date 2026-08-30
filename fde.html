@@ -38,7 +38,7 @@
         "description": "Forward deployed engineers in South Africa: we ship working AI systems inside your business. No roadmap deck, no pilot purgatory. Working by day five.",
         "inLanguage": "en-ZA",
         "datePublished": "2026-07-25",
-        "dateModified": "2026-08-29",
+        "dateModified": "2026-08-30",
         "isPartOf": {
           "@id": "https://www.imagineers.ai/#website"
         },
@@ -482,6 +482,40 @@
           should not be doing this job at all, or not yet, or not on this data. We will say so, and say why. That
           answer is worth more to you than another engagement is to us.
         </p>
+
+        <!-- =====================================================================
+             The rate, stated. Same reasoning as the matching block on
+             caio.html: collapsed so it is a deliberate click for a human, but
+             in the DOM so a crawler, an answer engine and build-llms-full all
+             read it with no special handling.
+
+             Do NOT move this into the JSON-LD only. A fee in the structured
+             data and nowhere on the page is cloaking.
+
+             Digits and words both, so an answer engine that strips markup
+             still gets an unambiguous number. stats-ok: an engineering rate is
+             not one of the two course fees and deliberately does not live in
+             stats.json, which a second public site fetches over HTTPS.
+             ===================================================================== -->
+        <details style="margin-top: 1.6rem;">
+          <summary>What an engagement costs</summary>
+          <div class="detail-copy">
+            <p>
+              Forward-deployed engineering is charged at <strong>R40,000 per engineer per day</strong> (forty thousand
+              rand per engineer per day), before VAT. Days are billed as they are worked, against the stage plan above,
+              so an engagement that should stop can stop.
+            </p>
+            <p>
+              A first working artifact by day five typically sits in the region of a week of one or two engineers. The
+              build-and-hand-over stage runs weeks two to six at a cadence agreed up front. We quote the shape before
+              we start and we do not bill for a discovery phase that produces a document.
+            </p>
+            <p>
+              The alignment stage is the two-day masterclass run privately for your leadership, priced as a course
+              rather than as engineering. See <a href="terms.html">booking terms</a> for that fee.
+            </p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -625,7 +659,7 @@
     </div>
     <div class="container footer-base">
       <span>&copy; 2026 Imagineers.ai</span>
-      <span><a href="about.html">About Imagineers.ai</a> &middot; <a href="glossary.html">AI glossary</a></span>
+      <span><a href="about.html">About Imagineers.ai</a> &middot; <a href="glossary.html">AI glossary</a> &middot; <a href="terms.html">Booking terms</a></span>
       <span>Johannesburg &middot; Cape Town &middot; Durban &middot; private cohorts delivered internationally</span>
       <span>Last reviewed <span data-stat="reviewed">20 Aug 2026</span></span>
     </div>
