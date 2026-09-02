@@ -45,16 +45,35 @@ Two different websites read it:
   HTML but not into the JSON-LD `Offer`, and to keep fees and headcounts from
   ever being mistaken for each other.
 - Adding a new stat means: add it to `stats.json`, then add a keyword for it to
-  `KEYWORDS` in **both** `sh/check-stats.mjs` and `sh/apply-stats.mjs`. They must
-  stay identical, and the keyword must be one no other stat can also match.
+  `KEYWORDS` in `sh/stats-lib.mjs`. One place, since 2 September 2026. The
+  writer and the checker both import that file, so they can no longer hold
+  different ideas of what counts as a figure. The keyword must still be one no
+  other stat can also match.
 - **Two dates live in `stats.json` too.** `verified` is when the headline
   figures were last checked and shows in the proof strip. `reviewed` is when
   the copy was last gone over and shows in the footer of every page. Both are
   plain strings, both are bound with `data-stat`, and neither needs a
   `KEYWORDS` entry, because `apply-stats` never does arithmetic on a string.
-- **`sh/.stats-applied.json` is committed on purpose and must not be hand-edited.**
-  It records which values are currently in the HTML, and it is the only way
-  `apply-stats` can find an unlabelled figure in prose on the next change.
+- **Nothing is located by its own value any more.** `sh/.stats-applied.json` and
+  the pass that used it were deleted on 2 September 2026. That pass found a
+  hand-typed figure by remembering the previous value and looking for it near a
+  keyword, which needed a committed state file and was the fragile half of the
+  system. Every figure now has an explicit home: a `data-stat` slot in the
+  markup, a `{{token}}` in `sh/llms.txt.tmpl`, or a `{{token}}` in
+  `sh/page-meta.json` reached by a structural anchor. **Do not reintroduce a
+  value-matching pass.** If a new figure cannot be bound in the markup, give it
+  an anchor in `sh/page-meta.json` instead.
+- **Every figure in prose must be bound.** There is no fallback that will catch
+  it otherwise; Part 2 of the checker will simply block the push. Three
+  attributes, and the third matters: `data-stat` and `data-stat-text` write the
+  full value ("800+", "R21,500"), while **`data-stat-num` writes the grouped
+  number only, no prefix and no suffix**. Prose says both "800+ senior
+  executives trained" and "800 executives have shown us", and forcing the suffix
+  into the second would edit published copy to suit the tooling.
+  `sh/bind-figures.mjs` does it safely: it refuses anything inside a tag, an
+  attribute, `<head>`, a script block or an existing slot, picks the right
+  attribute for the spelling it finds, and leaves anything ambiguous for a
+  human. Run it with no arguments for a dry run, `--write` to apply.
 
 Full procedure, written for a human coming back to this cold:
 **[`HOW-TO-UPDATE-THE-NUMBERS.md`](./HOW-TO-UPDATE-THE-NUMBERS.md)**. Read it
@@ -86,6 +105,35 @@ and the `sameAs` list.
   way. Reformatting every block would make every page look changed, and
   `apply-dates` reads "changed" as "content updated" and would stamp a new date
   on all of them.
+
+## 🚨 `page-meta.json` owns every title and description
+
+`stats.json` owns the numbers, `brand-entity.json` owns the identity, and
+`sh/page-meta.json` owns each page's title and its three descriptions.
+
+- **To change a page title or description, edit `sh/page-meta.json`.**
+  `sh/apply-meta.mjs` writes the title into `<title>`, `og:title` and
+  `twitter:title`, the description into `<meta name="description">` and the
+  `WebPage` node, and the two social descriptions into their own tags. One
+  sentence, stored once, instead of the four hand-kept copies it replaced.
+- **It carries `{{tokens}}`, not digits.** `{{courses}}`, `{{executives}}`,
+  `{{execDays}}`, `{{hours}}`, `{{price}}` and `{{priceInHouse}}` are filled
+  from `stats.json`. This is how the 23 figures that live inside `<meta>`
+  attributes and JSON-LD strings are kept exact, because neither can carry a
+  `data-stat` attribute.
+- **Every string is found by an anchor with no number in it**: a tag, an
+  attribute selector, a JSON-LD `@id`, or a question. That is the whole point.
+  An anchor that contained the figure would need to know the previous value,
+  which is the state file we just deleted.
+- **A JSON-LD string that carries a figure and is not a title or description
+  goes in the page's `schema` block**, keyed `node:<@id>` or `faq:<question>`.
+  Three exist today: the CAiO service node, and the fee answer on `terms.html`,
+  and the "who runs this" answer on the two masterclass pages.
+- **The `Offer` price is not stored there.** It is always `stats.price` as bare
+  digits, no R and no comma, because schema.org rejects both. `apply-meta`
+  writes it straight from `stats.json`.
+- Never type a title or description into a page. `sh/check-stats.sh` Part 8
+  blocks the push.
 
 ## 🚨 Page dates are stamped automatically, per page, on change
 
@@ -126,22 +174,31 @@ client-confidential goes in them.
 - Never invent a competitor's offer, price or format. `content-backlog.md` C3
   depends on six competitors' published material being checked by a human first.
 
-## `llms-full.txt` is generated, never written
+## Both `llms` files are generated, never written
 
-`llms.txt` is the hand-written index. `llms-full.txt` is every published page
-as one plain-text file, so an assistant reads the site in a single fetch.
+Neither of these is edited directly. `llms.txt` is the short index for AI
+crawlers; `llms-full.txt` is every published page as one plain-text file, so an
+assistant reads the whole site in a single fetch.
 
-- **It is built by `sh/build-llms-full.mjs` from the HTML**, and the page list
-  comes from `sitemap.xml`, so adding a page to the sitemap adds it here too.
-- **The `pre-commit` hook rebuilds it last.** The order is load-bearing:
-  `apply-stats` (figures) → `apply-brand` (identity) → `apply-dates` (dates) →
-  `build-llms-full` (plain text of the corrected HTML). Move anything above
-  `build-llms-full` and it captures the previous values.
-- **`sh/check-stats.sh` Part 4 rebuilds it in memory and compares byte for
-  byte**, so a hand-edit, a stale copy or a page changed after the last commit
-  all fail the same way and `pre-push` refuses the push.
-- **Do not hand-edit `llms-full.txt`.** The next commit overwrites it.
-- It carries no dates of its own. The reviewed date it prints is read out of
+- **`llms.txt` is rendered from `sh/llms.txt.tmpl` by `sh/apply-stats.mjs`.**
+  Changed 2 September 2026. It used to be hand-written, which meant its figures
+  were kept current by searching its prose for the previous value. Plain text
+  cannot carry a `data-stat` attribute, so the template holds `{{courses}}`,
+  `{{executives}}` and the rest where the numbers go, and there is nothing left
+  to guess. **Edit the template. `llms.txt` is output.**
+- **`llms-full.txt` is built by `sh/build-llms-full.mjs` from the HTML**, and
+  the page list comes from `sitemap.xml`, so adding a page to the sitemap adds
+  it here too.
+- **The `pre-commit` hook rebuilds them in order.** The order is load-bearing:
+  `apply-stats` (figures, and `llms.txt`) → `apply-brand` (identity) →
+  `apply-dates` (dates) → `build-llms-full` (plain text of the corrected HTML).
+  Move anything above `build-llms-full` and it captures the previous values.
+- **`sh/check-stats.sh` rebuilds both in memory and compares byte for byte**,
+  `llms-full.txt` in Part 6 and `llms.txt` in Part 7. A hand-edit, a stale copy
+  or a page changed after the last commit all fail the same way, and `pre-push`
+  refuses the push.
+- **Do not hand-edit either file.** The next commit overwrites both.
+- Neither carries dates of its own. The reviewed date they print is read out of
   the footer, which is bound to `stats.json`.
 
 ## Other rules

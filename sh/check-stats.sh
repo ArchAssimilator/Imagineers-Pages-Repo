@@ -36,6 +36,19 @@
 #           memory and compared byte for byte, so a stale copy, a hand-edit or
 #           a page that changed after the last commit all show up the same way.
 #
+#   PART 8  Titles and descriptions.  Every <title>, the three description
+#           tags and the matching strings in the structured data, checked
+#           against sh/page-meta.json. One sentence stored once, written into
+#           the four places it used to be typed. The figures inside those
+#           strings come from stats.json, which is why they can be exact
+#           without a data-stat attribute, which an attribute value cannot
+#           carry.
+#
+#   PART 7  llms.txt.  The hand-written index for AI crawlers, which is now
+#           rendered from sh/llms.txt.tmpl because plain text cannot carry a
+#           data-stat attribute. Rebuilt in memory and compared the same way.
+#           Edit the template; llms.txt itself is output.
+#
 # Exits 1 if any part finds something. sh/hooks/pre-push runs this and refuses
 # the push, which is the actual guard, since pushing is the deploy.
 #
@@ -56,5 +69,11 @@ node sh/apply-dates.mjs --check || STATUS=1
 
 printf '\n\033[2m── Part 6: llms-full.txt against the pages ───────────────\033[0m\n'
 node sh/build-llms-full.mjs --check || STATUS=1
+
+printf '\n\033[2m── Part 7: llms.txt against its template ─────────────────\033[0m\n'
+node sh/apply-stats.mjs --check || STATUS=1
+
+printf '\n\033[2m── Part 8: titles and descriptions against page-meta.json ─\033[0m\n'
+node sh/apply-meta.mjs --check || STATUS=1
 
 exit "$STATUS"

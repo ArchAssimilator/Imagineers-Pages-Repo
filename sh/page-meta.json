@@ -1,0 +1,91 @@
+{
+  "_README": "SINGLE SOURCE OF TRUTH for every page title and description. sh/apply-meta.mjs writes these into the six head slots and into the structured data, so the same sentence is stored once instead of being typed into four places. {{courses}}, {{executives}}, {{execDays}}, {{hours}}, {{price}} and {{priceInHouse}} are filled from stats.json, which is why no figure here is written as a digit. Never type a title or description into a page: the next commit overwrites it and sh/check-stats.sh Part 8 blocks the push.",
+  "_FIELDS": "title -> <title>, og:title, twitter:title. description -> <meta name=description> and the WebPage node in the structured data, which were always the same sentence. ogDescription -> og:description. twitterDescription -> twitter:description, omitted on pages that carry no twitter tags. schemaName -> the WebPage node name, stored only where it differs from title. schema -> extra structured-data strings that carry a figure, keyed by a stable anchor: node:<@id> or faq:<question>.",
+  "_PRICE": "The JSON-LD Offer price is not stored here. It is always stats.price written as bare digits, with no R and no comma, because a grouped price is not valid schema.org. apply-meta writes it from stats.json directly.",
+  "pages": {
+    "about.html": {
+      "title": "About Imagineers.ai | AI Executive Training in South Africa",
+      "description": "Imagineers.ai is a South African AI executive training provider, founded August 2023 by Rutger-Jan van Spaandonk and Chris Barker. Who we are, who we are for, and what we do differently.",
+      "ogDescription": "A South African AI executive training provider that also runs fractional Chief AI Officer mandates and forward-deployed engineering. Founded August 2023. Both founders teach every course themselves.",
+      "twitterDescription": "A South African AI executive training provider. Founded August 2023. Both founders teach every course themselves."
+    },
+    "ai-pipelines-vs-agents.html": {
+      "title": "AI Pipelines vs Agents | Imagineers.ai",
+      "description": "Almost everything that pays commercially today is an AI pipeline, not an agent. The difference, why pipelines win on real business work, and when agents fit.",
+      "ogDescription": "Agents are not the answer to your business problem. Almost everything that pays commercially today is a designed pipeline, each step small enough to be done properly."
+    },
+    "caio.html": {
+      "title": "Fractional CAiO as a Service in South Africa | Imagineers.ai",
+      "description": "A fractional CAiO in South Africa: board credibility, operating experience, and {{hours}}+ hours of hands-on frontier AI. Trained {{executives}} SA executives.",
+      "ogDescription": "A fractional CAiO in South Africa needs board credibility, operating scar tissue and genuine hands-on fluency with the frontier. Almost nobody has all three. Here is the evidence that we do.",
+      "twitterDescription": "Chief AI Officer capability without the hire. Board credibility, operating experience and hands-on frontier AI, retained as a mandate.",
+      "schemaName": "Fractional CAiO as a Service in South Africa",
+      "schema": {
+        "node:https://www.imagineers.ai/caio.html#service": {
+          "description": "Chief AI Officer capability without the hire: board-level credibility, operating experience at national scale, and {{hours}}+ hours each of hands-on frontier AI, retained as a mandate rather than employed full time."
+        }
+      }
+    },
+    "fde.html": {
+      "title": "Forward Deployed Engineers (FDE) in South Africa",
+      "description": "Forward deployed engineers in South Africa: we ship working AI systems inside your business. No roadmap deck, no pilot purgatory. Working by day five.",
+      "ogDescription": "The consultant leaves you a roadmap. We leave you a running system. Forward deployed engineers in South Africa, inside your business, on your data, shipping against the real problem.",
+      "twitterDescription": "Forward deployed engineers embedded in your business, shipping working AI systems. No roadmap deck, no pilot purgatory."
+    },
+    "glossary.html": {
+      "title": "AI Glossary for Executives | Imagineers.ai",
+      "description": "Plain-English definitions of the AI terms senior executives actually meet: context rot, AI pipelines and agents, fractional CAiO, forward deployed engineer, and more.",
+      "ogDescription": "Plain-English definitions of the AI terms senior executives actually meet, written by the people who teach them in the room.",
+      "twitterDescription": "Plain-English definitions of the AI terms senior executives actually meet."
+    },
+    "index.html": {
+      "title": "AI Executive Training in South Africa | Imagineers.ai",
+      "description": "AI executive training in South Africa for senior leaders. Two days from school-grade to business-grade AI output. {{courses}} courses, {{executives}} executives trained.",
+      "ogDescription": "AI executive training in South Africa. 80% of AI users think AI does not work. They are being treated like school kids. Two days to fix that, from the team that has trained {{executives}} executives across {{courses}} courses.",
+      "twitterDescription": "AI executive training in South Africa. 80% of AI users think AI does not work. Two days to fix that.",
+      "schemaName": "AI Executive Training in South Africa",
+      "schema": {
+        "faq:Who runs AI executive training in South Africa?": {
+          "text": "Imagineers.ai runs AI executive training in South Africa. Rutger-Jan van Spaandonk and Chris Barker have trained {{executives}} senior executives across {{courses}} two-day courses, delivered as the Daily Maverick Executive AI Masterclass in Johannesburg, Cape Town and Durban."
+        }
+      }
+    },
+    "masterclass.html": {
+      "title": "GenAI Executive Masterclass: Johannesburg, Cape Town, Durban",
+      "description": "AI executive training in Johannesburg, Cape Town and Durban. The full two-day curriculum, ending in dated commitments rather than notes. {{courses}} courses, {{executives}} executives.",
+      "ogDescription": "AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day GenAI Executive Masterclass in full, including the thirteen applied use cases and the written commitments ten of them end in. Run as {{courses}} courses for {{executives}} executives.",
+      "twitterDescription": "AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day masterclass, and the commitments it ends in.",
+      "schema": {
+        "faq:Who runs AI executive training in South Africa?": {
+          "text": "Imagineers.ai runs AI executive training in South Africa. Rutger-Jan van Spaandonk and Chris Barker have trained {{executives}} senior executives across {{courses}} two-day courses, delivered as the Daily Maverick Executive AI Masterclass in Johannesburg, Cape Town and Durban."
+        }
+      }
+    },
+    "terms.html": {
+      "title": "Booking Terms, Fees and Cancellations | Imagineers.ai",
+      "description": "What the GenAI Executive Masterclass costs, how to pay, how to cancel or send a substitute, and where Imagineers.ai stands on accreditation, the skills levy and B-BBEE.",
+      "ogDescription": "Fees, payment, cancellations, substitutions, purchase orders, VAT, accreditation and B-BBEE. The commercial answers in one place.",
+      "twitterDescription": "Fees, payment, cancellations, substitutions, purchase orders, VAT, accreditation and B-BBEE.",
+      "schema": {
+        "faq:How much does the GenAI Executive Masterclass cost?": {
+          "text": "An open enrolment seat costs {{price}} incl VAT per person. A private team cohort costs {{priceInHouse}} ex VAT for up to fifteen delegates. Delivery outside South Africa is quoted on enquiry."
+        }
+      }
+    },
+    "what-is-a-forward-deployed-engineer.html": {
+      "title": "What Is a Forward Deployed Engineer? (FDE) | Imagineers.ai",
+      "description": "A forward deployed engineer (FDE) works inside a client business shipping working AI systems. What the role is, and how it differs from a consultant.",
+      "ogDescription": "A forward deployed engineer (FDE) works inside a client business shipping working AI systems. What the role is, and how it differs from a consultant."
+    },
+    "what-is-a-fractional-caio.html": {
+      "title": "What Is a Fractional CAiO? | Imagineers.ai",
+      "description": "A fractional CAiO gives a business Chief AI Officer capability without a full-time hire. What the role does, and how it differs from a consultant.",
+      "ogDescription": "A fractional CAiO gives a business Chief AI Officer capability without a full-time hire. What the role does, and how it differs from a consultant."
+    },
+    "what-is-context-rot.html": {
+      "title": "What Is Context Rot? | Imagineers.ai",
+      "description": "Context rot is when an AI model keeps the facts but loses the relationships between them as context grows. What causes it, how fast, and how to prevent it.",
+      "ogDescription": "Context rot is when an AI model keeps the facts but loses the relationships between them as context grows. Bigger context windows do not fix it."
+    }
+  }
+}

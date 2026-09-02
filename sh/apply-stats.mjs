@@ -5,166 +5,112 @@
    Writes the numbers in stats.json into every published file. This is the
    thing that makes "edit stats.json and nothing else" literally true.
 
-   It does two passes.
+   Two jobs, and neither of them guesses.
 
-     PASS A  Bound fallbacks. Every data-stat / data-stat-text element gets
-             its visible text rewritten from stats.json. Purely mechanical,
-             no state needed, because the attribute says which stat it is.
+     BOUND   Every data-stat / data-stat-text / data-stat-num element gets its
+             visible text rewritten from stats.json. The attribute says which
+             stat it is, so there is nothing to work out and no state to keep.
 
-     PASS B  Hand-typed figures. A <meta> description, a JSON-LD block and a
-             sentence in the middle of a paragraph cannot carry an attribute,
-             so there is nothing in the file that says "this 725 is the
-             executives figure". We work it out by remembering what we last
-             wrote: sh/.stats-applied.json holds the values currently sitting
-             in the files. When stats.json moves from 725 to 800, we find every
-             725 that sits near the word "executives" and rewrite it.
+     LLMS    llms.txt is rendered from sh/llms.txt.tmpl, which holds {{tokens}}
+             where the figures go. Plain text cannot carry an attribute, so a
+             template is the only way it can be exact. Edit the template.
 
-   That is why .stats-applied.json is committed. It is not a cache, it is the
-   record of what the HTML currently says, and pass B is meaningless without
-   it. Do not delete it, and do not hand-edit it.
+   What used to be here, and why it is gone
+   ----------------------------------------
+   There was a third pass that found hand-typed figures by remembering the
+   previous value and looking for it near a keyword, using a committed state
+   file, sh/.stats-applied.json. It existed for one reason: a <meta> content
+   attribute and a JSON-LD string cannot carry a data-stat attribute, so 23
+   figures had nothing to bind them.
 
-   After both passes, sh/check-stats.sh should always exit 0. The pre-push
-   hook proves that independently, so a bug in here cannot silently ship.
+   Removed 2 September 2026. Those 23 now come from sh/page-meta.json via
+   sh/apply-meta.mjs, which finds each string by a structural anchor that has
+   no number in it: a tag, an attribute selector, a JSON-LD @id, a question.
+   The remaining loose figures in prose were bound outright. Nothing is located
+   by its own value any more, so nothing has to remember what it used to be.
+
+   Do not reintroduce a value-matching pass. If a new figure cannot be bound,
+   give it an anchor in sh/page-meta.json instead.
+
+   After both jobs, sh/check-stats.sh should always exit 0. The pre-push hook
+   proves that independently, so a bug in here cannot silently ship.
    ========================================================================== */
 
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
-import { readdirSync } from 'node:fs';
+import {
+  ROOT, stats, HTML_FILES, RED, GRN, DIM, OFF,
+  expected, wantedFor,
+} from './stats-lib.mjs';
 
-const ROOT = process.cwd();
-const GRN = '\x1b[32m', YEL = '\x1b[33m', DIM = '\x1b[2m', OFF = '\x1b[0m';
+const TMPL  = `${ROOT}/sh/llms.txt.tmpl`;
 
-const STATE = `${ROOT}/sh/.stats-applied.json`;
-const stats = JSON.parse(readFileSync(`${ROOT}/stats.json`, 'utf8'));
+/* ---------------------------------------------------------------- */
+/* llms.txt is rendered, not written                                */
+/* ---------------------------------------------------------------- */
 
-const FILES = [
-  ...readdirSync(ROOT).filter((f) => f.endsWith('.html')).sort(),
-  'llms.txt',
-];
-
-/* Same keywords and window as the checker, deliberately. If these two ever
-   disagree, apply-stats would write something check-stats then rejects. */
-const KEYWORDS = {
-  execDays:     /\bexecutive[- ]days\b/gi,
-  courses:      /\bcourses\b/gi,
-  executives:   /\bexecutives\b|\bleaders\b/gi,
-  hours:        /\bhours\b/gi,
-  price:        /\bincl\.? VAT\b|"price":/gi,
-  priceInHouse: /\bex\.? VAT\b/gi,
-};
-const WINDOW = 110;
-
-const group = (n) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-const expected = (name) =>
-  typeof stats[name] === 'string'
-    ? stats[name]
-    : (stats[name].prefix || '') + group(stats[name].value) + (stats[name].suffix || '');
-
-/* A stat carrying a prefix is money rather than a count. */
-const isFee = (name) => Boolean(stats[name] && stats[name].prefix);
-
-const mask = (text, re) => text.replace(re, (m) => ' '.repeat(m.length));
-const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-/* Regions that are not prose. Kept in step with check-stats.mjs, including
-   how Rand amounts are handled: the digits survive and only the "R" is
-   stripped, because "R21,500" has no word boundary between the R and the 2.
-   `money` carries the character range of each amount, so a count stat can skip
-   them by position and never rewrite half of a fee. */
-function masked(text) {
-  let t = text;
-  t = mask(t, /<!--[\s\S]*?-->/g);
-  t = mask(t, /&#?\w+;/g);
-  t = mask(t, /https?:\/\/[^\s"'<>]+/g);
-  t = mask(t, /\b\d{1,2}:\d{2}\b/g);
-  t = mask(t, /#[0-9a-fA-F]{3,8}\b/g);
-  t = mask(t, /\d[\d,]*\s*%/g);
-
-  const money = [];
-  t = t.replace(/\bR\s?(\d[\d,]*)\b/g, (whole, digits, offset) => {
-    const start = offset + whole.length - digits.length;
-    money.push([start, start + digits.length]);
-    return ' '.repeat(whole.length - digits.length) + digits;
+function renderLlms() {
+  const tmpl = readFileSync(TMPL, 'utf8');
+  return tmpl.replace(/\{\{(\w+)\}\}/g, (whole, name) => {
+    if (!(name in stats)) {
+      throw new Error(`sh/llms.txt.tmpl uses {{${name}}}, which is not in stats.json`);
+    }
+    return expected(name);
   });
+}
 
-  return { text: t, isMoney: (i) => money.some(([a, b]) => i >= a && i < b) };
+/* --check rebuilds it in memory and compares, writing nothing. Same shape as
+   apply-brand --check and build-llms-full --check, so sh/check-stats.sh can
+   treat all three the same way. A hand-edit of llms.txt, a stale copy and a
+   template edited without running the hook all fail here identically. */
+if (process.argv.includes('--check')) {
+  const want = renderLlms();
+  const have = existsSync(`${ROOT}/llms.txt`)
+    ? readFileSync(`${ROOT}/llms.txt`, 'utf8')
+    : null;
+
+  if (have === want) {
+    console.log(`${GRN}  llms.txt is in step with sh/llms.txt.tmpl.${OFF}`);
+    process.exit(0);
+  }
+
+  console.log(`${RED}  llms.txt does not match sh/llms.txt.tmpl.${OFF}`);
+  if (have === null) {
+    console.log(`${DIM}  llms.txt is missing entirely.${OFF}`);
+  } else {
+    /* Name the first differing line, because "they differ" is not actionable. */
+    const a = have.split('\n'), b = want.split('\n');
+    for (let i = 0; i < Math.max(a.length, b.length); i++) {
+      if (a[i] !== b[i]) {
+        console.log(`${DIM}  first difference at llms.txt:${i + 1}${OFF}`);
+        console.log(`${DIM}    file:     ${OFF}${(a[i] ?? '(end of file)').trim().slice(0, 100)}`);
+        console.log(`${DIM}    template: ${OFF}${(b[i] ?? '(end of file)').trim().slice(0, 100)}`);
+        break;
+      }
+    }
+  }
+  console.log(`${DIM}  llms.txt is generated. Edit sh/llms.txt.tmpl, then run sh/apply-stats.sh.${OFF}`);
+  process.exit(1);
 }
 
 /* ---------------------------------------------------------------- */
-/* Previous values                                                  */
-/* ---------------------------------------------------------------- */
-
-let applied = null;
-if (existsSync(STATE)) {
-  applied = JSON.parse(readFileSync(STATE, 'utf8'));
-} else {
-  /* First run. The files are whatever they are; we have no record of what we
-     last wrote, so pass B has nothing to go on and must not guess. Pass A
-     still runs, and check-stats will report anything pass B could not know
-     about. From the next change onwards, both passes work. */
-  console.log(`${YEL}No sh/.stats-applied.json yet. Recording the current values as the`);
-  console.log(`baseline and running the bound-fallback pass only. Run sh/check-stats.sh${OFF}`);
-  console.log(`${YEL}afterwards and fix any hand-typed figure by hand, once.${OFF}\n`);
-}
-
-/* ---------------------------------------------------------------- */
-/* Rewrite                                                          */
+/* Rewrite the HTML                                                 */
 /* ---------------------------------------------------------------- */
 
 const changed = [];
 
-for (const file of FILES) {
+for (const file of HTML_FILES) {
   const before = readFileSync(`${ROOT}/${file}`, 'utf8');
   let text = before;
 
-  /* --- PASS A: bound fallbacks ---------------------------------- */
+  /* --- Bound slots ---------------------------------------------- */
 
   text = text.replace(
-    /(<([a-z]+)[^>]*\bdata-stat(?:-text)?="([^"]+)"[^>]*>)([^<]*)(<)/gi,
-    (whole, open, tag, name, inner, close) => {
+    /(<([a-z]+)[^>]*\bdata-stat(-text|-num)?="([^"]+)"[^>]*>)([^<]*)(<)/gi,
+    (whole, open, tag, variant, name, inner, close) => {
       if (!(name in stats)) return whole;
-      return open + expected(name) + close;
+      return open + wantedFor(variant, name) + close;
     }
   );
-
-  /* --- PASS B: hand-typed figures ------------------------------- */
-
-  if (applied) {
-    for (const [name, keyword] of Object.entries(KEYWORDS)) {
-      const oldStat = applied[name];
-      const newStat = stats[name];
-      if (!oldStat || !newStat || typeof newStat === 'string') continue;
-      if (oldStat.value === newStat.value) continue;
-
-      const { text: search, isMoney } = masked(text);
-
-      /* Where the topic words are. */
-      const zones = [...search.matchAll(keyword)]
-        .map((m) => [m.index - WINDOW, m.index + m[0].length + WINDOW]);
-      if (!zones.length) continue;
-      const near = (i) => zones.some(([a, b]) => i >= a && i <= b);
-
-      /* Both "1400" and "1,400" spellings of the outgoing value. */
-      const forms = [group(oldStat.value), String(oldStat.value)]
-        .filter((v, i, a) => a.indexOf(v) === i);
-      const re = new RegExp(`\\b(?:${forms.map(esc).join('|')})\\b`, 'g');
-
-      /* Each figure is rewritten in the spelling it already had. Prose writes
-         "21,500" and a JSON-LD offer writes "21500", and an offer with a comma
-         in it is not valid schema.org, so we cannot pick one house style. */
-      const edits = [];
-      for (const m of search.matchAll(re)) {
-        if (!near(m.index)) continue;
-        if (!isFee(name) && isMoney(m.index)) continue;   // a count never rewrites a Rand amount
-        edits.push([m.index, m.index + m[0].length, m[0].includes(',')]);
-      }
-
-      /* Right to left, so earlier offsets stay valid. */
-      for (const [from, to, grouped] of edits.reverse()) {
-        const write = grouped ? group(newStat.value) : String(newStat.value);
-        text = text.slice(0, from) + write + text.slice(to);
-      }
-    }
-  }
 
   if (text !== before) {
     writeFileSync(`${ROOT}/${file}`, text);
@@ -173,19 +119,19 @@ for (const file of FILES) {
 }
 
 /* ---------------------------------------------------------------- */
-/* Record what the files now say                                    */
+/* Render llms.txt from its template                                */
 /* ---------------------------------------------------------------- */
 
-const record = {
-  _README: 'Written by sh/apply-stats.mjs. This is the record of which values are currently ' +
-           'baked into the HTML and llms.txt, and it is what lets apply-stats find hand-typed ' +
-           'figures on the next change. Committed on purpose. Do not hand-edit.',
-  ...Object.fromEntries(Object.keys(KEYWORDS).map((k) => [k, { value: stats[k].value }])),
-  verified: stats.verified,
-};
-const recordText = JSON.stringify(record, null, 2) + '\n';
-const stateChanged = !existsSync(STATE) || readFileSync(STATE, 'utf8') !== recordText;
-if (stateChanged) writeFileSync(STATE, recordText);
+{
+  const want = renderLlms();
+  const path = `${ROOT}/llms.txt`;
+  const have = existsSync(path) ? readFileSync(path, 'utf8') : null;
+  if (have !== want) {
+    writeFileSync(path, want);
+    changed.push('llms.txt');
+  }
+}
+
 
 /* ---------------------------------------------------------------- */
 
@@ -197,7 +143,7 @@ if (changed.length) {
 }
 
 /* The hook needs the list, so print it machine-readably on the last line. */
-const touched = [...changed, ...(stateChanged ? ['sh/.stats-applied.json'] : [])];
+const touched = changed;
 if (process.argv.includes('--porcelain')) {
   console.log('---FILES---');
   for (const f of touched) console.log(f);

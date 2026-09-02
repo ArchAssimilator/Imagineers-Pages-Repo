@@ -9,12 +9,84 @@
 #
 # Installed by:  sh/install-hooks.sh
 #
-# Blocks the push if any published figure disagrees with stats.json.
+# Blocks the push if it would not reach the live site, or if any published
+# figure disagrees with stats.json.
 # To push anyway:  git push --no-verify
 #
 set -uo pipefail
 
 cd "$(git rev-parse --show-toplevel)"
+
+# The branch GitHub Pages actually publishes. Confirmed against the Pages API,
+# 2 September 2026: {"branch":"main","path":"/"}. If that ever changes, change
+# it here too, because everything below trusts this line.
+DEPLOY_BRANCH=main
+
+# ---------------------------------------------------------------------------
+# Part 0: are we even pushing the branch that gets published?
+#
+# Added 2 September 2026, after days of work went to a feature branch while
+# every push looked successful and the live site never moved. A push to any
+# other branch is a perfectly good git operation and a silent non-deploy, and
+# nothing in git says so. This is the only place that can tell the difference.
+#
+# The git command line feeds this hook one line per ref on stdin:
+#   <local ref> <local sha> <remote ref> <remote sha>
+# We have to read it here, because stdin is consumed once.
+#
+# But NOT every client does. Chris pushes from Zed's git panel, and Zed is
+# already known to call this hook without the two arguments git promises
+# (zed-industries/zed#44096). A guard that reads only stdin therefore fails
+# OPEN on an empty ref list: no lines, no offenders, push allowed, nothing
+# published. That is the exact failure this hook exists to stop, so there is
+# a fallback below. Tested with  bash sh/hooks/pre-push < /dev/null.
+# ---------------------------------------------------------------------------
+refs=$(cat)
+zero='0000000000000000000000000000000000000000'
+offenders=()
+saw_ref=0
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  [ -z "${remote_ref:-}" ] && continue
+  saw_ref=1
+  # A branch deletion pushes an all-zero local sha. Not a deploy, let it go.
+  [ "${local_sha:-$zero}" = "$zero" ] && continue
+  if [ "$remote_ref" != "refs/heads/$DEPLOY_BRANCH" ]; then
+    offenders+=("${remote_ref#refs/heads/}")
+  fi
+done <<< "$refs"
+
+# Fallback: the client told us nothing, so judge the branch we are stood on.
+# That is what a bare `git push` sends, and it is the case that bit us.
+if [ "$saw_ref" -eq 0 ]; then
+  head_branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo HEAD)
+  if [ "$head_branch" != "$DEPLOY_BRANCH" ]; then
+    offenders+=("$head_branch")
+  fi
+fi
+
+if [ ${#offenders[@]} -gt 0 ]; then
+  current=$(git rev-parse --abbrev-ref HEAD)
+  printf '\n\033[31m\033[1m  ────────────────────────────────────────────────────────────────\033[0m\n'
+  printf '\033[31m\033[1m  PUSH BLOCKED. This does not publish anything.\033[0m\n\n'
+  printf '  You are on:      \033[1m%s\033[0m\n' "$current"
+  printf '  Pushing to:      %s\n' "${offenders[*]}"
+  printf '  Pages publishes: \033[1m%s\033[0m, and only %s.\n\n' "$DEPLOY_BRANCH" "$DEPLOY_BRANCH"
+  cat <<MSG
+  This push would succeed, and www.imagineers.ai would not change.
+
+  To publish the work on this branch:
+      git checkout $DEPLOY_BRANCH
+      git merge ${offenders[0]}
+      git push
+
+  To push this branch anyway, knowing it does not deploy:
+      git push --no-verify
+  ────────────────────────────────────────────────────────────────
+
+MSG
+  exit 1
+fi
 
 printf '\n\033[2m── pre-push: checking published figures against stats.json ──\033[0m\n'
 

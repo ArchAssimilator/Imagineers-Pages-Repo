@@ -156,11 +156,28 @@ if (problems.length) {
   process.exit(1);
 }
 
+/* A structural commit changes the markup without changing a single word a
+   reader sees: binding a loose figure into a data-stat slot, renaming a class,
+   reindenting a block. Bumping "last updated" for those tells Google the page
+   was revised when it was not, and a date that is not true is worse than no
+   date, because the engines stop trusting all of them.
+
+   So: SKIP_DATE_BUMP=1 git commit -m "..."  bumps nothing. Every stored date is
+   still written into the pages, so the HTML and page-dates.json stay in step
+   and Part 5 of the checker still passes.
+
+   Use it only when you have confirmed the visible text is unchanged. The honest
+   test is to rebuild llms-full.txt before and after and diff it: that file is
+   the pages with the markup stripped out, so if it does not move, no reader
+   sees a difference. Added 2 September 2026, when binding 21 prose figures
+   would otherwise have restamped seven pages that nobody had edited. */
+const SKIP_BUMP = process.env.SKIP_DATE_BUMP === '1';
+
 if (!CHECK) {
   const today = todayISO();
   let sourceChanged = false;
 
-  for (const file of changedPages()) {
+  for (const file of (SKIP_BUMP ? [] : changedPages())) {
     const d = pages[file];
     if (!d.published) { d.published = today; sourceChanged = true; }
     if (d.modified !== today) { d.modified = today; sourceChanged = true; bumped.push(file); }
@@ -212,7 +229,9 @@ if (bumped.length) {
   console.log(`${YEL}  last updated -> ${human(todayISO())}:${OFF}`);
   for (const f of bumped) console.log(`    ${f}`);
 } else {
-  console.log(`${DIM}  dates: no page content changed, nothing bumped${OFF}`);
+  console.log(SKIP_BUMP
+    ? `${DIM}  dates: SKIP_DATE_BUMP=1, nothing bumped (structural commit)${OFF}`
+    : `${DIM}  dates: no page content changed, nothing bumped${OFF}`);
 }
 
 if (PORCELAIN) {

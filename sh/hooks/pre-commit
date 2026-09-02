@@ -33,6 +33,17 @@ printf '%s\n' "$BRAND" | sed '/^---FILES---$/,$d'
 FILES="$FILES
 $(printf '%s\n' "$BRAND" | sed -n '/^---FILES---$/,$p' | tail -n +2)"
 
+# Titles and descriptions, from sh/page-meta.json. Runs before the dates for
+# the same reason apply-brand does: a page changed only by this still counts as
+# changed when the dates are worked out.
+META=$(node sh/apply-meta.mjs --porcelain 2>&1) || {
+  printf '\n\033[31mapply-meta failed, commit aborted:\033[0m\n%s\n' "$META"
+  exit 1
+}
+printf '%s\n' "$META" | sed '/^---FILES---$/,$d'
+FILES="$FILES
+$(printf '%s\n' "$META" | sed -n '/^---FILES---$/,$p' | tail -n +2)"
+
 # Bumps the last-updated date of any page whose own content changed in this
 # commit, and writes every page's dates from sh/page-dates.json. It reads git
 # to decide which pages changed, so it has to run after everything that edits

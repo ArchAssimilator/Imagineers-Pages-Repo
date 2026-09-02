@@ -2,12 +2,12 @@
   "_README": "SINGLE SOURCE OF TRUTH for the headline proof numbers. Edit this file and nothing else, then run sh/check-stats.sh and follow what it tells you. Full instructions: HOW-TO-UPDATE-THE-NUMBERS.md in this folder. These numbers are also consumed by the Executive Navigants landing page, in a separate repo, over https://www.imagineers.ai/stats.json.",
 
   "courses": {
-    "value": 45,
+    "value": 46,
     "suffix": "",
     "label": "two-day courses run"
   },
   "executives": {
-    "value": 800,
+    "value": 815,
     "suffix": "+",
     "label": "senior executives trained in person"
   },
@@ -39,6 +39,6 @@
 
   "_DATES": "Two dates, and they mean different things. verified is when the headline figures above were last checked against the records. reviewed is when the site copy was last gone over, and it is what the footer shows on every page. Both are plain strings, so apply-stats writes them into any data-stat slot that names them and never tries to do arithmetic on them.",
 
-  "verified": "1 Aug 2026",
-  "reviewed": "20 Aug 2026"
+  "verified": "1 Sep 2026",
+  "reviewed": "1 Sep 2026"
 }

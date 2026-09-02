@@ -77,13 +77,19 @@ so it is not orphaned.
 ├── aeo-gaps.md              # What is left to do, in priority order
 ├── content-backlog.md       # Lane coverage gaps
 ├── citation-landscape.md    # Which domains the engines cite (empty until measured)
-├── llms.txt                 # Site summary for AI crawlers
+├── llms.txt                 # Site summary for AI crawlers (GENERATED from sh/llms.txt.tmpl)
 ├── masterclass-theme.css    # Base theme: nav, hero, footer, typography, all pages
 ├── masterclass-v2.css       # Additive layer: hero-pitch, endorse-card, claim-band, acts, boards, usecase grid
 ├── masterclass-theme.js     # Nav toggle, scroll state, reveal-on-scroll, all pages
 ├── stats.json               # SINGLE SOURCE OF TRUTH for the headline numbers
-├── proof-stats.js           # Reads stats.json, fills the proof strips, all pages
+├── proof-stats.js           # Animates the proof strips only. Does NOT read stats.json, see its header
+├── sh/stats-lib.mjs         # Shared by the writer and the checker: keywords, masking, formatting
+├── sh/apply-stats.mjs       # Writes stats.json into the pages and renders llms.txt
 ├── sh/check-stats.sh        # Finds every figure that no longer matches stats.json
+├── sh/bind-figures.mjs      # One-off helper: wraps a loose prose figure in a data-stat slot
+├── sh/llms.txt.tmpl         # SOURCE for llms.txt. Holds {{courses}} etc. Edit this, not llms.txt
+├── sh/page-meta.json        # SOURCE for every page title and description. Edit this, not the page
+├── sh/apply-meta.mjs        # Writes page-meta.json into the head tags and the structured data
 ├── llms-full.txt            # GENERATED. Whole site as plain text, for AI crawlers
 ├── sh/build-llms-full.mjs   # Builds llms-full.txt from the pages. Do not hand-edit the output
 ├── masterclass-v2.js        # Whiteboard lightbox and sticky CTA. Home page only

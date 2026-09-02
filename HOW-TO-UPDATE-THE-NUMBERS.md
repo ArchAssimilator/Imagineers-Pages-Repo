@@ -200,17 +200,32 @@ in that repo: `docs/subsystems/proof-stats.md`.
 ## Things that will trip you up
 
 - **Adding a new stat** means adding it to `stats.json` and adding a keyword for
-  it to `KEYWORDS` in **both** `sh/check-stats.mjs` and `sh/apply-stats.mjs`.
-  They must agree, or apply-stats writes something check-stats then rejects.
+  it to `KEYWORDS` in `sh/stats-lib.mjs`. That is one file, as of 2 September
+  2026; it used to be two that had to be kept identical by hand, and the writer
+  and the checker now import the same list so they cannot disagree.
   Pick a keyword only that stat can own. Two stats that share one, the way both
   fees would have shared the word "price", will claim each other's figure and
   report the wrong one stale.
   Keywords are matched in the plural on purpose, so "45 courses" is policed but
   the "GenAI Executive Masterclass" product name is not mistaken for a headcount.
-- **`sh/.stats-applied.json` is committed on purpose.** It records which values
-  are currently written into the HTML, and it is the only way apply-stats can
-  find an unlabelled figure in prose on the next change. Do not delete or
-  hand-edit it.
+- **`llms.txt` is generated now.** Edit `sh/llms.txt.tmpl`, which holds
+  `{{courses}}` and friends where the figures go. Editing `llms.txt` itself is
+  wasted work: the next commit overwrites it, and Part 7 of the checker blocks
+  the push in the meantime and tells you which line disagrees.
+- **Titles and descriptions are in `sh/page-meta.json`.** So are the figures
+  inside them, as `{{courses}}` and friends. That file is how a number reaches a
+  `<meta>` tag or a JSON-LD string, neither of which can carry a `data-stat`
+  attribute. Editing a title or a description in a page is wasted work: the next
+  commit overwrites it and Part 8 blocks the push meanwhile.
+- **A figure in visible prose must be bound.** Nothing will find it otherwise.
+  `<span data-stat-text="courses">45</span>` writes the full value, and
+  `<span data-stat-num="executives">800</span>` writes the bare number with no
+  suffix, for the sentences that read "800 executives" rather than "800+".
+  `sh/bind-figures.mjs` does this safely; run it with no arguments to see what
+  it would change, then with `--write`.
+- **`sh/.stats-applied.json` is gone**, along with the pass that used it. Both
+  were deleted on 2 September 2026. Nothing is located by its own value now, so
+  nothing has to remember what that value used to be. Do not bring it back.
 - **Adding a new published file** that states a figure means adding it to
   `FILES` in `sh/check-stats.mjs`. `llms.txt` went stale unnoticed for exactly
   this reason.

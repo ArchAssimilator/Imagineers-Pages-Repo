@@ -10,14 +10,14 @@
   "pages": {
     "index.html":                              { "published": "2025-11-17", "modified": "2026-09-02" },
     "masterclass.html":                        { "published": "2026-08-19", "modified": "2026-09-02" },
-    "caio.html":                               { "published": "2025-11-17", "modified": "2026-08-30" },
-    "fde.html":                                { "published": "2026-07-25", "modified": "2026-08-30" },
-    "about.html":                              { "published": "2026-08-29", "modified": "2026-08-30" },
-    "glossary.html":                           { "published": "2026-08-29", "modified": "2026-08-30" },
-    "terms.html":                              { "published": "2026-08-30", "modified": "2026-08-30" },
-    "what-is-context-rot.html":                { "published": "2026-07-26", "modified": "2026-08-30" },
-    "what-is-a-fractional-caio.html":          { "published": "2026-07-26", "modified": "2026-08-30" },
-    "what-is-a-forward-deployed-engineer.html":{ "published": "2026-07-26", "modified": "2026-08-30" },
-    "ai-pipelines-vs-agents.html":             { "published": "2026-07-26", "modified": "2026-08-30" }
+    "caio.html":                               { "published": "2025-11-17", "modified": "2026-09-02" },
+    "fde.html":                                { "published": "2026-07-25", "modified": "2026-09-02" },
+    "about.html":                              { "published": "2026-08-29", "modified": "2026-09-02" },
+    "glossary.html":                           { "published": "2026-08-29", "modified": "2026-09-02" },
+    "terms.html":                              { "published": "2026-08-30", "modified": "2026-09-02" },
+    "what-is-context-rot.html":                { "published": "2026-07-26", "modified": "2026-09-02" },
+    "what-is-a-fractional-caio.html":          { "published": "2026-07-26", "modified": "2026-09-02" },
+    "what-is-a-forward-deployed-engineer.html":{ "published": "2026-07-26", "modified": "2026-09-02" },
+    "ai-pipelines-vs-agents.html":             { "published": "2026-07-26", "modified": "2026-09-02" }
   }
 }
