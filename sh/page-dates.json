@@ -8,8 +8,8 @@
   "_FORMATS": "Store ISO (YYYY-MM-DD) only. apply-dates renders the human form ('20 August 2026') into the visible text and writes the ISO form into the JSON-LD. Two renderings, one stored value, so they cannot disagree.",
 
   "pages": {
-    "index.html":                              { "published": "2025-11-17", "modified": "2026-08-30" },
-    "masterclass.html":                        { "published": "2026-08-19", "modified": "2026-08-30" },
+    "index.html":                              { "published": "2025-11-17", "modified": "2026-09-02" },
+    "masterclass.html":                        { "published": "2026-08-19", "modified": "2026-09-02" },
     "caio.html":                               { "published": "2025-11-17", "modified": "2026-08-30" },
     "fde.html":                                { "published": "2026-07-25", "modified": "2026-08-30" },
     "about.html":                              { "published": "2026-08-29", "modified": "2026-08-30" },
