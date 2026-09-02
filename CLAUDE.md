@@ -38,7 +38,7 @@ Two different websites read it:
   found or rewritten by anything.
 - **A number that tracks a stat but does not sit next to the word for it must be
   bound explicitly**, as `<span data-stat-text="courses">45</span>`. Otherwise
-  Part 3 of the checker reports it as an `ORPHAN` and the push is blocked.
+  Part 2 of the checker reports it as an `ORPHAN` and the push is blocked.
 - **The two course fees are stats too**, `price` and `priceInHouse`. Do not type
   a Rand figure into `index.html` or `llms.txt`; edit `stats.json`. A stat with a
   `prefix` is money, which is what tells the tooling to write the "R" into the
@@ -66,14 +66,13 @@ Two different websites read it:
 - **Every figure in prose must be bound.** There is no fallback that will catch
   it otherwise; Part 2 of the checker will simply block the push. Three
   attributes, and the third matters: `data-stat` and `data-stat-text` write the
-  full value ("800+", "R21,500"), while **`data-stat-num` writes the grouped
-  number only, no prefix and no suffix**. Prose says both "800+ senior
-  executives trained" and "800 executives have shown us", and forcing the suffix
-  into the second would edit published copy to suit the tooling.
-  `sh/bind-figures.mjs` does it safely: it refuses anything inside a tag, an
-  attribute, `<head>`, a script block or an existing slot, picks the right
-  attribute for the spelling it finds, and leaves anything ambiguous for a
-  human. Run it with no arguments for a dry run, `--write` to apply.
+  full value ("815+", "R21,500"), while **`data-stat-num` writes the grouped
+  number only, no prefix and no suffix**. Prose says both "815+ senior
+  executives trained" and "815 executives have shown us", and forcing the suffix
+  into the second would edit published copy to suit the tooling. Wrap it by
+  hand, then run `sh/check-stats.sh` to confirm the orphan is gone.
+  (`sh/bind-figures.mjs` did this automatically. It was a one-off, it has been
+  run, and it was deleted on 2 September 2026.)
 
 Full procedure, written for a human coming back to this cold:
 **[`HOW-TO-UPDATE-THE-NUMBERS.md`](./HOW-TO-UPDATE-THE-NUMBERS.md)**. Read it
@@ -132,7 +131,7 @@ and the `sameAs` list.
 - **The `Offer` price is not stored there.** It is always `stats.price` as bare
   digits, no R and no comma, because schema.org rejects both. `apply-meta`
   writes it straight from `stats.json`.
-- Never type a title or description into a page. `sh/check-stats.sh` Part 8
+- Never type a title or description into a page. `sh/check-stats.sh` Part 4
   blocks the push.
 
 ## 🚨 Page dates are stamped automatically, per page, on change
@@ -194,7 +193,7 @@ assistant reads the whole site in a single fetch.
   `apply-dates` (dates) → `build-llms-full` (plain text of the corrected HTML).
   Move anything above `build-llms-full` and it captures the previous values.
 - **`sh/check-stats.sh` rebuilds both in memory and compares byte for byte**,
-  `llms-full.txt` in Part 6 and `llms.txt` in Part 7. A hand-edit, a stale copy
+  `llms.txt` in Part 6 and `llms-full.txt` in Part 7. A hand-edit, a stale copy
   or a page changed after the last commit all fail the same way, and `pre-push`
   refuses the push.
 - **Do not hand-edit either file.** The next commit overwrites both.

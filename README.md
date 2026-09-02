@@ -86,7 +86,7 @@ so it is not orphaned.
 ├── sh/stats-lib.mjs         # Shared by the writer and the checker: keywords, masking, formatting
 ├── sh/apply-stats.mjs       # Writes stats.json into the pages and renders llms.txt
 ├── sh/check-stats.sh        # Finds every figure that no longer matches stats.json
-├── sh/bind-figures.mjs      # One-off helper: wraps a loose prose figure in a data-stat slot
+├── sh/apply.sh              # Runs all five generators in the load-bearing order. The hook runs this for you
 ├── sh/llms.txt.tmpl         # SOURCE for llms.txt. Holds {{courses}} etc. Edit this, not llms.txt
 ├── sh/page-meta.json        # SOURCE for every page title and description. Edit this, not the page
 ├── sh/apply-meta.mjs        # Writes page-meta.json into the head tags and the structured data
@@ -148,7 +148,7 @@ Each proof item is wired one of four ways:
 - No attribute means the slot is left alone. That is how a page swaps a number
   for a phrase, such as "Day 5" on the engineering page.
 
-Two hooks make this automatic. `pre-commit` runs `sh/apply-stats.sh`, which
+Two hooks make this automatic. `pre-commit` runs `sh/apply.sh`, which
 writes `stats.json` into every published file and stages the result, so editing
 the JSON and committing is the whole job. `pre-push` runs `sh/check-stats.sh`
 and refuses the push if anything still disagrees, which matters because pushing

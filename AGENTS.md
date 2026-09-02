@@ -9,7 +9,7 @@ gets them.
    of those figures into `proof-stats.js`. They lived there until July 2026 and
    it is why this site said 700 while Executive Navigants said 600.
 2. **To change a figure, edit `stats.json` and commit. Nothing else.** The
-   `pre-commit` hook runs `sh/apply-stats.sh`, which rewrites every published
+   `pre-commit` hook runs `sh/apply.sh`, which rewrites every published
    file, including meta descriptions, JSON-LD, prose and `llms.txt`, and stages
    them. The `pre-push` hook runs `sh/check-stats.sh` and blocks the push if
    anything disagrees. Turn the hooks on per clone with `sh/install-hooks.sh`.
@@ -21,17 +21,17 @@ gets them.
 5. **`llms-full.txt` is generated, never hand-written.** `pre-commit` rebuilds
    it from the published pages, immediately after `apply-stats`, and `pre-push`
    blocks the push if it is stale. Regenerate by hand with
-   `sh/build-llms-full.sh`. Editing it directly is pointless: the next commit
+   `sh/apply.sh`. Editing it directly is pointless: the next commit
    overwrites it.
 6. **`brand-entity.json` is the single source of truth for who this company
    is**: the canonical description, the category noun, the ICPs, the three
    differentiators, the founding date and the founder details. `pre-commit`
-   runs `sh/apply-brand.sh`, which writes it into the `Organization` and
+   runs `sh/apply.sh`, which writes it into the `Organization` and
    `Person` blocks on every page and into any `data-brand` slot. `pre-push`
    blocks on drift. Never hand-edit a company or founder block in a page's
    JSON-LD, and never put a headline figure in `brand-entity.json`.
 7. **Page dates are stamped automatically and must not be typed.**
-   `sh/page-dates.json` is the source; `sh/apply-dates.sh` writes the visible
+   `sh/page-dates.json` is the source; `sh/apply.sh` writes the visible
    byline and the `datePublished` / `dateModified` in the schema. The
    last-updated date is bumped **per page, only when that page's own content
    changed in that commit**, read from git. Do not change this to stamp every

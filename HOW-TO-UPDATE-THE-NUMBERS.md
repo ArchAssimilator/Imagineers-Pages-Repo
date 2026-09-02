@@ -14,7 +14,7 @@
 
 ## What happens when you commit
 
-`sh/hooks/pre-commit` runs `sh/apply-stats.sh`, which writes the new values
+`sh/hooks/pre-commit` runs `sh/apply.sh`, which writes the new values
 into the proof strips, the `<meta>` descriptions, the JSON-LD blocks, the prose
 and `llms.txt`, then stages what it changed. `sh/hooks/pre-push` then runs
 `sh/check-stats.sh` and blocks the push if a single figure is out of step.
@@ -43,7 +43,7 @@ The current values are in `stats.json` and nowhere else, including here. Run
 ```
 imagineers_ai/stats.json          <-- THE ONE FILE YOU EDIT
         |
-        |-- sh/apply-stats.sh writes it into every published file here,
+        |-- sh/apply.sh writes it into every published file here,
         |   at commit time, via the pre-commit hook
         |
         |-- proof-stats.js also reads it in the browser, so a visitor on a
@@ -101,7 +101,7 @@ git commit -am "Update headline numbers"
 ```
 
 The pre-commit hook rewrites and stages everything else. If you want to see the
-changes before you commit, run `sh/apply-stats.sh` yourself first; it does the
+changes before you commit, run `sh/apply.sh` yourself first; it does the
 same work and is safe to run any time.
 
 ### 3. Check, if you want to look
@@ -141,7 +141,7 @@ Write figures as digits (`725 executives`), not words. "Seven hundred
 executives" cannot be policed or rewritten by anything, and is how prose goes
 stale.
 
-**Part 3, figures nothing can find.** A number that equals a headline figure but
+**Part 2, figures nothing can find.** A number that equals a headline figure but
 sits nowhere near the word for it, and carries no `data-stat` attribute. The
 real example was "rebuilt the material 45 times", which tracks the course count
 but never says so, so it would have kept the old number forever while every
@@ -210,18 +210,18 @@ in that repo: `docs/subsystems/proof-stats.md`.
   the "GenAI Executive Masterclass" product name is not mistaken for a headcount.
 - **`llms.txt` is generated now.** Edit `sh/llms.txt.tmpl`, which holds
   `{{courses}}` and friends where the figures go. Editing `llms.txt` itself is
-  wasted work: the next commit overwrites it, and Part 7 of the checker blocks
+  wasted work: the next commit overwrites it, and Part 6 of the checker blocks
   the push in the meantime and tells you which line disagrees.
 - **Titles and descriptions are in `sh/page-meta.json`.** So are the figures
   inside them, as `{{courses}}` and friends. That file is how a number reaches a
   `<meta>` tag or a JSON-LD string, neither of which can carry a `data-stat`
   attribute. Editing a title or a description in a page is wasted work: the next
-  commit overwrites it and Part 8 blocks the push meanwhile.
+  commit overwrites it and Part 4 blocks the push meanwhile.
 - **A figure in visible prose must be bound.** Nothing will find it otherwise.
   `<span data-stat-text="courses">45</span>` writes the full value, and
   `<span data-stat-num="executives">800</span>` writes the bare number with no
   suffix, for the sentences that read "800 executives" rather than "800+".
-  `sh/bind-figures.mjs` does this safely; run it with no arguments to see what
+  Wrap it by hand in a `data-stat-text` span; run `sh/check-stats.sh` to see what
   it would change, then with `--write`.
 - **`sh/.stats-applied.json` is gone**, along with the pass that used it. Both
   were deleted on 2 September 2026. Nothing is located by its own value now, so

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   build-llms-full.mjs   (run it via sh/build-llms-full.sh, or let the
+   build-llms-full.mjs   (run it via sh/apply.sh, or let the
                           pre-commit hook run it for you)
 
    Writes llms-full.txt: every published page as one plain-text file, so an
@@ -194,7 +194,7 @@ if (CHECK) {
     process.exit(0);
   }
   console.log(`${RED}  llms-full.txt is stale.${OFF} It no longer matches the published pages.`);
-  console.log(`${DIM}  Regenerate it with:  sh/build-llms-full.sh${OFF}`);
+  console.log(`${DIM}  Regenerate it with:  sh/apply.sh${OFF}`);
   process.exit(1);
 }
 

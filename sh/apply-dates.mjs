@@ -1,5 +1,5 @@
 /* ==========================================================================
-   apply-dates.mjs   (run it via sh/apply-dates.sh, or let the pre-commit
+   apply-dates.mjs   (run it via sh/apply.sh, or let the pre-commit
                       hook run it for you)
 
    Keeps the published and last-updated date on every page true, without you
@@ -218,7 +218,7 @@ if (CHECK) {
   if (problems.length) {
     for (const p of problems) console.error(`${RED}  ✗ ${p}${OFF}`);
     console.error(`\n${RED}Dates on the pages disagree with sh/page-dates.json.${OFF}`);
-    console.error(`${DIM}Run  sh/apply-dates.sh  to rewrite them, then commit.${OFF}`);
+    console.error(`${DIM}Run  sh/apply.sh  to rewrite them, then commit.${OFF}`);
     process.exit(1);
   }
   console.log(`${GRN}  ✓ every page date matches sh/page-dates.json${OFF}`);

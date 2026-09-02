@@ -4,18 +4,13 @@
    The one place the figure tooling agrees with itself.
 
    sh/apply-stats.mjs writes the numbers into the published files, and
-   sh/check-stats.mjs proves it worked. Those two scripts used to hold their
-   own copies of the keyword list, the masking rules, the money detection and
-   the number formatting, with a comment in each telling the next person to
-   keep them identical by hand. CLAUDE.md carried that as a standing rule.
+   sh/check-stats.mjs proves it worked. Those two used to hold their own copies
+   of the keyword list, the masking rules, the money detection and the number
+   formatting, with a comment in each telling the next person to keep them
+   identical by hand.
 
-   Two copies of one rule is one rule and one bug waiting. If the writer's
-   idea of "near the word executives" ever drifted from the checker's, the
-   writer would produce something the checker then rejected, and the push
-   would be blocked by a disagreement between two files that were supposed to
-   say the same thing.
-
-   So: they both import this. Change a keyword once, here.
+   Two copies of one rule is one rule and one bug waiting. So: they both
+   import this. Change something once, here.
    ========================================================================== */
 
 import { readFileSync, readdirSync } from 'node:fs';
@@ -64,6 +59,11 @@ export const NUMERIC = Object.keys(stats).filter(
 
 /* --------------------------------------------------------------------------
    Which words mean "this text is talking about that stat"
+
+   One caller now: Part 2 of sh/check-stats.mjs, which uses these to tell an
+   anchored figure from an orphaned one. A number sitting beside the word for
+   it is in a sentence a human will read when they change it. A number sitting
+   on its own is not, and needs binding.
    -------------------------------------------------------------------------- */
 
 /* Ordered most specific first: "executive days" must be claimed by execDays
@@ -100,7 +100,7 @@ export const WINDOW = 110;
 /* Replace every match with spaces of the same length, so a masked region stops
    producing numbers while every character offset after it stays correct. That
    property is what lets the caller map an offset back to a line number. */
-export const mask = (text, re) => text.replace(re, (m) => ' '.repeat(m.length));
+const mask = (text, re) => text.replace(re, (m) => ' '.repeat(m.length));
 
 export const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
@@ -114,11 +114,10 @@ export const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
      data-stat-num    the grouped number ONLY, no prefix and no suffix.
 
    data-stat-num exists because prose does not always want the suffix. The site
-   says "800 executives have shown us which AI" in one place and "800+ senior
+   says "815 executives have shown us which AI" in one place and "815+ senior
    executives trained" in another, and both are correct English. Binding the
-   first with data-stat-text would rewrite it to "800+ executives have shown
-   us", which silently edits published copy to suit the tooling. Added
-   2 September 2026 so those could be bound without touching a word. */
+   first with data-stat-text would rewrite it to "815+ executives have shown
+   us", which silently edits published copy to suit the tooling. */
 export const BOUND = /<([a-z]+)[^>]*\bdata-stat(-text|-num)?="([^"]+)"[^>]*>([^<]*)</gi;
 
 /* What a given slot should read, which depends on how it was bound. */
@@ -141,7 +140,7 @@ export const wantedFor = (variant, name) =>
    still there. What keeps a fee from being read as a headcount is `isMoney`
    instead, which records the character range of every amount so a count stat
    can skip them by position rather than by guessing at their value. */
-export function maskNonStats(raw) {
+function maskNonStats(raw) {
   let text = raw;
   text = mask(text, /<!--[\s\S]*?-->/g);        // comments, including the waivers
   text = mask(text, /&#?\w+;/g);                // &#10003; is not seven hundred and three
@@ -186,7 +185,7 @@ export function load(file) {
 }
 
 /* Character ranges of the inner text of every bound slot in a file. Those are
-   owned by apply-stats pass A, so the other passes must leave them alone. */
+   owned by apply-stats, so the orphan check must not report them again. */
 export function boundRanges(raw) {
   const out = [];
   for (const m of raw.matchAll(BOUND)) {

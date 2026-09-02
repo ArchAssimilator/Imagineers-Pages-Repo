@@ -2,55 +2,41 @@
 #
 # check-stats.sh
 #
-# Run this every time you change a number in stats.json, or any page copy.
+# Proves every published file still agrees with the files that own its content.
+# Run it after changing a number, a description, or any page copy. The pre-push
+# hook runs it for you and refuses the push if it fails, which is the real
+# guard: pushing this repo IS the deploy, so nothing downstream can catch a
+# stale figure.
 #
-# stats.json is the single source of truth, but a static site cannot data-bind
-# a <meta> description or a JSON-LD block, so some figures are still typed out
-# by hand. This script finds all of them and tells you which ones no longer
-# agree with stats.json. It then checks the generated plain-text copy of the
-# site is still in step with the pages it was built from.
+# Seven parts, in the same order sh/apply.sh writes them.
 #
-#   PART 1  Bound fallbacks.  data-stat / data-stat-text elements whose visible
-#           text has drifted from stats.json. Crawlers and no-JS visitors see
-#           the stale text, so these are hard errors.
+#   PART 1  Bound numbers.  Every data-stat slot, against stats.json.
+#   PART 2  Figures nothing can find.  Numbers equal to a headline figure that
+#           are neither bound nor written next to the word for it, so nothing
+#           can ever move them.
+#   PART 3  Who the company is.  The company block, the two founder blocks and
+#           every data-brand slot, against brand-entity.json.
+#   PART 4  Titles and descriptions.  Every <title>, the three description tags
+#           and the matching strings in the structured data, against
+#           sh/page-meta.json. The figures inside those strings come from
+#           stats.json, which is how they stay exact without a data-stat
+#           attribute, which an attribute value cannot carry.
+#   PART 5  Page dates.  The visible published and last-updated dates, and
+#           datePublished / dateModified in the structured data, against
+#           sh/page-dates.json. Bumped automatically per page at commit time,
+#           so a mismatch means someone typed one.
+#   PART 6  llms.txt.  The index for AI crawlers, rendered from
+#           sh/llms.txt.tmpl because plain text cannot carry an attribute.
+#           Rebuilt in memory and compared. Edit the template, not the output.
+#   PART 7  llms-full.txt.  The whole site as plain text, generated from the
+#           pages. Rebuilt in memory and compared byte for byte, so a stale
+#           copy, a hand-edit or a page changed after the last commit all show
+#           up the same way.
 #
-#   PART 2  Hand-typed figures.  Every number written near the words courses,
-#           executives, executive days or hours, in the pages and in llms.txt.
-#           Also a hard error. A genuine false alarm is waived in place with an
-#           inline  <!-- stats-ok: why -->  comment.
+# Parts 3 to 7 all work the same way: rebuild from the source of truth, compare,
+# and complain about the difference. Nothing guesses.
 #
-#   PART 3  Figures nothing can find.  Numbers equal to a headline figure that
-#           are neither bound nor written next to the word for it.
-#
-#   PART 4  Who the company is.  The company block, the two founder blocks and
-#           every data-brand slot, checked against brand-entity.json. Same rule
-#           as the figures: one source of truth, and a hand-edit is an error.
-#
-#   PART 5  Page dates.  The visible published and last-updated dates, and the
-#           datePublished / dateModified in the structured data, checked
-#           against sh/page-dates.json. Those dates are bumped automatically
-#           per page at commit time, so a mismatch means someone typed one.
-#
-#   PART 6  llms-full.txt.  The whole site as plain text for AI crawlers,
-#           generated from the pages by sh/build-llms-full.mjs. Rebuilt in
-#           memory and compared byte for byte, so a stale copy, a hand-edit or
-#           a page that changed after the last commit all show up the same way.
-#
-#   PART 8  Titles and descriptions.  Every <title>, the three description
-#           tags and the matching strings in the structured data, checked
-#           against sh/page-meta.json. One sentence stored once, written into
-#           the four places it used to be typed. The figures inside those
-#           strings come from stats.json, which is why they can be exact
-#           without a data-stat attribute, which an attribute value cannot
-#           carry.
-#
-#   PART 7  llms.txt.  The hand-written index for AI crawlers, which is now
-#           rendered from sh/llms.txt.tmpl because plain text cannot carry a
-#           data-stat attribute. Rebuilt in memory and compared the same way.
-#           Edit the template; llms.txt itself is output.
-#
-# Exits 1 if any part finds something. sh/hooks/pre-push runs this and refuses
-# the push, which is the actual guard, since pushing is the deploy.
+# Exits 1 if any part finds something.
 #
 # Usage:  sh/check-stats.sh
 #
@@ -61,19 +47,19 @@ STATUS=0
 
 node sh/check-stats.mjs "$@" || STATUS=1
 
-printf '\n\033[2m── Part 4: company and founder details against brand-entity.json ──\033[0m\n'
+printf '\n\033[2m── Part 3: company and founder details against brand-entity.json ──\033[0m\n'
 node sh/apply-brand.mjs --check || STATUS=1
+
+printf '\n\033[2m── Part 4: titles and descriptions against page-meta.json ─\033[0m\n'
+node sh/apply-meta.mjs --check || STATUS=1
 
 printf '\n\033[2m── Part 5: page dates against sh/page-dates.json ─────────\033[0m\n'
 node sh/apply-dates.mjs --check || STATUS=1
 
-printf '\n\033[2m── Part 6: llms-full.txt against the pages ───────────────\033[0m\n'
-node sh/build-llms-full.mjs --check || STATUS=1
-
-printf '\n\033[2m── Part 7: llms.txt against its template ─────────────────\033[0m\n'
+printf '\n\033[2m── Part 6: llms.txt against its template ─────────────────\033[0m\n'
 node sh/apply-stats.mjs --check || STATUS=1
 
-printf '\n\033[2m── Part 8: titles and descriptions against page-meta.json ─\033[0m\n'
-node sh/apply-meta.mjs --check || STATUS=1
+printf '\n\033[2m── Part 7: llms-full.txt against the pages ───────────────\033[0m\n'
+node sh/build-llms-full.mjs --check || STATUS=1
 
 exit "$STATUS"

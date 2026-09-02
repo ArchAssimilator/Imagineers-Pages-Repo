@@ -1,5 +1,5 @@
 /* ==========================================================================
-   apply-stats.mjs   (run it via sh/apply-stats.sh, or let the pre-commit
+   apply-stats.mjs   (run it via sh/apply.sh, or let the pre-commit
                       hook run it for you)
 
    Writes the numbers in stats.json into every published file. This is the
@@ -88,7 +88,7 @@ if (process.argv.includes('--check')) {
       }
     }
   }
-  console.log(`${DIM}  llms.txt is generated. Edit sh/llms.txt.tmpl, then run sh/apply-stats.sh.${OFF}`);
+  console.log(`${DIM}  llms.txt is generated. Edit sh/llms.txt.tmpl, then run sh/apply.sh.${OFF}`);
   process.exit(1);
 }
 

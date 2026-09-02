@@ -1,5 +1,5 @@
 /* ==========================================================================
-   apply-brand.mjs   (run it via sh/apply-brand.sh, or let the pre-commit
+   apply-brand.mjs   (run it via sh/apply.sh, or let the pre-commit
                       hook run it for you)
 
    brand-entity.json is the single source of truth for WHO this company is,
@@ -224,7 +224,7 @@ for (const f of FILES) {
 if (CHECK) {
   if (changed.length) {
     for (const f of changed) console.error(`${RED}  ✗ ${f}: the company or founder details do not match brand-entity.json${OFF}`);
-    console.error(`\n${DIM}Run  sh/apply-brand.sh  to rewrite them, then commit.${OFF}`);
+    console.error(`\n${DIM}Run  sh/apply.sh  to rewrite them, then commit.${OFF}`);
     process.exit(1);
   }
   console.log(`${GRN}  ✓ company and founder details match brand-entity.json${OFF}`);
