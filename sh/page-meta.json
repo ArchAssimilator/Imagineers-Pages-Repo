@@ -53,7 +53,7 @@
     "masterclass.html": {
       "title": "GenAI Executive Masterclass: Johannesburg, Cape Town, Durban",
       "description": "AI executive training in Johannesburg, Cape Town and Durban. The full two-day curriculum, ending in dated commitments rather than notes. {{courses}} courses, {{executives}} executives.",
-      "ogDescription": "AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day GenAI Executive Masterclass in full, including the thirteen applied use cases and the written commitments ten of them end in. Run as {{courses}} courses for {{executives}} executives.",
+      "ogDescription": "AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day GenAI Executive Masterclass in full, including the thirteen applied use cases, the eleven modules that end in a written commitment, and the report the sponsor receives. Run as {{courses}} courses for {{executives}} executives.",
       "twitterDescription": "AI executive training in Johannesburg, Cape Town and Durban. Every module of the two-day masterclass, and the commitments it ends in.",
       "schema": {
         "faq:Who runs AI executive training in South Africa?": {

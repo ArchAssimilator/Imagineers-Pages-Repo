@@ -161,16 +161,15 @@ plus the three-column "Business work" table, which the homepage keeps.)
 - **Link to the homepage as `href="/"`, never `href="index.html"`.**
 - Both pages carry the same footer. If you change it, change it on all pages.
 
-## Open decision for the commitments work
+## The commitments work: decided
 
-The commitment mechanic (each day-two module ends in a written commitment,
-captured in an app, printable for the sponsor) is being added to
-`masterclass.html`. Decide before re-deriving:
+Settled by 1 October 2026. The homepage carries the full `commitments`
+section, identical to `masterclass.html`, including the sample sponsor report
+and the investor block. The "What does the sponsor receive" and "Do you sell
+consulting" questions sit on both pages, in the visible FAQ and in the
+structured data. Only the day two agenda note about which modules end in a
+commitment is masterclass-only, because the homepage does not carry the agenda.
 
-- Does the homepage get the full commitment section, a shortened version, or
-  only a line in the day-two lede?
-- The homepage does not carry the day two agenda, so any commitment content that
-  hangs off that agenda has to be self-contained to survive the copy.
-- If a new FAQ answer about not selling consulting goes into the structured
-  data, decide whether it belongs on both pages or only the deep page. The
-  homepage currently carries one question, the deep page two.
+The quickest safe way to carry a body change across is to diff
+`masterclass.html` before and after the edit and apply that patch to
+`index.html`. Hunks that land in the cut blocks fail, which is correct.

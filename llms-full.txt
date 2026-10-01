@@ -40,6 +40,8 @@ Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and D
 - Yes: A method built by operators who needed AI to produce defensible business work
 - No: Theory, ethics panels and slides about the future of work
 - Yes: Two days of doing, on your laptop, on your problems, with output you keep
+- No: A feedback form and a certificate of attendance
+- Yes: A report to your CEO of what every delegate committed to do, module by module
 - No: A lecture hall
 - Yes: Twelve people, two facilitators, interruptions encouraged
 - No: A vendor with a platform or a licence, and an implementation phase you are committed to before you arrive
@@ -53,7 +55,7 @@ Day one in one picture. Four steps, each one a prerequisite for the next.
 Day Two
 
 ## Day one is the method. Day two is the implementation.
-Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Ten of them end in a written commitment to something you will do in your first week back, so you do not leave with a list of ideas. You leave with a list of undertakings.
+Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Nine of them end in a written commitment to something you will do in your first week back, on top of the two you made on day one, so you do not leave with a list of ideas. You leave with a list of undertakings, and your CEO gets a report of them.
 The one people talk about afterwards
 
 #### Excel: the most sophisticated model you can imagine, built from scratch in fifteen minutes
@@ -112,15 +114,62 @@ The Implementation
 
 ## The implementation happens in the room, not in a proposal afterwards.
 It is the question we are asked most often, usually before lunch on day one. Do you teach for two days and then arrive with a consulting proposal? No. Nothing is waiting on the other side of the two days that you have to buy, and nothing in the fee is a lead generator. The implementation happens inside the two days, in the room, and you leave with it in writing. If you afterwards decide you want help building one of those commitments, we do that work, and it is quoted separately and asked for rather than assumed.
-Ten of the thirteen modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work, with a date on it. It is captured live in the room rather than scribbled on a pad nobody opens again.
-A private team course of fifteen delegates has 150 of those slots. Assume a quarter are declined, because not every module fits every job. You still walk out with about 112 undertakings, each one dated, owned, and written by the person who has to do it.
+Eleven modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work. It is captured live in the room rather than scribbled on a pad nobody opens again.
+A recent private cohort of 16 executives logged 124 commitments across the eleven modules, each one owned and written by the person who has to do it. Not every module fits every job, so nobody is expected to commit to all eleven.
 An open enrolment room of twelve seats produces about 90. Either way it is a work programme, and it did not exist on the morning of day one.
-At the end we print the lot as one document, delegate by delegate, module by module. In a private course it goes to the person who signed off the two days. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+
+### What the CEO receives
+After a private course, the person who signed off the two days gets one report. It lists every commitment, delegate by delegate and module by module, and marks the strongest tenth as gold standard. It shows how many of the eleven modules each person committed to, so it is plain who engaged and who did not.
+It also reads the commitments across the whole room. When people in different departments want to build the same thing, the report says so, and recommends building it once for the company instead of five times in five departments. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+Sample report · client, names and roles changed Back at work commitments: the leadership team of a manufacturing group
+16Executives in the room
+124Commitments logged
+11Modules that end in a commitment
+12Gold standard (the top tenth)
+Build it once, not five times
+What several people want to build | How many | What the report recommends
+A dashboard or scorecard | 13 of 16 | One reporting standard for the group, so performance, margin and delivery are tracked the same way everywhere
+A review and approval assistant | 9 of 16 | One assistant that checks papers against the board's own criteria, instead of nine separate attempts
+A guide to operating procedures | 7 of 16 | One shared playbook for front-line procedures and fault-finding
+Three of the twelve gold standard commitments
+"I'll build a custom GPT that reviews capital expenditure papers against the board's approval requirements before they go up, checking that costing, contingency, funding, payback and risks are all covered."
+Business Unit Head · Custom GPT module
+"I'll turn our quarterly audit and risk findings into an executive story: the key issues, their root causes, our exposure, and the actions management must take."
+Head of Internal Audit · Presentation module
+"I'll build a pricing and margin model that shows what each discount level really costs us, and feed it into a dashboard we can use to make quick decisions."
+Operations Director · Excel module
+Who committed to what
+Delegate | Modules committed | Gold standard
+Business Unit Head | 11 of 11 | 2
+Head of Internal Audit | 11 of 11 | 2
+Head of Engineering Projects | 9 of 11 | 0
+Legal Counsel | 5 of 11 | 0
+Commercial Manager | 2 of 11 | 0
+What happens next
+- Every delegate is sent their own commitments, formatted as a card they can pin up.
+- A 30-minute check-in with the whole group seven days after the course, to see what has been built.
+- A small working group to build the top shared tool once, for the whole company.
+Taken from a real report on a private cohort in September 2026, shortened, with the company, the people and anything that would identify them changed. The full report carries every delegate's wording on every module.
 This is the part a training company cannot copy. Naming the right task inside somebody else's business, in the room, in about ninety seconds, is a consulting skill and it only comes from having done the work. Between us we have built businesses, run them, turned them around, and spent years as consultants doing precisely this: sitting with an operator and finding the one job worth changing on Monday. A facilitator working from a curriculum has never had to make that call, so they can teach the tool and stop there. We are business builders first, which is why the two days end in commitments rather than notes.
 
-### The ten modules that end in a commitment
-Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
-Nine of them sit on day two; the presentation module is the day one exception, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than ten invented to fill in a form, which is why we plan on roughly three quarters being taken up.
+### The eleven modules that end in a commitment
+Expert method Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
+Nine of them sit on day two. Expert method and presentation storylines are the day one exceptions, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than eleven invented to fill in a form, and in practice about seven in ten get taken up.
+
+### For investors who send us into their portfolio companies
+Some of our private courses are booked by investors rather than by the company itself: a fund that wants its portfolio management teams using AI properly, and wants to know whether they are. The report answers that question. Each portfolio company gets its own report, in the same layout every time, so you can put two management teams side by side and see which one left with a plan and which one left with notes.
+One per company
+
+#### A separate report for each portfolio company
+Each report covers one leadership team. They are not pooled into a single portfolio view, but the format never changes, which is what makes them comparable.
+Evidence
+
+#### Proof the management team engaged
+Who committed to what, on which module, in their own words. A team that commits to nine of eleven modules is telling you something different from one that commits to two.
+Value creation
+
+#### Where the shared builds are
+The tools several executives in one company all want are the obvious first places to put value-creation money, and the report names them.
 The Objection
 
 ## "Our IT department will not let us put company data into AI."
@@ -145,7 +194,7 @@ Letting long conversations go sour | Managing context so long work stays coheren
 Prompts and outputs scattered across a dozen chats | A numbered working file per project, so any piece of AI work can be reconstructed
 Uploading whatever file you happen to have | Documents converted so they work, and a data rule you can defend
 Rebuilding the same task by hand each time | Turning it into a prompt chain your whole team can run
-Good intentions, and a notebook nobody reopens | Ten dated commitments in writing, and a document your CEO can hold you to
+Good intentions, and a notebook nobody reopens | Up to eleven commitments in writing, and a report your CEO can hold you to
 Private experimentation nobody can see | Company-owned methods that can be reviewed, governed and improved
 Building a financial model over two weeks, or paying somebody else to | A full driver-based model from a plain-English brief in fifteen minutes, using a tool you now own
 Thinking a $20 subscription is extravagant | Easily justifying $400 a month for when that time inevitably arrives
@@ -155,7 +204,7 @@ The second advantage nobody mentions You have already survived one complete tech
 The board we open the course with. Why existing leaders, and Gen X in particular, turn out to be the most effective AI users in the room.
 
 ### In the room, typically
-Business owners CEOs and MDs C-suite teams Founders Management consultants Senior managers Strategy teams Finance leaders Operations leaders HR and recruitment leaders Marketing and sales leaders Professional service providers Non-executive directors
+Business owners CEOs and MDs C-suite teams Founders Management consultants Senior managers Strategy teams Finance leaders Operations leaders HR and recruitment leaders Marketing and sales leaders Professional service providers Non-executive directors Portfolio company leadership teams
 No prior AI mastery required. Delegates range from complete beginners to experienced daily users. You do not need to be a developer or a data scientist. You do need to be willing to think clearly, brief carefully and reject weak output.
 Bring: a current laptop (Mac or PC) and accounts on ChatGPT, Claude, optionally Gemini and Copilot. At least one paid subscription is required.
 Delegate Feedback
@@ -205,7 +254,7 @@ The Daily Maverick Executive AI Masterclass. Cross-industry peers, which most de
 - High-value networking with senior professionals
 - Cross-industry examples and live facilitator guidance
 - First Wednesday alumni sessions, every month, at no further cost
-- The commitment mechanic in full: a room of twelve leaves with about 90 dated undertakings
+- The commitment mechanic in full: a room of twelve leaves with about 90 written commitments
 Check Dates and Book
 Up to fifteen delegates
 
@@ -217,7 +266,7 @@ Fully customised around your sector, your goals and your live operational priori
 - Applied directly to current strategic priorities
 - First Wednesday alumni sessions for the whole team, every month
 - Delivered internationally on request
-- The commitment pack for the sponsor: about 112 dated undertakings, printed as one document
+- A report for your CEO: every delegate's commitments, the gold standard ideas, and what to build once for the whole company
 Enquire for Your Team
 Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including internationally. Pricing for delivery outside South Africa quoted on enquiry.
 Where It Runs
@@ -240,7 +289,7 @@ It is why delegates from our earliest cohorts are still current. Come every mont
 How We Work Together
 
 ## Train, direct, build
-Three ways in, and they feed each other. The training tells us where AI pays. The board seat tells us what will get funded and governed. The building tells us what is true, which goes straight back into the course. You can take any one on its own, but each makes the next one cheaper.
+Three ways in, and they feed each other. The training tells us where AI pays. The board seat tells us what will get funded and governed. The building tells us what is true, which goes straight back into the course. You can take any one on its own, but each makes the next one cheaper. After a private course, the shared builds named in the commitment report are the natural first job for steps two and three, if you decide you want help with them.
 Step One
 
 #### GenAI Executive Masterclass
@@ -266,7 +315,8 @@ Do I need prior AI experience? No. The course starts with fundamentals and moves
 Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
 How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
 What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
-Do you sell consulting after the training? No, in the sense that matters: nothing is pushed at you and nothing is assumed. There is no platform, no licence and no implementation engagement you are signed up for by attending, and nothing in the fee is a lead generator. The implementation happens inside the course. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days. We do also run a fractional Chief AI Officer practice and a forward-deployed engineering practice, and delegates sometimes ask us to build one of the commitments afterwards. That is a separate engagement, quoted separately, and you have to ask for it.
+Do you sell consulting after the training? No, in the sense that matters: nothing is pushed at you and nothing is assumed. There is no platform, no licence and no implementation engagement you are signed up for by attending, and nothing in the fee is a lead generator. The implementation happens inside the course. Eleven modules close with every delegate writing down one specific thing they will do with it in their first week back, captured in the room. A recent private cohort of 16 logged 124 of those, and whoever signed off the two days receives them as one report. We do also run a fractional Chief AI Officer practice and a forward-deployed engineering practice, and delegates sometimes ask us to build one of the commitments afterwards. That is a separate engagement, quoted separately, and you have to ask for it.
+What does the sponsor receive after a private course? One report covering the whole leadership team. It lists every commitment, delegate by delegate and module by module, marks the strongest tenth as gold standard, and shows how many of the eleven modules each person committed to. It also names the tools several departments want to build, so the company builds each one once. Investors who book courses for portfolio companies receive a separate report for each company, in the same format. There is a sample of the report further up this page.
 Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
 Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
 Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
@@ -391,6 +441,8 @@ Between us: a Wharton MBA and a faculty-medal engineering degree, McKinsey and D
 - Yes: A method built by operators who needed AI to produce defensible business work
 - No: Theory, ethics panels and slides about the future of work
 - Yes: Two days of doing, on your laptop, on your problems, with output you keep
+- No: A feedback form and a certificate of attendance
+- Yes: A report to your CEO of what every delegate committed to do, module by module
 - No: A lecture hall
 - Yes: Twelve people, two facilitators, interruptions encouraged
 - No: A vendor with a platform or a licence, and an implementation phase you are committed to before you arrive
@@ -431,7 +483,7 @@ Boards are drawn from the live course material. Model names and figures reflect 
 Day Two
 
 ## Day one is the method. Day two is the implementation.
-Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Ten of them end in a written commitment to something you will do in your first week back, so you do not leave with a list of ideas. You leave with a list of undertakings.
+Day one changes how you brief AI. Day two is closer to a consulting engagement than a class: thirteen use cases, demonstrated live, most of them built by you, often on your own material. Nine of them end in a written commitment to something you will do in your first week back, on top of the two you made on day one, so you do not leave with a list of ideas. You leave with a list of undertakings, and your CEO gets a report of them.
 The one people talk about afterwards
 
 #### Excel: the most sophisticated model you can imagine, built from scratch in fifteen minutes
@@ -490,15 +542,62 @@ The Implementation
 
 ## The implementation happens in the room, not in a proposal afterwards.
 It is the question we are asked most often, usually before lunch on day one. Do you teach for two days and then arrive with a consulting proposal? No. Nothing is waiting on the other side of the two days that you have to buy, and nothing in the fee is a lead generator. The implementation happens inside the two days, in the room, and you leave with it in writing. If you afterwards decide you want help building one of those commitments, we do that work, and it is quoted separately and asked for rather than assumed.
-Ten of the thirteen modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work, with a date on it. It is captured live in the room rather than scribbled on a pad nobody opens again.
-A private team course of fifteen delegates has 150 of those slots. Assume a quarter are declined, because not every module fits every job. You still walk out with about 112 undertakings, each one dated, owned, and written by the person who has to do it.
+Eleven modules end the same way. Before we move on, every delegate writes down one specific thing they will do with that module in their first week back. Not a good intention. A named task, on a named piece of work. It is captured live in the room rather than scribbled on a pad nobody opens again.
+A recent private cohort of 16 executives logged 124 commitments across the eleven modules, each one owned and written by the person who has to do it. Not every module fits every job, so nobody is expected to commit to all eleven.
 An open enrolment room of twelve seats produces about 90. Either way it is a work programme, and it did not exist on the morning of day one.
-At the end we print the lot as one document, delegate by delegate, module by module. In a private course it goes to the person who signed off the two days. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+
+### What the CEO receives
+After a private course, the person who signed off the two days gets one report. It lists every commitment, delegate by delegate and module by module, and marks the strongest tenth as gold standard. It shows how many of the eleven modules each person committed to, so it is plain who engaged and who did not.
+It also reads the commitments across the whole room. When people in different departments want to build the same thing, the report says so, and recommends building it once for the company instead of five times in five departments. It is the plainest answer we know to "what did we actually get for that?", and it arrives before anybody has to ask.
+Sample report · client, names and roles changed Back at work commitments: the leadership team of a manufacturing group
+16Executives in the room
+124Commitments logged
+11Modules that end in a commitment
+12Gold standard (the top tenth)
+Build it once, not five times
+What several people want to build | How many | What the report recommends
+A dashboard or scorecard | 13 of 16 | One reporting standard for the group, so performance, margin and delivery are tracked the same way everywhere
+A review and approval assistant | 9 of 16 | One assistant that checks papers against the board's own criteria, instead of nine separate attempts
+A guide to operating procedures | 7 of 16 | One shared playbook for front-line procedures and fault-finding
+Three of the twelve gold standard commitments
+"I'll build a custom GPT that reviews capital expenditure papers against the board's approval requirements before they go up, checking that costing, contingency, funding, payback and risks are all covered."
+Business Unit Head · Custom GPT module
+"I'll turn our quarterly audit and risk findings into an executive story: the key issues, their root causes, our exposure, and the actions management must take."
+Head of Internal Audit · Presentation module
+"I'll build a pricing and margin model that shows what each discount level really costs us, and feed it into a dashboard we can use to make quick decisions."
+Operations Director · Excel module
+Who committed to what
+Delegate | Modules committed | Gold standard
+Business Unit Head | 11 of 11 | 2
+Head of Internal Audit | 11 of 11 | 2
+Head of Engineering Projects | 9 of 11 | 0
+Legal Counsel | 5 of 11 | 0
+Commercial Manager | 2 of 11 | 0
+What happens next
+- Every delegate is sent their own commitments, formatted as a card they can pin up.
+- A 30-minute check-in with the whole group seven days after the course, to see what has been built.
+- A small working group to build the top shared tool once, for the whole company.
+Taken from a real report on a private cohort in September 2026, shortened, with the company, the people and anything that would identify them changed. The full report carries every delegate's wording on every module.
 This is the part a training company cannot copy. Naming the right task inside somebody else's business, in the room, in about ninety seconds, is a consulting skill and it only comes from having done the work. Between us we have built businesses, run them, turned them around, and spent years as consultants doing precisely this: sitting with an operator and finding the one job worth changing on Monday. A facilitator working from a curriculum has never had to make that call, so they can teach the tool and stop there. We are business builders first, which is why the two days end in commitments rather than notes.
 
-### The ten modules that end in a commitment
-Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
-Nine of them sit on day two; the presentation module is the day one exception, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than ten invented to fill in a form, which is why we plan on roughly three quarters being taken up.
+### The eleven modules that end in a commitment
+Expert method Co-pilot and Gem chatbot CustomGPT process Presentation storylines Deep research Tabulated learning Voice input Data analysis Excel modelling Dashboards Vibe-coded app
+Nine of them sit on day two. Expert method and presentation storylines are the day one exceptions, because the method has to come first. Nobody is marked on the count. We would rather have seven commitments a delegate means than eleven invented to fill in a form, and in practice about seven in ten get taken up.
+
+### For investors who send us into their portfolio companies
+Some of our private courses are booked by investors rather than by the company itself: a fund that wants its portfolio management teams using AI properly, and wants to know whether they are. The report answers that question. Each portfolio company gets its own report, in the same layout every time, so you can put two management teams side by side and see which one left with a plan and which one left with notes.
+One per company
+
+#### A separate report for each portfolio company
+Each report covers one leadership team. They are not pooled into a single portfolio view, but the format never changes, which is what makes them comparable.
+Evidence
+
+#### Proof the management team engaged
+Who committed to what, on which module, in their own words. A team that commits to nine of eleven modules is telling you something different from one that commits to two.
+Value creation
+
+#### Where the shared builds are
+The tools several executives in one company all want are the obvious first places to put value-creation money, and the report names them.
 The Objection
 
 ## "Our IT department will not let us put company data into AI."
@@ -523,7 +622,7 @@ Letting long conversations go sour | Managing context so long work stays coheren
 Prompts and outputs scattered across a dozen chats | A numbered working file per project, so any piece of AI work can be reconstructed
 Uploading whatever file you happen to have | Documents converted so they work, and a data rule you can defend
 Rebuilding the same task by hand each time | Turning it into a prompt chain your whole team can run
-Good intentions, and a notebook nobody reopens | Ten dated commitments in writing, and a document your CEO can hold you to
+Good intentions, and a notebook nobody reopens | Up to eleven commitments in writing, and a report your CEO can hold you to
 Private experimentation nobody can see | Company-owned methods that can be reviewed, governed and improved
 Building a financial model over two weeks, or paying somebody else to | A full driver-based model from a plain-English brief in fifteen minutes, using a tool you now own
 Thinking a $20 subscription is extravagant | Easily justifying $400 a month for when that time inevitably arrives
@@ -533,7 +632,7 @@ The second advantage nobody mentions You have already survived one complete tech
 The board we open the course with. Why existing leaders, and Gen X in particular, turn out to be the most effective AI users in the room.
 
 ### In the room, typically
-Business owners CEOs and MDs C-suite teams Founders Management consultants Senior managers Strategy teams Finance leaders Operations leaders HR and recruitment leaders Marketing and sales leaders Professional service providers Non-executive directors
+Business owners CEOs and MDs C-suite teams Founders Management consultants Senior managers Strategy teams Finance leaders Operations leaders HR and recruitment leaders Marketing and sales leaders Professional service providers Non-executive directors Portfolio company leadership teams
 No prior AI mastery required. Delegates range from complete beginners to experienced daily users. You do not need to be a developer or a data scientist. You do need to be willing to think clearly, brief carefully and reject weak output.
 Bring: a current laptop (Mac or PC) and accounts on ChatGPT, Claude, optionally Gemini and Copilot. At least one paid subscription is required.
 Who It Is Not For
@@ -596,7 +695,7 @@ The Daily Maverick Executive AI Masterclass. Cross-industry peers, which most de
 - High-value networking with senior professionals
 - Cross-industry examples and live facilitator guidance
 - First Wednesday alumni sessions, every month, at no further cost
-- The commitment mechanic in full: a room of twelve leaves with about 90 dated undertakings
+- The commitment mechanic in full: a room of twelve leaves with about 90 written commitments
 Check Dates and Book
 Up to fifteen delegates
 
@@ -608,7 +707,7 @@ Fully customised around your sector, your goals and your live operational priori
 - Applied directly to current strategic priorities
 - First Wednesday alumni sessions for the whole team, every month
 - Delivered internationally on request
-- The commitment pack for the sponsor: about 112 dated undertakings, printed as one document
+- A report for your CEO: every delegate's commitments, the gold standard ideas, and what to build once for the whole company
 Enquire for Your Team
 Johannesburg, Cape Town and Durban for open enrolment. Private cohorts delivered anywhere, including internationally. Pricing for delivery outside South Africa quoted on enquiry.
 Where It Runs
@@ -643,7 +742,7 @@ It is why delegates from our earliest cohorts are still current. Come every mont
 How We Work Together
 
 ## Train, direct, build
-Three ways in, and they feed each other. The training tells us where AI pays. The board seat tells us what will get funded and governed. The building tells us what is true, which goes straight back into the course. You can take any one on its own, but each makes the next one cheaper.
+Three ways in, and they feed each other. The training tells us where AI pays. The board seat tells us what will get funded and governed. The building tells us what is true, which goes straight back into the course. You can take any one on its own, but each makes the next one cheaper. After a private course, the shared builds named in the commitment report are the natural first job for steps two and three, if you decide you want help with them.
 Step One
 
 #### GenAI Executive Masterclass
@@ -669,7 +768,8 @@ Do I need prior AI experience? No. The course starts with fundamentals and moves
 Will this be relevant to my specific industry? Yes. The frameworks are cross-industry by design, and both formats include guided translation into your own context. Private cohorts are built around your sector directly.
 How many people are in each session? Twelve, always. It is capped so that both facilitators can get to every person's actual work.
 What is the difference between the two formats? Tailor-Made is private and customised for one organisation. Open Enrolment is the Daily Maverick Executive AI Masterclass: public, cross-industry, delivered with them and booked through them. The core curriculum is the same.
-Do you sell consulting after the training? No, in the sense that matters: nothing is pushed at you and nothing is assumed. There is no platform, no licence and no implementation engagement you are signed up for by attending, and nothing in the fee is a lead generator. The implementation happens inside the course. Ten of the thirteen modules close with every delegate writing down one specific thing they will do with it in their first week back, dated and captured in the room. A private team course of fifteen delegates walks out with about 112 of those, printed as one document for whoever signed off the two days. We do also run a fractional Chief AI Officer practice and a forward-deployed engineering practice, and delegates sometimes ask us to build one of the commitments afterwards. That is a separate engagement, quoted separately, and you have to ask for it.
+Do you sell consulting after the training? No, in the sense that matters: nothing is pushed at you and nothing is assumed. There is no platform, no licence and no implementation engagement you are signed up for by attending, and nothing in the fee is a lead generator. The implementation happens inside the course. Eleven modules close with every delegate writing down one specific thing they will do with it in their first week back, captured in the room. A recent private cohort of 16 logged 124 of those, and whoever signed off the two days receives them as one report. We do also run a fractional Chief AI Officer practice and a forward-deployed engineering practice, and delegates sometimes ask us to build one of the commitments afterwards. That is a separate engagement, quoted separately, and you have to ask for it.
+What does the sponsor receive after a private course? One report covering the whole leadership team. It lists every commitment, delegate by delegate and module by module, marks the strongest tenth as gold standard, and shows how many of the eleven modules each person committed to. It also names the tools several departments want to build, so the company builds each one once. Investors who book courses for portfolio companies receive a separate report for each company, in the same format. There is a sample of the report further up this page.
 Our IT department has standardised on one AI tool. Is the course still useful? Yes, and it is often more useful. We work across the major platforms because they are not interchangeable, and part of the value is being able to have an informed conversation with your IT function about what your current stack does well and where a second tool would be worth the licence.
 Can we use real company data in the exercises? That is your call, and we help you make it properly. We cover what should never be uploaded, what to redact, which settings to change first, and how to write a data policy that satisfies an audit without stopping the business. Delegates who prefer to work on anonymised or public material lose nothing.
 Which model should I be using? It depends on the job, and it changes every few weeks. More importantly, the model is only half the story: the surrounding toolset determines whether a platform can convert your file, run the calculation or build the deck. We show you how to tell the difference and how to keep testing it after the course.
@@ -724,7 +824,7 @@ Vibe coding training
 13:15 | Samples and a live build. Education demo. |
 13:45 | Build an app. Your own exercise, in AI Studio. |
 16:30 | Realistic end time |
-Times are indicative and subject to change. Day two in particular moves around a lot, because we follow the use cases the room turns out to care about. The custom assistant session produces two commitments rather than one, and the presentation commitment is made on day one.
+Times are indicative and subject to change. Day two in particular moves around a lot, because we follow the use cases the room turns out to care about. The custom assistant session produces two commitments rather than one, and the expert method and presentation commitments are made on day one.
 How the agenda maps to business capability Agenda Area | Skill Built | Business Capability Gained
 AI foundations | AI mental model | Understand what the technology is, why outputs vary, and why it matters now.
 Adoption and leadership | Adoption judgement | See AI as a capability to manage, direct and build early.
